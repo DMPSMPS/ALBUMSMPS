@@ -11,7 +11,7 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $13
 	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $13
 	smpsHeaderPSG       Snd_Supersonic_PSG1,	$0C, $01, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG2,	$0C, $01, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG2,	$0C, $03, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -138,7 +138,7 @@ Snd_Supersonic_FM3:
 Snd_Supersonic_Call00:
 	smpsPan             panRight, $00
 	smpsSetvoice        $01
-	smpsAlterVol        $F1
+	smpsAlterVol        $F6
 	dc.b    nCs5, $18, nB4, $0C, nA4, $0C, nCs5, $0C, nB4, $0C, nA4, $0C
 	dc.b    nAb4, $2E, nRst, $02, nFs5, $16
 
@@ -154,7 +154,7 @@ Snd_Supersonic_Loop1B:
 	dc.b    nRst, $60
 	smpsSetvoice        $03
 	smpsPan             panCenter, $00
-	smpsAlterVol        $2E
+	smpsAlterVol        $29
 	dc.b    nA3, $04
 	smpsAlterVol        $FF
 	dc.b    nB3, $02
