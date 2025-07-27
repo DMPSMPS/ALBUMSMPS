@@ -445,8 +445,8 @@ Snd_Supersonic_Voices:
 
 ;	Voice $05
 ;	$08
-;	$0A, $70, $30, $00, 	$1F, $1F, $5F, $5F, 	$00, $00, $00, $00
-;	$00, $00, $00, $00, 	$00, $00, $00, $00, 	$24, $2D, $13, $8A
+;	$0A, $70, $30, $00, 	$1F, $1F, $5F, $5F, 	$12, $0E, $0A, $0A
+;	$00, $04, $04, $03, 	$2F, $2F, $2F, $2F, 	$24, $2D, $13, $80
 	smpsVcAlgorithm     $00
 	smpsVcFeedback      $01
 	smpsVcUnusedBits    $00
@@ -455,8 +455,8 @@ Snd_Supersonic_Voices:
 	smpsVcRateScale     $01, $01, $00, $00
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $00, $00, $00
+	smpsVcDecayRate1    $00, $00, $00, $0F
 	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $00, $00, $00, $00
-	smpsVcReleaseRate   $00, $00, $00, $00
+	smpsVcDecayLevel    $04, $04, $04, $01
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $0A, $13, $2D, $24
