@@ -144,17 +144,16 @@ Snd_Supersonic_Loop0B:
 ; FM3 Data
 Snd_Supersonic_FM3:
 	smpsModSet          $07, $01, $03, $05
-	dc.b	nRst
 
 Snd_Supersonic_Loop04:
-	dc.b	$7C, nRst, $41, nRst, $41
+	dc.b	nRst, $7C, nRst, $41, nRst, $41
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	dc.b	nRst, $44
 	smpsCall            Snd_Supersonic_Call02
-	dc.b	nRst, $7C, nRst
+	dc.b	nRst, $7C
 
 Snd_Supersonic_Loop05:
-	dc.b	$41
+	dc.b	nRst, $41
 	smpsLoop            $00, $04, Snd_Supersonic_Loop05
 	smpsCall            Snd_Supersonic_Call02
 	smpsJump            Snd_Supersonic_FM3
