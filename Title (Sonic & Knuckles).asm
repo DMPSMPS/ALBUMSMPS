@@ -11,7 +11,7 @@ Snd_Title_Header:
 	smpsHeaderFM        Snd_Title_FM4,	$00, $05
 	smpsHeaderFM        Snd_Title_FM5,	$00, $05
 	smpsHeaderPSG       Snd_Title_PSG1,	$0C, $05, $00, sTone_0A
-	smpsHeaderPSG       Snd_Title_PSG2,	$0C, $02, $00, sTone_0A
+	smpsHeaderPSG       Snd_Title_PSG2,	$F4, $02, $00, sTone_0A
 	smpsHeaderPSG       Snd_Title_PSG3,	$0C, $05, $00, sTone_0A
 
 ; DAC Data
@@ -1080,7 +1080,8 @@ Snd_Title_Loop69:
 Snd_Title_PSG2:
 	smpsModSet          $01, $01, $FD, $00
 	smpsAlterNote       $04
-	dc.b	nC0, $60, smpsNoAttack, $60, nRst, $06
+	dc.b	nD1, $60, smpsNoAttack, $60, nRst, $06
+	smpsAlterPitch	    $18
 	smpsModSet          $00, $00, $00, $00
 	smpsPSGAlterVol     $03
 	smpsAlterNote       $00
