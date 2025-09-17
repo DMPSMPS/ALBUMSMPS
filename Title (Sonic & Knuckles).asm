@@ -884,6 +884,7 @@ Snd_Title_Loop50:
 	dc.b	nA2, $06, nD2, $06
 	smpsAlterVol        $FD
 	dc.b	nD3, $06, nD2, $06
+	smpsAlterVol        $FD
 	smpsStop
 
 ; FM4 Data
