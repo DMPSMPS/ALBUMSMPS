@@ -82,7 +82,7 @@ Snd_Title_Loop58:
 	dc.b	nB4, $0C, nCs5, $0C, nD5, $18, nCs5, $0C, nD5, $0C, nRst, $0C
 	dc.b	nA5, $0C, nRst, $0C, nFs5, $48, nRst, $0C, nD5, $0C, nFs5, $0C
 	dc.b	nE5, $10, nCs5, $10, nB4, $10, nCs5, $04, nRst, $08, nE5, $18
-	dc.b	nE5, $0C, nRst, $36
+	dc.b	nE5, $10, nRst, $32
 
 Snd_Title_Loop59:
 	dc.b	nB4, $06, nCs5, $06, nE5, $06
