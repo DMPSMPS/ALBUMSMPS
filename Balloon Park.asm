@@ -366,7 +366,7 @@ Snd_BPZ_PSG3:
 	dc.b	nRst, $30
 
 Snd_BPZ_Jump05:
-	smpsPSGvoice        sTone_02
+	smpsPSGvoice        sTone_01
 	dc.b	nRst, $30, nRst, nRst, nRst, nRst, nRst, nRst, nRst, nMaxPSG2, $05, smpsNoAttack
 	dc.b	$13, nMaxPSG2, $04, smpsNoAttack, $02, nMaxPSG2, $04, smpsNoAttack, $0E, nMaxPSG2, $05, smpsNoAttack
 	dc.b	$13, nMaxPSG2, $06, $01, smpsNoAttack, $11, nMaxPSG2, $07, smpsNoAttack, $11, nMaxPSG2, $04
