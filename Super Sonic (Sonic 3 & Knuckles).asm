@@ -273,7 +273,7 @@ Snd_Supersonic_Loop07:
 	dc.b	nFs4, nRst, nFs4, nRst, nAb4, nRst, nAb4, nRst, nA4, nRst, nA4, nRst
 	dc.b	nB4, nRst, nB4, nRst, $60
 	smpsModSet          $2A, $01, $29, $00
-	dc.b	nE4, $3C, smpsNoAttack
+	dc.b	nE5, $3C, smpsNoAttack
 	smpsModSet          $01, $00, $00, $00
 	dc.b	$24
 	smpsModSet          $07, $01, $03, $05
