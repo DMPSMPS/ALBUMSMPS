@@ -36,10 +36,11 @@ SSZALBUMDACLOOP:
 	smpsLoop            $00, $10, SSZALBUMDACLOOP
 	smpsPan             panCenter, $00
 	dc.b	dKickS3, $06, dKickS3, $06, dKickS3, $24, dMuffledSnare, $30, dKickS3, $06, dKickS3, $06
-	dc.b	dKickS3, $24, dMuffledSnare, $0C, dMuffledSnare, $24, dKickS3, $06, dKickS3, $06, dKickS3, $24
-	dc.b	dMuffledSnare, $30, dKickS3, $06, dKickS3, $06, dKickS3, $24, dMuffledSnare, $0C, dMuffledSnare, $24
-	dc.b	dKickS3, $06, dKickS3, $06, dKickS3, $24, dMuffledSnare, $30, dKickS3, $06, dKickS3, $06
-	dc.b	dKickS3, $24, dMuffledSnare, $0C, dMuffledSnare, $24, dKickS3, $06, dKickS3, $06, dKickS3, $24
+	dc.b	dKickS3, $18, dMuffledSnare, $05, dMuffledSnare, $05, dMuffledSnare, $0E, dMuffledSnare, $24, dKickS3, $06
+	dc.b	dKickS3, $06, dKickS3, $24, dMuffledSnare, $30, dKickS3, $06, dKickS3, $06, dKickS3, $18
+	dc.b	dMuffledSnare, $05, dMuffledSnare, $05, dMuffledSnare, $0E, dMuffledSnare, $24, dKickS3, $06, dKickS3, $06
+	dc.b	dKickS3, $24, dMuffledSnare, $30, dKickS3, $06, dKickS3, $06, dKickS3, $18, dMuffledSnare, $05
+	dc.b	dMuffledSnare, $05, dMuffledSnare, $0E, dMuffledSnare, $24, dKickS3, $06, dKickS3, $06, dKickS3, $24
 	dc.b	dMuffledSnare, $30, dKickS3, $06, dKickS3, $06, dKickS3, $18, dMuffledSnare, $06, dMuffledSnare, $06
 	dc.b	dKickS3, $24
 	smpsJump	SSZLOOPPOINT
