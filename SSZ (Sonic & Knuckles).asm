@@ -210,11 +210,11 @@ Snd_SSZ_Loop12:
 	dc.b	nEb3, $06, nCs2, $06, nF3, $06, nCs2, $06
 	smpsLoop            $00, $02, Snd_SSZ_Loop12
 	smpsLoop            $01, $02, Snd_SSZ_Loop0F
-	dc.b	nC3, $06, nC2, $06, nC3, $06, nC2, $06, nD3, $06, nC2, $06
-	dc.b	nE3, $06, nC2, $06, nF3, $06, nC2, $06, nE3, $06, nC2, $06
-	dc.b	nD3, $06, nC2, $06, nE3, $06, nC2, $06, nBb2, $06, nBb1, $06
-	dc.b	nBb2, $06, nBb1, $06, nC3, $06, nBb1, $06, nD3, $06, nBb1, $06
-	dc.b	nEb3, $06
+	dc.b	nBb2, $06, nBb1, $06, nBb2, $06, nBb1, $06, nC3, $06, nBb1, $06
+	dc.b	nD3, $06, nBb1, $06, nEb3, $06, nBb1, $06, nD3, $06, nBb1, $06
+	dc.b	nC3, $06, nBb1, $06, nD3, $06, nBb1, $06, nAb2, $06, nAb1, $06
+	dc.b	nAb2, $06, nAb1, $06, nBb2, $06, nAb1, $06, nC3, $06, nAb1, $06
+	dc.b	nCs3, $06
 
 Snd_SSZ_Loop13:
 	dc.b	nAb1, $06, nC3, $06, nAb1, $06, nBb2, $06
