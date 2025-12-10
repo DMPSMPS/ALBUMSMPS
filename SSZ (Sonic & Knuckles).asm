@@ -276,8 +276,9 @@ Snd_SSZ_Loop1A:
 	smpsLoop            $00, $02, Snd_SSZ_Loop1A
 
 Snd_SSZ_Loop1B:
-	dc.b	nRst, $72
-	smpsLoop            $00, $05, Snd_SSZ_Loop1B
+	dc.b	nRst, $73
+	smpsLoop            $00, $04, Snd_SSZ_Loop1B
+	dc.b	nRst, $74
 	smpsSetvoice        $01
 	dc.b	nF5, $12, nE5, $12, nC5, $0C, nC6, $12, nB5, $12, nG5, $0C
 	dc.b	nF5, $12, nE5, $12
