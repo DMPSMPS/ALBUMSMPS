@@ -146,67 +146,67 @@ Snd_Supersonic_Call02:
 	smpsAlterVol        $29
 	dc.b	nA3, $03
 	smpsAlterVol        $FF
-	dc.b	nB3, $03
+	dc.b	nB3
 	smpsAlterVol        $FF
-	dc.b	nCs4, $03
+	dc.b	nCs4
 	smpsAlterVol        $FF
-	dc.b	nE4, $03
+	dc.b	nE4
 	smpsAlterVol        $FF
-	dc.b	nB3, $03
+	dc.b	nB3
 	smpsAlterVol        $FF
-	dc.b	nCs4, $03
+	dc.b	nCs4
 	smpsAlterVol        $FF
-	dc.b	nD4, $03
+	dc.b	nD4
 	smpsAlterVol        $FF
-	dc.b	nFs4, $03
+	dc.b	nFs4
 	smpsAlterVol        $FF
-	dc.b	nCs4, $03
+	dc.b	nCs4
 	smpsAlterVol        $FF
-	dc.b	nD4, $03
+	dc.b	nD4
 	smpsAlterVol        $FF
-	dc.b	nE4, $03
+	dc.b	nE4
 	smpsAlterVol        $FF
-	dc.b	nAb4, $03
+	dc.b	nAb4
 	smpsAlterVol        $FF
-	dc.b	nD4, $03
+	dc.b	nD4
 	smpsAlterVol        $FF
-	dc.b	nE4, $03
+	dc.b	nE4
 	smpsAlterVol        $FF
-	dc.b	nFs4, $03
+	dc.b	nFs4
 	smpsAlterVol        $FF
-	dc.b	nA4, $03
+	dc.b	nA4
 	smpsAlterVol        $FF
-	dc.b	nE4, $03
+	dc.b	nE4
 	smpsAlterVol        $FF
-	dc.b	nFs4, $03
+	dc.b	nFs4
 	smpsAlterVol        $FF
-	dc.b	nAb4, $03
+	dc.b	nAb4
 	smpsAlterVol        $FF
-	dc.b	nB4, $03
+	dc.b	nB4
 	smpsAlterVol        $FF
-	dc.b	nFs4, $03
+	dc.b	nFs4
 	smpsAlterVol        $FF
-	dc.b	nAb4, $03
+	dc.b	nAb4
 	smpsAlterVol        $FF
-	dc.b	nA4, $03
+	dc.b	nA4
 	smpsAlterVol        $FF
-	dc.b	nCs5, $03
+	dc.b	nCs5
 	smpsAlterVol        $FF
-	dc.b	nAb4, $03
+	dc.b	nAb4
 	smpsAlterVol        $FF
-	dc.b	nA4, $03
+	dc.b	nA4
 	smpsAlterVol        $FF
-	dc.b	nB4, $03
+	dc.b	nB4
 	smpsAlterVol        $FF
-	dc.b	nD5, $03
+	dc.b	nD5
 	smpsAlterVol        $FF
-	dc.b	nA4, $03
+	dc.b	nA4
 	smpsAlterVol        $FF
-	dc.b	nB4, $03
+	dc.b	nB4
 	smpsAlterVol        $FF
-	dc.b	nCs5, $03
+	dc.b	nCs5
 	smpsAlterVol        $FF
-	dc.b	nE5, $03
+	dc.b	nE5
 	smpsReturn
 
 ; FM4 Data
