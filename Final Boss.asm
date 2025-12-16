@@ -43,11 +43,9 @@ Snd_FinalBoss_Loop10:
 	dc.b	nD5, nE5, $0C, nD5, $12, nA4, $1E, nE4, $12, nB4, nA4, $0C
 	dc.b	nD5, $12, nE5, nFs5, $0C, nG5, $12, nA5, nB5, $0C, nD6, $12
 	dc.b	nA5, $1E, nRst, $0C
-	dc.b	nE7, $03, nD7, $03, nA6, $03, nE6, $03, nD6, $03, nA5, $03
-	dc.b	nE5, $03, nD5, $03, nA4, $03, nD5, $03, nE5, $03, nA5, $03
-	dc.b	nE6, $03, nA6, $03, nD7, $03, nE7, $03, nD7, $03, nA6, $03
-	dc.b	nE6, $03, nD6, $03, nA6, $03, nE7, $03, nD7, $03, nA6, $03
-	dc.b	nRst, $0A, nRst, $02
+	dc.b	nE7, $03, nD7, nA6, nE6, nD6, nA5, nE5, nD5, nA4, nD5, nE5, nA5
+	dc.b	nE6, nA6, nD7, nE7, nD7, nA6, nE6, nD6, nA6, nE7, nD7, nA6
+	dc.b	nRst, $0C
 	smpsJump            Snd_FinalBoss_Loop0F
 
 ; Unreachable
@@ -178,11 +176,9 @@ Snd_FinalBoss_Loop05:
 	dc.b	nD5, nE5, $0C, nD5, $12, nA4, $1E, nE4, $12, nB4, nA4, $0C
 	dc.b	nD5, $12, nE5, nFs5, $0C, nG5, $12, nA5, nB5, $0C, nD6, $12
 	dc.b	nA5, $1E, nRst, $0C
-	dc.b	nE7, $03, nD7, $03, nA6, $03, nE6, $03, nD6, $03, nA5, $03
-	dc.b	nE5, $03, nD5, $03, nA4, $03, nD5, $03, nE5, $03, nA5, $03
-	dc.b	nE6, $03, nA6, $03, nD7, $03, nE7, $03, nD7, $03, nA6, $03
-	dc.b	nE6, $03, nD6, $03, nA6, $03, nE7, $03, nD7, $03, nA6, $03
-	dc.b	nRst, $0A, nRst, $02
+	dc.b	nE7, $03, nD7, nA6, nE6, nD6, nA5, nE5, nD5, nA4, nD5, nE5, nA5
+	dc.b	nE6, nA6, nD7, nE7, nD7, nA6, nE6, nD6, nA6, nE7, nD7, nA6
+	dc.b	nRst, $0C
 	smpsJump            Snd_FinalBoss_Loop04
 
 ; Unreachable
