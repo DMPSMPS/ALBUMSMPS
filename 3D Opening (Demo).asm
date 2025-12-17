@@ -1,25 +1,25 @@
-Snd_Title_Demo_Header:
+Snd_Title_Header:
 	smpsHeaderStartSong 3
-	smpsHeaderVoice     Snd_Title_Demo_Voices
+	smpsHeaderVoice     Snd_Title_Voices
 	smpsHeaderChan      $06, $03
 	smpsHeaderTempo     $01, $7D
 
-	smpsHeaderDAC       Snd_Title_Demo_DAC
-	smpsHeaderFM        Snd_Title_Demo_FM1,	$00, $0B
-	smpsHeaderFM        Snd_Title_Demo_FM2,	$00, $05
-	smpsHeaderFM        Snd_Title_Demo_FM3,	$00, $05
-	smpsHeaderFM        Snd_Title_Demo_FM4,	$00, $18
-	smpsHeaderFM        Snd_Title_Demo_FM5,	$00, $09
-	smpsHeaderPSG       Snd_Title_Demo_PSG1,	$0C, $02, $00, $00
-	smpsHeaderPSG       Snd_Title_Demo_PSG2,	$0C, $04, $00, $00
-	smpsHeaderPSG       Snd_Title_Demo_PSG3,	$23, $01, $00, sTone_0F
+	smpsHeaderDAC       Snd_Title_DAC
+	smpsHeaderFM        Snd_Title_FM1,	$00, $0B
+	smpsHeaderFM        Snd_Title_FM2,	$00, $05
+	smpsHeaderFM        Snd_Title_FM3,	$00, $05
+	smpsHeaderFM        Snd_Title_FM4,	$00, $18
+	smpsHeaderFM        Snd_Title_FM5,	$00, $09
+	smpsHeaderPSG       Snd_Title_PSG1,	$0C, $02, $00, $00
+	smpsHeaderPSG       Snd_Title_PSG2,	$0C, $04, $00, $00
+	smpsHeaderPSG       Snd_Title_PSG3,	$23, $01, $00, sTone_0F
 
 ; DAC Data
-Snd_Title_Demo_DAC:
+Snd_Title_DAC:
     dc.b    dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03
     dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dKickS3, $06, dKickS3, $06
     dc.b    dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03
-    dc.b    dMuffledSnare, $03, dMuffledSnare, $03, dMuffledSnare, $03, dCrashCymbal, $0C, dMuffledSnare, $06, dKickS3, $03
+    dc.b    dMuffledSnare, $03, dMuffledSnare, $03, dMuffledSnare, $03, dIntroKick, $0C, dMuffledSnare, $06, dKickS3, $03
     dc.b    dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06
     dc.b    dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03
     dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dKickS3, $06, dKickS3, $06
@@ -32,7 +32,7 @@ Snd_Title_Demo_DAC:
     dc.b    dKickS3, $03, dMuffledSnare, $06, dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03
     dc.b    dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06
     dc.b    dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03
-    dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dCrashCymbal, $0C, dMuffledSnare, $06
+    dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dIntroKick, $0C, dMuffledSnare, $06
     dc.b    dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03
     dc.b    dMuffledSnare, $06, dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06
     dc.b    dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dKickS3, $06
@@ -46,11 +46,11 @@ Snd_Title_Demo_DAC:
     dc.b    dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03
     dc.b    dMuffledSnare, $06, dMuffledSnare, $03, dMuffledSnare, $03, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03
     dc.b    dKickS3, $03, dMuffledSnare, $03, dMuffledSnare, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $03
-    dc.b    dMuffledSnare, $03, dCrashCymbal, $06
+    dc.b    dMuffledSnare, $03, dIntroKick, $06
     smpsStop
 
 ; FM1 Data
-Snd_Title_Demo_FM1:
+Snd_Title_FM1:
     smpsSetvoice        $00
     dc.b    nRst, $30, nRst, $30, nC3, $03, nRst, $03, nC3, $03, nRst, $03, nC4, $06
     dc.b    nC3, $03, nC4, $03, nC3, $03, nC4, $03, nC3, $06, nC4, $06
@@ -91,16 +91,16 @@ Snd_Title_Demo_FM1:
     smpsStop
 
 ; FM2 Data
-Snd_Title_Demo_FM2:
+Snd_Title_FM2:
 	smpsPan             panLeft, $00
 	smpsSetvoice        $04
 	smpsFMAlterVol      $29
 	dc.b    nRst, $30, nFs6, $01
 
-Snd_Title_Demo_Loop02:
+Snd_Title_Loop02:
 	dc.b    smpsNoAttack, nFs6
 	smpsFMAlterVol      $FF
-	smpsLoop            $00, $30, Snd_Title_Demo_Loop02
+	smpsLoop            $00, $30, Snd_Title_Loop02
 	smpsPan             panCenter, $00
 	smpsSetvoice        $01
 	smpsFMAlterVol      $17
@@ -162,17 +162,17 @@ Snd_Title_Demo_Loop02:
 	smpsStop
 
 ; FM3 Data
-Snd_Title_Demo_FM3:
+Snd_Title_FM3:
 	smpsPan             panRight, $00
 	smpsSetvoice        $04
 	dc.b    nRst, $30
 	smpsAlterNote       $01
 	smpsFMAlterVol      $29
 	dc.b    nFs6, $01
-Snd_Title_Demo_Loop01:
+Snd_Title_Loop01:
 	dc.b    smpsNoAttack, nFs6
 	smpsFMAlterVol      $FF
-	smpsLoop            $00, $30, Snd_Title_Demo_Loop01
+	smpsLoop            $00, $30, Snd_Title_Loop01
 	smpsPan             panCenter, $00
 	smpsSetvoice        $05
 	smpsAlterNote       $02
@@ -235,7 +235,7 @@ Snd_Title_Demo_Loop01:
 	smpsStop
 
 ; FM4 Data
-Snd_Title_Demo_FM4:
+Snd_Title_FM4:
 	dc.b    nRst, $32, nRst, $32
 	smpsAlterNote       $FD
 	smpsPan             panCenter, $00
@@ -296,7 +296,7 @@ Snd_Title_Demo_FM4:
 	smpsStop
 
 ; FM5 Data
-Snd_Title_Demo_FM5:
+Snd_Title_FM5:
 	smpsModSet          $24, $01, $04, $07
 	smpsAlterNote       $02
 	smpsSetvoice        $03
@@ -309,7 +309,7 @@ Snd_Title_Demo_FM5:
 	smpsStop
 
 ; PSG1 Data
-Snd_Title_Demo_PSG1:
+Snd_Title_PSG1:
 	smpsPSGvoice        sTone_03
 	dc.b    nRst, $30, nRst, $30, nG1, $06, nE2, $06, nG1, $06, nE2, $06, nG1, $06
 	dc.b    nE2, $06, nG1, $06, nE2, $06, nG1, $06, nE2, $06, nG1, $06
@@ -336,7 +336,7 @@ Snd_Title_Demo_PSG1:
 	smpsStop
 
 ; PSG2 Data
-Snd_Title_Demo_PSG2:
+Snd_Title_PSG2:
 	smpsPSGvoice        sTone_03
 	dc.b    nRst, $32, nRst, $31, nG2, $06, nC2, $06, nG2, $06, nC2, $06, nG2, $06
 	dc.b    nC2, $06, nG2, $06, nC2, $06, nG2, $06, nC2, $06, nG2, $06
@@ -363,7 +363,7 @@ Snd_Title_Demo_PSG2:
 	smpsStop
 
 ; PSG3 Data
-Snd_Title_Demo_PSG3:
+Snd_Title_PSG3:
 	smpsPSGform         $E7
 	dc.b    (nMaxPSG2-$23)&$FF, $03
 	smpsPSGAlterVol     $02
@@ -870,7 +870,7 @@ Snd_Title_Demo_PSG3:
 	dc.b    $09
 	smpsStop
 
-Snd_Title_Demo_Voices:
+Snd_Title_Voices:
 ;	Voice $00
 ;	$20
 ;	$36, $35, $30, $31, 	$DF, $DF, $9F, $9F, 	$07, $06, $09, $06
