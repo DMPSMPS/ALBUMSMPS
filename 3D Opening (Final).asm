@@ -236,18 +236,10 @@ Snd_Title_Loop01:
 
 ; FM4 Data
 Snd_Title_FM4:
-	smpsPan             panRight, $00
-	smpsSetvoice        $02
-	smpsModSet          $00, $01, $01, $04
-	smpsModOn
-	smpsModSet          $00, $01, $02, $04
+	smpsAlterNote       $FD
+	smpsPan             panCenter, $00
 	dc.b	nRst, $7F, $48
-	smpsSetvoice        $05
-	smpsPan             panCenter, $00
-	smpsModSet          $00, $01, $07, $04
-	smpsPan             panCenter, $00
 	smpsSetvoice        $06
-	smpsFMAlterVol      $17
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b	nRst, $18, nC5
 	smpsModSet          $07, $01, $03, $05
