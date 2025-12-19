@@ -94,7 +94,7 @@ Snd_Supersonic_Loop0C:
 Snd_Supersonic_Loop0B:
 	dc.b	nRst, $04, nD5, $08
 	smpsLoop            $01, $03, Snd_Supersonic_Loop0B
-	dc.b	nRst, $03, nCs5, $18, nA4, $0C, nE4, nFs4, nA4, $18, nB4, $60
+	dc.b	nRst, $04, nCs5, $18, nA4, $0C, nE4, nFs4, nA4, $18, nB4, $60
 	dc.b	nRst, $0C
 	smpsLoop            $02, $02, Snd_Supersonic_Loop0C
 	dc.b	nA4, $08, nRst, $04, nA4, $08, nRst, $04, nA4, $06, nB4, $06
