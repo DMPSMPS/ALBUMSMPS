@@ -132,15 +132,15 @@ Snd_Supersonic_Call02:
 	smpsSetvoice        $01
 	smpsPan             panRight, $00
 	smpsAlterVol        $F6
-	dc.b	nCs5, $18, nB4, $0C, nA4, $0C, nCs5, $0C, nB4, $0C, nA4, $0C
-	dc.b	nAb4, $2D, nRst, $03, nFs5, $15, nRst, $03, nFs5, $09, nRst, $03
-	dc.b	nFs5, $09, nRst, $03, nFs5, $09, nRst, $03, nE5, $18, nCs5, $0C
-	dc.b	nA4, $0C, nA4, $0C, nCs5, $18, nD5, $60, nRst, $0C, nFs4, $09
-	dc.b	nRst, $03, nFs4, $09, nRst, $03, nFs4, $06, nAb4, $06, nA4, $0C
-	dc.b	nAb4, $09, nRst, $03, nAb4, $09, nRst, $03, nAb4, $06, nBb4, $06
-	dc.b	nB4, $0C, nA4, $09, nRst, $03, nA4, $09, nRst, $03, nA4, $06
-	dc.b	nB4, $06, nCs5, $0C, nB4, $09, nRst, $03, nB4, $09, nRst, $03
-	dc.b	nB4, $06, nCs5, $06, nD5, $0C, nRst, $60
+	dc.b	nCs5, $18, nB4, $0C, nA4, $0C, nCs5, $0C, nB4, $0C, nA4, $0C, nAb4, $2C, nRst, $04, nFs5
+	dc.b	$14, nRst, $04, nFs5, $08, nRst, $04, nFs5, $08, nRst, $04, nFs5
+	dc.b	$08, nRst, $04, nE5, $18, nCs5, $0C, nA4, $0C, nA4, $0C, nCs5
+	dc.b	$18, nD5, $60, nRst, $0C, nFs4, $08, nRst, $04, nFs4, $08
+	dc.b	nRst, $04, nFs4, $06, nAb4, $06, nA4, $0C, nAb4, $08, nRst, $04, nAb4
+	dc.b	$08, nRst, $04, nAb4, $06, nBb4, $06, nB4, $0C, nA4, $08
+	dc.b	nRst, $04, nA4, $08, nRst, $04, nA4, $06, nB4, $06, nCs5, $0C, nB4
+	dc.b	$08, nRst, $04, nB4, $08, nRst, $04, nB4, $06, nCs5, $06, nD5
+	dc.b	$0C, nRst, $60
 	smpsSetvoice        $03
 	smpsPan             panCenter, $00
 	smpsAlterVol        $29
