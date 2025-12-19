@@ -629,90 +629,94 @@ Snd_Menu_PSG3:
 	smpsPSGform         $E7
 	dc.b	nRst, $2A
 
-Snd_Menu_Jump05:
+Snd_Menu_Loop21:
 	smpsCall            Snd_Menu_Call01
-	smpsCall            Snd_Menu_Call01
-	smpsCall            Snd_Menu_Call01
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	dc.b	$06
-	smpsPSGAlterVol      $03, nMaxPSG1
+	smpsLoop            $00, $03, Snd_Menu_Loop21
+	smpsPSGAlterVol     $FD
+	dc.b	nMaxPSG1, $06
+	smpsPSGAlterVol     $03
 	dc.b	$03, nMaxPSG1, nMaxPSG1, $06, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, $0C
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	dc.b	$0C, nMaxPSG1, $06, nMaxPSG1, $08, nMaxPSG1, nMaxPSG1, $02
-	smpsPSGAlterVol      $03, nRst
-	dc.b	$06
+	smpsPSGAlterVol     $FD
+	dc.b	$0C, $06, $08, nMaxPSG1, nMaxPSG1, $02
+	smpsPSGAlterVol     $03
+	dc.b	nRst, $06
 	smpsCall            Snd_Menu_Call01
 	smpsCall            Snd_Menu_Call01
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	dc.b	$06
-	smpsPSGAlterVol      $03, nMaxPSG1
+	smpsPSGAlterVol     $FD
+	dc.b	nMaxPSG1, $06
+	smpsPSGAlterVol     $03
 	dc.b	$03, nMaxPSG1
 
-Snd_Menu_Loop06:
+Snd_Menu_Loop22:
 	dc.b	nMaxPSG1, $06
-	smpsLoop            $00, $0D, Snd_Menu_Loop06
-	dc.b	nMaxPSG1, $32, nMaxPSG1, $34
+	smpsLoop            $00, $0D, Snd_Menu_Loop22
+	dc.b	$32, $34
+
+Snd_Menu_Loop23:
 	smpsCall            Snd_Menu_Call02
-	smpsCall            Snd_Menu_Call02
-	smpsCall            Snd_Menu_Call02
-	smpsCall            Snd_Menu_Call02
-	smpsCall            Snd_Menu_Call02
-	smpsCall            Snd_Menu_Call02
-	smpsCall            Snd_Menu_Call02
-	dc.b	nMaxPSG1, $06, nMaxPSG1, $03, nMaxPSG1, nMaxPSG1, $06, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1
-	dc.b	$36
+	smpsLoop            $00, $07, Snd_Menu_Loop23
+	dc.b	nMaxPSG1, $06, $03, nMaxPSG1, nMaxPSG1, $06, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, $36
 	smpsCall            Snd_Menu_Call01
 	smpsCall            Snd_Menu_Call01
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	dc.b	$06
-	smpsPSGAlterVol      $03, nMaxPSG1
+	smpsPSGAlterVol     $FD
+	dc.b	nMaxPSG1, $06
+	smpsPSGAlterVol     $03
 	dc.b	$03, nMaxPSG1
 
-Snd_Menu_Loop07:
+Snd_Menu_Loop24:
 	dc.b	nMaxPSG1, $06
-	smpsLoop            $00, $0D, Snd_Menu_Loop07
-	dc.b	nMaxPSG1, $32, nMaxPSG1, $34, nMaxPSG1, $06, nMaxPSG1, $03, nMaxPSG1, nMaxPSG1, $06
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	smpsPSGAlterVol      $03, nMaxPSG1
-	dc.b	nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1
+	smpsLoop            $00, $0D, Snd_Menu_Loop24
+	dc.b	$32, $34, $06
 
-Snd_Menu_Loop08:
-	dc.b	nMaxPSG1, $06, nMaxPSG1, $03, nMaxPSG1, nMaxPSG1, $06
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	smpsPSGAlterVol      $03, nMaxPSG1
-	dc.b	nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1
-	smpsLoop            $00, $06, Snd_Menu_Loop08
-	dc.b	nMaxPSG1, $06, nMaxPSG1, $03, nMaxPSG1, nMaxPSG1, $06
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	smpsPSGAlterVol      $03, nMaxPSG1
-	dc.b	nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1
-	dc.b	nMaxPSG1, $03, nMaxPSG1, nMaxPSG1, $06
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	smpsPSGAlterVol      $03, nMaxPSG1
-	dc.b	nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1, nMaxPSG1
-	dc.b	nMaxPSG1, $03, nMaxPSG1, nMaxPSG1, $06
-	smpsPSGAlterVol      $FD, nMaxPSG1
+Snd_Menu_Loop26:
+	dc.b	$03, nMaxPSG1, nMaxPSG1, $02
+	smpsPSGAlterVol     $FD
 	dc.b	nMaxPSG1
-	smpsJump            Snd_Menu_Jump05
+	smpsPSGAlterVol     $03
+	dc.b	nMaxPSG1
+
+Snd_Menu_Loop25:
+	dc.b	nMaxPSG1, $06
+	smpsLoop            $00, $09, Snd_Menu_Loop25
+
+Snd_Menu_Loop27:
+	dc.b	nMaxPSG1, $06
+	smpsLoop            $01, $02, Snd_Menu_Loop26
+	dc.b	nMaxPSG1
+	smpsLoop            $02, $06, Snd_Menu_Loop27
+
+Snd_Menu_Loop29:
+	dc.b	$06, $03, nMaxPSG1, nMaxPSG1, $02
+	smpsPSGAlterVol     $FD
+	dc.b	nMaxPSG1
+	smpsPSGAlterVol     $03
+
+Snd_Menu_Loop28:
+	dc.b	nMaxPSG1, nMaxPSG1, $06
+	smpsLoop            $00, $06, Snd_Menu_Loop28
+	smpsLoop            $01, $02, Snd_Menu_Loop29
+	dc.b	nMaxPSG1, nMaxPSG1, $03, nMaxPSG1, nMaxPSG1, $02
+	smpsPSGAlterVol     $FD
+	dc.b	nMaxPSG1
+	smpsPSGAlterVol     $03
+	dc.b	nMaxPSG1, nMaxPSG1, $06
+	smpsJump            Snd_Menu_Loop21
 
 Snd_Menu_Call01:
-	smpsPSGAlterVol      $FD, nMaxPSG1
-	dc.b	$06
-	smpsPSGAlterVol      $03, nMaxPSG1
+	smpsPSGAlterVol     $FD
+	dc.b	nMaxPSG1, $06
+	smpsPSGAlterVol     $03
 	dc.b	$03, nMaxPSG1
 
-Snd_Menu_Loop0A:
+Snd_Menu_Loop2E:
 	dc.b	nMaxPSG1, $06
-	smpsLoop            $01, $0E, Snd_Menu_Loop0A
+	smpsLoop            $01, $0E, Snd_Menu_Loop2E
 	smpsReturn
 
 Snd_Menu_Call02:
-	dc.b	nMaxPSG1, $06, nMaxPSG1, $03, nMaxPSG1
+	dc.b	nMaxPSG1, $06, $03, nMaxPSG1
 
-Snd_Menu_Loop09:
+Snd_Menu_Loop2D:
 	dc.b	nMaxPSG1, $06
-	smpsLoop            $01, $0E, Snd_Menu_Loop09
+	smpsLoop            $01, $0E, Snd_Menu_Loop2D
 	smpsReturn
-
-; Unreachable
-	smpsStop
