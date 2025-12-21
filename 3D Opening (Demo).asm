@@ -94,13 +94,13 @@ Snd_Title_FM1:
 Snd_Title_FM2:
 	smpsPan             panLeft, $00
 	smpsSetvoice        $04
-	smpsFMAlterVol      $29
+	smpsFMAlterVol      $28
 	dc.b    nRst, $30, nFs6, $01
 
 Snd_Title_Loop02:
 	dc.b    smpsNoAttack, nFs6
 	smpsFMAlterVol      $FF
-	smpsLoop            $00, $30, Snd_Title_Loop02
+	smpsLoop            $00, $2F, Snd_Title_Loop02
 	smpsPan             panCenter, $00
 	smpsSetvoice        $01
 	smpsFMAlterVol      $17
@@ -167,12 +167,12 @@ Snd_Title_FM3:
 	smpsSetvoice        $04
 	dc.b    nRst, $30
 	smpsAlterNote       $01
-	smpsFMAlterVol      $29
+	smpsFMAlterVol      $28
 	dc.b    nFs6, $01
 Snd_Title_Loop01:
 	dc.b    smpsNoAttack, nFs6
 	smpsFMAlterVol      $FF
-	smpsLoop            $00, $30, Snd_Title_Loop01
+	smpsLoop            $00, $2F, Snd_Title_Loop01
 	smpsPan             panCenter, $00
 	smpsSetvoice        $05
 	smpsAlterNote       $02
@@ -236,7 +236,7 @@ Snd_Title_Loop01:
 
 ; FM4 Data
 Snd_Title_FM4:
-	dc.b    nRst, $32, nRst, $32
+	dc.b    nRst, $32, nRst, $31
 	smpsAlterNote       $FD
 	smpsPan             panCenter, $00
 	smpsSetvoice        $06
