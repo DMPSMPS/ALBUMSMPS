@@ -132,9 +132,7 @@ Snd_Title_Loop02:
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nC5, $06
 	smpsModSet          $01, $00, $00, $00
-	dc.b	nD5, $36
-	smpsModSet          $01, $01, $01, $00
-	dc.b	smpsNoAttack, nEb5, $30
+	dc.b	nD5, $36, smpsNoAttack, nEb5, $18, smpsNoAttack, nE5, $18
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nC5, $0C
 	smpsModSet          $07, $01, $03, $05
@@ -269,9 +267,7 @@ Snd_Title_FM4:
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nC5, $06
 	smpsModSet          $01, $00, $00, $00
-	dc.b	nD5, $36
-	smpsModSet          $01, $01, $01, $00
-	dc.b	smpsNoAttack, nEb5, $30
+	dc.b	nD5, $36, smpsNoAttack, nEb5, $18, smpsNoAttack, nE5, $18
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nC5, $0C
 	smpsModSet          $07, $01, $03, $05
@@ -326,9 +322,9 @@ Snd_Title_PSG1:
 	dc.b	nE2, $06, nG0, $03, nB0, $03, nD1, $03, nF1, $03, nG1, $03
 	dc.b	nF1, $03, nD1, $03, nB0, $03, nG0, $03, nB0, $03, nD1, $03
 	dc.b	nF1, $03, nG1, $03, nF1, $03, nD1, $03, nB0, $03, nG0, $03
-	dc.b	nB0, $03, nE1, $03, nG1, $03, nB0, $03, nEb1, $03, nAb1, $03
-	dc.b	nB1, $03, nD1, $03, nFs1, $03, nB1, $03, nD2, $03, nF1, $03
-	dc.b	nA1, $03, nD2, $03, nF2, $03, nG1, $06, nE2, $06, nG1, $06
+	dc.b	nB0, $03, nD1, $03, nG1, $03, nB0, $03, nD1, $03, nG1, $03
+	dc.b	nB1, $03, nD1, $03, nG1, $03, nB1, $03, nD2, $03, nG1, $03
+	dc.b	nB1, $03, nD2, $03, nG2, $03, nG1, $06, nE2, $06, nG1, $06
 	dc.b	nE2, $06, nG1, $06, nE2, $06, nG1, $06, nE2, $06, nG1, $06
 	dc.b	nE2, $06, nG1, $06, nE2, $06, nG1, $06, nE2, $06, nG1, $06
 	dc.b	nE2, $06, nB1, $06, nF2, $06, nB1, $06, nF2, $06, nB1, $06
@@ -353,9 +349,9 @@ Snd_Title_PSG2:
 	dc.b	nC2, $06, nG0, $03, nB0, $03, nD1, $03, nF1, $03, nG1, $03
 	dc.b	nF1, $03, nD1, $03, nB0, $03, nG0, $03, nB0, $03, nD1, $03
 	dc.b	nF1, $03, nG1, $03, nF1, $03, nD1, $03, nB0, $03, nG0, $03
-	dc.b	nB0, $03, nE1, $03, nG1, $03, nB0, $03, nEb1, $03, nAb1, $03
-	dc.b	nB1, $03, nD1, $03, nFs1, $03, nB1, $03, nD2, $03, nF1, $03
-	dc.b	nA1, $03, nD2, $03, nF2, $03, nG2, $06, nC2, $06, nG2, $06
+	dc.b	nB0, $03, nD1, $03, nG1, $03, nB0, $03, nD1, $03, nG1, $03
+	dc.b	nB1, $03, nD1, $03, nG1, $03, nB1, $03, nD2, $03, nG1, $03
+	dc.b	nB1, $03, nD2, $03, nG2, $03, nG2, $06, nC2, $06, nG2, $06
 	dc.b	nC2, $06, nG2, $06, nC2, $06, nG2, $06, nC2, $06, nG2, $06
 	dc.b	nC2, $06, nG2, $06, nC2, $06, nG2, $06, nC2, $06, nG2, $06
 	dc.b	nC2, $06, nG2, $06, nD2, $06, nG2, $06, nD2, $06, nG2, $06
