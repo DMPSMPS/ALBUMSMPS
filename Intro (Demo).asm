@@ -327,8 +327,8 @@ Snd_Title_PSG1:
 	dc.b	nF1, $03, nD1, $03, nB0, $03, nG0, $03, nB0, $03, nD1, $03
 	dc.b	nF1, $03, nG1, $03, nF1, $03, nD1, $03, nB0, $03, nG0, $03
 	dc.b	nB0, $03, nE1, $03, nG1, $03, nB0, $03, nEb1, $03, nAb1, $03
-	dc.b	nB1, $03, nEb1, $03, nG1, $03, nC2, $03, nEb2, $03, nG1, $03
-	dc.b	nB1, $03, nE2, $03, nG2, $03, nG1, $06, nE2, $06, nG1, $06
+	dc.b	nB1, $03, nD1, $03, nFs1, $03, nB1, $03, nD2, $03, nF1, $03
+	dc.b	nA1, $03, nD2, $03, nF2, $03, nG1, $06, nE2, $06, nG1, $06
 	dc.b	nE2, $06, nG1, $06, nE2, $06, nG1, $06, nE2, $06, nG1, $06
 	dc.b	nE2, $06, nG1, $06, nE2, $06, nG1, $06, nE2, $06, nG1, $06
 	dc.b	nE2, $06, nB1, $06, nF2, $06, nB1, $06, nF2, $06, nB1, $06
@@ -353,9 +353,9 @@ Snd_Title_PSG2:
 	dc.b	nC2, $06, nG0, $03, nB0, $03, nD1, $03, nF1, $03, nG1, $03
 	dc.b	nF1, $03, nD1, $03, nB0, $03, nG0, $03, nB0, $03, nD1, $03
 	dc.b	nF1, $03, nG1, $03, nF1, $03, nD1, $03, nB0, $03, nG0, $03
-	dc.b	nC1, $03, nE1, $03, nG1, $03, nB0, $03, nE1, $03, nAb1, $03
-	dc.b	nB1, $03, nEb1, $03, nAb1, $03, nC2, $03, nEb2, $03, nG1, $03
-	dc.b	nC2, $03, nE2, $03, nG2, $03, nG2, $06, nC2, $06, nG2, $06
+	dc.b	nB0, $03, nE1, $03, nG1, $03, nB0, $03, nEb1, $03, nAb1, $03
+	dc.b	nB1, $03, nD1, $03, nFs1, $03, nB1, $03, nD2, $03, nF1, $03
+	dc.b	nA1, $03, nD2, $03, nF2, $03, nG2, $06, nC2, $06, nG2, $06
 	dc.b	nC2, $06, nG2, $06, nC2, $06, nG2, $06, nC2, $06, nG2, $06
 	dc.b	nC2, $06, nG2, $06, nC2, $06, nG2, $06, nC2, $06, nG2, $06
 	dc.b	nC2, $06, nG2, $06, nD2, $06, nG2, $06, nD2, $06, nG2, $06
