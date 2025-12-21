@@ -1,4 +1,3 @@
-
 Snd_Title_Header:
 	smpsHeaderStartSong 3
 	smpsHeaderVoice     Snd_Title_Voices
