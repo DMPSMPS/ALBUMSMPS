@@ -310,56 +310,55 @@ Snd_Title_FM5:
 ; PSG1 Data
 Snd_Title_PSG1:
 	smpsPSGvoice        sTone_03
-	dc.b	nRst, $7F, nRst, $41, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nB1
-	dc.b	$0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1
-	dc.b	$0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1
-	dc.b	$0C, nF2, $0C, nB1, $0C, nF2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1
-	dc.b	$06, nF1, $06, nD1, $06, nB0, $06, nG0, $06, nB0, $06, nD1
-	dc.b	$06, nF1, $06, nG1, $06, nF1, $06, nD1, $06, nB0, $06, nG0
-	dc.b	$06, nB0, $06, nD1, $06, nF1, $06, nB0, $06, nEb1, $06, nFs1
-	dc.b	$06, nA1, $06, nEb1, $06, nG1, $06, nBb1, $06, nCs2, $06, nG1
-	dc.b	$06, nB1, $06, nD2, $06, nF2, $06, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1
-	dc.b	$0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1
-	dc.b	$0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nAb1
-	dc.b	$60, nG1, $60, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1
-	dc.b	$0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C
+	dc.b    nRst, $7F, nRst, $41, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nB1, $0C
+	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C
+	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C
+	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1, $06
+	dc.b    nF1, $06, nD1, $06, nB0, $06, nG0, $06, nB0, $06, nD1, $06
+	dc.b    nF1, $06, nG1, $06, nF1, $06, nD1, $06, nB0, $06, nG0, $06
+	dc.b    nB0, $06, nE1, $06, nG1, $06, nB0, $06, nEb1, $06, nAb1, $06
+	dc.b    nB1, $06, nEb1, $06, nG1, $06, nC2, $06, nEb2, $06, nG1, $06
+	dc.b    nB1, $06, nE2, $06, nG2, $06, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C
+	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C
+	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nAb1, $60
+	dc.b    nG1, $60, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
+	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C
 	smpsStop
 
 ; PSG2 Data
 Snd_Title_PSG2:
 	smpsPSGvoice        sTone_03
-	dc.b	nRst, $7F, nRst, $47, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2
-	dc.b	$0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2
-	dc.b	$0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1
-	dc.b	$06, nF1, $06, nD1, $06, nB0, $06, nG0, $06, nB0, $06, nD1
-	dc.b	$06, nF1, $06, nG1, $06, nF1, $06, nD1, $06, nB0, $06, nG0
-	dc.b	$06, nB0, $06, nD1, $06, nF1, $06, nB0, $06, nEb1, $06, nFs1
-	dc.b	$06, nA1, $06, nEb1, $06, nG1, $06, nBb1, $06, nCs2, $06, nG1
-	dc.b	$06, nB1, $06, nD2, $06, nF2, $06, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2
-	dc.b	$0C, nC2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2
-	dc.b	$0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2
-	dc.b	$0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $06, nEb1
-	dc.b	$60, nD1, $60, nRst, $06, nG2, $0C, nC2, $0C, nG2, $0C, nC2
-	dc.b	$0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2
-	dc.b	$0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2
-	dc.b	$0C
+	dc.b    nRst, $7F, nRst, $47, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C
+	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C
+	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1, $06
+	dc.b    nF1, $06, nD1, $06, nB0, $06, nG0, $06, nB0, $06, nD1, $06
+	dc.b    nF1, $06, nG1, $06, nF1, $06, nD1, $06, nB0, $06, nG0, $06
+	dc.b    nC1, $06, nE1, $06, nG1, $06, nB0, $06, nE1, $06, nAb1, $06
+	dc.b    nB1, $06, nEb1, $06, nAb1, $06, nC2, $06, nEb2, $06, nG1, $06
+	dc.b    nC2, $06, nE2, $06, nG2, $06, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
+	dc.b    nC2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C
+	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C
+	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $06, nEb1, $60
+	dc.b    nD1, $60, nRst, $06, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C
+	dc.b    nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C
+	dc.b    nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C
 	smpsStop
 
 ; PSG3 Data
