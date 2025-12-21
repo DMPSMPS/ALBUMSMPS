@@ -131,8 +131,8 @@ Snd_Title_Loop02:
 	dc.b    nEb5, $06
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nC5, $06
-	smpsModSet          $01, $01, $01, $00
-	dc.b    nD5, $33, smpsNoAttack, nD5
+	smpsModSet          $01, $00, $00, $00
+	dc.b	nD5, $36, smpsNoAttack, nEb5, $30
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nC5, $0C
 	smpsModSet          $07, $01, $03, $05
@@ -205,7 +205,7 @@ Snd_Title_Loop01:
 	dc.b    nC5, $06
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nG4, $06
-	smpsModSet          $01, $01, $01, $00
+	smpsModSet          $01, $00, $00, $00
 	dc.b    nB4, $33, smpsNoAttack, nB4
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nG4, $0C
@@ -236,7 +236,7 @@ Snd_Title_Loop01:
 
 ; FM4 Data
 Snd_Title_FM4:
-	dc.b    nRst, $32, nRst, $31
+	dc.b    nRst, $32, nRst, $32
 	smpsAlterNote       $FD
 	smpsPan             panCenter, $00
 	smpsSetvoice        $06
@@ -266,8 +266,8 @@ Snd_Title_FM4:
 	dc.b    nEb5, $06
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nC5, $06
-	smpsModSet          $01, $01, $01, $00
-	dc.b    nD5, $33, smpsNoAttack, nD5
+	smpsModSet          $01, $00, $00, $00
+	dc.b	nD5, $36, smpsNoAttack, nEb5, $30
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nC5, $0C
 	smpsModSet          $07, $01, $03, $05
