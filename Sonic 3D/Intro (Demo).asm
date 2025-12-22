@@ -19,7 +19,7 @@ Snd_Title_DAC:
     dc.b    dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03
     dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dKickS3, $06, dKickS3, $06
     dc.b    dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03
-    dc.b    dMuffledSnare, $03, dMuffledSnare, $03, dMuffledSnare, $03, dIntroKick, $0C, dMuffledSnare, $06, dKickS3, $03
+    dc.b    dMuffledSnare, $03, dMuffledSnare, $03, dMuffledSnare, $03, dCrashCymbal, $0C, dMuffledSnare, $06, dKickS3, $03
     dc.b    dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06
     dc.b    dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03
     dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dKickS3, $06, dKickS3, $06
@@ -32,7 +32,7 @@ Snd_Title_DAC:
     dc.b    dKickS3, $03, dMuffledSnare, $06, dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03
     dc.b    dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06
     dc.b    dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03
-    dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dIntroKick, $0C, dMuffledSnare, $06
+    dc.b    dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dCrashCymbal, $0C, dMuffledSnare, $06
     dc.b    dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03
     dc.b    dMuffledSnare, $06, dKickS3, $06, dKickS3, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $06
     dc.b    dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03, dMuffledSnare, $06, dKickS3, $06
@@ -46,7 +46,7 @@ Snd_Title_DAC:
     dc.b    dKickS3, $03, dMuffledSnare, $06, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03, dKickS3, $03
     dc.b    dMuffledSnare, $06, dMuffledSnare, $03, dMuffledSnare, $03, dMuffledSnare, $03, dKickS3, $06, dMuffledSnare, $03
     dc.b    dKickS3, $03, dMuffledSnare, $03, dMuffledSnare, $06, dMuffledSnare, $06, dKickS3, $03, dMuffledSnare, $03
-    dc.b    dMuffledSnare, $03, dIntroKick, $06
+    dc.b    dMuffledSnare, $03, dCrashCymbal, $06
     smpsStop
 
 ; FM1 Data
@@ -208,7 +208,7 @@ Snd_Title_Loop01:
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nAb4, $06
 	smpsModSet          $01, $00, $00, $00
-	dc.b    nB4, $33, smpsNoAttack, nB4
+	dc.b    nB4, $66
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nG4, $0C
 	smpsModSet          $07, $01, $03, $05
