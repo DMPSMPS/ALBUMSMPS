@@ -434,21 +434,17 @@ Snd_SpecialS2_PSG1:
 	dc.b	nRst, $72, nC2, $0C, nG2, $0C, nBb2, $0C, nG2, $06, nA2, $24
 	dc.b	nRst, $72, nC2, $0C, nG2, $0C, nBb2, $0C, nG2, $06, nA2, $24
 	dc.b	nRst, $77, nRst, $77, nRst, $77, nRst, $77, nRst, $77, nRst, $77
-	dc.b	nRst, $77, nRst, $01
-	smpsChangeTransposition		$F4
-	dc.b	nC3, $30, nB2
+	dc.b	nRst, $77, nRst, $01, nC3, $30, nB2
 	dc.b	$30, nBb2, $30, nA2, $30, nAb2, $24, nAb2, $0C, nG2, $0C, nG2
 	dc.b	$0C, nA2, $0C, nG2, $0C, nC3, $30, nB2, $30, nBb2, $30, nA2
 	dc.b	$30, nAb2, $24, nAb2, $0C, nG2, $0C, nG2, $0C, nG2, $0C, nAb2
-	dc.b	$0C
-	smpsChangeTransposition		$0C
-	dc.b	nA2, $06, nB2, $06, nC3, $06, nRst, $06, nE3, $06
+	dc.b	$0C, nA2, $06, nB2, $06, nC3, $06, nRst, $06, nE3, $06
 	dc.b	nRst, $06, nC3, $06, nA2, $06, nAb2, $06, nB2, $06, nC3, $06
 	dc.b	nRst, $06, nE3, $06, nRst, $06, nC3, $06, nAb2, $06, nG2, $06, nB2
 	dc.b	$06, nC3, $06, nRst, $06, nE3, $06, nRst, $06, nC3, $06, nG2
 	dc.b	$06, nFs2, $06, nB2, $06, nC3, $06, nRst, $06, nFs3, $06, nE3
 	dc.b	$06, nC3, $06, nA2, $06, nF2, $30, nRst, $30
-	smpsJump	Snd_SpecialS2_PSG1	
+	smpsJump	Snd_SpecialS2_PSG1
 
 ; PSG2 Data
 Snd_SpecialS2_PSG2:
