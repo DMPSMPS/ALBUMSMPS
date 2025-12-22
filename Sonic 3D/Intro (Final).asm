@@ -199,15 +199,15 @@ Snd_Title_Loop01:
 	smpsModSet          $0C, $01, $F0, $FF
 	dc.b    smpsNoAttack, $18
 	smpsModSet          $0C, $01, $F8, $FF
-	dc.b    nRst, $18, nG4, $18
+	dc.b    nRst, $18, nAb4, $18
 	smpsModSet          $07, $01, $03, $05
-	dc.b    nE4, $0C, nE5, $0C, nD5, $0C, nC5, $18, nD5, $0C, nC5, $0C
+	dc.b    nEb4, $06, nEb5, $06, nC5, $06, nC5, $0C, nC5, $06, nC5, $06
 	smpsModSet          $07, $01, $09, $05
-	dc.b    nG4, $18
+	dc.b    nAb4, $18
 	smpsModSet          $0C, $01, $F0, $FF
 	dc.b    nC5, $0C
 	smpsModSet          $0C, $01, $F8, $FF
-	dc.b    nG4, $0C
+	dc.b    nAb4, $0C
 	smpsModSet          $01, $00, $00, $00
 	dc.b    nB4, $7F, smpsNoAttack, $4D
 	smpsModSet          $0C, $01, $F8, $FF
@@ -318,10 +318,10 @@ Snd_Title_PSG1:
 	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nB1, $0C
 	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C
 	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C, nF2, $0C, nB1, $0C
-	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
-	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
-	dc.b    nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C, nE2, $0C, nG1, $0C
-	dc.b    nE2, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1, $06
+	dc.b    nF2, $0C, nB1, $0C, nF2, $0C, nEb1, $0C, nC2, $0C, nEb1, $0C
+	dc.b    nC2, $0C, nEb1, $0C, nC2, $0C, nEb1, $0C, nC2, $0C, nEb1, $0C
+	dc.b    nC2, $0C, nEb1, $0C, nC2, $0C, nEb1, $0C, nC2, $0C, nEb1, $0C
+	dc.b    nC2, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1, $06
 	dc.b    nF1, $06, nD1, $06, nB0, $06, nG0, $06, nB0, $06, nD1, $06
 	dc.b    nF1, $06, nG1, $06, nF1, $06, nD1, $06, nB0, $06, nG0, $06
 	dc.b    nB0, $06, nD1, $06, nG1, $06, nB0, $06, nD1, $06, nG1, $06
@@ -345,10 +345,10 @@ Snd_Title_PSG2:
 	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
 	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C
 	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C
-	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
-	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
-	dc.b    nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C, nC2, $0C, nG2, $0C
-	dc.b    nC2, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1, $06
+	dc.b    nD2, $0C, nG2, $0C, nD2, $0C, nEb2, $0C, nAb1, $0C, nEb2, $0C
+	dc.b    nAb1, $0C, nEb2, $0C, nAb1, $0C, nEb2, $0C, nAb1, $0C, nEb2, $0C
+	dc.b    nAb1, $0C, nEb2, $0C, nAb1, $0C, nEb2, $0C, nAb1, $0C, nEb2, $0C
+	dc.b    nAb1, $0C, nG0, $06, nB0, $06, nD1, $06, nF1, $06, nG1, $06
 	dc.b    nF1, $06, nD1, $06, nB0, $06, nG0, $06, nB0, $06, nD1, $06
 	dc.b    nF1, $06, nG1, $06, nF1, $06, nD1, $06, nB0, $06, nG0, $06
 	dc.b    nB0, $06, nD1, $06, nG1, $06, nB0, $06, nD1, $06, nG1, $06
