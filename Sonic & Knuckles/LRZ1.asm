@@ -13,6 +13,7 @@ Snd_LRZ1_Header:
 	smpsHeaderPSG       Snd_LRZ1_PSG1,	$F4, $04, $00, sTone_0C
 	smpsHeaderPSG       Snd_LRZ1_PSG2,	$F4, $04, $00, sTone_0C
 	smpsHeaderPSG       Snd_LRZ1_PSG3,	$F4, $01, $00, sTone_0C
+
 ; DAC Data
 Snd_LRZ1_DAC:
 	smpsCall            Snd_LRZ1_Call00
@@ -170,6 +171,7 @@ Snd_LRZ1_Jump01:
 	smpsModSet          $0F, $01, $06, $06
 	smpsCall            Snd_LRZ1_Call06
 	smpsSetvoice        $11
+	smpsAlterNote       $FB
 	dc.b	nRst, $02
 	smpsAlterVol        $15
 	smpsCall            Snd_LRZ1_Call07
@@ -248,6 +250,7 @@ Snd_LRZ1_Jump00:
 	smpsPan             panRight, $00
 	smpsCall            Snd_LRZ1_Call06
 	smpsSetvoice        $11
+	smpsAlterNote       $FB
 	smpsAlterVol        $13
 	smpsCall            Snd_LRZ1_Call07
 	smpsAlterVol        $ED
