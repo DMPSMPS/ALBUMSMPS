@@ -133,8 +133,9 @@ Snd_Title_Loop02:
 	dc.b    nC5, $06
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nD5, $36
-	smpsModSet          $01, $01, $01, $00
-	dc.b     $30
+	smpsModSet 	    $01, $01, $01, $00
+	smpsModRefreshNextNote          
+	dc.b     smpsNoAttack, $30
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nC5, $0C
 	smpsModSet          $07, $01, $03, $05
@@ -270,8 +271,9 @@ Snd_Title_FM4:
 	dc.b    nC5, $06
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nD5, $36
-	smpsModSet          $01, $01, $01, $00
-	dc.b     $30
+	smpsModSet 	    $01, $01, $01, $00
+	smpsModRefreshNextNote          
+	dc.b     smpsNoAttack, $30
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b    nRst, $0C, nC5, $0C
 	smpsModSet          $07, $01, $03, $05
