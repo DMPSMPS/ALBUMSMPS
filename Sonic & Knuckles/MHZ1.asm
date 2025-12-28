@@ -98,8 +98,8 @@ Snd_MHZ1_FM2:
 	dc.b	nD3, $1A, nRst, $0A, nD3, $26, nRst, $05, nCs3, $03, nRst, $01
 	dc.b	nC3, $08, nBb2, $04, nRst, $01, nBb2, $1A, nRst, $0A, nBb2, $28
 	dc.b	nRst, $03, nBb2, $03, nRst, $01, nC3, $08, nE2, $04, nRst, $01
-	dc.b	nBb2, $14, nRst, $03, nBb2, $03, nRst, $01, nA2, $08, nBb2, $04
-	dc.b	nRst, $01, nC3, $1A, nRst, $06, nC3, $08, nBb2, $05, nRst, $01
+	dc.b	nBb2, $14, nRst, $04, nBb2, $03, nRst, $01, nA2, $08, nBb2, $04
+	dc.b	nRst, $01, nC3, $1A, nRst, $05, nC3, $08, nBb2, $05, nRst, $01
 	dc.b	nC3, $04, nD3, $05, nRst, $01, nC3, $08, nBb2, $06, nRst, $06
 	dc.b	nBb2, $04, nBb2, $08, nBb2, $04, nC3, $08, nBb2, $06, nRst, $06
 	dc.b	nBb2, $06, nRst, $06, nBb2, $04, nC3, $0C, nBb2, $0C
