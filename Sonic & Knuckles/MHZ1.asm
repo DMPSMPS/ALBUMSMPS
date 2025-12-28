@@ -21,32 +21,32 @@ Snd_MHZ1_FM1:
 	smpsPan             panCenter, $00
 	dc.b	nRst, $07
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nB4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nA4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nA4, $06, nRst, $0B, nA4, $12, nRst, $06
 	dc.b	nA4, $0C, nBb4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nA4, $06, nRst, $0B
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nB4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nA4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nA4, $06, nRst, $0B, nA4, $12, nRst, $06
 	dc.b	nA4, $0C, nB4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nA4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nA4, $06, nRst, $0B
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D
@@ -143,32 +143,32 @@ Snd_MHZ1_FM3:
 	smpsPan             panLeft, $00
 	dc.b	nRst, $07, nFs4, $06, nRst, $0B, nFs4, $12, nRst, $06, nFs4, $0C
 	dc.b	nG4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nFs4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nF4, $06, nRst, $0B, nF4, $12
 	dc.b	nRst, $06, nF4, $0C, nG4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nF4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nFs4, $06
 	dc.b	nRst, $0B, nFs4, $12, nRst, $06, nFs4, $0C, nG4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nFs4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nF4, $06, nRst, $0B, nF4, $12, nRst, $06, nF4, $0C
 	dc.b	nG4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nF4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nFs4, $06, nRst, $0B, nFs4, $12
 	dc.b	nRst, $06, nFs4, $0C, nG4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nFs4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nF4, $06
 	dc.b	nRst, $0B, nF4, $12, nRst, $06, nF4, $0C, nG4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nF4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nF4, $06, nRst, $0B, nF4, $12, nRst, $06, nG4, $0A, nRst, $02
@@ -219,32 +219,32 @@ Snd_MHZ1_FM4:
 	smpsPan             panRight, $00
 	dc.b	nRst, $07, nD4, $06, nRst, $0B, nD4, $12, nRst, $06, nD4, $0C
 	dc.b	nE4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nD4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nD4, $06, nRst, $0B, nD4, $12
 	dc.b	nRst, $06, nD4, $0C, nE4, $08
-	smpsModSet          $01, $01, $FF, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nD4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nD4, $06
 	dc.b	nRst, $0B, nD4, $12, nRst, $06, nD4, $0C, nE4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nD4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nD4, $06, nRst, $0B, nD4, $12, nRst, $06, nD4, $0C
 	dc.b	nE4, $08
-	smpsModSet          $01, $01, $FF, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nD4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nD4, $06, nRst, $0B, nD4, $12
 	dc.b	nRst, $06, nD4, $0C, nE4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nD4, $1C, nRst, $07
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nD4, $06
 	dc.b	nRst, $0B, nD4, $12, nRst, $06, nD4, $0C, nE4, $08
-	smpsModSet          $01, $01, $FF, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nD4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nD4, $06, nRst, $0B, nD4, $12, nRst, $06, nE4, $0A, nRst, $02
@@ -295,32 +295,32 @@ Snd_MHZ1_FM5:
 	smpsPan             panCenter, $00
 	dc.b	nRst, $07, nRst, $07
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nB4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nA4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nA4, $06, nRst, $0B, nA4, $12, nRst, $06
 	dc.b	nA4, $0C, nBb4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nA4, $06, nRst, $0B
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nB4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nA4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D, nA4, $06, nRst, $0B, nA4, $12, nRst, $06
 	dc.b	nA4, $0C, nB4, $08
-	smpsModSet          $01, $01, $04, $00
+	smpsModSet          $01, $01, $03, $00
 	dc.b	nA4, $1C
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $07, nA4, $06, nRst, $0B
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
-	smpsModSet          $01, $01, $FC, $00
+	smpsModSet          $01, $01, $FD, $00
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D
