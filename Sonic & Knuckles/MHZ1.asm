@@ -50,8 +50,8 @@ Snd_MHZ1_FM1:
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D
-	dc.b	nBb4, $06, nRst, $0B, nBb4, $12, nRst, $06, nC5, $0C, nC5, $08
-	dc.b	nC5, $08, nRst, $74
+	dc.b	nBb4, $06, nRst, $0B, nBb4, $12, nRst, $06, nC5, $0A, nRst, $02
+	dc.b	nC5, $04, nRst, $02, nC5, $04, nRst, $7A
 	dc.b	nRst, $60, nRst, $30
 
 Snd_MHZ1_Jump05:
@@ -99,7 +99,7 @@ Snd_MHZ1_FM2:
 	dc.b	nC3, $08, nBb2, $04, nRst, $01, nBb2, $1A, nRst, $0A, nBb2, $28
 	dc.b	nRst, $03, nBb2, $03, nRst, $01, nC3, $08, nE2, $04, nRst, $01
 	dc.b	nBb2, $14, nRst, $03, nBb2, $03, nRst, $01, nA2, $08, nBb2, $04
-	dc.b	nRst, $01, nC3, $1C, nRst, $04, nC3, $08, nBb2, $05, nRst, $01
+	dc.b	nRst, $01, nC3, $1A, nRst, $06, nC3, $08, nBb2, $05, nRst, $01
 	dc.b	nC3, $04, nD3, $05, nRst, $01, nC3, $08, nBb2, $06, nRst, $06
 	dc.b	nBb2, $04, nBb2, $08, nBb2, $04, nC3, $08, nBb2, $06, nRst, $06
 	dc.b	nBb2, $06, nRst, $06, nBb2, $04, nC3, $0C, nBb2, $0C
@@ -171,8 +171,8 @@ Snd_MHZ1_FM3:
 	smpsModSet          $01, $01, $FC, $00
 	dc.b	nF4, $16
 	smpsModSet          $0D, $01, $02, $06
-	dc.b	nRst, $0D, nF4, $06, nRst, $0B, nF4, $12, nRst, $06, nG4, $0C
-	dc.b	nG4, $08, nG4, $08, nRst, $74
+	dc.b	nRst, $0D, nF4, $06, nRst, $0B, nF4, $12, nRst, $06, nG4, $0A, nRst, $02
+	dc.b	nG4, $04, nRst, $02, nG4, $04, nRst, $7A
 	dc.b	nRst, $06, nFs4, $02, nG4, nAb4, nA4, $0A, nRst, $02, nA4, $0A
 	dc.b	nRst, $02, nRst, $06, nFs4, $02, nG4, nAb4, nA4, $0A, nRst, $02
 	dc.b	nA4, $0A, nRst, $02, nRst, $0C, nA4, $0A, nRst, $02, nRst, $30
@@ -247,8 +247,8 @@ Snd_MHZ1_FM4:
 	smpsModSet          $01, $01, $FF, $00
 	dc.b	nD4, $16
 	smpsModSet          $0D, $01, $02, $06
-	dc.b	nRst, $0D, nD4, $06, nRst, $0B, nD4, $12, nRst, $06, nE4, $0C
-	dc.b	nE4, $08, nE4, $08, nRst, $74
+	dc.b	nRst, $0D, nD4, $06, nRst, $0B, nD4, $12, nRst, $06, nE4, $0A, nRst, $02
+	dc.b	nE4, $04, nRst, $02, nE4, $04, nRst, $7A
 	dc.b	nRst, $06, nEb4, $02, nE4, nF4, nFs4, $0A, nRst, $02, nFs4, $0A
 	dc.b	nRst, $02, nRst, $06, nEb4, $02, nE4, nF4, nFs4, $0A, nRst, $02
 	dc.b	nFs4, $0A, nRst, $02, nRst, $0C, nFs4, $0A, nRst, $02, nRst, $30
@@ -324,8 +324,8 @@ Snd_MHZ1_FM5:
 	dc.b	nA4, $16
 	smpsModSet          $0D, $01, $02, $06
 	dc.b	nRst, $0D
-	dc.b	nBb4, $06, nRst, $0B, nBb4, $12, nRst, $06, nC5, $0C, nC5, $08
-	dc.b	nC5, $08, nRst, $74
+	dc.b	nBb4, $06, nRst, $0B, nBb4, $12, nRst, $06, nC5, $0A, nRst, $02
+	dc.b	nC5, $04, nRst, $02, nC5, $04, nRst, $7A
 	dc.b	nRst, $60, nRst, $30
 
 Snd_MHZ1_Jump01:
@@ -360,12 +360,12 @@ Snd_MHZ1_Loop02:
 
 ; DAC Data
 Snd_MHZ1_DAC:
-	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C, dSnareS3, $08, dKickS3, $10
+	dc.b	dKickS3, $18, dSnareS3, $0E, dKickS3, $06, dKickS3, $1B, dSnareS3, $08, dKickS3, $11
 	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $04
-	dc.b	dSnareS3, $06, dSnareS3, $08, dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C
-	dc.b	dSnareS3, $08, dKickS3, $10, dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C
-	dc.b	dSnareS3, $06, dSnareS3, $04, dSnareS3, $06, dSnareS3, $08, dKickS3, $18, dSnareS3, $0C
-	dc.b	dKickS3, $08, dKickS3, $1C, dSnareS3, $08, dKickS3, $10, dKickS3, $18, dSnareS3, $0C
+	dc.b	dSnareS3, $06, dSnareS3, $08, dKickS3, $18, dSnareS3, $0E, dKickS3, $06, dKickS3, $1B
+	dc.b	dSnareS3, $08, dKickS3, $11, dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C
+	dc.b	dSnareS3, $06, dSnareS3, $04, dSnareS3, $06, dSnareS3, $08, dKickS3, $18, dSnareS3, $0E
+	dc.b	dKickS3, $06, dKickS3, $1B, dSnareS3, $08, dKickS3, $11, dKickS3, $18, dSnareS3, $0C
 	dc.b	dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $04, dSnareS3, $06, dSnareS3, $08
 	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B, dSnareS3, $08, dKickS3, $11
 	dc.b	dSnareS3, $08, dKickS3, $0C, dKickS3, $10, dSnareS3, $08, dKickS3, $0C, dKickS3, $0C
