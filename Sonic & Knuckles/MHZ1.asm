@@ -360,13 +360,13 @@ Snd_MHZ1_Loop02:
 
 ; DAC Data
 Snd_MHZ1_DAC:
-	dc.b	dKickS3, $18, dSnareS3, $0E, dKickS3, $06, dKickS3, $1B, dSnareS3, $08, dKickS3, $11
-	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $04
-	dc.b	dSnareS3, $06, dSnareS3, $08, dKickS3, $18, dSnareS3, $0E, dKickS3, $06, dKickS3, $1B
+	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B, dSnareS3, $08, dKickS3, $11
+	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B
 	dc.b	dSnareS3, $08, dKickS3, $11, dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C
-	dc.b	dSnareS3, $06, dSnareS3, $04, dSnareS3, $06, dSnareS3, $08, dKickS3, $18, dSnareS3, $0E
-	dc.b	dKickS3, $06, dKickS3, $1B, dSnareS3, $08, dKickS3, $11, dKickS3, $18, dSnareS3, $0C
-	dc.b	dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $04, dSnareS3, $06, dSnareS3, $08
+	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $18, dSnareS3, $0C
+	dc.b	dKickS3, $08, dKickS3, $1B, dSnareS3, $08, dKickS3, $11, dKickS3, $18, dSnareS3, $0C
+	dc.b	dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
 	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B, dSnareS3, $08, dKickS3, $11
 	dc.b	dSnareS3, $08, dKickS3, $0C, dKickS3, $10, dSnareS3, $08, dKickS3, $0C, dKickS3, $0C
 	dc.b	dKickS3, $04, dSnareS3, $0C, dKickS3, $0C
