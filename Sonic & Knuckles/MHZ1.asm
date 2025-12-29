@@ -104,7 +104,6 @@ Snd_MHZ1_Loop09:
 
 ; FM2 Data
 Snd_MHZ1_FM2:
-	smpsStop
 	smpsSetvoice        $01
 	smpsModSet          $0D, $01, $02, $06
 	smpsPan             panCenter, $00
@@ -433,7 +432,6 @@ Snd_MHZ1_Loop02:
 
 ; DAC Data
 Snd_MHZ1_DAC:
-	smpsStop
 	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B, dSnareS3, $08, dKickS3, $11
 	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $06
 	dc.b	dSnareS3, $06, dSnareS3, $06, dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B
