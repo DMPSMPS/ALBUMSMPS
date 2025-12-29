@@ -23,7 +23,7 @@ Snd_MHZ1_FM1:
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nB4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nA4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -31,7 +31,7 @@ Snd_MHZ1_FM1:
 	dc.b	nA4, $0C, nBb4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nA4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -39,7 +39,7 @@ Snd_MHZ1_FM1:
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nB4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nA4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -47,7 +47,7 @@ Snd_MHZ1_FM1:
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nA4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -55,7 +55,7 @@ Snd_MHZ1_FM1:
 	dc.b	nA4, $0C, nB4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nA4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -63,7 +63,7 @@ Snd_MHZ1_FM1:
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nA4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -104,6 +104,7 @@ Snd_MHZ1_Loop09:
 
 ; FM2 Data
 Snd_MHZ1_FM2:
+	smpsStop
 	smpsSetvoice        $01
 	smpsModSet          $0D, $01, $02, $06
 	smpsPan             panCenter, $00
@@ -163,7 +164,7 @@ Snd_MHZ1_FM3:
 	dc.b	nG4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nFs4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -171,7 +172,7 @@ Snd_MHZ1_FM3:
 	dc.b	nRst, $06, nF4, $0C, nG4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nF4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -179,7 +180,7 @@ Snd_MHZ1_FM3:
 	dc.b	nRst, $0B, nFs4, $12, nRst, $06, nFs4, $0C, nG4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nFs4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -187,7 +188,7 @@ Snd_MHZ1_FM3:
 	dc.b	nG4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nF4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -195,7 +196,7 @@ Snd_MHZ1_FM3:
 	dc.b	nRst, $06, nFs4, $0C, nG4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nFs4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -203,7 +204,7 @@ Snd_MHZ1_FM3:
 	dc.b	nRst, $0B, nF4, $12, nRst, $06, nF4, $0C, nG4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nF4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -257,7 +258,7 @@ Snd_MHZ1_FM4:
 	dc.b	nE4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nD4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -265,7 +266,7 @@ Snd_MHZ1_FM4:
 	dc.b	nRst, $06, nD4, $0C, nE4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nD4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -273,7 +274,7 @@ Snd_MHZ1_FM4:
 	dc.b	nRst, $0B, nD4, $12, nRst, $06, nD4, $0C, nE4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nD4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -281,7 +282,7 @@ Snd_MHZ1_FM4:
 	dc.b	nE4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nD4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -289,7 +290,7 @@ Snd_MHZ1_FM4:
 	dc.b	nRst, $06, nD4, $0C, nE4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nD4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C, nRst, $07
 	smpsModSet          $0D, $01, $02, $06
@@ -297,7 +298,7 @@ Snd_MHZ1_FM4:
 	dc.b	nRst, $0B, nD4, $12, nRst, $06, nD4, $0C, nE4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nD4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -351,7 +352,7 @@ Snd_MHZ1_FM5:
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nB4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nA4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -359,7 +360,7 @@ Snd_MHZ1_FM5:
 	dc.b	nA4, $0C, nBb4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nA4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -367,7 +368,7 @@ Snd_MHZ1_FM5:
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nB4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nA4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -375,7 +376,7 @@ Snd_MHZ1_FM5:
 	dc.b	nA4, $06, nRst, $0B, nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nA4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -383,7 +384,7 @@ Snd_MHZ1_FM5:
 	dc.b	nA4, $0C, nB4, $08
 	smpsModSet          $01, $00, $00, $00
 	dc.b	nA4, $10
-	smpsModSet 	    $01, $01, $10, $00
+	smpsModSet 	    $01, $01, $0A, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -391,7 +392,7 @@ Snd_MHZ1_FM5:
 	dc.b	nA4, $12, nRst, $06, nA4, $0C, nBb4, $08
 	smpsModSet          $FF, $00, $00, $00
 	dc.b	nA4, $0A
-	smpsModSet 	    $01, $01, $F0, $00
+	smpsModSet 	    $01, $01, $F6, $00
 	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, $0C
 	smpsModSet          $0D, $01, $02, $06
@@ -432,6 +433,7 @@ Snd_MHZ1_Loop02:
 
 ; DAC Data
 Snd_MHZ1_DAC:
+	smpsStop
 	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B, dSnareS3, $08, dKickS3, $11
 	dc.b	dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1C, dSnareS3, $06, dSnareS3, $06
 	dc.b	dSnareS3, $06, dSnareS3, $06, dKickS3, $18, dSnareS3, $0C, dKickS3, $08, dKickS3, $1B
