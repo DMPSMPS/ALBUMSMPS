@@ -921,13 +921,13 @@ Snd_SpecialS2_Voices:
 
 ;	Voice $03
 ;	$04
-;	$03, $03, $03, $03, 	$13, $10, $13, $10, 	$06, $0C, $06, $0C
+;	$04, $04, $04, $04, 	$13, $10, $13, $10, 	$06, $0C, $06, $0C
 ;	$00, $00, $00, $00, 	$4F, $2F, $4F, $2F, 	$1E, $8C, $1E, $80
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $00
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $03, $03, $03, $03
+	smpsVcCoarseFreq    $04, $04, $04, $04
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $10, $13, $10, $13
 	smpsVcAmpMod        $00, $00, $00, $00
