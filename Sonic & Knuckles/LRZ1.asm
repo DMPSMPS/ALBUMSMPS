@@ -104,7 +104,7 @@ Snd_LRZ1_Loop0A:
 	dc.b	nC2, $04, nRst, $0E, nD2, $02, nRst, $04, nC2, $06, nA1, $04
 	dc.b	nRst, $08, nG1, $06, nRst, $0C, nG1, $06, nRst, $0C, nA1, $36
 	dc.b	nRst, $06
-	smpsAlterPitch      $F4
+	smpsChangeTransposition      $F4
 
 Snd_LRZ1_Loop0B:
 	dc.b	nF2, $0A, nRst, $08, nF2, $04, nRst, $02, nC3, $0C, nF2, $08
@@ -150,7 +150,7 @@ Snd_LRZ1_Loop0E:
 	dc.b	nRst, $02, nF2, $14, nRst, $04, nEb2, $04, nRst, $02, nF2, $06
 	dc.b	nRst, $06, nF2, $06, nG2, $14, nRst, $04, nF2, $02, nRst, $04
 	dc.b	nG2, $0C, nF2, $04, nRst, $02, nG2, $1E, nRst, $18
-	smpsAlterPitch      $0C
+	smpsChangeTransposition      $0C
 	smpsJump            Snd_LRZ1_Jump02
 
 ; FM2 Data
@@ -210,7 +210,7 @@ Snd_LRZ1_Call06:
 	smpsReturn
 
 Snd_LRZ1_Call07:
-	smpsAlterPitch      $F4
+	smpsChangeTransposition      $F4
 
 Snd_LRZ1_Loop14:
 	dc.b	nA5, $06, nRst, $06, nE6, $42, nRst, $06, nD6, $06, nC6, $06
@@ -226,7 +226,7 @@ Snd_LRZ1_Loop14:
 	dc.b	nA6, $4E, nRst, $06, nG6, $0C, nD6, $4E, nRst, $06, nF6, $06
 	dc.b	nE6, $06, nC6, $54, nRst, $06, nG6, $04, nRst, $02, nG6, $5A
 	dc.b	nRst, $06
-	smpsAlterPitch      $0C
+	smpsChangeTransposition      $0C
 	smpsReturn
 
 ; FM3 Data
@@ -307,13 +307,13 @@ Snd_LRZ1_Loop08:
 	dc.b	nRst, $56
 	smpsLoop            $00, $11, Snd_LRZ1_Loop08
 	dc.b	nRst, $4A
-	smpsAlterPitch      $E8
+	smpsChangeTransposition      $E8
 	dc.b	nA5, $4E, nRst, $06, nG5, $0C, nD5, $4E, nRst, $06, nF5, $06
 	dc.b	nE5, $06, nC5, $4E, nRst, $06, nC5, $0C, nD5, $5A, nRst, $06
 	dc.b	nA5, $4E, nRst, $06, nG5, $0C, nD5, $4E, nRst, $06, nF5, $06
 	dc.b	nE5, $06, nC5, $54, nRst, $06, nG5, $04, nRst, $02, nG5, $5A
 	dc.b	nRst, $06
-	smpsAlterPitch      $18
+	smpsChangeTransposition      $18
 	smpsAlterVol        $FC
 	smpsJump            Snd_LRZ1_FM4
 
@@ -383,13 +383,13 @@ Snd_LRZ1_Loop04:
 	dc.b	nRst, $56
 	smpsLoop            $00, $11, Snd_LRZ1_Loop04
 	dc.b	nRst, $4A
-	smpsAlterPitch      $E8
+	smpsChangeTransposition      $E8
 	dc.b	nC6, $4E, nRst, $06, nC6, $0C, nG5, $4E, nRst, $06, nC6, $06
 	dc.b	nB5, $06, nE5, $4E, nRst, $06, nE5, $0C, nG5, $5A, nRst, $06
 	dc.b	nC6, $4E, nRst, $06, nC6, $0C, nG5, $4E, nRst, $06, nC6, $06
 	dc.b	nB5, $06, nE5, $54, nRst, $06, nB5, $04, nRst, $02, nB5, $5A
 	dc.b	nRst, $06
-	smpsAlterPitch      $18
+	smpsChangeTransposition      $18
 	smpsAlterVol        $FC
 	smpsJump            Snd_LRZ1_FM5
 
@@ -423,7 +423,7 @@ Snd_LRZ1_Call08:
 	smpsReturn
 
 Snd_LRZ1_Call09:
-	smpsAlterPitch      $18
+	smpsChangeTransposition      $18
 
 Snd_LRZ1_Loop15:
 	dc.b	nF1, $0C, nF1, $06, nA1, $0C, nF1, $06, nC2, $06, nA1, $06
@@ -474,7 +474,7 @@ Snd_LRZ1_Loop1E:
 	dc.b	nF1, $0C, nF1, $06, nA1, $0C, nF1, $06, nG1, $0C
 	dc.b	nG1, $0C, nG1, $06, nB1, $0C, nG1, $06, nD2, $06, nB1, $06
 	dc.b	nG1, $0C, nRst, $24
-	smpsAlterPitch      $E8
+	smpsChangeTransposition      $E8
 	smpsReturn
 
 ; PSG2 Data
@@ -489,7 +489,7 @@ Snd_LRZ1_Jump04:
 	dc.b	nC4, $06, nC5, $0C, nC4, $06, nE4, nE5, $0C, nE4, $06, nE4
 	dc.b	nE5, nD5, nC5, nA4, $0C, nB3, nB3, $06, nB4, $0C, nB3, $06
 	dc.b	nE4, nE5, $0C, nE4, $06, nE4, nE4, $1E
-	smpsAlterPitch      $18
+	smpsChangeTransposition      $18
 
 Snd_LRZ1_Loop13:
 	dc.b	nRst, $12, nC3, $0C, nC2, $06, nE2, $06, nE3, $0C, nE2, $06
@@ -507,7 +507,7 @@ Snd_LRZ1_Loop13:
 	dc.b	nA2, $0C, nB1, $0C, nB1, $06, nB2, $0C, nB1, $06, nE2, $06
 	dc.b	nD3, $0C, nD2, $06, nD2, $06, nD2, $1E
 	smpsLoop            $00, $03, Snd_LRZ1_Loop13
-	smpsAlterPitch      $E8
+	smpsChangeTransposition      $E8
 	smpsJump            Snd_LRZ1_Jump04
 
 ; PSG3 Data
