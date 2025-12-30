@@ -286,47 +286,29 @@ UnusedBoss_Jump01:
 ; PSG3 Data
 UnusedBoss_PSG3:
 	smpsPSGform         $E7
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF, $30
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF, $18, $48
 
 UnusedBoss_Jump00:
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF, $30
-	smpsPSGvoice        sTone_0F
+	smpsPSGvoice        sTone_01
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_01
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_01
 	dc.b	(nMaxPSG2-$23)&$FF
 	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_0F
+	smpsPSGvoice        sTone_01
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_01
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_0F
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_0F
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_0F
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_0F
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
-	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_01
 	dc.b	(nMaxPSG2-$23)&$FF
 	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF
@@ -334,13 +316,31 @@ UnusedBoss_Jump00:
 	dc.b	(nMaxPSG2-$23)&$FF
 	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_01
 	dc.b	(nMaxPSG2-$23)&$FF
-	smpsPSGvoice        sTone_12
+	smpsPSGvoice        sTone_0F
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_0F
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_0F
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_01
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_01
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_01
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_0F
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_0F
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_0F
+	dc.b	(nMaxPSG2-$23)&$FF
+	smpsPSGvoice        sTone_0F
 	dc.b	(nMaxPSG2-$23)&$FF
 	smpsJump            UnusedBoss_Jump00
 
