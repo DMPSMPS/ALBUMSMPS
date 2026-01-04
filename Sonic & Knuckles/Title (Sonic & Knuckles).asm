@@ -78,19 +78,19 @@ Snd_Title_Loop58:
 	dc.b	nCs5, $18, nA4, $0C, nE4, $0C, nFs4, $04, nRst, $08, nA4, $18
 	dc.b	nA4, $3C, nRst, $0C
 	dc.b	nCs5, $0C, nD5, $0C, nE5, $0C, nFs5, $0C, nFs5, $18, nFs5, $0C
-	dc.b	nE5, $18, nD5, $0C, nE5, $48, nRst, $24, nFs5, $0C, nFs5, $18
-	dc.b	nFs5, $0C, nE5, $18, nD5, $0C, nE5, $30, nRst, $24, nB4, $0C
-	dc.b	nCs5, $0C, nD5, $18, nCs5, $0C, nD5, $0C, nRst, $0C, nA5, $0C
-	dc.b	nRst, $0C, nFs5, $30, nRst, $24, nD5, $0C, nFs5, $0C, nE5, $10
-	dc.b	nCs5, $10, nB4, $10, nCs5, $04, nRst, $08, nE5, $18, nE5, $12
-	dc.b	nRst, $30, nB4, $06, nCs5, $06, nE5, $06, nB4, $06, nCs5, $06
-	dc.b	nE5, $06, nF5, $06, nFs5, $0C, nFs5, $18, nFs5, $0C, nE5, $18
-	dc.b	nD5, $0C, nE5, $48, nRst, $24, nFs5, $0C, nA5, $0C, nRst, $0C
-	dc.b	nFs5, $18, nE5, $0C, nD5, $0C, nE5, $2A, nRst, $2A, nB4, $0C
-	dc.b	nCs5, $0C, nD5, $18, nCs5, $0C, nD5, $0C, nRst, $0C, nA5, $0C
-	dc.b	nRst, $0C, nFs5, $30, nRst, $24, nD5, $0C, nFs5, $0C, nE5, $10
-	dc.b	nCs5, $10, nB4, $10, nA4, $42, nRst, $1E, nA4, $06, nB4, $06
-	dc.b	nCs5, $06, nE5, $06, nB4, $06, nCs5, $06, nE5, $06, nFs5, $06
+	dc.b	nE5, $18, nD5, $0C, nE5, $6C, nFs5, $0C, nFs5, $18, nFs5, $0C
+	dc.b	nE5, $18, nD5, $0C, nE5, $48, nRst, $0C, nB4, $0C, nCs5, $0C
+	dc.b	nD5, $18, nCs5, $0C, nD5, $0C, nRst, $0C, nA5, $0C, nRst, $0C
+	dc.b	nFs5, $48, nRst, $0C, nD5, $0C, nFs5, $0C, nE5, $10, nCs5, $10
+	dc.b	nB4, $10, nCs5, $04, nRst, $08, nE5, $18, nE5, $12, nRst, $30
+	dc.b	nB4, $06, nCs5, $06, nE5, $06, nB4, $06, nCs5, $06, nE5, $06
+	dc.b	nF5, $06, nFs5, $0C, nFs5, $18, nFs5, $0C, nE5, $18, nD5, $0C
+	dc.b	nE5, $6C, nFs5, $0C, nA5, $0C, nRst, $0C, nFs5, $18, nE5, $0C
+	dc.b	nD5, $0C, nE5, $3C, nRst, $18, nB4, $0C, nCs5, $0C, nD5, $18
+	dc.b	nCs5, $0C, nD5, $0C, nRst, $0C, nA5, $0C, nRst, $0C, nFs5, $48
+	dc.b	nRst, $0C, nD5, $0C, nFs5, $0C, nE5, $10, nCs5, $10, nB4, $10
+	dc.b	nA4, $60, nA4, $06, nB4, $06, nCs5, $06, nE5, $06, nB4, $06
+	dc.b	nCs5, $06, nE5, $06, nFs5, $06
 	dc.b	nA5, $18, nFs5, $0C, nE5, $0C, nA5, $0C, nFs5, $0C
 	dc.b	nD5, $0C, nE5, $30, nD6, $18
 	smpsNoteFill        $06
