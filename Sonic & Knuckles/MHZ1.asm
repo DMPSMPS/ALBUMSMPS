@@ -109,19 +109,18 @@ Snd_MHZ1_FM2:
 	smpsSetvoice        $01
 	smpsModSet          $0D, $01, $02, $06
 	smpsPan             panCenter, $00
-	dc.b	nD3, $1E, nRst, $06, nD3, $2A, nRst, $01, nCs3, $04, nC3, $08
-	dc.b	nBb2, $04, nRst, $01, nBb2, $1E, nRst, $06, nBb2, $2A, nRst, $01
-	dc.b	nBb2, $04, nC3, $08, nCs3, $04, nRst, $01, nD3, $1E, nRst, $06
-	dc.b	nD3, $2A, nRst, $01, nCs3, $04, nC3, $08, nBb2, $04, nRst, $01
-	dc.b	nBb2, $1E, nRst, $06, nBb2, $2A, nRst, $01, nBb2, $04, nC3, $08
-	dc.b	nCs3, $04, nRst, $01, nD3, $1E, nRst, $06, nD3, $2A, nRst, $01
-	dc.b	nCs3, $04, nC3, $08, nBb2, $04, nRst, $01, nBb2, $1E, nRst, $06
-	dc.b	nBb2, $2A, nRst, $01, nBb2, $04, nC3, $08, nE2, $04, nRst, $01
-	dc.b	nBb2, $17, nRst, $01, nBb2, $04, nA2, $08, nBb2, $04, nRst, $01
-	dc.b	nC3, $1E, nRst, $01, nC3, $08, nBb2, $05, nRst, $01, nC3, $04
-	dc.b	nD3, $05, nRst, $01, nC3, $08, nBb2, $06, nRst, $06, nBb2, $04
-	dc.b	nBb2, $08, nBb2, $04, nC3, $08, nBb2, $06, nRst, $06, nBb2, $06
-	dc.b	nRst, $06, nBb2, $04, nC3, $0C, nBb2, $0C
+	dc.b	nD3, $1B, nRst, $09, nD3, $27, nRst, $04, nCs3, $05, nC3, $07
+	dc.b	nBb2, $05, nBb2, $1B, nRst, $09, nBb2, $27, nRst, $04, nBb2, $05
+	dc.b	nC3, $07, nCs3, $05, nD3, $1B, nRst, $09, nD3, $27, nRst, $04
+	dc.b	nCs3, $05, nC3, $07, nBb2, $05, nBb2, $1B, nRst, $09, nBb2, $27
+	dc.b	nRst, $04, nBb2, $05, nC3, $07, nCs3, $05, nD3, $1B, nRst, $09
+	dc.b	nD3, $27, nRst, $04, nCs3, $05, nC3, $07, nBb2, $05, nBb2, $1B
+	dc.b	nRst, $09, nBb2, $27, nRst, $04, nBb2, $05, nC3, $07, nE2, $05
+	dc.b	nBb2, $15, nRst, $03, nBb2, $05, nA2, $07, nBb2, $05, nC3, $1B
+	dc.b	nRst, $04, nC3, $08, nBb2, $05, nRst, $01, nC3, $04, nD3, $05
+	dc.b	nRst, $01, nC3, $08, nBb2, $06, nRst, $06, nBb2, $04, nBb2, $08
+	dc.b	nBb2, $04, nC3, $08, nBb2, $06, nRst, $06, nBb2, $06, nRst, $06
+	dc.b	nBb2, $04, nC3, $0C, nBb2, $0C
 	dc.b	nD3, $0C, nRst, $18, nD3, $0C, nRst, $18, nD3, $0C, nD3, $0C
 	dc.b	nRst, $14, nD3, $03, nRst, $01, nC3, $08, nB2, $04, nA2, $0C
 
