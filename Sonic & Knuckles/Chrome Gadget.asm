@@ -8,8 +8,8 @@ Snd_CGZ_Header:
 	smpsHeaderFM        Snd_CGZ_FM1,	$18, $0C
 	smpsHeaderFM        Snd_CGZ_FM2,	$0C, $02
 	smpsHeaderFM        Snd_CGZ_FM3,	$0C, $0C
-	smpsHeaderFM        Snd_CGZ_FM4,	$0C, $0B
-	smpsHeaderFM        Snd_CGZ_FM5,	$0C, $0B
+	smpsHeaderFM        Snd_CGZ_FM4,	$0C, $0F
+	smpsHeaderFM        Snd_CGZ_FM5,	$0C, $0F
 	smpsHeaderPSG       Snd_CGZ_PSG1,	$F4, $03, $00, sTone_0C
 	smpsHeaderPSG       Snd_CGZ_PSG2,	$F4, $04, $00, sTone_0C
 	smpsHeaderPSG       Snd_CGZ_PSG3,	$00, $02, $00, sTone_0C
