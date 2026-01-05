@@ -10,8 +10,8 @@ snd_sng_z4a1_Header:
 	smpsHeaderFM        snd_sng_z4a1_FM3,	$00, $15
 	smpsHeaderFM        snd_sng_z4a1_FM4,	$00, $15
 	smpsHeaderFM        snd_sng_z4a1_FM5,	$00, $15
-	smpsHeaderPSG       snd_sng_z4a1_PSG1,	$F4, $06, $00, sTone_11
-	smpsHeaderPSG       snd_sng_z4a1_PSG2,	$F4, $07, $00, sTone_11
+	smpsHeaderPSG       snd_sng_z4a1_PSG1,	$F4, $06, $00, sTone_03
+	smpsHeaderPSG       snd_sng_z4a1_PSG2,	$E8, $06, $00, sTone_03
 	smpsHeaderPSG       snd_sng_z4a1_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -270,7 +270,6 @@ snd_sng_z4a1_PSG3:
 
 ; PSG1 Data
 snd_sng_z4a1_PSG1:
-	smpsStop
         dc.b    nRst, $0C, nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $08, nRst, $0A
         dc.b    nRst, $0C, nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $1E
         dc.b    nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $12, nRst, $0C
@@ -297,7 +296,7 @@ snd_sng_z4a1_PSG1:
 
 ; PSG2 Data
 snd_sng_z4a1_PSG2:
-	smpsStop
+	smpsJump	snd_sng_z4a1_PSG1
 
 snd_sng_z4a1_Voices:
 ;	Voice $00
