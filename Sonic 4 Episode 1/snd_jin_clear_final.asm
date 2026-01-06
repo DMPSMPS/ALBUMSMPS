@@ -31,6 +31,7 @@ snd_jin_clear_final_DAC:
 
 ; FM1 Data
 snd_jin_clear_final_FM1:
+	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	dc.b	nRst, $30, nG2, $06, nG3, $06, nG2, $06, nG3, $06, nG2, $06
 	dc.b	nG3, $06, nG2, $06, nG3, $06, nF2, $06, nF3, $06, nF2, $06
@@ -50,6 +51,7 @@ snd_jin_clear_final_FM1:
 
 ; FM2 Data
 snd_jin_clear_final_FM2:
+	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
 	dc.b	nRst, $30, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
 	dc.b	nC5, $06, nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06
@@ -73,6 +75,7 @@ snd_jin_clear_final_FM2:
 
 ; FM3 Data
 snd_jin_clear_final_FM3:
+	smpsModSet          $07, $01, $03, $05
 	smpsPan             panCenter, $00
 	smpsSetvoice        $02
 	dc.b	nRst, $30, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
@@ -97,6 +100,7 @@ snd_jin_clear_final_FM3:
 
 ; FM4 Data
 snd_jin_clear_final_FM4:
+	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	dc.b	nRst, $30, nD4, $0F, nRst, $03, nD4, $06, nRst, $06, nD4, $06
 	dc.b	nRst, $06, nF4, $06, nRst, $06, nF4, $06, nRst, $06, nF4, $0C
@@ -117,6 +121,7 @@ snd_jin_clear_final_FM4:
 
 ; FM5 Data
 snd_jin_clear_final_FM5:
+	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $03
 	dc.b	nRst, $30, nD4, $0F, nRst, $03, nD4, $06, nRst, $06, nD4, $06
 	dc.b	nRst, $06, nF4, $06, nRst, $06, nF4, $06, nRst, $06, nF4, $0C
