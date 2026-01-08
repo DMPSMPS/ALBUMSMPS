@@ -6,8 +6,8 @@ snd_sng_z3a1_Header:
 
 	smpsHeaderDAC       snd_sng_z3a1_DAC
 	smpsHeaderFM        snd_sng_z3a1_FM1,	$00, $0E
-	smpsHeaderFM        snd_sng_z3a1_FM2,	$00, $13
-	smpsHeaderFM        snd_sng_z3a1_FM3,	$00, $13
+	smpsHeaderFM        snd_sng_z3a1_FM2,	$00, $0C
+	smpsHeaderFM        snd_sng_z3a1_FM3,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM4,	$00, $1B
 	smpsHeaderFM        snd_sng_z3a1_FM5,	$00, $13
 	smpsHeaderPSG       snd_sng_z3a1_PSG1,	$0C, $03, $00, sTone_23
@@ -89,20 +89,17 @@ snd_sng_z3a1_FM1:
 snd_sng_z3a1_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsFMAlterVol	    -$07
 	dc.b	nRst, $18, nD5, $0C, nA4, $0C, nC5, $0C, nG4, $24, nA4, $24
 	dc.b	nF4, $24, nG4, $18, nD4, $24, nF4, $24, nG4, $24, nC4, $4E
 	dc.b	nRst, $1E, nD5, $0C, nA4, $0C, nC5, $0C, nG4, $24, nA4, $24
 	dc.b	nF4, $24, nG4, $18, nD4, $24, nF4, $24, nG4, $24, nC5, $54
 	smpsSetvoice        $04
-	smpsFMAlterVol	     $07
 	dc.b	nA4, $0C, nA4, $0C, nAb4, $0C, nA4, $0C, nRst, $0C, nD4, $0C
 	dc.b	nF4, $0C, nG4, $0C, nA4, $0C, nA4, $0C, nAb4, $0C, nA4, $0C
 	dc.b	nRst, $0C, nD4, $0C, nC5, $0C, nG4, $0C, nA4, $0C, nA4, $0C
 	dc.b	nAb4, $0C, nA4, $0C, nRst, $0C, nD4, $0C, nF4, $0C, nG4, $0C
 	dc.b	nA4, $18, nG4, $18, nC5, $18, nF4, $18, nRst, $18
 	smpsSetvoice        $01
-	smpsFMAlterVol	    -$07
 	dc.b	nD5, $18, nA4, $0C, nC5, $18, nG4, $0C, nA4, $18, nF4, $0C
 	dc.b	nG4, $18, nA4, $0C, nG4, $0C, nF4, $0C, nD4, $0C, nRst, $0C
 	dc.b	nD4, $0C, nF4, $0C, nRst, $0C, nF4, $0C, nG4, $0C, nRst, $0C
@@ -111,7 +108,6 @@ snd_sng_z3a1_FM2:
 	dc.b	nF4, $0C, nD4, $0C, nRst, $0C, nD4, $0C, nF4, $0C, nRst, $0C
 	dc.b	nF4, $0C, nG4, $0C, nRst, $0C, nG4, $0C, nC5, $54
 	smpsSetvoice        $04
-	smpsFMAlterVol	    $07
 	dc.b	nA4, $18, nAb4, $0C, nA4, $18, nD4, $0C, nF4, $0C, nG4, $0C
 	dc.b	nA4, $18, nC5, $18, nA4, $0C, nG4, $0C, nF4, $18, nG4, $0C
 	dc.b	nA4, $18, nC5, $18, nA4, $18, nD5, $18, nC5, $0C, nA4, $0C
@@ -123,14 +119,12 @@ snd_sng_z3a1_FM2:
 snd_sng_z3a1_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsFMAlterVol	    -$07
 	dc.b	nRst, $18, nD4, $0C, nA3, $0C, nC4, $0C, nG3, $24, nA3, $24
 	dc.b	nF3, $24, nG3, $18, nD3, $24, nF3, $24, nG3, $24, nC3, $4E
 	dc.b	nRst, $1E, nD4, $0C, nA3, $0C, nC4, $0C, nG3, $24, nA3, $24
 	dc.b	nF3, $24, nG3, $18, nD3, $24, nF3, $24, nG3, $24, nC4, $54, nRst, $0C
 	smpsSetvoice        $04
 	smpsAlterVol        $0B
-	smpsFMAlterVol	     $07
 	dc.b	nA4, $0C, nA4, $0C, nAb4, $0C, nA4, $0C, nRst, $0C, nD4, $0C
 	dc.b	nF4, $0C, nG4, $0C, nA4, $0C, nA4, $0C, nAb4, $0C, nA4, $0C
 	dc.b	nRst, $0C, nD4, $0C, nC5, $0C, nG4, $0C, nA4, $0C, nA4, $0C
@@ -138,7 +132,6 @@ snd_sng_z3a1_FM3:
 	dc.b	nA4, $18, nG4, $18, nC5, $18, nF4, $18, nRst, $0C
 	smpsSetvoice        $01
 	smpsAlterVol        $F5
-	smpsFMAlterVol	    -$07
 	dc.b	nD4, $18, nA3, $0C, nC4, $18, nG3, $0C, nA3, $18, nF3, $0C
 	dc.b	nG3, $18, nA3, $0C, nG3, $0C, nF3, $0C, nD3, $0C, nRst, $0C
 	dc.b	nD3, $0C, nF3, $0C, nRst, $0C, nF3, $0C, nG3, $0C, nRst, $0C
@@ -148,7 +141,6 @@ snd_sng_z3a1_FM3:
 	dc.b	nF3, $0C, nG3, $0C, nRst, $0C, nG3, $0C, nC4, $54, nRst, $0C
 	smpsSetvoice        $04
 	smpsAlterVol        $0B
-	smpsFMAlterVol	    $07
 	dc.b	nA4, $18, nAb4, $0C, nA4, $18, nD4, $0C, nF4, $0C, nG4, $0C
 	dc.b	nA4, $18, nC5, $18, nA4, $0C, nG4, $0C, nF4, $18, nG4, $0C
 	dc.b	nA4, $18, nC5, $18, nA4, $18, nD5, $18, nC5, $0C, nA4, $0C
