@@ -8,8 +8,8 @@ snd_sng_final_Header:
 	smpsHeaderFM        snd_sng_final_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_final_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_final_FM3,	$00, $1E
-	smpsHeaderFM        snd_sng_final_FM4,	$00, $13
-	smpsHeaderFM        snd_sng_final_FM5,	$00, $13
+	smpsHeaderFM        snd_sng_final_FM4,	$00, $08
+	smpsHeaderFM        snd_sng_final_FM5,	$00, $08
 	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $00, $00, sTone_03
 	smpsHeaderPSG       snd_sng_final_PSG2,	$0C, $02, $00, sTone_11
 
@@ -144,7 +144,6 @@ snd_sng_final_FM3:
 
 ; FM4 Data
 snd_sng_final_FM4:
-	smpsFMAlterVol      $FB
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panLeft, $00
 	smpsSetvoice        $02
@@ -185,7 +184,6 @@ snd_sng_final_FM4:
 
 ; FM5 Data
 snd_sng_final_FM5:
-	smpsFMAlterVol      $FB
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panRight, $00
 	smpsSetvoice        $02
