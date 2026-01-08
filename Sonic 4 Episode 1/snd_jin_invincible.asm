@@ -9,8 +9,8 @@ snd_jin_invincible_Header:
 	smpsHeaderFM        snd_jin_invincible_FM2,	$00, $13
 	smpsHeaderFM        snd_jin_invincible_FM3,	$00, $1E
 	smpsHeaderFM        snd_jin_invincible_FM4,	$00, $13
-	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $00, $00, sTone_06
-	smpsHeaderPSG       snd_jin_invincible_PSG2,	$0C, $00, $00, sTone_06
+	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $00, $00, sTone_03
+	smpsHeaderPSG       snd_jin_invincible_PSG2,	$0C, $00, $00, sTone_03
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
