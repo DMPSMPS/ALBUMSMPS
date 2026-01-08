@@ -16,43 +16,43 @@ snd_sng_z2a2_Header:
 
 ; DAC Data
 snd_sng_z2a2_DAC:
-	dc.b	dKickS3, $12, dKickS3, $12, dQuickLooseSnare, $12, dKickS3, $12, dQuickLooseSnare, $08, dQuickLooseSnare, $04
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dKickS3, $0C, dQuickLooseSnare, $08, dQuickLooseSnare, $04, dQuickLooseSnare, $06
-	dc.b	dKickS3, $12, dKickS3, $14, dKickS3, $04, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $06
-	dc.b	dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06
-	dc.b	dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06
-	dc.b	dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C
-	dc.b	dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $12, dKickS3, $0C, dQuickLooseSnare, $08
-	dc.b	dQuickLooseSnare, $04, dQuickLooseSnare, $06, dKickS3, $12, dKickS3, $14, dKickS3, $04, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C
-	dc.b	dKickS3, $06, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C
-	dc.b	dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06
-	dc.b	dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $06, dKickS3, $12
-	dc.b	dKickS3, $0C, dQuickLooseSnare, $08, dQuickLooseSnare, $04, dQuickLooseSnare, $06, dKickS3, $12, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $08, dQuickLooseSnare, $04, dQuickLooseSnare, $04, dQuickLooseSnare, $04, dQuickLooseSnare, $04, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $08
-	dc.b	dKickS3, $04, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $06
-	dc.b	dKickS3, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $0C
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $06, dKickS3, $0C, dKickS3, $06
-	dc.b	dQuickLooseSnare, $0C, dKickS3, $0C, dQuickLooseSnare, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $0C
-	dc.b	dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $0C, dKickS3, $06, dQuickLooseSnare, $0C, dQuickLooseSnare, $06
-	dc.b	dQuickLooseSnare, $0C, dQuickLooseSnare, $06, dQuickLooseSnare, $06
+	dc.b	dKickS3, $12, dKickS3, $12, dSnareS3, $12, dKickS3, $12, dSnareS3, $08, dSnareS3, $04
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dKickS3, $0C, dSnareS3, $08, dSnareS3, $04, dSnareS3, $06
+	dc.b	dKickS3, $12, dKickS3, $14, dKickS3, $04, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C
+	dc.b	dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $06
+	dc.b	dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C
+	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06
+	dc.b	dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C
+	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06
+	dc.b	dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C
+	dc.b	dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $12, dKickS3, $0C, dSnareS3, $08
+	dc.b	dSnareS3, $04, dSnareS3, $06, dKickS3, $12, dKickS3, $14, dKickS3, $04, dSnareS3, $0C
+	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C
+	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C
+	dc.b	dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C
+	dc.b	dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C
+	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C
+	dc.b	dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06
+	dc.b	dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $12
+	dc.b	dKickS3, $0C, dSnareS3, $08, dSnareS3, $04, dSnareS3, $06, dKickS3, $12, dKickS3, $0C
+	dc.b	dSnareS3, $08, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $08, dKickS3, $04, dSnareS3, $06, dKickS3, $0C, dKickS3, $06
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $08
+	dc.b	dKickS3, $04, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $08, dKickS3, $04, dSnareS3, $06
+	dc.b	dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $08, dKickS3, $04, dSnareS3, $06, dKickS3, $0C, dKickS3, $06
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $08, dKickS3, $04, dSnareS3, $0C
+	dc.b	dKickS3, $08, dKickS3, $04, dSnareS3, $0C, dKickS3, $06, dSnareS3, $0C, dSnareS3, $06
+	dc.b	dSnareS3, $0C, dSnareS3, $06, dSnareS3, $06
 	smpsJump	snd_sng_z2a2_DAC	
 
 ; FM4 Data
