@@ -91,6 +91,7 @@ snd_sng_z4a1_FM1:
 snd_sng_z4a1_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+	smpsFMAlterVol     -$07
 	dc.b	nC5, $03, nC5, $03, nC5, $05, nRst, $07, nG4, $08, nRst, $0A
 	dc.b	nBb4, $0C, nC5, $03, nC5, $03, nC5, $05, nRst, $07, nEb5, $1E
 	dc.b	nC5, $03, nC5, $03, nC5, $05, nRst, $07, nG4, $12, nBb4, $0C
@@ -101,6 +102,7 @@ snd_sng_z4a1_FM2:
 	dc.b	nC5, $03, nC5, $05, nRst, $07, nBb4, $1E
 	smpsSetvoice        $02
 	smpsChangeTransposition		$0C
+	smpsFMAlterVol      $07
 	dc.b	nC5, $12, nEb5, $0C, nD5, $0C, nBb4
 	dc.b	$06, nC5, $12, nG4, $12, nF4, $0C, nG4, $12, nC5, $21
 	dc.b	nRst, $2D, nC5, $12, nEb5, $0C, nD5, $06, nBb4, $0C, nC5, $12, nG4
@@ -116,14 +118,17 @@ snd_sng_z4a1_FM2:
 	dc.b	nRst, $06, nG4, $06, nRst, $06, nBb4, $06, nRst, $0C
 	smpsSetvoice        $01
 	smpsChangeTransposition		$F4
+	smpsFMAlterVol     -$07
 	dc.b	nEb5, $06, nEb5, $06, nRst, $06
 	dc.b	nD5, $06, nD5, $06, nCs5, $06, nCs5, $06
+	smpsFMAlterVol      $07
 	smpsJump	snd_sng_z4a1_FM2
 
 ; FM3 Data
 snd_sng_z4a1_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+	smpsFMAlterVol     -$07
 	dc.b	nC4, $03, nC4, $03, nC4, $05, nRst, $07, nC4, $1E, nF4, $03
 	dc.b	nF4, $03, nF4, $05, nRst, $07, nF4, $1E, nEb4, $03, nEb4, $03
 	dc.b	nEb4, $05, nRst, $07, nEb4, $1E, nCs4, $03, nCs4, $03, nCs4, $05
@@ -131,6 +136,7 @@ snd_sng_z4a1_FM3:
 	dc.b	nC4, $1E, nF4, $03, nF4, $03, nF4, $05, nRst, $07, nF4, $1E
 	dc.b	nEb4, $03, nEb4, $03, nEb4, $05, nRst, $07, nEb4, $1E, nCs4, $03
 	dc.b	nCs4, $03, nCs4, $05, nRst, $07, nCs4, $1E
+	smpsFMAlterVol      $07
 	smpsSetvoice        $03
 	smpsChangeTransposition		$0C
 	smpsFMAlterVol      -$03
@@ -151,9 +157,9 @@ snd_sng_z4a1_FM3:
 	dc.b	nRst, $06, nG3, $06, nRst, $06, nBb3, $06, nRst, $0C
 	smpsSetvoice        $01
 	smpsChangeTransposition		$F4
-	smpsFMAlterVol      $07
 	dc.b	nBb4, $06, nBb4, $06, nRst, $06
 	dc.b	nA4, $06, nA4, $06, nAb4, $06, nAb4, $06
+	smpsFMAlterVol      $07
 	smpsJump	snd_sng_z4a1_FM3
 
 ; FM4 Data
@@ -200,6 +206,7 @@ snd_sng_z4a1_FM4:
 snd_sng_z4a1_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+	smpsAlterNote       $FD
         dc.b    nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $08, nRst, $0A
         dc.b    nRst, $0C, nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $1E
         dc.b    nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $12, nRst, $0C
