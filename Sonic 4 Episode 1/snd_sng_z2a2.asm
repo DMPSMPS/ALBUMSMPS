@@ -5,11 +5,11 @@ snd_sng_z2a2_Header:
 	smpsHeaderTempo     $01, $44
 
 	smpsHeaderDAC       snd_sng_z2a2_DAC
-	smpsHeaderFM        snd_sng_z2a2_FM1,	$00, $13
+	smpsHeaderFM        snd_sng_z2a2_FM1,	$00, $0C
 	smpsHeaderFM        snd_sng_z2a2_FM2,	$00, $0E
-	smpsHeaderFM        snd_sng_z2a2_FM3,	$00, $13
-	smpsHeaderFM        snd_sng_z2a2_FM4,	$00, $25
-	smpsHeaderFM        snd_sng_z2a2_FM5,	$00, $25
+	smpsHeaderFM        snd_sng_z2a2_FM3,	$00, $0C
+	smpsHeaderFM        snd_sng_z2a2_FM4,	$00, $1E
+	smpsHeaderFM        snd_sng_z2a2_FM5,	$00, $1E
 	smpsHeaderPSG       snd_sng_z2a2_PSG1,	$00, $00, $00, $00
 	smpsHeaderPSG       snd_sng_z2a2_PSG2,	$00, $00, $00, $00
 	smpsHeaderPSG       snd_sng_z2a2_PSG3,	$23, $00, $00, sTone_0F
