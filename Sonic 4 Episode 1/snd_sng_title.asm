@@ -10,8 +10,8 @@ snd_sng_title_Header:
 	smpsHeaderFM        snd_sng_title_FM3,	$F4, $15
 	smpsHeaderFM        snd_sng_title_FM4,	$00, $0F
 	smpsHeaderFM        snd_sng_title_FM5,	$00, $0F
-	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $01, $00, sTone_03
-	smpsHeaderPSG       snd_sng_title_PSG2,	$0C, $00, $00, sTone_03
+	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $01, $00, sTone_06
+	smpsHeaderPSG       snd_sng_title_PSG2,	$0C, $00, $00, sTone_06
 	smpsHeaderPSG       snd_sng_title_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
