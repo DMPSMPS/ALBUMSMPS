@@ -5,11 +5,11 @@ Snd_Invic_Header:
 	smpsHeaderTempo     $01, $7D
 
 	smpsHeaderDAC       Snd_Invic_DAC
-	smpsHeaderFM        Snd_Invic_FM1,	$01, $0B
-	smpsHeaderFM        Snd_Invic_FM2,	$F5, $16
-	smpsHeaderFM        Snd_Invic_FM3,	$F5, $18
-	smpsHeaderFM        Snd_Invic_FM4,	$0D, $15
-	smpsHeaderFM        Snd_Invic_FM5,	$F5, $16
+	smpsHeaderFM        Snd_Invic_FM1,	$F9, $0B
+	smpsHeaderFM        Snd_Invic_FM2,	$ED, $16
+	smpsHeaderFM        Snd_Invic_FM3,	$ED, $18
+	smpsHeaderFM        Snd_Invic_FM4,	$05, $15
+	smpsHeaderFM        Snd_Invic_FM5,	$ED, $16
 	smpsHeaderPSG       Snd_Invic_PSG1,	$00, $06, $00, sTone_06
 	smpsHeaderPSG       Snd_Invic_PSG2,	$00, $07, $00, sTone_04
 	smpsHeaderPSG       Snd_Invic_PSG3,	$23, $00, $00, sTone_03
