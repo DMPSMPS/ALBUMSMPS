@@ -107,7 +107,7 @@ snd_jin_invincible_FM2INIT:
 ; FM3 Data
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $02
 	smpsAlterNote	    $FD
 	dc.b	nRst, $0C
 	smpsJump		snd_jin_invincible_FM2INIT
