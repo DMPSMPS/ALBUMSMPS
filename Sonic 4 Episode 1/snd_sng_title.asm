@@ -229,7 +229,7 @@ snd_sng_title_Voices:
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $01, $05, $02, $01
-	smpsVcCoarseFreq    $02, $03, $01, $02
+	smpsVcCoarseFreq    $02, $03, $01, $04
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $0F, $14, $14, $12
 	smpsVcAmpMod        $00, $00, $00, $00
