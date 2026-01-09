@@ -1,14 +1,13 @@
 snd_jin_invincible_Header:
 	smpsHeaderStartSong 3
 	smpsHeaderVoice     snd_jin_invincible_Voices
-	smpsHeaderChan      $05, $03
+	smpsHeaderChan      $04, $03
 	smpsHeaderTempo     $01, $07
 
 	smpsHeaderDAC       snd_jin_invincible_DAC
 	smpsHeaderFM        snd_jin_invincible_FM1,	$00, $0E
 	smpsHeaderFM        snd_jin_invincible_FM2,	$00, $13
 	smpsHeaderFM        snd_jin_invincible_FM3,	$00, $1E
-	smpsHeaderFM        snd_jin_invincible_FM4,	$00, $13
 	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $00, $00, sTone_03
 	smpsHeaderPSG       snd_jin_invincible_PSG2,	$0C, $00, $00, sTone_03
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
@@ -79,7 +78,7 @@ snd_jin_invincible_FM1:
 ; FM2 Data
 snd_jin_invincible_FM2:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
+	smpsSetvoice        $01
 	dc.b	nC5, $0F, nRst, $03, nB4, $0C, nA4, $06, nG4, $06, nRst, $06
 	dc.b	nD5, $0F, nRst, $03, nCs5, $0C, nB4, $06, nA4, $06, nRst, $06
 	dc.b	nEb5, $0F, nRst, $03, nD5, $0C, nC5, $06, nBb4, $06, nRst, $06
@@ -107,59 +106,10 @@ snd_jin_invincible_FM2:
 ; FM3 Data
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
-	smpsAlterNote	    $FD
-	dc.b	nRst, $0C, nC5, $0F, nRst, $03, nB4, $0C, nA4, $06, nG4, $06
-	dc.b	nRst, $06, nD5, $0F, nRst, $03, nCs5, $0C, nB4, $06, nA4, $06
-	dc.b	nRst, $06, nEb5, $0F, nRst, $03, nD5, $0C, nC5, $06, nBb4, $06
-	dc.b	nRst, $06, nF5, $0F, nRst, $03, nE5, $0C, nD5, $06, nC5, $06
-	dc.b	nRst, $06, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
-	dc.b	nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $0C, nRst, $0C
-	dc.b	nE5, $0C, nFs5, $0C, nD5, $36, nRst, $06, nD5, $0C, nRst, $06
-	dc.b	nD5, $06, nE5, $06, nRst, $06, nG5, $0C, nRst, $0C, nFs5, $0C
-	dc.b	nRst, $0C, nE5, $54, nRst, $18, nD5, $0C, nRst, $06, nD5, $06
-	dc.b	nE5, $06, nRst, $06, nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C
-	dc.b	nE5, $0C, nRst, $0C, nE5, $0C, nFs5, $0C, nD5, $36, nRst, $06
-	dc.b	nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06, nG5, $0C
-	dc.b	nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $54, nRst, $18, nB4, $06
-	dc.b	nCs5, $06, nD5, $06, nB4, $0C, nCs5, $06, nD5, $09, nRst, $03
-	dc.b	nCs5, $06, nD5, $06, nE5, $06, nCs5, $0C, nD5, $06, nE5, $09
-	dc.b	nRst, $03, nD5, $06, nE5, $06, nF5, $06, nD5, $0C, nE5, $06
-	dc.b	nF5, $09, nRst, $03, nE5, $06, nF5, $06, nG5, $06, nE5, $0C
-	dc.b	nF5, $06, nG5, $06, nE5, $06, nD5, $0C, nRst, $06, nD5, $06
-	dc.b	nE5, $06, nRst, $06, nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C
-	dc.b	nE5, $0C, nRst, $0C, nE5, $0C, nFs5, $0C, nD5, $36, nRst, $5A
 	smpsSetvoice        $01
-	smpsPan             panCenter, $00
-	smpsStop
-
-; FM4 Data
-snd_jin_invincible_FM4:
-	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
 	smpsAlterNote	    $FD
-	smpsStop
-	dc.b	nC4, $0F, nRst, $03, nB3, $0C, nA3, $06, nG3, $06, nRst, $06
-	dc.b	nD4, $0F, nRst, $03, nCs4, $0C, nB3, $06, nA3, $06, nRst, $06
-	dc.b	nEb4, $0F, nRst, $03, nD4, $0C, nC4, $06, nBb3, $06, nRst, $06
-	dc.b	nF4, $0F, nRst, $03, nE4, $0C, nD4, $06, nC4, $06, nRst, $06
-	dc.b	nD4, $0C, nRst, $06, nD4, $06, nE4, $06, nRst, $06, nG4, $0C
-	dc.b	nRst, $0C, nFs4, $0C, nRst, $0C, nE4, $0C, nRst, $0C, nE4, $0C
-	dc.b	nFs4, $0C, nD4, $36, nRst, $06, nD4, $0C, nRst, $06, nD4, $06
-	dc.b	nE4, $06, nRst, $06, nG4, $0C, nRst, $0C, nFs4, $0C, nRst, $0C
-	dc.b	nE4, $54, nRst, $18, nD4, $0C, nRst, $06, nD4, $06, nE4, $06
-	dc.b	nRst, $06, nG4, $0C, nRst, $0C, nFs4, $0C, nRst, $0C, nE4, $0C
-	dc.b	nRst, $0C, nE4, $0C, nFs4, $0C, nD4, $36, nRst, $06, nD4, $0C
-	dc.b	nRst, $06, nD4, $06, nE4, $06, nRst, $06, nG4, $0C, nRst, $0C
-	dc.b	nFs4, $0C, nRst, $0C, nE4, $54, nRst, $18, nB3, $06, nCs4, $06
-	dc.b	nD4, $06, nB3, $0C, nCs4, $06, nD4, $09, nRst, $03, nCs4, $06
-	dc.b	nD4, $06, nE4, $06, nCs4, $0C, nD4, $06, nE4, $09, nRst, $03
-	dc.b	nD4, $06, nE4, $06, nF4, $06, nD4, $0C, nE4, $06, nF4, $09
-	dc.b	nRst, $03, nE4, $06, nF4, $06, nG4, $06, nE4, $0C, nF4, $06
-	dc.b	nG4, $06, nE4, $06, nD4, $0C, nRst, $06, nD4, $06, nE4, $06
-	dc.b	nRst, $06, nG4, $0C, nRst, $0C, nFs4, $0C, nRst, $0C, nE4, $0C
-	dc.b	nRst, $0C, nE4, $0C, nFs4, $0C, nD4, $36, nRst, $66
-	smpsStop
+	dc.b	nRst, $0C
+	smpsJump		snd_jin_invincible_FM2
 
 ; PSG1 Data
 snd_jin_invincible_PSG1:
@@ -254,37 +204,19 @@ snd_jin_invincible_Voices:
 	smpsVcTotalLevel    $00, $1E, $14, $0E
 
 ;	Voice $01
-;	$15
-;	$71, $72, $01, $31, 	$0F, $14, $14, $14, 	$00, $05, $02, $02
-;	$00, $00, $00, $00, 	$0F, $1F, $1F, $1F, 	$2D, $80, $80, $80
-	smpsVcAlgorithm     $05
-	smpsVcFeedback      $02
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $03, $00, $07, $07
-	smpsVcCoarseFreq    $01, $01, $02, $01
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $14, $14, $14, $0F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $02, $02, $05, $00
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $01, $01, $01, $00
-	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $00, $00, $2D
-
-;	Voice $02
 ;	$3D
-;	$12, $21, $51, $12, 	$12, $14, $14, $0F, 	$0A, $05, $05, $05
-;	$00, $00, $00, $00, 	$2B, $2B, $2B, $1B, 	$19, $80, $80, $80
+;	$12, $21, $54, $12, 	$12, $14, $14, $0F, 	$0A, $05, $02, $05
+;	$00, $00, $00, $00, 	$2B, $2B, $1F, $1B, 	$19, $00, $00, $00
 	smpsVcAlgorithm     $05
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $01, $05, $02, $01
-	smpsVcCoarseFreq    $02, $01, $01, $02
+	smpsVcCoarseFreq    $02, $04, $01, $02
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $0F, $14, $14, $12
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $05, $05, $05, $0A
+	smpsVcDecayRate1    $05, $02, $05, $0A
 	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $01, $02, $02, $02
-	smpsVcReleaseRate   $0B, $0B, $0B, $0B
+	smpsVcDecayLevel    $01, $01, $02, $02
+	smpsVcReleaseRate   $0B, $0F, $0B, $0B
 	smpsVcTotalLevel    $00, $00, $00, $19
