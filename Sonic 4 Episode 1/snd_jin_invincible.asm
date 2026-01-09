@@ -79,7 +79,7 @@ snd_jin_invincible_FM1:
 ; FM2 Data
 snd_jin_invincible_FM2:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $02
 	dc.b	nC5, $0F, nRst, $03, nB4, $0C, nA4, $06, nG4, $06, nRst, $06
 	dc.b	nD5, $0F, nRst, $03, nCs5, $0C, nB4, $06, nA4, $06, nRst, $06
 	dc.b	nEb5, $0F, nRst, $03, nD5, $0C, nC5, $06, nBb4, $06, nRst, $06
@@ -107,7 +107,7 @@ snd_jin_invincible_FM2:
 ; FM3 Data
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $02
 	smpsAlterNote	    $FD
 	dc.b	nRst, $0C, nC5, $0F, nRst, $03, nB4, $0C, nA4, $06, nG4, $06
 	dc.b	nRst, $06, nD5, $0F, nRst, $03, nCs5, $0C, nB4, $06, nA4, $06
@@ -138,6 +138,7 @@ snd_jin_invincible_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsAlterNote	    $FD
+	smpsStop
 	dc.b	nC4, $0F, nRst, $03, nB3, $0C, nA3, $06, nG3, $06, nRst, $06
 	dc.b	nD4, $0F, nRst, $03, nCs4, $0C, nB3, $06, nA3, $06, nRst, $06
 	dc.b	nEb4, $0F, nRst, $03, nD4, $0C, nC4, $06, nBb3, $06, nRst, $06
