@@ -83,6 +83,7 @@ snd_jin_clear_final_FM2:
 snd_jin_clear_final_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
+	smpsAlterNote       $FD
 	dc.b	nRst, $36, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
 	dc.b	nC5, $06, nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06
 	dc.b	nA4, $06, nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03
@@ -109,6 +110,7 @@ snd_jin_clear_final_FM3:
 snd_jin_clear_final_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
+	smpsAlterNote       $FA
 	dc.b	nRst, $3C, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
 	dc.b	nC5, $06, nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06
 	dc.b	nA4, $06, nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03
