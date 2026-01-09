@@ -10,8 +10,8 @@ snd_sng_title_Header:
 	smpsHeaderFM        snd_sng_title_FM3,	$F4, $1E
 	smpsHeaderFM        snd_sng_title_FM4,	$00, $14
 	smpsHeaderFM        snd_sng_title_FM5,	$00, $14
-	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $01, $00, sTone_03
-	smpsHeaderPSG       snd_sng_title_PSG2,	$0C, $00, $00, sTone_03
+	smpsHeaderPSG       snd_sng_title_PSG1,	$F4, $01, $00, sTone_0A
+	smpsHeaderPSG       snd_sng_title_PSG2,	$0C, $00, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_title_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -155,6 +155,7 @@ snd_sng_title_FM4:
 
 ; PSG1 Data
 snd_sng_title_PSG1:
+	smpsModSet          $15, $01, $03, $06
 	dc.b	nRst, $30, nD4, $0C, nRst, $06, nD4, $06, nE4, $06, nRst, $06
 	dc.b	nG4, $0C, nRst, $0C, nFs4, $0C, nRst, $0C, nE4, $0C, nRst, $0C
 	dc.b	nE4, $0C, nFs4, $0C, nD4, $36, nRst, $06, nD4, $0C, nRst, $06
@@ -169,6 +170,7 @@ snd_sng_title_PSG1:
 
 ; PSG2 Data
 snd_sng_title_PSG2:
+	smpsModSet          $15, $01, $03, $06
 	dc.b	nRst, $30, nA1, $1E, nRst, $06, nA1, $0C, nRst, $0C, nA1, $0C
 	dc.b	nRst, $0C, nC2, $0C, nRst, $0C, nC2, $0C, nRst, $0C, nC2, $18
 	dc.b	nB1, $0C, nA1, $0C, nG1, $0C, nB1, $1E, nRst, $06, nB1, $0C
