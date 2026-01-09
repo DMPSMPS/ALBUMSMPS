@@ -7,7 +7,7 @@ snd_sng_title_Header:
 	smpsHeaderDAC       snd_sng_title_DAC
 	smpsHeaderFM        snd_sng_title_FM1,	$00, $10
 	smpsHeaderFM        snd_sng_title_FM2,	$00, $15
-	smpsHeaderFM        snd_sng_title_FM3,	$F4, $15
+	smpsHeaderFM        snd_sng_title_FM3,	$00, $1E
 	smpsHeaderFM        snd_sng_title_FM4,	$00, $0F
 	smpsHeaderFM        snd_sng_title_FM5,	$00, $0F
 	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $01, $00, sTone_03
@@ -59,8 +59,7 @@ snd_sng_title_FM1:
 snd_sng_title_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panCenter, $00
-	smpsSetvoice        $01
-	smpsAlterNote	    $03
+	smpsSetvoice        $02
 	dc.b	nRst, $30, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
 	dc.b	nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $0C, nRst, $0C
 	dc.b	nE5, $0C, nFs5, $0C, nD5, $36, nRst, $06, nD5, $0C, nRst, $06
@@ -78,7 +77,7 @@ snd_sng_title_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsAlterNote	    $FD
-	dc.b	nRst, $30, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
+	dc.b	nRst, $3C, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
 	dc.b	nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $0C, nRst, $0C
 	dc.b	nE5, $0C, nFs5, $0C, nD5, $36, nRst, $06, nD5, $0C, nRst, $06
 	dc.b	nD5, $06, nE5, $06, nRst, $06, nG5, $0C, nRst, $0C, nFs5, $0C
