@@ -79,6 +79,7 @@ snd_jin_invincible_FM1:
 snd_jin_invincible_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+snd_jin_invincible_FM2INIT:
 	dc.b	nC5, $0F, nRst, $03, nB4, $0C, nA4, $06, nG4, $06, nRst, $06
 	dc.b	nD5, $0F, nRst, $03, nCs5, $0C, nB4, $06, nA4, $06, nRst, $06
 	dc.b	nEb5, $0F, nRst, $03, nD5, $0C, nC5, $06, nBb4, $06, nRst, $06
@@ -109,7 +110,7 @@ snd_jin_invincible_FM3:
 	smpsSetvoice        $01
 	smpsAlterNote	    $FD
 	dc.b	nRst, $0C
-	smpsJump		snd_jin_invincible_FM2
+	smpsJump		snd_jin_invincible_FM2INIT
 
 ; PSG1 Data
 snd_jin_invincible_PSG1:
@@ -222,3 +223,21 @@ snd_jin_invincible_Voices:
 	smpsVcDecayLevel    $01, $01, $02, $02
 	smpsVcReleaseRate   $0B, $0F, $0B, $0B
 	smpsVcTotalLevel    $00, $00, $00, $19
+
+;	Voice $02
+;	$15
+;	$71, $72, $01, $31, 	$0F, $14, $14, $14, 	$00, $05, $02, $02
+;	$00, $00, $00, $00, 	$0F, $1F, $1F, $1F, 	$2D, $80, $80, $80
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $02
+	smpsVcUnusedBits    $00
+	smpsVcDetune        $03, $00, $07, $07
+	smpsVcCoarseFreq    $01, $01, $02, $01
+	smpsVcRateScale     $00, $00, $00, $00
+	smpsVcAttackRate    $14, $14, $14, $0F
+	smpsVcAmpMod        $00, $00, $00, $00
+	smpsVcDecayRate1    $02, $02, $05, $00
+	smpsVcDecayRate2    $00, $00, $00, $00
+	smpsVcDecayLevel    $01, $01, $01, $00
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcTotalLevel    $00, $00, $00, $2D
