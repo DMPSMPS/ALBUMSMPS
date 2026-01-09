@@ -135,6 +135,7 @@ snd_sng_z4a1_FM3:
 	dc.b	nCs4, $03, nCs4, $05, nRst, $07, nCs4, $1E
 	smpsChangeTransposition		$0C
 	smpsFMAlterVol       -$03
+	smpsSetvoice        $03
 	dc.b	nC5, $12, nEb5, $0C, nD5, $0C, nBb4
 	dc.b	$06, nC5, $12, nG4, $12, nF4, $0C, nG4, $12, nC5, $21
 	dc.b	nRst, $2D, nC5, $12, nEb5, $0C, nD5, $06, nBb4, $0C, nC5, $12, nG4
