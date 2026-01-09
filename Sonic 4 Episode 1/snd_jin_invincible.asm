@@ -8,8 +8,8 @@ snd_jin_invincible_Header:
 	smpsHeaderFM        snd_jin_invincible_FM1,	$00, $0E
 	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
-	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $00, $00, sTone_03
-	smpsHeaderPSG       snd_jin_invincible_PSG2,	$0C, $00, $00, sTone_03
+	smpsHeaderPSG       snd_jin_invincible_PSG1,	$00, $00, $00, sTone_0A
+	smpsHeaderPSG       snd_jin_invincible_PSG2,	$0C, $00, $00, sTone_0A
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -113,6 +113,7 @@ snd_jin_invincible_FM3:
 
 ; PSG1 Data
 snd_jin_invincible_PSG1:
+	smpsModSet          $15, $01, $03, $06
 	dc.b	nRst, $02, $10, nD1, $1B, nRst, $03, nE1, $0F, nRst, $03, nE1
 	dc.b	$1B, nRst, $03, nF1, $0F, nRst, $03, nF1, $1B, nRst, $03, nG1
 	dc.b	$0F, nRst, $03, nG1, $1B, nRst, $03, nA1, $1E, nRst, $06, nA1
@@ -133,6 +134,7 @@ snd_jin_invincible_PSG1:
 
 ; PSG2 Data
 snd_jin_invincible_PSG2:
+	smpsModSet          $15, $01, $03, $06
 	dc.b	nG1, $0F, nRst, $03, nB1, $0C, nA1, $06, nG1, $06, nRst, $06
 	dc.b	nA1, $0F, nRst, $03, nCs2, $0C, nB1, $06, nA1, $06, nRst, $06
 	dc.b	nBb1, $0F, nRst, $03, nD2, $0C, nC2, $06, nBb1, $06, nRst, $06
