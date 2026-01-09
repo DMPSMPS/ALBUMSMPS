@@ -1,4 +1,4 @@
-snd_sng_title_Header:
+8snd_sng_title_Header:
 	smpsHeaderStartSong 3
 	smpsHeaderVoice     snd_sng_title_Voices
 	smpsHeaderChan      $06, $03
@@ -10,7 +10,7 @@ snd_sng_title_Header:
 	smpsHeaderFM        snd_sng_title_FM3,	$F4, $1E
 	smpsHeaderFM        snd_sng_title_FM4,	$00, $14
 	smpsHeaderFM        snd_sng_title_FM5,	$00, $14
-	smpsHeaderPSG       snd_sng_title_PSG1,	$F4, $01, $00, sTone_0A
+	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $01, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_title_PSG2,	$0C, $00, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_title_PSG3,	$23, $00, $00, sTone_0F
 
