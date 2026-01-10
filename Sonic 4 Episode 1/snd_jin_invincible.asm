@@ -8,8 +8,8 @@ snd_jin_invincible_Header:
 	smpsHeaderFM        snd_jin_invincible_FM1,	$00, $0E
 	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
-	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $03, $00, $00
-	smpsHeaderPSG       snd_jin_invincible_PSG2,	$0C, $03, $00, $00
+	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $03, $00, sTone_0A
+	smpsHeaderPSG       snd_jin_invincible_PSG2,	$00, $03, $00, sTone_17
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -107,14 +107,13 @@ snd_jin_invincible_FM2INIT:
 ; FM3 Data
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
+	smpsSetvoice        $01
 	smpsAlterNote	    $FD
 	dc.b	nRst, $0C
 	smpsJump		snd_jin_invincible_FM2INIT
 
 ; PSG1 Data
 snd_jin_invincible_PSG1:
-	smpsModSet          $15, $01, $03, $06
 	dc.b	nRst, $02, $10, nD1, $1B, nRst, $03, nE1, $0F, nRst, $03, nE1
 	dc.b	$1B, nRst, $03, nF1, $0F, nRst, $03, nF1, $1B, nRst, $03, nG1
 	dc.b	$0F, nRst, $03, nG1, $1B, nRst, $03, nA1, $1E, nRst, $06, nA1
@@ -129,13 +128,11 @@ snd_jin_invincible_PSG1:
 	dc.b	$12, nRst, $0C, nBb1, $06, nRst, $0C, nBb1, $12, nRst, $0C, nC2
 	dc.b	$06, nRst, $0C, nC2, $12, nRst, $0C, nA1, $1E, nRst, $06, nA1
 	dc.b	$0C, nRst, $0C, nA1, $0C, nRst, $0C, nC2, $0C, nRst, $0C, nC2
-	dc.b	$0C, nRst, $0C, nC2, $18, nB1, $0C, nA1, $0C, nG1, $0C, nRst
-	dc.b	$60
+	dc.b	$0C, nRst, $0C, nC2, $18, nB1, $0C, nA1, $0C, nG1, $0C
 	smpsStop
 
 ; PSG2 Data
 snd_jin_invincible_PSG2:
-	smpsModSet          $15, $01, $03, $06
 	dc.b	nG1, $0F, nRst, $03, nB1, $0C, nA1, $06, nG1, $06, nRst, $06
 	dc.b	nA1, $0F, nRst, $03, nCs2, $0C, nB1, $06, nA1, $06, nRst, $06
 	dc.b	nBb1, $0F, nRst, $03, nD2, $0C, nC2, $06, nBb1, $06, nRst, $06
@@ -155,7 +152,7 @@ snd_jin_invincible_PSG2:
 	dc.b	nRst, $03, nE2, $06, nF2, $06, nG2, $06, nE2, $0C, nF2, $06
 	dc.b	nG2, $06, nE2, $06, nD2, $0C, nRst, $06, nD2, $06, nE2, $06
 	dc.b	nRst, $06, nG2, $0C, nRst, $0C, nFs2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nRst, $0C, nE2, $0C, nFs2, $0C, nD2, $36, nRst, $66
+	dc.b	nRst, $0C, nE2, $0C, nFs2, $0C, nD2, $36
 	smpsStop
 
 ; PSG3 Data
@@ -214,7 +211,7 @@ snd_jin_invincible_Voices:
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $01, $05, $02, $01
-	smpsVcCoarseFreq    $02, $03, $01, $04
+	smpsVcCoarseFreq    $02, $03, $01, $02
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $0F, $14, $14, $12
 	smpsVcAmpMod        $00, $00, $00, $00
