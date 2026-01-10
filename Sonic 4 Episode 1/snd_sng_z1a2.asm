@@ -159,19 +159,8 @@ snd_sng_z1a2_PSG1:
 
 ; PSG2 Data
 snd_sng_z1a2_PSG2:
-	dc.b	nRst, $7F, nRst, $17, nG1, $03, nA1, $03, nB1, $03, nC2, $03, nA1
-	dc.b	$03, nB1, $03, nC2, $03, nD2, $03, nB1, $03, nC2, $03, nD2
-	dc.b	$03, nE2, $03, nD2, $03, nE2, $03, nF2, $03, nG2, $03
-	dc.b	nRst, $7F, nRst, $11, nG1, $03, nA1, $03, nB1, $03, nC2, $03, nA1, $03
-	dc.b	nB1, $03, nC2, $03, nD2, $03, nB1, $03, nC2, $03, nD2, $03
-	dc.b	nE2, $03, nD2, $03, nE2, $03, nF2, $03, nG2, $03, nRst, $7F
-	dc.b	nRst, $7F, nRst, $7F, nRst, $27, nG1, $09, nA1, $03, nB1, $03, nC2, $03, nA1
-	dc.b	$03, nB1, $03, nC2, $03, nD2, $03, nB1, $03, nC2, $03, nD2
-	dc.b	$03, nE2, $03, nD2, $03, nE2, $03, nF2, $03, nG2, $03
-	dc.b	nRst, $7F, nRst, $7F, nRst, $7F, nRst, $2D, nG1, $09, nA1, $03, nB1, $03, nC2, $03
-	dc.b	nA1, $03, nB1, $03, nC2, $03, nD2, $03, nB1, $03, nC2, $03
-	dc.b	nD2, $03, nE2, $03, nD2, $03, nE2, $03, nF2, $03, nG2, $03
-	smpsJump	snd_sng_z1a2_PSG2	
+	dc.b nRst, $06
+	smpsJump	snd_sng_z1a2_PSG1
 
 ; PSG3 Data
 snd_sng_z1a2_PSG3:
