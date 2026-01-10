@@ -159,7 +159,7 @@ snd_sng_z1a2_PSG1:
 
 ; PSG2 Data
 snd_sng_z1a2_PSG2:
-	dc.b nRst, $06
+	dc.b       nRst, $06
 	smpsJump	snd_sng_z1a2_PSG1
 
 ; PSG3 Data
