@@ -10,8 +10,8 @@ snd_jin_clear_final_Header:
 	smpsHeaderFM        snd_jin_clear_final_FM3,	$00, $1E
 	smpsHeaderFM        snd_jin_clear_final_FM4,	$00, $21
 	smpsHeaderFM        snd_jin_clear_final_FM5,	$00, $13
-	smpsHeaderPSG       snd_jin_clear_final_PSG1,	$0C, $00, $00, sTone_0A
-	smpsHeaderPSG       snd_jin_clear_final_PSG2,	$0C, $00, $00, sTone_0A
+	smpsHeaderPSG       snd_jin_clear_final_PSG1,	$0C, $03, $00, $00
+	smpsHeaderPSG       snd_jin_clear_final_PSG2,	$0C, $03, $00, $00
 	smpsHeaderPSG       snd_jin_clear_final_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -158,7 +158,6 @@ snd_jin_clear_final_FM5:
 
 ; PSG1 Data
 snd_jin_clear_final_PSG1:
-	smpsModSet          $15, $01, $03, $06
 	dc.b	nRst, $30, nD1, $0F, nRst, $03, nD1, $06, nRst, $06, nD1, $06
 	dc.b	nRst, $06, nF1, $06, nRst, $06, nF1, $06, nB1, $06, nF1, $0C
 	dc.b	nE1, $06, nD1, $06, nC1, $06, nE1, $0F, nRst, $03, nG1, $06
@@ -178,7 +177,6 @@ snd_jin_clear_final_PSG1:
 
 ; PSG2 Data
 snd_jin_clear_final_PSG2:
-	smpsModSet          $15, $01, $03, $06
 	dc.b	nRst, $7F, nRst, $23, nE1, $06, nRst, $06, nE1, $06, nRst, $06
 	smpsPSGAlterVol     $02
 	dc.b	nE1, $09, nRst, $7F, $20
