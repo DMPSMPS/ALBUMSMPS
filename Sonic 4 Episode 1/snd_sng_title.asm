@@ -10,8 +10,8 @@ snd_sng_title_Header:
 	smpsHeaderFM        snd_sng_title_FM3,	$F4, $1E
 	smpsHeaderFM        snd_sng_title_FM4,	$00, $14
 	smpsHeaderFM        snd_sng_title_FM5,	$00, $14
-	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $03, $00, $00
-	smpsHeaderPSG       snd_sng_title_PSG2,	$0C, $03, $00, $00
+	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $03, $00, sTone_0A
+	smpsHeaderPSG       snd_sng_title_PSG2,	$0C, $03, $00, sTone_17
 	smpsHeaderPSG       snd_sng_title_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -75,7 +75,7 @@ snd_sng_title_FM2:
 ; FM3 Data
 snd_sng_title_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $03
+	smpsSetvoice        $01
 	smpsAlterNote	    $FD
 	dc.b	nRst, $3C, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
 	dc.b	nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $0C, nRst, $0C
