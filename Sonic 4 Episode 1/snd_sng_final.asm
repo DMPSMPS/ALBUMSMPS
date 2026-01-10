@@ -10,8 +10,8 @@ snd_sng_final_Header:
 	smpsHeaderFM        snd_sng_final_FM3,	$00, $1E
 	smpsHeaderFM        snd_sng_final_FM4,	$00, $08
 	smpsHeaderFM        snd_sng_final_FM5,	$00, $08
-	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $03, $00, $00
-	smpsHeaderPSG       snd_sng_final_PSG2,	$0C, $02, $00, $00
+	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $03, $00, sTone_0A
+	smpsHeaderPSG       snd_sng_final_PSG2,	$0C, $03, $00, sTone_17
 
 ; DAC Data
 snd_sng_final_DAC:
