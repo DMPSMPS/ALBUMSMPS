@@ -10,8 +10,8 @@ snd_jin_clear_final_Header:
 	smpsHeaderFM        snd_jin_clear_final_FM3,	$00, $1E
 	smpsHeaderFM        snd_jin_clear_final_FM4,	$00, $21
 	smpsHeaderFM        snd_jin_clear_final_FM5,	$00, $13
-	smpsHeaderPSG       snd_jin_clear_final_PSG1,	$0C, $03, $00, $00
-	smpsHeaderPSG       snd_jin_clear_final_PSG2,	$0C, $03, $00, $00
+	smpsHeaderPSG       snd_jin_clear_final_PSG1,	$0C, $03, $00, sTone_0A
+	smpsHeaderPSG       snd_jin_clear_final_PSG2,	$0C, $03, $00, sTone_17
 	smpsHeaderPSG       snd_jin_clear_final_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
