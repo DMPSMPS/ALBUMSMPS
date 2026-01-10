@@ -7,10 +7,10 @@ snd_sng_final_Header:
 	smpsHeaderDAC       snd_sng_final_DAC
 	smpsHeaderFM        snd_sng_final_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_final_FM2,	$00, $13
-	smpsHeaderFM        snd_sng_final_FM3,	$18, $13
+	smpsHeaderFM        snd_sng_final_FM3,	$00, $1E
 	smpsHeaderFM        snd_sng_final_FM4,	$00, $08
 	smpsHeaderFM        snd_sng_final_FM5,	$00, $08
-	smpsHeaderPSG       snd_sng_final_PSG1,	$E8, $05, $00, sTone_11
+	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $03, $00, $00
 	smpsHeaderPSG       snd_sng_final_PSG2,	$0C, $02, $00, $00
 
 ; DAC Data
@@ -109,7 +109,6 @@ snd_sng_final_FM1:
 snd_sng_final_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-snd_sng_final_FM2INIT:
 	dc.b	nRst, $60, nA4, $0C, nE4, $0C, nRst, $0C, nA4, $0C, nG4, $0C
 	dc.b	nD4, $0C, nRst, $0C, nG4, $0C, nFs4, $18, nG4, $0C, nF4, $18
 	dc.b	nE4, $0C, nD4, $18, nA4, $0C, nE4, $0C, nRst, $0C, nA4, $0C
@@ -138,29 +137,10 @@ snd_sng_final_FM2INIT:
 ; FM3 Data
 snd_sng_final_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $03
-	dc.b	nRst, $60, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C
-	dc.b	nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18
-	dc.b	nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
-	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2, $0C
-	dc.b	nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C
-	dc.b	nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2, $0C
-	dc.b	nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C
-	dc.b	nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18
-	dc.b	nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2
-	dc.b	$0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2
-	dc.b	$18, nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2
-	dc.b	$0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2
-	dc.b	$0C, nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2
-	dc.b	$0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2
-	dc.b	$0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2
-	dc.b	$0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C
-	dc.b	nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1
-	dc.b	$18, nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
-	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60
-	smpsStop	
+	smpsAlterNote       $FD
+	smpsSetvoice        $01
+	dc.b	nRst, $0C
+	smpsJump	snd_sng_final_FM2		
 
 ; FM4 Data
 snd_sng_final_FM4:
@@ -244,8 +224,28 @@ snd_sng_final_FM5:
 
 ; PSG1 Data
 snd_sng_final_PSG1:
-	dc.b	nRst, $0C
-	smpsJump	snd_sng_final_FM2INIT	
+	dc.b	nRst, $60, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C
+	dc.b	nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18
+	dc.b	nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
+	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
+	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2, $0C
+	dc.b	nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C
+	dc.b	nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2, $0C
+	dc.b	nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C
+	dc.b	nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18
+	dc.b	nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2
+	dc.b	$0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2
+	dc.b	$18, nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2
+	dc.b	$0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2
+	dc.b	$0C, nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2
+	dc.b	$0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2
+	dc.b	$0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2
+	dc.b	$0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C
+	dc.b	nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1
+	dc.b	$18, nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
+	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
+	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60
+	smpsStop
 
 ; PSG2 Data
 snd_sng_final_PSG2:
@@ -352,21 +352,3 @@ snd_sng_final_Voices:
 	smpsVcDecayLevel    $00, $00, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $0B, $0A, $0D, $0C
-
-;	Voice $03
-;	$15
-;	$71, $72, $01, $31, 	$0F, $14, $14, $14, 	$00, $05, $02, $02
-;	$00, $00, $00, $00, 	$0F, $1F, $1F, $1F, 	$2D, $80, $80, $80
-	smpsVcAlgorithm     $05
-	smpsVcFeedback      $02
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $03, $00, $07, $07
-	smpsVcCoarseFreq    $01, $01, $02, $01
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $14, $14, $14, $0F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $02, $02, $05, $00
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $01, $01, $01, $00
-	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $00, $00, $2D
