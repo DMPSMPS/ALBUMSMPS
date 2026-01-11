@@ -62,15 +62,15 @@ snd_jin_clear_final_FM2:
 	dc.b	nA4, $06, nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03
 	dc.b	nG4, $03, nA4, $03, nRst, $03, nC5, $06, nRst, $06, nB4, $06
 	dc.b	nRst, $06
-	smpsAlterVol        $05
+	;smpsAlterVol        $05
 	dc.b	nG4, $09, nRst, $03, nG4, $03, nRst, $03, nA4, $15, nRst, $03
 	dc.b	nG4, $06, nRst, $06
-	smpsAlterVol        $FB
+	;smpsAlterVol        $FB
 	dc.b	nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03, nC5, $06
 	dc.b	nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06, nA4, $06
 	dc.b	nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03, nG4, $03
 	dc.b	nA4, $03, nRst, $03, nC5, $06, nRst, $06, nB4, $06, nRst, $06
-	smpsAlterVol        $05
+	;smpsAlterVol        $05
 	dc.b	nG4, $09, nRst, $03, nG4, $03, nRst, $03, nA4, $15, nRst, $03
 	dc.b	nG4, $0C, nE4, $06, nFs4, $06, nG4, $06, nC5, $0C, nB4, $0C
 	dc.b	nA4, $09, nRst, $03, nA4, $06, nG4, $0C, nBb4, $06, nA4, $06
@@ -89,15 +89,15 @@ snd_jin_clear_final_FM3:
 	dc.b	nA4, $06, nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03
 	dc.b	nG4, $03, nA4, $03, nRst, $03, nC5, $06, nRst, $06, nB4, $06
 	dc.b	nRst, $06
-	smpsAlterVol        $04
+	;smpsAlterVol        $04
 	dc.b	nG4, $09, nRst, $03, nG4, $03, nRst, $03, nA4, $15, nRst, $03
 	dc.b	nG4, $06, nRst, $06
-	smpsAlterVol        $FC
+	;smpsAlterVol        $FC
 	dc.b	nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03, nC5, $06
 	dc.b	nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06, nA4, $06
 	dc.b	nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03, nG4, $03
 	dc.b	nA4, $03, nRst, $03, nC5, $06, nRst, $06, nB4, $06, nRst, $06
-	smpsAlterVol        $04
+	;smpsAlterVol        $04
 	dc.b	nG4, $09, nRst, $03, nG4, $03, nRst, $03, nA4, $15, nRst, $03
 	dc.b	nG4, $0C, nE4, $06, nFs4, $06, nG4, $06, nC5, $0C, nB4, $0C
 	dc.b	nA4, $09, nRst, $03, nA4, $06, nG4, $0C, nBb4, $06, nA4, $06
@@ -116,15 +116,15 @@ snd_jin_clear_final_FM4:
 	dc.b	nA4, $06, nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03
 	dc.b	nG4, $03, nA4, $03, nRst, $03, nC5, $06, nRst, $06, nB4, $06
 	dc.b	nRst, $06
-	smpsAlterVol        $04
+	;smpsAlterVol        $04
 	dc.b	nG4, $09, nRst, $03, nG4, $03, nRst, $03, nA4, $15, nRst, $03
 	dc.b	nG4, $06, nRst, $06
-	smpsAlterVol        $FC
+	;smpsAlterVol        $FC
 	dc.b	nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03, nC5, $06
 	dc.b	nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06, nA4, $06
 	dc.b	nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03, nG4, $03
 	dc.b	nA4, $03, nRst, $03, nC5, $06, nRst, $06, nB4, $06, nRst, $06
-	smpsAlterVol        $04
+	;smpsAlterVol        $04
 	dc.b	nG4, $09, nRst, $03, nG4, $03, nRst, $03, nA4, $15, nRst, $03
 	dc.b	nG4, $0C, nRst, $06, nFs4, $06, nG4, $06, nC5, $0C, nB4, $0C
 	dc.b	nA4, $09, nRst, $03, nA4, $06, nG4, $0C, nBb4, $06, nA4, $06
@@ -141,14 +141,14 @@ snd_jin_clear_final_FM5:
 	dc.b	nRst, $06, nF4, $06, nRst, $06, nF4, $06, nRst, $06, nF4, $0C
 	dc.b	nE4, $06, nD4, $06, nC4, $06, nE4, $0F, nRst, $03, nE4, $06
 	dc.b	nRst, $06, nE4, $06, nRst, $06
-	smpsAlterVol        $05
+	;smpsAlterVol        $05
 	dc.b	nE4, $09, nRst, $09, nEb4, $18, nC4, $0C
-	smpsAlterVol        $FB
+	;smpsAlterVol        $FB
 	dc.b	nD4, $0F, nRst, $03, nD4, $06, nRst, $06, nD4, $06, nRst, $06
 	dc.b	nF4, $06, nRst, $06, nF4, $06, nRst, $06, nF4, $0C, nE4, $06
 	dc.b	nD4, $06, nC4, $06, nE4, $0F, nRst, $03, nE4, $06, nRst, $06
 	dc.b	nE4, $06, nRst, $06
-	smpsAlterVol        $05
+	;smpsAlterVol        $05
 	dc.b	nE4, $09, nRst, $09, nEb4, $18, nC4, $0C, nE4, $12, nFs4, $18
 	dc.b	nEb4, $09, nRst, $03, nEb4, $03, nRst, $03, nEb4, $0C, nF4, $03
 	dc.b	nRst, $03, nF4, $06, nRst, $06, nD4, $36, nRst, $30
@@ -162,14 +162,14 @@ snd_jin_clear_final_PSG1:
 	dc.b	nRst, $06, nF1, $06, nRst, $06, nF1, $06, nB1, $06, nF1, $0C
 	dc.b	nE1, $06, nD1, $06, nC1, $06, nE1, $0F, nRst, $03, nG1, $06
 	dc.b	nRst, $06, nG1, $06, nRst, $06
-	smpsPSGAlterVol     $02
+	;smpsPSGAlterVol     $02
 	dc.b	nG1, $09, nRst, $03, nG1, $03, nRst, $03, nEb1, $18, nC1, $0C
-	smpsPSGAlterVol     $FE
+	;smpsPSGAlterVol     $FE
 	dc.b	nD1, $0F, nRst, $03, nD1, $06, nRst, $06, nD1, $06, nRst, $06
 	dc.b	nF1, $06, nRst, $06, nF1, $06, nB1, $06, nF1, $0C, nE1, $06
 	dc.b	nD1, $06, nC1, $06, nE1, $0F, nRst, $03, nG1, $06, nRst, $06
 	dc.b	nG1, $06, nRst, $06
-	smpsPSGAlterVol     $02
+	;smpsPSGAlterVol     $02
 	dc.b	nG1, $09, nRst, $03, nG1, $03, nRst, $03, nEb1, $18, nC1, $0C
 	dc.b	nE1, $12, nFs1, $18, nEb1, $09, nRst, $03, nEb1, $06, nEb1, $0C
 	dc.b	nF1, $06, nF1, $06, nRst, $06, nD1, $36, nRst, $30
@@ -178,11 +178,11 @@ snd_jin_clear_final_PSG1:
 ; PSG2 Data
 snd_jin_clear_final_PSG2:
 	dc.b	nRst, $7F, nRst, $23, nE1, $06, nRst, $06, nE1, $06, nRst, $06
-	smpsPSGAlterVol     $02
+	;smpsPSGAlterVol     $02
 	dc.b	nE1, $09, nRst, $7F, $20
-	smpsPSGAlterVol     $FE
+	;smpsPSGAlterVol     $FE
 	dc.b	nE1, $06, nRst, $06, nE1, $06, nRst, $06
-	smpsPSGAlterVol     $02
+	;smpsPSGAlterVol     $02
 	dc.b	nE1, $09
 	smpsStop
 
