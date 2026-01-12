@@ -75,7 +75,7 @@ snd_sng_title_FM2:
 ; FM3 Data
 snd_sng_title_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $03
+	smpsSetvoice        $01
 	smpsAlterNote	    $FD
 	dc.b	nRst, $3C, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
 	dc.b	nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $0C, nRst, $0C
