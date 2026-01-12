@@ -226,7 +226,7 @@ snd_sng_z1a1_Voices:
 	smpsVcDetune        $01, $05, $02, $01
 	smpsVcCoarseFreq    $02, $03, $01, $02
 	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $0F, $14, $14, $12
+	smpsVcAttackRate    $0F, $0F, $14, $12
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $05, $02, $05, $0A
 	smpsVcDecayRate2    $00, $00, $00, $00
