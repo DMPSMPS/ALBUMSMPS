@@ -280,6 +280,7 @@ snd_sng_z4a1_PSG3:
 
 ; PSG1 Data
 snd_sng_z4a1_PSG1:
+	smpsStop
         dc.b    nRst, $0C, nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $08, nRst, $0A
         dc.b    nRst, $0C, nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $1E
         dc.b    nRst, $03, nRst, $03, nRst, $05, nRst, $07, nRst, $12, nRst, $0C
