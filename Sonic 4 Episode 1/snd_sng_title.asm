@@ -75,7 +75,7 @@ snd_sng_title_FM2:
 ; FM3 Data
 snd_sng_title_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $03
 	smpsAlterNote	    $FD
 	dc.b	nRst, $3C, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
 	dc.b	nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $0C, nRst, $0C
@@ -229,7 +229,7 @@ snd_sng_title_Voices:
 	smpsVcDetune        $01, $05, $02, $01
 	smpsVcCoarseFreq    $02, $03, $01, $02
 	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $0F, $14, $14, $12
+	smpsVcAttackRate    $0F, $0F, $14, $12
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $05, $02, $05, $0A
 	smpsVcDecayRate2    $00, $00, $00, $00
