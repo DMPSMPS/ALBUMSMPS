@@ -9,7 +9,7 @@ snd_sng_z3a1_Header:
 	smpsHeaderFM        snd_sng_z3a1_FM2,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM3,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM4,	$00, $1B
-	smpsHeaderFM        snd_sng_z3a1_FM5,	$00, $0B
+	smpsHeaderFM        snd_sng_z3a1_FM5,	$00, $13
 	smpsHeaderPSG       snd_sng_z3a1_PSG1,	$0C, $03, $00, sTone_23
 	smpsHeaderPSG       snd_sng_z3a1_PSG2,	$0C, $03, $00, sTone_23
 	smpsHeaderPSG       snd_sng_z3a1_PSG3,	$23, $00, $00, sTone_0F
@@ -190,20 +190,16 @@ snd_sng_z3a1_FM4:
 snd_sng_z3a1_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $03
-	smpsFMAlterVol	    -$08
 	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
 	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C
 	dc.b	nF5, $0C, nG5, $0C
 	smpsSetvoice        $05
-	smpsFMAlterVol	     $08
 	dc.b	nBb1, $7F, smpsNoAttack, $41, nG1, $7F, smpsNoAttack, $11, nC2, $30
 	smpsSetvoice        $03
-	smpsFMAlterVol	    -$08
 	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
 	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C
 	dc.b	nF5, $0C, nG5, $0C
 	smpsSetvoice        $05
-	smpsFMAlterVol	     $08
 	dc.b	nBb1, $7F, smpsNoAttack, $41, nG1, $7F, smpsNoAttack, $11, nC2, $30, nRst, $7F
 	dc.b	nRst, $7F, nRst, $7F, nRst, $03
 	smpsJump	snd_sng_z3a1_FM5
