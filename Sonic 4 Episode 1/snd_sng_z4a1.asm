@@ -101,12 +101,12 @@ snd_sng_z4a1_FM2:
 	dc.b	nC5, $03, nC5, $05, nRst, $07, nG4, $12, nBb4, $0C, nC5, $03
 	dc.b	nC5, $03, nC5, $05, nRst, $07, nBb4, $1E
 	smpsSetvoice        $02
+	smpsFMAlterVol       $0A
 	dc.b	nC5, $12, nEb5, $0C, nD5, $0C, nBb4
 	dc.b	$06, nC5, $12, nG4, $12, nF4, $0C, nG4, $12, nC5, $21
 	dc.b	nRst, $2D, nC5, $12, nEb5, $0C, nD5, $06, nBb4, $0C, nC5, $12, nG4
 	dc.b	$12, nBb4, $0C, nC5, $12, nAb4, $21, nRst, $2D
 	smpsSetvoice        $04
-	smpsFMAlterVol       $0A
 	smpsFMAlterVol      -$07
 	dc.b	nRst, $06, nC4, $06, nEb4, $06, nF4, $06, nG4, $06, nBb4, $06
 	dc.b	nRst, $06, nC5, $06, nRst, $06, nG4, $06, nBb4, $1E, nRst, $0C, nC4
