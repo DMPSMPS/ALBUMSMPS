@@ -5,7 +5,7 @@ snd_sng_z1a1_Header:
 	smpsHeaderTempo     $01, $7A
 
 	smpsHeaderDAC       snd_sng_z1a1_DAC
-	smpsHeaderFM        snd_sng_z1a1_FM1,	$0C, $08
+	smpsHeaderFM        snd_sng_z1a1_FM1,	$00, $08
 	smpsHeaderFM        snd_sng_z1a1_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_z1a1_FM3,	$00, $13
 	smpsHeaderFM        snd_sng_z1a1_FM4,	$00, $1E
@@ -92,9 +92,9 @@ snd_sng_z1a1_FM2INIT:
 	dc.b	nBb4, $0C, nC5, $12, nA4, $0C, nF4, $0C, nG4, $0C, nF4, $06
 	dc.b	nC5, $30, nF5, $0C, nE5, $06, nC5, $0C, nD5, $12, nE5, $0C
 	dc.b	nF5, $0C, nE5, $06, nRst, $06, nE5, $06, nD5, $0C, nC5, $0C
-	dc.b	nG4, $0C, nA4, $0C, nRst, $06, nD5, $18, nRst, $06, nD5, $0C
-	dc.b	nRst, $06, nC5, $1E, nBb4, $12, nC5, $0C, nD5, $06, nF5, $0C
-	dc.b	nC5, $12, nF5, $0C, nA5, $06, nC5, $06, nG5, $18, nC6, $1E
+	dc.b	nG4, $0C, nA4, $12, nD5, $1E, nD5, $12, nC5, $1E, nBb4, $12
+	dc.b	nC5, $0C, nD5, $06, nF5, $0C, nC5, $12, nF5, $0C, nA5, $06
+	dc.b	nC5, $06, nG5, $18, nC6, $1E
 	smpsJump	snd_sng_z1a1_FM2	
 
 ; FM3 Data
