@@ -350,7 +350,7 @@ snd_sng_z4a1_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $01, $01, $01, $01
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $1C, $1C, $1E
+	smpsVcTotalLevel    $00, $1A, $1A, $1C
 
 ;	Voice $02
 ;	$3D
