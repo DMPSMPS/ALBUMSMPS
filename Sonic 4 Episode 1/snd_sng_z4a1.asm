@@ -408,18 +408,18 @@ snd_sng_z4a1_Voices:
 
 ;	Voice $05
 ;	$3F
-;	$71, $72, $3F, $34, 	$8D, $52, $9F, $1F, 	$09, $00, $00, $0D
-;	$00, $00, $00, $00, 	$23, $08, $02, $F7, 	$15, $14, $1D, $1B
+;	$74, $7F, $32, $31, 	$1F, $1F, $12, $0D, 	$0D, $00, $00, $09
+;	$00, $00, $00, $00, 	$2F, $00, $00, $22, 	$07, $1D, $00, $15
 	smpsVcAlgorithm     $07
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $03, $03, $07, $07
-	smpsVcCoarseFreq    $0F, $04, $02, $01
+	smpsVcCoarseFreq    $04, $0F, $02, $01
 	smpsVcRateScale     $00, $02, $01, $02
 	smpsVcAttackRate    $1F, $1F, $12, $0D
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $0D, $00, $00, $09
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $0F, $00, $00, $02
-	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcReleaseRate   $07, $02, $08, $03
 	smpsVcTotalLevel    $07, $1D, $00, $15
