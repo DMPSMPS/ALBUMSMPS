@@ -267,9 +267,9 @@ snd_sng_z3a2_PSG2:
 snd_sng_z3a2_PSG3:
 	smpsPSGform         $E7
 	dc.b	nRst, $0C, (nMaxPSG2-$23)&$FF, $18, $12, $06, $18, $18
-	dc.b	$18, $12, $0C, $06
+	dc.b	$18, $12, $0C, $12, $0C
 snd_sng_z3a2_PSG3Loop:
-	dc.b	nRst, $0C, $18, $18
+	dc.b	nRst, $0C, $18
 	dc.b	$18, $06, $0C, $06, $18, $18
 	dc.b	$18, $06, $0C, $06, $18, $18
 	dc.b	$18, $06, $0C, $06, $18, $18
