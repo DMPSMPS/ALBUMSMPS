@@ -338,7 +338,7 @@ snd_sng_z3a1_Voices:
 	smpsVcDecayRate1    $0D, $00, $00, $09
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $0F, $00, $00, $02
-	smpsVcReleaseRate   $07, $02, $08, $03
+	smpsVcReleaseRate   $07, $0F, $08, $03
 	smpsVcTotalLevel    $07, $1D, $00, $15
 
 ;	Voice $02
