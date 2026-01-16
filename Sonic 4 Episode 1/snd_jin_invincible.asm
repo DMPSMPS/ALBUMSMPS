@@ -1,13 +1,15 @@
 snd_jin_invincible_Header:
 	smpsHeaderStartSong 3
 	smpsHeaderVoice     snd_jin_invincible_Voices
-	smpsHeaderChan      $04, $03
+	smpsHeaderChan      $06, $03
 	smpsHeaderTempo     $01, $07
 
 	smpsHeaderDAC       snd_jin_invincible_DAC
 	smpsHeaderFM        snd_jin_invincible_FM1,	$00, $0E
 	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
+	smpsHeaderFM        snd_jin_invincible_FM4,	$18, $13
+	smpsHeaderFM        snd_jin_invincible_FM5,	$18, $13
 	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $03, $00, sTone_0A
 	smpsHeaderPSG       snd_jin_invincible_PSG2,	$00, $03, $00, sTone_17
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
@@ -112,8 +114,10 @@ snd_jin_invincible_FM3:
 	dc.b	nRst, $0C
 	smpsJump		snd_jin_invincible_FM2INIT
 
-; PSG1 Data
-snd_jin_invincible_PSG1:
+; FM5 Data
+snd_jin_invincible_FM5:
+	smpsModSet          $07, $01, $03, $05
+	smpsSetvoice        $03
 	dc.b	nRst, $02, $10, nD1, $1B, nRst, $03, nE1, $0F, nRst, $03, nE1
 	dc.b	$1B, nRst, $03, nF1, $0F, nRst, $03, nF1, $1B, nRst, $03, nG1
 	dc.b	$0F, nRst, $03, nG1, $1B, nRst, $03, nA1, $1E, nRst, $06, nA1
@@ -131,8 +135,10 @@ snd_jin_invincible_PSG1:
 	dc.b	$0C, nRst, $0C, nC2, $18, nB1, $0C, nA1, $0C, nG1, $0C
 	smpsStop
 
-; PSG2 Data
-snd_jin_invincible_PSG2:
+; FM4 Data
+snd_jin_invincible_FM4:
+	smpsSetvoice        $01
+	smpsModSet          $07, $01, $03, $05
 	dc.b	nG1, $0F, nRst, $03, nB1, $0C, nA1, $06, nG1, $06, nRst, $06
 	dc.b	nA1, $0F, nRst, $03, nCs2, $0C, nB1, $06, nA1, $06, nRst, $06
 	dc.b	nBb1, $0F, nRst, $03, nD2, $0C, nC2, $06, nBb1, $06, nRst, $06
@@ -153,6 +159,14 @@ snd_jin_invincible_PSG2:
 	dc.b	nG2, $06, nE2, $06, nD2, $0C, nRst, $06, nD2, $06, nE2, $06
 	dc.b	nRst, $06, nG2, $0C, nRst, $0C, nFs2, $0C, nRst, $0C, nE2, $0C
 	dc.b	nRst, $0C, nE2, $0C, nFs2, $0C, nD2, $36
+	smpsStop
+
+; PSG1 Data
+snd_jin_invincible_PSG1:
+	smpsStop
+
+; PSG2 Data
+snd_jin_invincible_PSG2:
 	smpsStop
 
 ; PSG3 Data
@@ -238,3 +252,21 @@ snd_jin_invincible_Voices:
 	smpsVcDecayLevel    $01, $01, $01, $00
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $00, $00, $00, $2D
+
+;	Voice $03
+;	$3D
+;	$01, $01, $01, $01, 	$94, $19, $19, $19, 	$0F, $0D, $0D, $0D
+;	$07, $04, $04, $04, 	$25, $1A, $1A, $1A, 	$15, $80, $80, $80
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $07
+	smpsVcUnusedBits    $00
+	smpsVcDetune        $00, $00, $00, $00
+	smpsVcCoarseFreq    $01, $01, $01, $01
+	smpsVcRateScale     $00, $00, $00, $02
+	smpsVcAttackRate    $19, $19, $19, $14
+	smpsVcAmpMod        $00, $00, $00, $00
+	smpsVcDecayRate1    $0D, $0D, $0D, $0F
+	smpsVcDecayRate2    $04, $04, $04, $07
+	smpsVcDecayLevel    $01, $01, $01, $02
+	smpsVcReleaseRate   $0A, $0A, $0A, $05
+	smpsVcTotalLevel    $00, $00, $00, $15
