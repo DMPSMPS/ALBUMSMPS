@@ -76,16 +76,9 @@ snd_sng_title_FM2:
 snd_sng_title_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	dc.b	nRst, $30, nD4, $0C, nRst, $06, nD4, $06, nE4, $06, nRst, $06
-	dc.b	nG4, $0C, nRst, $0C, nFs4, $0C, nRst, $0C, nE4, $0C, nRst, $0C
-	dc.b	nE4, $0C, nFs4, $0C, nD4, $36, nRst, $06, nD4, $0C, nRst, $06
-	dc.b	nD4, $06, nE4, $06, nRst, $06, nD4, $0C, nRst, $0C, nD4, $0C
-	dc.b	nRst, $0C, nCs4, $54, nRst, $18, nD4, $0C, nRst, $06, nD4, $06
-	dc.b	nE4, $06, nRst, $06, nG4, $0C, nRst, $0C, nFs4, $0C, nRst, $0C
-	dc.b	nE4, $0C, nRst, $0C, nE4, $0C, nFs4, $0C, nD4, $36, nRst, $06
-	dc.b	nD4, $0C, nRst, $06, nD4, $06, nE4, $06, nRst, $06, nD4, $0C
-	dc.b	nRst, $0C, nD4, $0C, nRst, $0C, nCs4, $24, nE4, $15, nRst, $03
-	dc.b	nE4, $06, nRst, $06, nE4, $09, nRst, $0F, nD4, $18
+	dc.b	nRst, $7F, nRst, $7F, nRst, $16, nD5, $0C, nRst, $0C, nD5, $0C, nRst, $0C
+	dc.b	nCs5, $54, nRst, $7F, nRst, $7D, nD5, $0C, nRst, $0C, nD5, $0C
+	dc.b	nRst, $0C, nCs5, $24, nRst, $3C, nD5, $18
 	smpsStop
 
 ; FM4 Data
