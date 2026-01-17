@@ -8,7 +8,7 @@ snd_jin_invincible_Header:
 	smpsHeaderFM        snd_jin_invincible_FM1,	$00, $0E
 	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
-	smpsHeaderFM        snd_jin_invincible_FM4,	$18, $13
+	smpsHeaderFM        snd_jin_invincible_FM4,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM5,	$18, $13
 	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $03, $00, sTone_0A
 	smpsHeaderPSG       snd_jin_invincible_PSG2,	$00, $03, $00, sTone_17
@@ -139,26 +139,10 @@ snd_jin_invincible_FM5:
 snd_jin_invincible_FM4:
 	smpsSetvoice        $01
 	smpsModSet          $07, $01, $03, $05
-	dc.b	nG1, $0F, nRst, $03, nB1, $0C, nA1, $06, nG1, $06, nRst, $06
-	dc.b	nA1, $0F, nRst, $03, nCs2, $0C, nB1, $06, nA1, $06, nRst, $06
-	dc.b	nBb1, $0F, nRst, $03, nD2, $0C, nC2, $06, nBb1, $06, nRst, $06
-	dc.b	nC2, $0F, nRst, $03, nE2, $0C, nD2, $06, nC2, $06, nRst, $06
-	dc.b	nD2, $0C, nRst, $06, nD2, $06, nE2, $06, nRst, $06, nG2, $0C
-	dc.b	nRst, $0C, nFs2, $0C, nRst, $0C, nE2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nFs2, $0C, nD2, $36, nRst, $06, nD2, $0C, nRst, $06, nD2, $06
-	dc.b	nE2, $06, nRst, $06, nD2, $0C, nRst, $0C, nD2, $0C, nRst, $0C
-	dc.b	nCs2, $54, nRst, $18, nD2, $0C, nRst, $06, nD2, $06, nE2, $06
-	dc.b	nRst, $06, nG2, $0C, nRst, $0C, nFs2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nRst, $0C, nE2, $0C, nFs2, $0C, nD2, $36, nRst, $06, nD2, $0C
-	dc.b	nRst, $06, nD2, $06, nE2, $06, nRst, $06, nD2, $0C, nRst, $0C
-	dc.b	nD2, $0C, nRst, $0C, nCs2, $54, nRst, $18, nB1, $06, nCs2, $06
-	dc.b	nD2, $06, nB1, $0C, nCs2, $06, nD2, $09, nRst, $03, nCs2, $06
-	dc.b	nD2, $06, nE2, $06, nCs2, $0C, nD2, $06, nE2, $09, nRst, $03
-	dc.b	nD2, $06, nE2, $06, nF2, $06, nD2, $0C, nE2, $06, nF2, $09
-	dc.b	nRst, $03, nE2, $06, nF2, $06, nG2, $06, nE2, $0C, nF2, $06
-	dc.b	nG2, $06, nE2, $06, nD2, $0C, nRst, $06, nD2, $06, nE2, $06
-	dc.b	nRst, $06, nG2, $0C, nRst, $0C, nFs2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nRst, $0C, nE2, $0C, nFs2, $0C, nD2, $36
+	dc.b	nG4, $0F, nRst, $21, nA4, $0F, nRst, $21, nBb4, $0F, nRst, $21
+	dc.b	nC5, $0F, nRst, $7F, nRst, $7F, nRst, $07, nD5, $0C, nRst, $0C, nD5, $0C
+	dc.b	nRst, $0C, nCs5, $54, nRst, $7F, nRst, $7D, nD5, $0C, nRst, $0C, nD5
+	dc.b	$0C, nRst, $0C, nCs5, $54, nRst, $7F, nRst, $7F, nRst, $7F, nRst, $1B
 	smpsStop
 
 ; PSG1 Data
