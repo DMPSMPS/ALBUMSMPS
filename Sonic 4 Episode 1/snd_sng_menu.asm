@@ -136,7 +136,7 @@ snd_sng_menu_PSG1:
 	dc.b	nRst, $7F, nRst, $7F, nRst, $22, nA2, $06, nG2, $06, nF2, $06, nE2, $06
 	dc.b	nA2, $06, nG2, $06, nF2, $06, nE2, $06, nB2, $06, nA2, $06
 	dc.b	nG2, $06, nF2, $06, nG2, $06, nF2, $06, nE2, $06, nD2, $06
-	dc.b	nRst, $7F, $7F, $22, nA2, $06, nG2, $06, nF2, $06, nE2, $06
+	dc.b	nRst, $7F, nRst, $7F, nRst, $22, nA2, $06, nG2, $06, nF2, $06, nE2, $06
 	dc.b	nA2, $06, nG2, $06, nF2, $06, nE2, $06, nB2, $06, nA2, $06
 	dc.b	nG2, $06, nF2, $06, nG2, $06, nA2, $06, nB2, $06, nD3, $06
 	dc.b	nRst, $7F, nRst, $1D, nE3, $06, nD3, $06, nC3, $06, nRst, $06, nA2
@@ -191,13 +191,13 @@ snd_sng_menu_Voices:
 
 ;	Voice $01
 ;	$3D
-;	$01, $21, $51, $01, 	$12, $14, $14, $0F, 	$0A, $05, $05, $05
+;	$12, $21, $51, $12, 	$12, $14, $14, $0F, 	$0A, $05, $05, $05
 ;	$00, $00, $00, $00, 	$2B, $2B, $2B, $1B, 	$19, $80, $80, $80
 	smpsVcAlgorithm     $05
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $05, $02, $00
-	smpsVcCoarseFreq    $01, $01, $01, $01
+	smpsVcDetune        $01, $05, $02, $01
+	smpsVcCoarseFreq    $02, $01, $01, $02
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $0F, $14, $14, $12
 	smpsVcAmpMod        $00, $00, $00, $00
