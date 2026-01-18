@@ -7,9 +7,9 @@ snd_jin_invincible_Header:
 	smpsHeaderDAC       snd_jin_invincible_DAC
 	smpsHeaderFM        snd_jin_invincible_FM1,	$00, $0E
 	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $13
-	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
 	smpsHeaderFM        snd_jin_invincible_FM4,	$F4, $13
-	smpsHeaderFM        snd_jin_invincible_FM5,	$18, $13
+	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
+	smpsHeaderFM        snd_jin_invincible_FM5,	$24, $13
 	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $03, $00, sTone_0A
 	smpsHeaderPSG       snd_jin_invincible_PSG2,	$00, $03, $00, sTone_17
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
