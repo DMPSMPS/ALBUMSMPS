@@ -7,7 +7,7 @@ snd_sng_title_Header:
 	smpsHeaderDAC       snd_sng_title_DAC
 	smpsHeaderFM        snd_sng_title_FM1,	$00, $10
 	smpsHeaderFM        snd_sng_title_FM2,	$F4, $15
-	smpsHeaderFM        snd_sng_title_FM3,	$00, $15
+	smpsHeaderFM        snd_sng_title_FM3,	$F4, $15
 	smpsHeaderFM        snd_sng_title_FM4,	$F4, $1E
 	smpsHeaderFM        snd_sng_title_FM5,	$24, $15
 	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $03, $00, sTone_0A
