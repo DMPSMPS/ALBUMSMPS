@@ -94,6 +94,7 @@ snd_sng_cutscene_FM2:
 snd_sng_cutscene_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+	smpsAlterNote       $FD
 	dc.b	nRst, $18, nA3, $03, nRst, $03, nA3, $03, nRst, $03, nC4, $03
 	dc.b	nD4, $09, nE4, $03, nRst, $03, nE4, $03, nRst, $03, nA3, $0C
 	dc.b	nG3, $03, nRst, $03, nG3, $03, nRst, $03, nC4, $03, nD4, $09
@@ -118,7 +119,7 @@ snd_sng_cutscene_FM3:
 	dc.b	nRst, $0F
 	smpsStop
 
-; FM4 Data
+; FM4 Data 
 snd_sng_cutscene_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $03
