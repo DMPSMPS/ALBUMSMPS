@@ -206,7 +206,7 @@ snd_sng_z3a3_PSG1:
 
 ; PSG2 Data
 snd_sng_z3a3_PSG2:
-	dc.b	nRst, $0C
+	dc.b	nRst, $06
 	smpsAlterNote	$FF
 	smpsJump	snd_sng_z3a3_PSG1
 
