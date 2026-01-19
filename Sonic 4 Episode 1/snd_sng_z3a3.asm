@@ -10,8 +10,8 @@ snd_sng_z3a3_Header:
 	smpsHeaderFM        snd_sng_z3a3_FM3,	$00, $13
 	smpsHeaderFM        snd_sng_z3a3_FM4,	$00, $19
 	smpsHeaderFM        snd_sng_z3a3_FM5,	$00, $19
-	smpsHeaderPSG       snd_sng_z3a3_PSG1,	$0C, $03, $00, sTone_11
-	smpsHeaderPSG       snd_sng_z3a3_PSG2,	$0C, $07, $00, sTone_11
+	smpsHeaderPSG       snd_sng_z3a3_PSG1,	$0C, $04, $00, sTone_11
+	smpsHeaderPSG       snd_sng_z3a3_PSG2,	$0C, $09, $00, sTone_11
 	smpsHeaderPSG       snd_sng_z3a3_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
