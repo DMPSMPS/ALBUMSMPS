@@ -5,7 +5,7 @@ snd_sng_z3a1_Header:
 	smpsHeaderTempo     $01, $11
 
 	smpsHeaderDAC       snd_sng_z3a1_DAC
-	smpsHeaderFM        snd_sng_z3a1_FM1,	$00, $09
+	smpsHeaderFM        snd_sng_z3a1_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_z3a1_FM2,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM3,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM4,	$00, $1B
