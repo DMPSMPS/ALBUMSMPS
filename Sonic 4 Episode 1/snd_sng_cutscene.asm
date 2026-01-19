@@ -8,8 +8,8 @@ snd_sng_cutscene_Header:
 	smpsHeaderFM        snd_sng_cutscene_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_cutscene_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_cutscene_FM3,	$00, $13
-	smpsHeaderFM        snd_sng_cutscene_FM4,	$00, $18
-	smpsHeaderFM        snd_sng_cutscene_FM5,	$00, $18
+	smpsHeaderFM        snd_sng_cutscene_FM4,	$00, $1D
+	smpsHeaderFM        snd_sng_cutscene_FM5,	$00, $1D
 	smpsHeaderPSG       snd_sng_cutscene_PSG1,	$0C, $05, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_cutscene_PSG2,	$0C, $06, $00, sTone_17
 	smpsHeaderPSG       snd_sng_cutscene_PSG3,	$23, $00, $00, sTone_0F
