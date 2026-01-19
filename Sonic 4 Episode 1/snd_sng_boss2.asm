@@ -5,7 +5,7 @@ snd_sng_boss2_Header:
 	smpsHeaderTempo     $01, $6B
 
 	smpsHeaderDAC       snd_sng_boss2_DAC
-	smpsHeaderFM        snd_sng_boss2_FM1,	$F4, $09
+	smpsHeaderFM        snd_sng_boss2_FM1,	$F4, $0E
 	smpsHeaderFM        snd_sng_boss2_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_boss2_FM3,	$00, $1E
 	smpsHeaderFM        snd_sng_boss2_FM4,	$0C, $13
