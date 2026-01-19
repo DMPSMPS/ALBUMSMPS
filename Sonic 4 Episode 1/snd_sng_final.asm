@@ -11,7 +11,7 @@ snd_sng_final_Header:
 	smpsHeaderFM        snd_sng_final_FM4,	$00, $08
 	smpsHeaderFM        snd_sng_final_FM5,	$00, $08
 	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $03, $00, sTone_0A
-	smpsHeaderPSG       snd_sng_final_PSG2,	$0C, $03, $00, sTone_17
+	smpsHeaderPSG       snd_sng_final_PSG2,	$E8, $05, $00, sTone_11
 
 ; DAC Data
 snd_sng_final_DAC:
@@ -109,6 +109,7 @@ snd_sng_final_FM1:
 snd_sng_final_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+snd_sng_final_FM2INIT:
 	dc.b	nRst, $60, nA4, $0C, nE4, $0C, nRst, $0C, nA4, $0C, nG4, $0C
 	dc.b	nD4, $0C, nRst, $0C, nG4, $0C, nFs4, $18, nG4, $0C, nF4, $18
 	dc.b	nE4, $0C, nD4, $18, nA4, $0C, nE4, $0C, nRst, $0C, nA4, $0C
@@ -243,7 +244,8 @@ snd_sng_final_FM5:
 
 ; PSG2 Data
 snd_sng_final_PSG2:
-	smpsStop
+	dc.b	nRst, $0C
+	smpsJump	snd_sng_final_FM2INIT
 
 ; PSG1 Data
 snd_sng_final_PSG1:
