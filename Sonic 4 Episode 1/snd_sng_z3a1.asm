@@ -9,9 +9,9 @@ snd_sng_z3a1_Header:
 	smpsHeaderFM        snd_sng_z3a1_FM2,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM3,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM4,	$F4, $1B
-	smpsHeaderFM        snd_sng_z3a1_FM5,	$00, $0B
+	smpsHeaderFM        snd_sng_z3a1_FM5,	$00, $1B
 	smpsHeaderPSG       snd_sng_z3a1_PSG1,	$0C, $03, $00, sTone_23
-	smpsHeaderPSG       snd_sng_z3a1_PSG2,	$0C, $03, $00, sTone_23
+	smpsHeaderPSG       snd_sng_z3a1_PSG2,	$0C, $05, $00, sTone_11
 	smpsHeaderPSG       snd_sng_z3a1_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -197,90 +197,98 @@ snd_sng_z3a1_FM4:
 ; FM5 Data
 snd_sng_z3a1_FM5:
 	smpsModSet          $07, $01, $03, $05
+	smpsSetvoice        $02
+	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
+	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
+	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18
+	dc.b	nA4, $0C
+	smpsAlterVol        $F8
+	smpsAlterVol        $F8
 	smpsSetvoice        $03
-	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
-	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C
-	dc.b	nF5, $0C, nG5, $0C
+	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
+	smpsSetvoice        $02
+	smpsAlterVol        $08
+	smpsAlterVol        $08
+	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
+	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
+	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18
+	dc.b	nA4, $0C
+	smpsAlterVol        $F8
+	smpsAlterVol        $F8
+	smpsSetvoice        $03
+	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C, nF5, $0C, nG5, $0C
 	smpsSetvoice        $05
 	dc.b	nBb1, $7F, smpsNoAttack, $41, nG1, $7F, smpsNoAttack, $11, nC2, $30
+	smpsSetvoice        $02
+	smpsAlterVol        $08
+	smpsAlterVol        $08
+	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
+	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
+	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18
+	dc.b	nA4, $0C
+	smpsAlterVol        $F8
+	smpsAlterVol        $F8
 	smpsSetvoice        $03
-	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
-	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C
-	dc.b	nF5, $0C, nG5, $0C
+	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
+	smpsSetvoice        $02
+	smpsAlterVol        $08
+	smpsAlterVol        $08
+	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
+	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
+	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18, nA4, $0C
+	smpsSetvoice        $03
+	smpsAlterVol        $F8
+	smpsAlterVol        $F8
+	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C, nF5, $0C, nG5, $0C
 	smpsSetvoice        $05
-	dc.b	nBb1, $7F, smpsNoAttack, $41, nG1, $7F, smpsNoAttack, $11, nC2, $30, nRst, $7F
-	dc.b	nRst, $7F, nRst, $7F, nRst, $03
+	dc.b	nBb1, $7F, smpsNoAttack, $41, nG1, $7F, smpsNoAttack, $11, nC2, $30
+	dc.b	nRst, $0C
+	smpsSetvoice        $02
+	smpsAlterVol        $08
+	smpsAlterVol        $08
+	dc.b	nD5, $0C, nRst, $0C, nD5, $0C, nC5, $0C, nD5, $0C, nC5, $0C
+	dc.b	nRst, $0C, nD5, $0C, nRst, $0C, nD5, $0C, nRst, $0C, nD5, $0C
+	dc.b	nC5, $0C, nG4, $0C, nA4, $0C, nRst, $78, nRst, $48
 	smpsJump	snd_sng_z3a1_FM5
 
 ; PSG1 Data
 snd_sng_z3a1_PSG1:
-	dc.b	nA1, $0C, nRst, $0C, nA1, $0C, nRst, $18, nA1, $24, nD1, $0C
-	dc.b	nF1, $0C, nD1, $0C, nC2, $18, nA1, $24, nBb1, $0C, nRst, $0C
-	dc.b	nBb1, $0C, nRst, $18, nBb1, $0C, nRst, $0C, nBb1, $18, nA1, $0C
-	dc.b	nE1, $0C, nF1, $0C, nG1, $0C, nF1, $0C, nE1, $0C, nF1, $0C
-	dc.b	nA1, $0C, nRst, $0C, nA1, $0C, nRst, $18, nA1, $24, nD1, $0C
-	dc.b	nF1, $0C, nD1, $0C, nC2, $18, nA1, $24, nBb1, $0C, nRst, $0C
-	dc.b	nBb1, $0C, nRst, $18, nBb1, $0C, nRst, $0C, nBb1, $18, nA1, $0C
-	dc.b	nE1, $0C, nF1, $0C, nG1, $0C, nA1, $0C, nC2, $0C, nD2, $0C
-	dc.b	nRst, $18, nD2, $0C, nD2, $0C, nRst, $0C, nD2, $0C, nRst, $18
-	dc.b	nD2, $0C, nRst, $0C, nD2, $0C, nRst, $0C, nC2, $0C, nD2, $0C
-	dc.b	nC2, $0C, nBb1, $0C, nRst, $18, nD2, $0C, nD2, $0C, nRst, $0C
-	dc.b	nD2, $0C, nRst, $0C, nA1, $0C, nD2, $0C, nRst, $0C, nD2, $0C
-	dc.b	nRst, $0C, nC2, $0C, nD2, $0C, nC2, $0C, nA1, $0C, nA1, $0C
-	dc.b	nRst, $0C, nA1, $0C, nRst, $18, nA1, $24, nD1, $0C, nF1, $0C
-	dc.b	nD1, $0C, nC2, $18, nA1, $24, nBb1, $0C, nRst, $0C, nBb1, $0C
-	dc.b	nRst, $18, nBb1, $0C, nRst, $0C, nBb1, $18, nA1, $0C, nE1, $0C
-	dc.b	nF1, $0C, nG1, $0C, nF1, $0C, nE1, $0C, nA1, $0C, nA1, $0C
-	dc.b	nRst, $0C, nA1, $0C, nRst, $18, nA1, $24, nD1, $0C, nF1, $0C
-	dc.b	nD1, $0C, nC2, $18, nA1, $24, nBb1, $0C, nRst, $0C, nBb1, $0C
-	dc.b	nRst, $18, nBb1, $0C, nRst, $0C, nBb1, $18, nA1, $0C, nE1, $0C
-	dc.b	nF1, $0C, nG1, $0C, nA1, $0C, nC2, $0C, nD2, $0C, nRst, $18
-	dc.b	nD2, $0C, nD2, $0C, nRst, $0C, nD2, $0C, nRst, $18, nD2, $0C
-	dc.b	nRst, $0C, nD2, $0C, nRst, $0C, nC2, $0C, nD2, $0C, nC2, $0C
-	dc.b	nBb1, $0C, nRst, $18, nD2, $0C, nD2, $0C, nRst, $0C, nD2, $0C
-	dc.b	nRst, $18, nD2, $0C, nRst, $0C, nD2, $0C, nRst, $0C, nC2, $0C
-	dc.b	nD2, $0C, nC2, $0C, nA1, $0C, nRst, $0C, nD2, $0C, nRst, $0C
-	dc.b	nD2, $0C, nC2, $0C, nD2, $0C, nC2, $0C, nRst, $0C, nD2, $0C
-	dc.b	nRst, $0C, nD2, $0C, nRst, $0C, nD2, $0C, nC2, $0C, nG1, $0C
-	dc.b	nA1, $0C, nRst, $7F, nRst, $41
+	dc.b	nD2, $0C, nRst, $0C, nD2, $0C, nRst, $18, nD2, $24, nRst, $24
+	dc.b	nG2, $18, nF2, $24, nD2, $0C, nRst, $0C, nD2, $0C, nRst, $18
+	dc.b	nD2, $0C, nRst, $0C, nD2, $18, nD2, $0C, nE2, $0C, nF2, $0C
+	dc.b	nG2, $0C, nF2, $0C, nE2, $0C, nF2, $0C, nD2, $0C, nRst, $0C
+	dc.b	nD2, $0C, nRst, $18, nD2, $24, nRst, $24, nG2, $18, nF2, $24
+	dc.b	nD2, $0C, nRst, $0C, nD2, $0C, nRst, $18, nD2, $0C, nRst, $0C
+	dc.b	nD2, $18, nD2, $0C, nE2, $0C, nF2, $0C, nG2, $0C, nA2, $0C
+	dc.b	nC3, $0C, nD3, $0C, nRst, $18, nD3, $0C, nD3, $0C, nRst, $0C
+	dc.b	nD3, $0C, nRst, $18, nD3, $0C, nRst, $0C, nD3, $0C, nRst, $0C
+	dc.b	nC3, $0C, nD3, $0C, nC3, $0C, nBb2, $0C, nRst, $18, nD3, $0C
+	dc.b	nD3, $0C, nRst, $0C, nD3, $0C, nRst, $0C, nA2, $0C, nD3, $0C
+	dc.b	nRst, $0C, nD3, $0C, nRst, $0C, nC3, $0C, nD3, $0C, nC3, $0C
+	dc.b	nA2, $0C, nD2, $0C, nRst, $0C, nD2, $0C, nRst, $18, nD2, $24
+	dc.b	nRst, $24, nG2, $18, nF2, $24, nD2, $0C, nRst, $0C, nD2, $0C
+	dc.b	nRst, $18, nD2, $0C, nRst, $0C, nD2, $18, nRst, $0C, nE2, $0C
+	dc.b	nF2, $0C, nG2, $0C, nF2, $0C, nE2, $0C, nA2, $0C, nD2, $0C
+	dc.b	nRst, $0C, nD2, $0C, nRst, $18, nD2, $24, nRst, $24, nG2, $18
+	dc.b	nF2, $24, nD2, $0C, nRst, $0C, nD2, $0C, nRst, $18, nD2, $0C
+	dc.b	nRst, $0C, nD2, $18, nD2, $0C, nE2, $0C, nF2, $0C, nG2, $0C
+	dc.b	nA2, $0C, nC3, $0C, nD3, $0C, nRst, $18, nD3, $0C, nD3, $0C
+	dc.b	nRst, $0C, nD3, $0C, nRst, $18, nD3, $0C, nRst, $0C, nD3, $0C
+	dc.b	nRst, $0C, nC3, $0C, nD3, $0C, nC3, $0C, nBb2, $0C, nRst, $18
+	dc.b	nD3, $0C, nD3, $0C, nRst, $0C, nD3, $0C, nRst, $18, nD3, $0C
+	dc.b	nRst, $0C, nD3, $0C, nRst, $0C, nC3, $0C, nD3, $0C, nC3, $0C
+	dc.b	nA2, $0C, nRst, $7F, nRst, $41, nRst, $78, nRst, $48
 	smpsJump	snd_sng_z3a1_PSG1
 
 ; PSG2 Data
 snd_sng_z3a1_PSG2:
-	smpsPSGvoice        sTone_23
-	dc.b	nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18, nD1, $24, nRst, $24
-	dc.b	nG1, $18, nF1, $24, nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18
-	dc.b	nD1, $0C, nRst, $0C, nD1, $18, nD1, $0C, nRst, $0C
-	smpsPSGAlterVol     $02
-	smpsPSGvoice        sTone_11
-	dc.b	nD3, $0C, nF3, $0C, nG3, $0C, nC3, $18
-	smpsPSGAlterVol     $FE
-	smpsPSGvoice        sTone_23
-	dc.b	nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18, nD1, $24, nRst, $24
-	dc.b	nG1, $18, nF1, $24, nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18
-	dc.b	nD1, $0C, nRst, $0C, nD1, $18, nD1, $0C, nRst, $0C
-	smpsPSGAlterVol     $02
-	smpsPSGvoice        sTone_11
-	dc.b	nD3, $0C, nF3, $0C, nG3, $0C, nD3, $0C, nF3, $0C, nG3, $0C
-	dc.b	nRst, $7F, nRst, $7F, nRst, $76
-	smpsPSGAlterVol     $FE
-	smpsPSGvoice        sTone_23
-	dc.b	nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18, nD1, $24, nRst, $24
-	dc.b	nG1, $18, nF1, $24, nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18
-	dc.b	nD1, $0C, nRst, $0C, nD1, $18, nRst, $18
-	smpsPSGAlterVol     $02
-	smpsPSGvoice        sTone_11
-	dc.b	nD3, $0C, nF3, $0C, nG3, $0C, nC3, $18
-	smpsPSGAlterVol     $FE
-	smpsPSGvoice        sTone_23
-	dc.b	nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18, nD1, $24, nRst, $24
-	dc.b	nG1, $18, nF1, $24, nD1, $0C, nRst, $0C, nD1, $0C, nRst, $18
-	dc.b	nD1, $0C, nRst, $0C, nD1, $18, nD1, $0C, nRst, $0C
-	smpsPSGAlterVol     $02
-	smpsPSGvoice        sTone_11
-	dc.b	nD3, $0C, nF3, $0C, nG3, $0C, nD3, $0C, nF3, $0C, nG3, $0C
+	dc.b	nRst, $7F, nRst, $7F, nRst, $46, nD3, $0C, nF3, $0C, nG3, $0C, nC3, $24
+	dc.b	nRst, $7F, nRst, $7F, nRst, $3A, nD3, $0C, nF3, $0C, nG3, $0C, nD3, $0C
+	dc.b	nF3, $0C, nG3, $0C, nRst, $74, nRst, $74, nRst, $74, nRst, $74
+	dc.b	nRst, $74, nRst, $74, nD3
+	dc.b	$0C, nF3, $0C, nG3, $0C, nC3, $24, nRst, $7F, nRst, $7F, nRst, $3A, nD3
+	dc.b	$0C, nF3, $0C, nG3, $0C, nD3, $0C, nF3, $0C, nG3, $0C
 	dc.b	nRst, $7E, nRst, $7E, nRst, $7E, nRst, $7E, nRst, $7E, nRst, $7E
-	smpsPSGAlterVol     $FE
 	smpsJump	snd_sng_z3a1_PSG2	
 
 ; PSG3 Data
