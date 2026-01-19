@@ -7,7 +7,7 @@ snd_sng_final_Header:
 	smpsHeaderDAC       snd_sng_final_DAC
 	smpsHeaderFM        snd_sng_final_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_final_FM2,	$00, $13
-	smpsHeaderFM        snd_sng_final_FM3,	$00, $1E
+	smpsHeaderFM        snd_sng_final_FM3,	$18, $13
 	smpsHeaderFM        snd_sng_final_FM4,	$00, $08
 	smpsHeaderFM        snd_sng_final_FM5,	$00, $08
 	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $03, $00, sTone_0A
@@ -137,10 +137,29 @@ snd_sng_final_FM2:
 ; FM3 Data
 snd_sng_final_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsAlterNote       $FD
-	smpsSetvoice        $01
-	dc.b	nRst, $0C
-	smpsJump	snd_sng_final_FM2		
+	smpsSetvoice        $03
+	dc.b	nRst, $60, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C
+	dc.b	nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18
+	dc.b	nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
+	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
+	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2, $0C
+	dc.b	nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C
+	dc.b	nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2, $0C
+	dc.b	nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C
+	dc.b	nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18
+	dc.b	nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2
+	dc.b	$0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2
+	dc.b	$18, nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2
+	dc.b	$0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2
+	dc.b	$0C, nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2
+	dc.b	$0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2
+	dc.b	$0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2
+	dc.b	$0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C
+	dc.b	nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1
+	dc.b	$18, nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
+	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
+	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60
+	smpsStop
 
 ; FM4 Data
 snd_sng_final_FM4:
@@ -222,33 +241,12 @@ snd_sng_final_FM5:
 	smpsPan             panRight, $00
 	smpsStop
 
-; PSG1 Data
-snd_sng_final_PSG1:
-	dc.b	nRst, $60, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C
-	dc.b	nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18
-	dc.b	nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
-	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2, $0C
-	dc.b	nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C
-	dc.b	nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2, $0C
-	dc.b	nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C
-	dc.b	nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18
-	dc.b	nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2
-	dc.b	$0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2
-	dc.b	$18, nA1, $0C, nB1, $18, nE2, $0C, nC2, $0C, nRst, $0C, nE2
-	dc.b	$0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2
-	dc.b	$0C, nC2, $18, nA1, $0C, nB1, $18, nRst, $60, nE2, $0C, nC2
-	dc.b	$0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C, nRst, $0C, nC2
-	dc.b	$0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1, $18, nE2
-	dc.b	$0C, nC2, $0C, nRst, $0C, nE2, $0C, nC2, $0C, nG1, $0C
-	dc.b	nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C, nC2, $18, nA1, $0C, nB1
-	dc.b	$18, nRst, $7F, nRst, $11, nE2, $0C, nC2, $0C, nRst, $0C, nE2, $0C
-	dc.b	nC2, $0C, nG1, $0C, nRst, $0C, nC2, $0C, nD2, $18, nE2, $0C
-	dc.b	nC2, $18, nA1, $0C, nB1, $18, nRst, $60
-	smpsStop
-
 ; PSG2 Data
 snd_sng_final_PSG2:
+	smpsStop
+
+; PSG1 Data
+snd_sng_final_PSG1:
 	dc.b	nRst, $78, nE2, $06, nA2, $06, nE3, $06, nA3, $06, nG3, $06
 	dc.b	nE3, $06, nD3, $06, nG2, $06, nRst, $24, nFs3, $06, nD3, $06
 	dc.b	nG3, $06, nFs3, $06, nD3, $06, nA2, $06, nRst, $0C, nG2, $06
@@ -334,7 +332,6 @@ snd_sng_final_Voices:
 	smpsVcReleaseRate   $0B, $0B, $0B, $0B
 	smpsVcTotalLevel    $00, $00, $00, $19
 
-
 ;	Voice $02
 ;	$1F
 ;	$66, $31, $53, $22, 	$1C, $98, $1F, $1F, 	$12, $0F, $0F, $0F
@@ -352,3 +349,21 @@ snd_sng_final_Voices:
 	smpsVcDecayLevel    $00, $00, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $0B, $0A, $0D, $0C
+
+;	Voice $03
+;	$15
+;	$71, $72, $01, $31, 	$0F, $14, $14, $14, 	$00, $05, $02, $02
+;	$00, $00, $00, $00, 	$0F, $1F, $1F, $1F, 	$2D, $80, $80, $80
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $02
+	smpsVcUnusedBits    $00
+	smpsVcDetune        $03, $00, $07, $07
+	smpsVcCoarseFreq    $01, $01, $02, $01
+	smpsVcRateScale     $00, $00, $00, $00
+	smpsVcAttackRate    $14, $14, $14, $0F
+	smpsVcAmpMod        $00, $00, $00, $00
+	smpsVcDecayRate1    $02, $02, $05, $00
+	smpsVcDecayRate2    $00, $00, $00, $00
+	smpsVcDecayLevel    $01, $01, $01, $00
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcTotalLevel    $00, $00, $00, $2D
