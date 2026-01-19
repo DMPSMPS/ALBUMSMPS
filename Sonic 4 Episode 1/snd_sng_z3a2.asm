@@ -277,7 +277,7 @@ snd_sng_z3a2_PSG1Loop:
 
 ; PSG2 Data
 snd_sng_z3a2_PSG2:
-	dc.b	nRst, $06
+	dc.b	nRst, $0C
 	smpsJump	snd_sng_z3a2_PSG1
 
 ; PSG3 Data
