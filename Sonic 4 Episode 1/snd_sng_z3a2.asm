@@ -10,8 +10,8 @@ snd_sng_z3a2_Header:
 	smpsHeaderFM        snd_sng_z3a2_FM3,	$00, $13
 	smpsHeaderFM        snd_sng_z3a2_FM4,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a2_FM5,	$00, $0C
-	smpsHeaderPSG       snd_sng_z3a2_PSG1,	$0C, $03, $00, sTone_0A
-	smpsHeaderPSG       snd_sng_z3a2_PSG2,	$0C, $07, $00, sTone_17
+	smpsHeaderPSG       snd_sng_z3a2_PSG1,	$0C, $00, $00, sTone_0A
+	smpsHeaderPSG       snd_sng_z3a2_PSG2,	$0C, $04, $00, sTone_17
 	smpsHeaderPSG       snd_sng_z3a2_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -244,18 +244,35 @@ snd_sng_z3a2_PSG1:
 	dc.b	nRst, $7F, nRst, $41
 snd_sng_z3a2_PSG1Loop:
 	dc.b	nRst, $3E, nRst, $7F, nRst, $63, nB1, $06, nFs2, $06, nB2, $06, nBb1
-	dc.b	$06, nRst, $0C, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06
+	dc.b	$06, nRst, $0C
+	smpsPSGAlterVol		$05
+	dc.b	nB1, $06, nFs2, $06, nB2, $06, nBb1, $06
+	smpsPSGAlterVol		$02
 	dc.b	nRst, $0C, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $7F, nRst, $7F
-	dc.b	nRst, $22, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C, nB1
-	dc.b	$06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C, nB1, $06, nFs2
+	smpsPSGAlterVol		-$07
+	dc.b	nRst, $22, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C, 
+	smpsPSGAlterVol		$05
+	dc.b	nB1
+	dc.b	$06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C
+	smpsPSGAlterVol		$02
+	dc.b	nB1, $06, nFs2
 	dc.b	$06, nB2, $06, nBb1, $06, nRst, $68, nRst, $68, nRst, $68, nRst, $68, nRst, $68, nRst, $68
+	smpsPSGAlterVol		-$07
 	dc.b	nRst, $68, nRst, $68, nRst, $68, nRst, $68, nRst, $68, nRst, $68, nB1, $06, nFs2, $06, nB2, $06
-	dc.b	nBb1, $06, nRst, $0C, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06
+	dc.b	nBb1, $06
+	smpsPSGAlterVol		$05
+	dc.b	nRst, $0C, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06
+	smpsPSGAlterVol		$02
 	dc.b	nRst, $0C, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $7F
+	smpsPSGAlterVol		-$07
 	dc.b	nRst, $7F, nRst, $22, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C
-	dc.b	nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C, nB1, $06
+	smpsPSGAlterVol		$05
+	dc.b	nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C
+	smpsPSGAlterVol		$02
+	dc.b	nB1, $06
 	dc.b	nFs2, $06, nB2, $06, nBb1, $06, nRst, $60, nRst, $60, nRst, $60, nRst, $60, nRst, $60, nRst, $60, nRst, $60, nRst, $60, nRst, $60
 	dc.b	nRst, $60, nRst, $60, nRst, $60
+	smpsPSGAlterVol		-$07
 	smpsJump	snd_sng_z3a2_PSG1Loop
 
 ; PSG2 Data
