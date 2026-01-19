@@ -250,7 +250,7 @@ snd_sng_z3a2_PSG1Loop:
 	smpsPSGAlterVol		$02
 	dc.b	nRst, $0C, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $7F, nRst, $7F
 	smpsPSGAlterVol		-$07
-	dc.b	nRst, $22, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C, 
+	dc.b	nRst, $22, nB1, $06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C
 	smpsPSGAlterVol		$05
 	dc.b	nB1
 	dc.b	$06, nFs2, $06, nB2, $06, nBb1, $06, nRst, $0C
