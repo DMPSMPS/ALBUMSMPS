@@ -7,7 +7,7 @@ snd_sng_cutscene_Header:
 	smpsHeaderDAC       snd_sng_cutscene_DAC
 	smpsHeaderFM        snd_sng_cutscene_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_cutscene_FM2,	$00, $13
-	smpsHeaderFM        snd_sng_cutscene_FM3,	$00, $13
+	smpsHeaderFM        snd_sng_cutscene_FM3,	$00, $1E
 	smpsHeaderFM        snd_sng_cutscene_FM4,	$00, $22
 	smpsHeaderFM        snd_sng_cutscene_FM5,	$00, $22
 	smpsHeaderPSG       snd_sng_cutscene_PSG1,	$0C, $05, $00, sTone_0A
@@ -93,31 +93,10 @@ snd_sng_cutscene_FM2:
 ; FM3 Data
 snd_sng_cutscene_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $00
 	smpsAlterNote       $FD
-	dc.b	nRst, $18, nA3, $03, nRst, $03, nA3, $03, nRst, $03, nC4, $03
-	dc.b	nD4, $09, nE4, $03, nRst, $03, nE4, $03, nRst, $03, nA3, $0C
-	dc.b	nG3, $03, nRst, $03, nG3, $03, nRst, $03, nC4, $03, nD4, $09
-	dc.b	nE4, $03, nRst, $03, nE4, $03, nRst, $03, nG3, $0C, nF3, $03
-	dc.b	nRst, $03, nF3, $03, nRst, $03, nC4, $03, nD4, $09, nE4, $03
-	dc.b	nRst, $03, nE4, $03, nRst, $03, nF3, $0C, nE3, $03, nRst, $03
-	dc.b	nE3, $03, nRst, $03, nE3, $03, nRst, $03, nG3, $03, nRst, $03
-	dc.b	nG3, $03, nRst, $03, nG3, $03, nRst, $03, nB3, $03, nRst, $03
-	dc.b	nB3, $03, nRst, $03, nA3, $03, nRst, $03, nA3, $03, nRst, $03
-	dc.b	nC4, $03, nD4, $09, nE4, $03, nRst, $03, nE4, $03, nRst, $03
-	dc.b	nA3, $0C, nG3, $03, nRst, $03, nG3, $03, nRst, $03, nC4, $03
-	dc.b	nD4, $09, nE4, $03, nRst, $03, nE4, $03, nRst, $03, nG3, $0C
-	dc.b	nF3, $03, nRst, $03, nF3, $03, nRst, $03, nC4, $03, nD4, $09
-	dc.b	nE4, $03, nRst, $03, nE4, $03, nRst, $03, nF3, $0C, nE3, $03
-	dc.b	nRst, $03, nE3, $03, nRst, $03, nE3, $03, nRst, $03, nG3, $03
-	dc.b	nRst, $03, nG3, $03, nRst, $03, nG3, $03, nRst, $03, nC4, $03
-	dc.b	nRst, $03, nB3, $03, nRst, $03, nC4, $12, nA3, $12, nC4, $06
-	dc.b	nE4, $06, nD4, $12, nG3, $1E, nF3, $12, nC4, $0C, nB3, $06
-	dc.b	nC4, $0C, nG3, $06, nRst, $06, nG3, $06, nRst, $1E, nAb3, $06
-	dc.b	nC4, $06, nEb4, $06, nBb3, $0C, nD4, $06, nF4, $0C, nB3, $06
-	dc.b	nEb4, $06, nFs4, $06, nCs4, $0C, nF4, $06, nAb4, $0C, nEb4, $09
-	dc.b	nRst, $0F
-	smpsStop
+	dc.b	nRst, $0C
+	smpsJump	snd_sng_cutscene_FM2
 
 ; FM4 Data 
 snd_sng_cutscene_FM4:
