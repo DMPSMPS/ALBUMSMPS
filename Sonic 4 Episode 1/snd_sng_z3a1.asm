@@ -8,9 +8,9 @@ snd_sng_z3a1_Header:
 	smpsHeaderFM        snd_sng_z3a1_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_z3a1_FM2,	$00, $0C
 	smpsHeaderFM        snd_sng_z3a1_FM3,	$00, $0C
-	smpsHeaderFM        snd_sng_z3a1_FM4,	$F4, $1B
+	smpsHeaderFM        snd_sng_z3a1_FM4,	$E8, $1B
 	smpsHeaderFM        snd_sng_z3a1_FM5,	$00, $1B
-	smpsHeaderPSG       snd_sng_z3a1_PSG1,	$00, $03, $00, sTone_23
+	smpsHeaderPSG       snd_sng_z3a1_PSG1,	$F4, $03, $00, sTone_23
 	smpsHeaderPSG       snd_sng_z3a1_PSG2,	$0C, $05, $00, sTone_11
 	smpsHeaderPSG       snd_sng_z3a1_PSG3,	$23, $00, $00, sTone_0F
 
@@ -159,6 +159,7 @@ snd_sng_z3a1_FM3:
 
 ; FM4 Data
 snd_sng_z3a1_FM4:
+	smpsAlterVol        $FE
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	dc.b	nD5, $0C, nRst, $0C, nD5, $0C, nRst, $18, nE5, $24, nF5, $0C
@@ -192,41 +193,48 @@ snd_sng_z3a1_FM4:
 	dc.b	nG5, $0C, nF5, $0C, nE5, $0C, nC5, $0C, nF5, $0C, nD5, $0C
 	dc.b	nA4, $0C, nE5, $18, nC5, $0C, nG4, $0C, nF4, $0C, nD5, $18
 	dc.b	nRst, $48
+	smpsAlterVol        $02
 	smpsJump	snd_sng_z3a1_FM4	
 
 ; FM5 Data
 snd_sng_z3a1_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
-	smpsChangeTransposition		$F4
+	smpsAlterVol        $FE
+	smpsChangeTransposition		$E8
 	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
 	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
 	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18
 	dc.b	nA4, $0C
-	smpsChangeTransposition		$0C
+	smpsAlterVol        $02
+	smpsChangeTransposition		$18
 	smpsAlterVol        $F8
 	smpsAlterVol        $F8
 	smpsSetvoice        $03
 	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
-	smpsChangeTransposition		$F4
+	smpsChangeTransposition		$E8
 	smpsSetvoice        $02
 	smpsAlterVol        $08
 	smpsAlterVol        $08
+	smpsAlterVol        $02
+	smpsAlterVol        $FE
 	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
 	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
 	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18
 	dc.b	nA4, $0C
-	smpsChangeTransposition		$0C
+	smpsChangeTransposition		$18
 	smpsAlterVol        $F8
 	smpsAlterVol        $F8
 	smpsSetvoice        $03
+	smpsAlterVol        $02
 	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C, nF5, $0C, nG5, $0C
 	smpsSetvoice        $05
 	dc.b	nBb1, $7F, smpsNoAttack, $41, nG1, $7F, smpsNoAttack, $11, nC2, $30
 	smpsSetvoice        $02
 	smpsAlterVol        $08
 	smpsAlterVol        $08
-	smpsChangeTransposition		$F4
+	smpsChangeTransposition		$E8
+	smpsAlterVol        $FE
 	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
 	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
 	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18
@@ -234,19 +242,22 @@ snd_sng_z3a1_FM5:
 	smpsAlterVol        $F8
 	smpsAlterVol        $F8
 	smpsSetvoice        $03
-	smpsChangeTransposition		$0C
+	smpsAlterVol        $02
+	smpsChangeTransposition		$18
 	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nC5, $24
 	smpsSetvoice        $02
 	smpsAlterVol        $08
 	smpsAlterVol        $08
-	smpsChangeTransposition		$F4
+	smpsChangeTransposition		$E8
+	smpsAlterVol        $FE
 	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
 	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
 	dc.b	nBb4, $0C, nRst, $18, nBb4, $0C, nRst, $0C, nBb4, $18, nA4, $0C
 	smpsSetvoice        $03
 	smpsAlterVol        $F8
 	smpsAlterVol        $F8
-	smpsChangeTransposition		$0C
+	smpsAlterVol        $02
+	smpsChangeTransposition		$18
 	dc.b	nD5, $0C, nF5, $0C, nG5, $0C, nD5, $0C, nF5, $0C, nG5, $0C
 	smpsSetvoice        $05
 	dc.b	nBb1, $7F, smpsNoAttack, $41, nG1, $7F, smpsNoAttack, $11, nC2, $30
@@ -254,11 +265,13 @@ snd_sng_z3a1_FM5:
 	smpsSetvoice        $02
 	smpsAlterVol        $08
 	smpsAlterVol        $08
-	smpsChangeTransposition		$F4
+	smpsAlterVol        $FE
+	smpsChangeTransposition		$E8
 	dc.b	nD5, $0C, nRst, $0C, nD5, $0C, nC5, $0C, nD5, $0C, nC5, $0C
 	dc.b	nRst, $0C, nD5, $0C, nRst, $0C, nD5, $0C, nRst, $0C, nD5, $0C
 	dc.b	nC5, $0C, nG4, $0C, nA4, $0C, nRst, $78, nRst, $48
-	smpsChangeTransposition		$0C
+	smpsChangeTransposition		$18
+	smpsAlterVol        $02
 	smpsJump	snd_sng_z3a1_FM5
 
 ; PSG1 Data
