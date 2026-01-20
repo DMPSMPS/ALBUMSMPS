@@ -116,7 +116,7 @@ snd_sng_z1a1_FM3INIT:
 	dc.b	nRst, $06, nF4, $0C, nRst, $06, nF4, $0C, nD5, $06, nBb4, $0C
 	dc.b	nG4, $0C, nRst, $06, nC5, $0C, nF5, $06, nC5, $06, nE5, $12
 	dc.b	nRst, $06, nG5, $18, nRst, $06
-	smpsJump	snd_sng_z1a1_FM3
+	smpsJump	snd_sng_z1a1_FM3INIT
 
 ; FM4 Data
 snd_sng_z1a1_FM4:
@@ -131,6 +131,7 @@ snd_sng_z1a1_FM4:
 snd_sng_z1a1_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsAlterNote       $FD
+	smpsSetvoice        $01
 	smpsPan             panRight, $00
 	dc.b	nRst, $06
 	smpsJump	snd_sng_z1a1_FM3INIT
