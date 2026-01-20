@@ -9,7 +9,7 @@ snd_sng_title_Header:
 	smpsHeaderFM        snd_sng_title_FM2,	$F4, $15
 	smpsHeaderFM        snd_sng_title_FM3,	$F4, $15
 	smpsHeaderFM        snd_sng_title_FM4,	$F4, $1E
-	smpsHeaderFM        snd_sng_title_FM5,	$24, $1F
+	smpsHeaderFM        snd_sng_title_FM5,	$24, $1A
 	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $05, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_title_PSG2,	$E8, $05, $00, sTone_17
 	smpsHeaderPSG       snd_sng_title_PSG3,	$23, $00, $00, sTone_0F
@@ -58,8 +58,9 @@ snd_sng_title_FM1:
 ; FM2 Data
 snd_sng_title_FM2:
 	smpsModSet          $07, $01, $03, $05
-	smpsPan             panCenter, $00
+	smpsPan             panLeft, $00
 	smpsSetvoice        $01
+snd_sng_title_FM2INIT:
 	dc.b	nRst, $30, nD5, $0C, nRst, $06, nD5, $06, nE5, $06, nRst, $06
 	dc.b	nG5, $0C, nRst, $0C, nFs5, $0C, nRst, $0C, nE5, $0C, nRst, $0C
 	dc.b	nE5, $0C, nFs5, $0C, nD5, $36, nRst, $06, nD5, $0C, nRst, $06
@@ -84,14 +85,16 @@ snd_sng_title_FM3:
 ; FM4 Data
 snd_sng_title_FM4:
 	smpsModSet          $07, $01, $03, $05
-	dc.b	nRst, $0C
+	smpsPan             panRight, $00
 	smpsAlterNote	$FD
-	smpsJump	snd_sng_title_FM2
+	dc.b	nRst, $0C
+	smpsJump	snd_sng_title_FM2INIT
 	
 ; FM5 Data
 snd_sng_title_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
+	smpsPan             panRight, $00
 	dc.b	nRst, $30, nA1, $1E, nRst, $06, nA1, $0C, nRst, $0C, nA1, $0C
 	dc.b	nRst, $0C, nC2, $0C, nRst, $0C, nC2, $0C, nRst, $0C, nC2, $18
 	dc.b	nB1, $0C, nA1, $0C, nG1, $0C, nB1, $1E, nRst, $06, nB1, $0C
