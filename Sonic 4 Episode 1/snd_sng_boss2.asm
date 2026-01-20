@@ -84,10 +84,10 @@ snd_sng_boss2_FM2Loop:
 	;smpsModSet          $00, $01, $03, $04
 	dc.b	smpsNoAttack, $06
 	;smpsModSet          $00, $01, $04, $04
-	smpsPan             panCenter, $00
 	dc.b	nEb5, $06
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	smpsNoAttack, $06
+	smpsPan             panCenter, $00
 	dc.b	nC5, $0C, nG4, $06, nC5, $06, nRst, $06, nEb5, $06, nRst, $06
 	dc.b	nC5, $06, nEb5, $06, nRst, $06, nEb5, $06, nRst, $06, nD5, $06
 	dc.b	nRst, $06, nCs5, $06, nRst, $06
@@ -110,10 +110,10 @@ snd_sng_boss2_FM2Loop:
 	;smpsModSet          $00, $01, $03, $04
 	dc.b	smpsNoAttack, $06
 	;smpsModSet          $00, $01, $04, $04
-	smpsPan             panCenter, $00
 	dc.b	nEb5, $06
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	smpsNoAttack, $06
+	smpsPan             panCenter, $00
 	dc.b	nC5, $0C, nG4, $06, nC5, $06, nRst, $06, nEb5, $06, nRst, $06
 	dc.b	nC5, $06, nEb5, $06, nRst, $06, nEb5, $06, nRst, $06, nD5, $06
 	dc.b	nRst, $06, nCs5, $06, nRst, $36
