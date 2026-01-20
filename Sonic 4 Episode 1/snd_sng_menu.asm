@@ -9,7 +9,7 @@ snd_sng_menu_Header:
 	smpsHeaderFM        snd_sng_menu_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_menu_FM3,	$00, $13
 	smpsHeaderFM        snd_sng_menu_FM4,	$00, $18
-	smpsHeaderFM        snd_sng_menu_FM5,	$00, $22
+	smpsHeaderFM        snd_sng_menu_FM5,	$00, $1E
 	smpsHeaderPSG       snd_sng_menu_PSG1,	$0C, $02, $00, sTone_06
 	smpsHeaderPSG       snd_sng_menu_PSG2,	$0C, $05, $00, sTone_04
 	smpsHeaderPSG       snd_sng_menu_PSG3,	$23, $00, $00, sTone_0F
@@ -129,7 +129,7 @@ snd_sng_menu_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsAlterNote	$FD
 	dc.b	nRst, $0C
-	smpsJump	snd_sng_menu_FM4	
+	smpsJump	snd_sng_menu_FM2	
 
 ; PSG1 Data
 snd_sng_menu_PSG1:
