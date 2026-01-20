@@ -126,9 +126,9 @@ snd_sng_boss2_FM3:
 	smpsAlterNote		$FD
 	smpsSetvoice        $01
 	smpsPan             panRight, $00
-	dc.b	nRst, $18
+	dc.b	nRst, $18, nRst, $06
 snd_sng_boss2_FM3Loop:
-	dc.b	nRst, $06, nC5, $06, nC4, $06, nF4, $06, nG4, $06, nEb5, $06
+	dc.b	nC5, $06, nC4, $06, nF4, $06, nG4, $06, nEb5, $06
 	dc.b	nF4, $06, nG4, $06, nC5, $06, nD5, $06, nEb5, $06, nD5, $06
 	;smpsModSet          $00, $01, $01, $04
 	dc.b	nCs5, $06
@@ -181,7 +181,7 @@ snd_sng_boss2_FM3Loop:
 	smpsAlterVol        $F5
 	dc.b	nC4, $0C, nG3, $06, nC4, $06, nRst, $06, nEb4, $06, nRst, $06
 	dc.b	nC4, $06, nEb4, $06, nRst, $06, nEb4, $06, nRst, $06, nD4, $06
-	dc.b	nRst, $06, nCs4, $06, nRst, $36
+	dc.b	nRst, $06, nCs4, $06, nRst, $36, nRst, $06
 	smpsAlterVol        $0B
 	smpsPan             panRight, $00
 	smpsJump	snd_sng_boss2_FM3Loop
