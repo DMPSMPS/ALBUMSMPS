@@ -85,7 +85,7 @@ snd_sng_menu_FM2INIT:
 	dc.b	nF5, $0C, nE5, $18, nC5, $0C, nD5, $0C, nE5, $0C, nD5, $24
 	dc.b	nE5, $30, nRst, $0C, nA5, $0C, nG5, $0C, nF5, $0C, nE5, $18
 	dc.b	nC5, $0C, nD5, $0C, nE5, $0C, nD5, $24, nC5, $24, nRst, $18
-	smpsJump	snd_sng_menu_FM2
+	smpsJump	snd_sng_menu_FM2INIT
 
 
 ; FM3 Data
