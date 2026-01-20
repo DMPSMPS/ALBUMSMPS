@@ -86,7 +86,6 @@ snd_sng_title_FM3:
 snd_sng_title_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panRight, $00
-	smpsAlterNote	$FD
 	dc.b	nRst, $0C
 	smpsJump	snd_sng_title_FM2INIT
 	
