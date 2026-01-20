@@ -60,6 +60,7 @@ snd_sng_z2a2_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	smpsAlterNote	    $FD
+	smpsPan             panRight, $00
 	smpsJump	snd_sng_z2a2_FM1
 
 ; FM5 Data
@@ -67,6 +68,7 @@ snd_sng_z2a2_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	smpsAlterNote	    $FD
+	smpsPan             panRight, $00
 	smpsJump	snd_sng_z2a2_FM3
 
 ; FM1 Data
