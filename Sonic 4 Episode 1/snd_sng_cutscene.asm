@@ -66,6 +66,7 @@ snd_sng_cutscene_FM1:
 snd_sng_cutscene_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
+snd_sng_cutscene_FM2INIT:
 	dc.b	nRst, $18, nA3, $03, nRst, $03, nA3, $03, nRst, $03, nC4, $03
 	dc.b	nD4, $09, nE4, $03, nRst, $03, nE4, $03, nRst, $03, nA3, $0C
 	dc.b	nG3, $03, nRst, $03, nG3, $03, nRst, $03, nC4, $03, nD4, $09
@@ -93,15 +94,16 @@ snd_sng_cutscene_FM2:
 ; FM3 Data
 snd_sng_cutscene_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $00
+	smpsSetvoice        $01
 	smpsAlterNote       $FD
-	dc.b	nRst, $0C
-	smpsJump	snd_sng_cutscene_FM2
+	smpsPan             panLeft, $00
+	smpsJump	snd_sng_cutscene_FM2INIT
 
 ; FM4 Data 
 snd_sng_cutscene_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $03
+	smpsPan             panRight, $00
 	dc.b	nRst, $1E, nE4, $06, nRst, $06, nE4, $06, nD4, $06, nE4, $06
 	dc.b	nRst, $06, nE4, $06, nRst, $06, nD4, $06, nRst, $06, nD4, $1E
 	dc.b	nRst, $06, nE4, $06, nRst, $06, nE4, $06, nD4, $06, nE4, $06
@@ -123,6 +125,7 @@ snd_sng_cutscene_FM4:
 snd_sng_cutscene_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $03
+	smpsPan             panRight, $00
 	dc.b	nRst, $1E, nA3, $06, nRst, $06, nA3, $06, nG3, $06, nA3, $06
 	dc.b	nRst, $06, nA3, $06, nRst, $06, nG3, $06, nRst, $06, nG3, $1E
 	dc.b	nRst, $06, nC4, $06, nRst, $06, nA3, $06, nG3, $06, nA3, $06
