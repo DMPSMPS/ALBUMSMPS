@@ -5,7 +5,7 @@ snd_sng_z1a2_Header:
 	smpsHeaderTempo     $01, $77
 
 	smpsHeaderDAC       snd_sng_z1a2_DAC
-	smpsHeaderFM        snd_sng_z1a2_FM1,	$0C, $0F
+	smpsHeaderFM        snd_sng_z1a2_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_z1a2_FM2,	$00, $14
 	smpsHeaderFM        snd_sng_z1a2_FM3,	$00, $1F
 	smpsHeaderFM        snd_sng_z1a2_FM4,	$00, $0F
@@ -87,6 +87,8 @@ snd_sng_z1a2_FM1:
 snd_sng_z1a2_FM2:
 	smpsSetvoice        $01
 	smpsModSet          $07, $01, $03, $05
+	smpsPan             panRight, $00
+snd_sng_z1a2_FM2INIT:
 	dc.b	nG4, $18, nC5, $0C, nB4, $06, nG4, $06, nRst, $06, nG4, $06
 	dc.b	nD5, $08, nRst, $04, nC5, $08, nRst, $04, nG4, $08, nRst, $04
 	dc.b	nB4, $0C, nC5, $03, nRst, $03, nA4, $1E, nRst, $30, nG4, $18
@@ -106,20 +108,23 @@ snd_sng_z1a2_FM2:
 	dc.b	nA5, $06, nG5, $0C, nC5, $06, nE5, $06, nD5, $27, nRst, $0F
 	dc.b	nA5, $06, nB5, $06, nC6, $06, nB5, $06, nRst, $06, nG5, $06
 	dc.b	nRst, $06, nC6, $24, nRst, $12
-	smpsJump	snd_sng_z1a2_FM2	
+	smpsJump	snd_sng_z1a2_FM2INIT	
 
 ; FM3 Data
 snd_sng_z1a2_FM3:
 	smpsSetvoice        $01
 	smpsModSet          $07, $01, $03, $05
 	smpsAlterNote       $FD
+	smpsPan             panLeft, $00
 	dc.b	nRst, $0C
-	smpsJump	snd_sng_z1a2_FM2	
+	smpsJump	snd_sng_z1a2_FM2INIT	
 
 ; FM4 Data
 snd_sng_z1a2_FM4:
+	smpsPan             panLeft, $00
 	smpsSetvoice        $02
 	smpsModSet          $07, $01, $03, $05
+snd_sng_z1a2_FM4INIT:
 	dc.b	nRst, $60, nG4, $0C, nA4, $03, nRst, $03, nF4, $1E, nRst, $7F
 	dc.b	nRst, $11, nG4, $0C, nA4, $03, nRst, $03, nF4, $1E, nRst, $30, nF4
 	dc.b	$18, nA4, $0C, nG4, $06, nE4, $1E, nRst, $78, nF4, $18, nA4
@@ -131,15 +136,16 @@ snd_sng_z1a2_FM4:
 	dc.b	nD4, $06, nC4, $0C, nB3, $06, nA3, $0C, nA3, $06, nG3, $06
 	dc.b	nB3, $27, nRst, $0F, nF4, $06, nF4, $06, nA4, $06, nG4, $06
 	dc.b	nRst, $06, nD4, $06, nRst, $06, nE4, $24, nRst, $12
-	smpsJump	snd_sng_z1a2_FM4
+	smpsJump	snd_sng_z1a2_FM4INIT
 
 ; FM5 Data
 snd_sng_z1a2_FM5:
+	smpsPan             panRight, $00
 	smpsSetvoice        $02
 	smpsModSet          $07, $01, $03, $05
 	smpsAlterNote       $FD
 	dc.b	nRst, $06
-	smpsJump	snd_sng_z1a2_FM4
+	smpsJump	snd_sng_z1a2_FM4INIT
 
 ; PSG1 Data
 snd_sng_z1a2_PSG1:
