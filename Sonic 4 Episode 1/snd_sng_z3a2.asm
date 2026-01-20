@@ -11,7 +11,7 @@ snd_sng_z3a2_Header:
 	smpsHeaderFM        snd_sng_z3a2_FM4,	$F4, $0C
 	smpsHeaderFM        snd_sng_z3a2_FM5,	$F4, $0C
 	smpsHeaderPSG       snd_sng_z3a2_PSG1,	$0C, $00, $00, sTone_0A
-	smpsHeaderPSG       snd_sng_z3a2_PSG2,	$0C, $04, $00, sTone_17
+	smpsHeaderPSG       snd_sng_z3a2_PSG2,	$E8, $05, $00, sTone_11
 	smpsHeaderPSG       snd_sng_z3a2_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -148,7 +148,7 @@ snd_sng_z3a2_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
 	dc.b	nRst, $7F, nRst, $41
-snd_sng_z3a2_FM2Loop:
+snd_sng_z3a2_FM2INIT:
 	dc.b	nEb4, $48, nAb4, $18, nFs4, $48, nCs4, $18, nEb4
 	dc.b	$30, nFs4, $30, nRst, $60, nEb4, $48, nAb4, $18, nBb4, $30, nFs4
 	dc.b	$30, nEb4, $30, nFs4, $30, nRst, $60, nEb4, $30, nAb4, $30, nEb4
@@ -163,7 +163,7 @@ snd_sng_z3a2_FM2Loop:
 	dc.b	$30, nAb4, $30, nEb4, $30, nFs4, $30, nEb4, $24, nFs4, $3C, nBb4
 	dc.b	$30, nFs4, $18, nA4, $18, nAb4, $60, nAb3, $0C, nRst, $0C, nAb3
 	dc.b	$0C, nRst, $0C, nAb3, $0C, nRst, $7F, nRst, $65
-	smpsJump	snd_sng_z3a2_FM2Loop
+	smpsJump	snd_sng_z3a2_FM2INIT
 
 ; FM3 Data
 snd_sng_z3a2_FM3:
@@ -277,8 +277,9 @@ snd_sng_z3a2_PSG1Loop:
 
 ; PSG2 Data
 snd_sng_z3a2_PSG2:
-	dc.b	nRst, $06
-	smpsJump	snd_sng_z3a2_PSG1
+	dc.b	nRst, $7F, nRst, $41
+	dc.b	nRst, $0C
+	smpsJump	snd_sng_z3a2_FM2INIT
 
 ; PSG3 Data
 snd_sng_z3a2_PSG3:
