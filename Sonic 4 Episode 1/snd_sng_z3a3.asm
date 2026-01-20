@@ -108,6 +108,7 @@ snd_sng_z3a3_FM2:
 snd_sng_z3a3_FM3:
 	smpsSetvoice        $03
 	smpsModSet          $07, $01, $03, $05
+	smpsPan             panLeft, $00
 	dc.b	nRst, $7F, nRst, $41, nBb3, $24, nRst, $0C, nD4, $24, nE4, $54
 	dc.b	nRst, $7F, nRst, $59, nBb3, $18, nRst, $0C, nF4, $3C, nE4, $30, nD4, $0C
 	dc.b	nRst, $0C, nC4, $0C, nRst, $7F, nRst, $4D, nD4, $18, nRst, $0C, nBb3
