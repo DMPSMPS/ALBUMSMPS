@@ -122,7 +122,7 @@ snd_sng_z1a1_FM3INIT:
 snd_sng_z1a1_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsAlterNote       $FD
-	smpsSetvoice        $01
+	smpsSetvoice        $02
 	smpsPan             panRight, $00
 	dc.b	nRst, $06
 	smpsJump	snd_sng_z1a1_FM2INIT
