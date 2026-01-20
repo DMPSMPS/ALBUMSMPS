@@ -84,7 +84,7 @@ snd_sng_boss2_FM2Loop:
 	;smpsModSet          $00, $01, $03, $04
 	dc.b	smpsNoAttack, $06
 	;smpsModSet          $00, $01, $04, $04
-	smpsPan             panRight, $00
+	smpsPan             panCenter, $00
 	dc.b	nEb5, $06
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	smpsNoAttack, $06
@@ -110,7 +110,7 @@ snd_sng_boss2_FM2Loop:
 	;smpsModSet          $00, $01, $03, $04
 	dc.b	smpsNoAttack, $06
 	;smpsModSet          $00, $01, $04, $04
-	smpsPan             panRight, $00
+	smpsPan             panCenter, $00
 	dc.b	nEb5, $06
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	smpsNoAttack, $06
@@ -149,7 +149,7 @@ snd_sng_boss2_FM3Loop:
 	dc.b	smpsNoAttack, $06
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	nEb5, $06
-	smpsPan             panLeft, $00
+	smpsPan             panCenter, $00
 	smpsAlterVol        $F5
 	dc.b	nC4, $0C, nG3, $06, nC4, $06, nRst, $06, nEb4, $06, nRst, $06
 	dc.b	nC4, $06, nEb4, $06, nRst, $06, nEb4, $06, nRst, $06, nD4, $06
@@ -177,7 +177,7 @@ snd_sng_boss2_FM3Loop:
 	dc.b	smpsNoAttack, $06
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	nEb5, $06
-	smpsPan             panLeft, $00
+	smpsPan             panCenter, $00
 	smpsAlterVol        $F5
 	dc.b	nC4, $0C, nG3, $06, nC4, $06, nRst, $06, nEb4, $06, nRst, $06
 	dc.b	nC4, $06, nEb4, $06, nRst, $06, nEb4, $06, nRst, $06, nD4, $06
