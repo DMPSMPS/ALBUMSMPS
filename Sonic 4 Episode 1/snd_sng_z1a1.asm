@@ -96,7 +96,7 @@ snd_sng_z1a1_FM2INIT:
 	dc.b	nG4, $0C, nA4, $12, nD5, $1E, nD5, $12, nC5, $1E, nBb4, $12
 	dc.b	nC5, $0C, nD5, $06, nF5, $0C, nC5, $12, nF5, $0C, nA5, $06
 	dc.b	nC5, $06, nG5, $18, nC6, $1E
-	smpsJump	snd_sng_z1a1_FM2	
+	smpsJump	snd_sng_z1a1_FM2INIT	
 
 ; FM3 Data
 snd_sng_z1a1_FM3:
