@@ -64,8 +64,10 @@ snd_sng_menu_FM1:
 
 ; FM2 Data
 snd_sng_menu_FM2:
+	smpsPan             panLeft, $00
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+snd_sng_menu_FM2INIT:
 	dc.b	nRst, $0C, nG4, $06, nA4, $06, nC5, $06, nRst, $06, nC5, $06
 	dc.b	nRst, $06, nD5, $12, nC5, $06, nRst, $24, nG4, $06, nA4, $06
 	dc.b	nC5, $06, nRst, $06, nC5, $06, nRst, $06, nD5, $12, nE5, $06
@@ -126,10 +128,11 @@ snd_sng_menu_FM4:
 	
 ; FM5 Data
 snd_sng_menu_FM5:
+	smpsPan             panRight, $00
 	smpsModSet          $07, $01, $03, $05
-	smpsAlterNote	$FD
+	smpsSetvoice        $01
 	dc.b	nRst, $0C
-	smpsJump	snd_sng_menu_FM2	
+	smpsJump	snd_sng_menu_FM2INIT	
 
 ; PSG1 Data
 snd_sng_menu_PSG1:
