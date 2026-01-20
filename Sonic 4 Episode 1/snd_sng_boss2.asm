@@ -190,6 +190,7 @@ snd_sng_boss2_FM3Loop:
 snd_sng_boss2_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panLeft, $00
+	smpsSetvoice        $02
 	dc.b	nRst, $18
 	smpsJump	snd_sng_boss2_FM5Loop
 
@@ -197,6 +198,7 @@ snd_sng_boss2_FM4:
 snd_sng_boss2_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
+	smpsPan             panLeft, $00
 	dc.b	nRst, $18
 snd_sng_boss2_FM5Loop:
 	dc.b	nRst, $59, nRst, $67, nG3, $0C, nE3, $06, nG3, $06, nRst, $06, nC4
