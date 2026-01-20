@@ -59,6 +59,7 @@ snd_sng_worldmap_FM1:
 snd_sng_worldmap_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
+snd_sng_worldmap_FM2INIT:
 	dc.b	nA3, $05, nRst, $01, nA3, $06, nG3, $06, nD3, $06, nRst, $06
 	dc.b	nE3, $06, nRst, $06, nFs3, $06, nRst, $06, nG3, $06, nRst, $06
 	dc.b	nA3, $0C, nG3, $06, nFs3, $06, nD3, $06, nG3, $51, nRst, $0F
@@ -78,14 +79,16 @@ snd_sng_worldmap_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	smpsAlterNote	    $FD
+	smpsPan             panRight, $00
 	dc.b	nRst, $06
-	smpsJump	snd_sng_worldmap_FM2
+	smpsJump	snd_sng_worldmap_FM2INIT
 
 
 ; FM4 Data
 snd_sng_worldmap_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+	smpsPan             panLeft, $00
 	smpsChangeTransposition		$F4
 	dc.b	nFs5, $05, nRst, $01, nFs5, $06, nE5, $06, nA4, $06, nRst, $06
 	dc.b	nCs5, $06, nRst, $06, nD5, $06, nRst, $06, nE5, $06, nRst, $06
@@ -115,6 +118,7 @@ snd_sng_worldmap_FM4:
 snd_sng_worldmap_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
+	smpsPan             panLeft, $00
 	dc.b	nRst, $60, nG3, $18, nB3, $18, nC4, $12, nD4, $12, nE4, $0C
 	dc.b	nRst, $60, nE4, $12, nD4, $12, nC4, $0C, nD4, $18, nRst, $0C
 	dc.b	nD4, $0C, nRst, $7F, nRst, $41
