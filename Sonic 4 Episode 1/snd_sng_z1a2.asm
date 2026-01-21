@@ -114,7 +114,6 @@ snd_sng_z1a2_FM2INIT:
 snd_sng_z1a2_FM3:
 	smpsSetvoice        $01
 	smpsModSet          $07, $01, $03, $05
-	smpsAlterNote       $FD
 	smpsPan             panLeft, $00
 	dc.b	nRst, $0C
 	smpsJump	snd_sng_z1a2_FM2INIT	
@@ -143,7 +142,6 @@ snd_sng_z1a2_FM5:
 	smpsPan             panRight, $00
 	smpsSetvoice        $02
 	smpsModSet          $07, $01, $03, $05
-	smpsAlterNote       $FD
 	dc.b	nRst, $06
 	smpsJump	snd_sng_z1a2_FM4INIT
 
