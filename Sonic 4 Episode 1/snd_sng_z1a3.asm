@@ -168,7 +168,6 @@ snd_sng_z1a3_FM3:
 
 ; FM4 Data
 snd_sng_z1a3_FM4:
-	smpsAlterNote       $FD
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $03
 	smpsAlterVol        -$0A
@@ -199,7 +198,6 @@ snd_sng_z1a3_FM4:
 
 ; FM5 Data
 snd_sng_z1a3_FM5:
-	smpsAlterNote       $FD
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $04
 	smpsPan             panRight, $00
