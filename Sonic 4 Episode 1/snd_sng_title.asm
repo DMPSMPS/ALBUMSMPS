@@ -16,19 +16,19 @@ snd_sng_title_Header:
 
 ; DAC Data
 snd_sng_title_DAC:
-	dc.b	dSnareS3, $0C, dSnareS3, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $0C, dKickS3, $0C
-	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
-	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
-	dc.b	dSnareS3, $0C, dKickS3, $06, dSnareS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C
-	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C
-	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dSnareS3, $06, dSnareS3, $0C, dKickS3, $0C
-	dc.b	dSnareS3, $0C, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $0C
-	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
-	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
-	dc.b	dSnareS3, $0C, dKickS3, $06, dSnareS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C
-	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dSnareS3, $06
-	dc.b	dSnareS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06
-	dc.b	dKickS3, $12, dSnareS3, $06, dSnareS3, $06, dKickS3, $3C
+	dc.b	dSnare, $0C, dSnare, $0C, dSnare, $06, dSnare, $06, dSnare, $0C, dKick, $0C
+	dc.b	dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C
+	dc.b	dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C
+	dc.b	dSnare, $0C, dKick, $06, dSnare, $06, dSnare, $0C, dKick, $0C, dSnare, $0C
+	dc.b	dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C
+	dc.b	dKick, $0C, dSnare, $0C, dKick, $06, dSnare, $06, dSnare, $0C, dKick, $0C
+	dc.b	dSnare, $0C, dKick, $06, dSnare, $06, dSnare, $06, dSnare, $06, dKick, $0C
+	dc.b	dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C
+	dc.b	dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C
+	dc.b	dSnare, $0C, dKick, $06, dSnare, $06, dSnare, $0C, dKick, $0C, dSnare, $0C
+	dc.b	dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $06, dSnare, $06
+	dc.b	dSnare, $0C, dSnare, $0C, dKick, $0C, dSnare, $0C, dKick, $0C, dSnare, $06
+	dc.b	dKick, $12, dSnare, $06, dSnare, $06, dKick, $3C
 	smpsStop
 
 ; FM1 Data
@@ -84,6 +84,7 @@ snd_sng_title_FM3:
 
 ; FM4 Data
 snd_sng_title_FM4:
+	smpsSetvoice        $01
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panRight, $00
 	dc.b	nRst, $0C
