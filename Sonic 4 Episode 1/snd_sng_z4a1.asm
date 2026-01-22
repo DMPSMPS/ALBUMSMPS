@@ -108,6 +108,7 @@ snd_sng_z4a1_FM2:
 	dc.b	$12, nBb4, $0C, nC5, $12, nAb4, $21, nRst, $2D
 	smpsSetvoice        $04
 	smpsFMAlterVol      -$07
+	smpsChangeTransposition		$0C
 	dc.b	nRst, $06, nC4, $06, nEb4, $06, nF4, $06, nG4, $06, nBb4, $06
 	dc.b	nRst, $06, nC5, $06, nRst, $06, nG4, $06, nBb4, $1E, nRst, $0C, nC4
 	dc.b	$06, nEb4, $06, nF4, $06, nG4, $06, nBb4, $06, nRst, $06, nC5
@@ -116,6 +117,7 @@ snd_sng_z4a1_FM2:
 	dc.b	$06, nRst, $06, nG4, $06, nBb4, $21, nRst, $03, nG4, $0C, nC4
 	dc.b	$06, nEb4, $0C, nRst, $06, nF4, $0C, nRst, $06, nFs4, $0C
 	dc.b	nRst, $06, nG4, $06, nRst, $06, nBb4, $06, nRst, $0C
+	smpsChangeTransposition		$F4
 	smpsSetvoice        $01
 	smpsFMAlterVol       $07
 	smpsFMAlterVol       -$07
@@ -146,7 +148,6 @@ snd_sng_z4a1_FM3:
 	smpsFMAlterVol       $03
 	smpsSetvoice        $05
 	smpsFMAlterVol      -$07
-	smpsChangeTransposition     $0C
 	dc.b	nRst, $06, nC3, $06, nEb3, $06, nF3, $06, nG3, $06, nBb3, $06
 	dc.b	nRst, $06, nC4, $06, nRst, $06, nG3, $06, nBb3, $1E, nRst, $0C, nC3
 	dc.b	$06, nEb3, $06, nF3, $06, nG3, $06, nBb3, $06, nRst, $06, nC4
@@ -156,7 +157,6 @@ snd_sng_z4a1_FM3:
 	dc.b	$06, nEb3, $0C, nRst, $06, nF3, $0C, nRst, $06, nFs3, $0C
 	dc.b	nRst, $06, nG3, $06, nRst, $06, nBb3, $06, nRst, $0C
 	smpsSetvoice        $01
-	smpsChangeTransposition     $F4
 	smpsFMAlterVol      $07
 	smpsFMAlterVol       -$07
 	dc.b	nBb4, $06, nBb4, $06, nRst, $06
