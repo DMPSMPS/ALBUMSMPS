@@ -111,7 +111,7 @@ snd_jin_invincible_FM3:
 	smpsSetvoice        $01
 	smpsAlterNote	    $FD
 	smpsPan             panRight, $00
-	dc.b	nRst, $0C
+	dc.b	nRst, $06
 	smpsJump		snd_jin_invincible_FM2INIT
 
 ; FM5 Data
