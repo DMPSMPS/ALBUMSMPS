@@ -109,7 +109,6 @@ snd_jin_invincible_FM2INIT:
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsAlterNote	    $FD
 	smpsPan             panRight, $00
 	dc.b	nRst, $06
 	smpsJump		snd_jin_invincible_FM2INIT
