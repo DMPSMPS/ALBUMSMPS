@@ -6,8 +6,8 @@ snd_sng_boss2_Header:
 
 	smpsHeaderDAC       snd_sng_boss2_DAC
 	smpsHeaderFM        snd_sng_boss2_FM1,	$F4, $0E
-	smpsHeaderFM        snd_sng_boss2_FM2,	$00, $13
-	smpsHeaderFM        snd_sng_boss2_FM3,	$00, $1E
+	smpsHeaderFM        snd_sng_boss2_FM2,	$00, $0F
+	smpsHeaderFM        snd_sng_boss2_FM3,	$00, $1A
 	smpsHeaderFM        snd_sng_boss2_FM4,	$0C, $13
 	smpsHeaderFM        snd_sng_boss2_FM5,	$00, $13
 	smpsHeaderPSG       snd_sng_boss2_PSG1,	$0C, $03, $00, sTone_0A
