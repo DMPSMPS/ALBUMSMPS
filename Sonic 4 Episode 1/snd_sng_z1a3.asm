@@ -6,10 +6,10 @@ snd_sng_z1a3_Header:
 
 	smpsHeaderDAC       snd_sng_z1a3_DAC
 	smpsHeaderFM        snd_sng_z1a3_FM1,	$00, $0F
-	smpsHeaderFM        snd_sng_z1a3_FM2,	$00, $12
-	smpsHeaderFM        snd_sng_z1a3_FM3,	$00, $12
-	smpsHeaderFM        snd_sng_z1a3_FM4,	$00, $20
-	smpsHeaderFM        snd_sng_z1a3_FM5,	$00, $22
+	smpsHeaderFM        snd_sng_z1a3_FM2,	$00, $0E
+	smpsHeaderFM        snd_sng_z1a3_FM3,	$00, $0E
+	smpsHeaderFM        snd_sng_z1a3_FM4,	$00, $1C
+	smpsHeaderFM        snd_sng_z1a3_FM5,	$00, $1E
 	smpsHeaderPSG       snd_sng_z1a3_PSG1,	$0C, $03, $00, sTone_03
 	smpsHeaderPSG       snd_sng_z1a3_PSG2,	$0C, $03, $00, sTone_03
 	smpsHeaderPSG       snd_sng_z1a3_PSG3,	$23, $00, $00, sTone_0F
