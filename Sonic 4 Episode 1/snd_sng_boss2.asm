@@ -8,8 +8,8 @@ snd_sng_boss2_Header:
 	smpsHeaderFM        snd_sng_boss2_FM1,	$F4, $0E
 	smpsHeaderFM        snd_sng_boss2_FM2,	$00, $0F
 	smpsHeaderFM        snd_sng_boss2_FM3,	$00, $1A
-	smpsHeaderFM        snd_sng_boss2_FM4,	$0C, $13
-	smpsHeaderFM        snd_sng_boss2_FM5,	$00, $13
+	smpsHeaderFM        snd_sng_boss2_FM4,	$0C, $0F
+	smpsHeaderFM        snd_sng_boss2_FM5,	$00, $0F
 	smpsHeaderPSG       snd_sng_boss2_PSG1,	$0C, $03, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_boss2_PSG2,	$0C, $03, $00, sTone_17
 	smpsHeaderPSG       snd_sng_boss2_PSG3,	$23, $00, $00, sTone_0F
