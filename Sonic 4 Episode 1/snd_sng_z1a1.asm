@@ -104,18 +104,17 @@ snd_sng_z1a1_FM3:
 	smpsSetvoice        $01
 	;smpsPan             panLeft, $00
 snd_sng_z1a1_FM3INIT:
-	dc.b	nF4, $06, nC4, $2A, nRst, $06, nC4, $24, nF4, $06, nD4, $2A
-	dc.b	nRst, $06, nC4, $12, nRst, $06, nC4, $18, nF4, $06, nC4, $2A
-	dc.b	nRst, $06, nC4, $24, nF4, $06, nD4, $2A, nRst, $06, nC4, $12
-	dc.b	nRst, $06, nC4, $18, nC5, $0C, nF4, $42, nRst, $06, nF4, $0C
-	dc.b	nG4, $0C, nD4, $1E, nRst, $06, nD4, $18, nC4, $18, nC5, $0C
-	dc.b	nF4, $42, nRst, $06, nF4, $0C, nG4, $0C, nF4, $42, nE5, $06
-	dc.b	nA4, $0C, nBb4, $12, nF4, $0C, nBb4, $0C, nG4, $06, nRst, $06
-	dc.b	nG4, $06, nG4, $0C, nG4, $06, nRst, $06, nG4, $0C, nF4, $0C
-	dc.b	nRst, $06, nF4, $18, nRst, $06, nG4, $0C, nRst, $06, nG4, $18
-	dc.b	nRst, $06, nF4, $0C, nRst, $06, nF4, $0C, nD5, $06, nBb4, $0C
-	dc.b	nG4, $0C, nRst, $06, nC5, $0C, nF5, $06, nC5, $06, nE5, $12
-	dc.b	nRst, $06, nG5, $18, nRst, $06
+	dc.b	nRst, $06, nC4, $2A, nRst, $06, nC4, $24, nRst, $06, nD4, $2A
+	dc.b	nRst, $06, nC4, $12, nRst, $06, nC4, $18, nRst, $06, nC4, $2A
+	dc.b	nRst, $06, nC4, $24, nRst, $06, nD4, $2A, nRst, $06, nC4, $12
+	dc.b	nRst, $06, nC4, $18, nRst, $0C, nF4, $42, nRst, $1E, nD4, $1E
+	dc.b	nRst, $06, nD4, $18, nC4, $18, nRst, $0C, nF4, $42, nRst, $1E
+	dc.b	nF4, $42, nRst, $06, nA4, $0C, nBb4, $12, nF4, $0C, nBb4, $0C
+	dc.b	nG4, $06, nRst, $06, nG4, $06, nG4, $0C, nG4, $06, nRst, $06
+	dc.b	nG4, $0C, nF4, $0C, nRst, $06, nF4, $18, nRst, $06, nG4, $0C
+	dc.b	nRst, $06, nG4, $18, nRst, $06, nF4, $0C, nRst, $06, nF4, $0C
+	dc.b	nRst, $06, nBb4, $0C, nG4, $0C, nRst, $06, nC5, $0C, nF5, $06
+	dc.b	nRst, $06, nE5, $12, nRst, $06, nG5, $18, nRst, $06
 	smpsJump	snd_sng_z1a1_FM3INIT
 
 ; FM4 Data
