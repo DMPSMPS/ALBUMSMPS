@@ -20,14 +20,14 @@ snd_sng_worldmap_DAC:
 	dc.b	dSnareS3, $0C, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06
-	dc.b	dLowTomS3, $06, dFloorTomS3, $06, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dKickS3, $06
+	dc.b	dElectricLowTom, $06, dElectricFloorTom, $06, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $06, dSnareS3, $06
 	dc.b	dSnareS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C
 	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06
-	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dLowTomS3, $06, dFloorTomS3, $06, dKickS3, $06
-	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dLowTomS3, $06, dFloorTomS3, $06
-	dc.b	dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dLowTomS3, $06
-	dc.b	dFloorTomS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06
+	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dElectricLowTom, $06, dElectricFloorTom, $06, dKickS3, $06
+	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dElectricLowTom, $06, dElectricFloorTom, $06
+	dc.b	dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dElectricLowTom, $06
+	dc.b	dElectricFloorTom, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
 	smpsJump	snd_sng_worldmap_DAC
