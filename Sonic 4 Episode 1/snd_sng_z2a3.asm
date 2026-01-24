@@ -8,7 +8,7 @@ snd_sng_z2a3_Header:
 	smpsHeaderFM        snd_sng_z2a3_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_z2a3_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_z2a3_FM3,	$00, $25
-	smpsHeaderFM        snd_sng_z2a3_FM4,	$00, $13
+	smpsHeaderFM        snd_sng_z2a3_FM4,	$00, $18
 	smpsHeaderPSG       snd_sng_z2a3_PSG1,	$00, $00, $00, $00
 	smpsHeaderPSG       snd_sng_z2a3_PSG2,	$00, $00, $00, $00
 	smpsHeaderPSG       snd_sng_z2a3_PSG3,	$23, $00, $00, sTone_0F
@@ -135,7 +135,7 @@ snd_sng_z2a3_FM3:
 snd_sng_z2a3_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
-	smpsPan             panRight, $00
+	;smpsPan             panRight, $00
 	dc.b	nA3, $08, nRst, $10, nA4, $10, nG4, $08, nF4, $10, nG4, $08
 	dc.b	nF4, $10, nC4, $08, nRst, $18, nE4, $10, nF4, $08, nRst, $10
 	dc.b	nD4, $08, nF4, $18, nD4, $08, nRst, $10, nF4, $18, nD4, $08
