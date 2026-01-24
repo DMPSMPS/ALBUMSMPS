@@ -473,7 +473,7 @@ Snd_LRZ1_Loop1E:
 	dc.b	nF1, $0C, nF1, $06, nA1, $0C, nF1, $06, nC2, $06, nA1, $06
 	dc.b	nF1, $0C, nF1, $06, nA1, $0C, nF1, $06, nG1, $0C
 	dc.b	nG1, $0C, nG1, $06, nB1, $0C, nG1, $06, nD2, $06, nB1, $06
-	dc.b	nG1, $0C, nRst, $24
+	dc.b	nG1, $12, nRst, $1E
 	smpsChangeTransposition      $E8
 	smpsReturn
 
