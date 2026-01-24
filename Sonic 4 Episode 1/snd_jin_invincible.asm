@@ -9,7 +9,7 @@ snd_jin_invincible_Header:
 	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM4,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
-	smpsHeaderFM        snd_jin_invincible_FM5,	$24, $13
+	smpsHeaderFM        snd_jin_invincible_FM5,	$24, $18
 	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $03, $00, sTone_0A
 	smpsHeaderPSG       snd_jin_invincible_PSG2,	$00, $03, $00, sTone_17
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
@@ -109,6 +109,7 @@ snd_jin_invincible_FM2INIT:
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
+	smpsAlterNote	    $FD
 	;smpsPan             panRight, $00
 	dc.b	nRst, $0C
 	smpsJump		snd_jin_invincible_FM2INIT
