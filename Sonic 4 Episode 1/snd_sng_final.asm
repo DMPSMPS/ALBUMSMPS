@@ -8,8 +8,8 @@ snd_sng_final_Header:
 	smpsHeaderFM        snd_sng_final_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_final_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_final_FM3,	$18, $13
-	smpsHeaderFM        snd_sng_final_FM4,	$00, $04
-	smpsHeaderFM        snd_sng_final_FM5,	$00, $04
+	smpsHeaderFM        snd_sng_final_FM4,	$00, $08
+	smpsHeaderFM        snd_sng_final_FM5,	$00, $08
 	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $03, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_final_PSG2,	$E8, $05, $00, sTone_11
 
