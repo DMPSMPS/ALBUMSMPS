@@ -96,7 +96,7 @@ snd_sng_cutscene_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
 	smpsAlterNote       $FD
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	smpsJump	snd_sng_cutscene_FM2INIT
 
 ; FM4 Data 
