@@ -15,18 +15,19 @@ snd_sng_worldmap_Header:
 	smpsHeaderPSG       snd_sng_worldmap_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
+;Change "High to Low for Sonic 2 Drums
 snd_sng_worldmap_DAC:
 	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C
 	dc.b	dSnareS3, $0C, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06
-	dc.b	dElectricLowTom, $06, dElectricFloorTom, $06, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dKickS3, $06
+	dc.b	dElectricHighTom, $06, dElectricFloorTom, $06, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $06, dSnareS3, $06
 	dc.b	dSnareS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C
 	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06
-	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dElectricLowTom, $06, dElectricFloorTom, $06, dKickS3, $06
-	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dElectricLowTom, $06, dElectricFloorTom, $06
-	dc.b	dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dElectricLowTom, $06
+	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dElectricHighTom, $06, dElectricFloorTom, $06, dKickS3, $06
+	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dElectricHighTom, $06, dElectricFloorTom, $06
+	dc.b	dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dElectricHighTom, $06
 	dc.b	dElectricFloorTom, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
