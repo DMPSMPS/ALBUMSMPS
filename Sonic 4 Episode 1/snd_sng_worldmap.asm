@@ -106,7 +106,7 @@ snd_sng_worldmap_FM4:
 	smpsChangeTransposition		$0C
 	smpsSetvoice        $02
 	smpsFMAlterVol      $03
-	dc.b	nG4, $12, nA4, $12, nFs4, $0C, nG4, $18, nA4, $0C, nRst, $0C
+	dc.b	nG4, $12, nA4, $12, nFs4, $0C, nG4, $18, nA4, $0C, nD4, $0C
 	dc.b	nG4, $12, nD4, $0C, nRst, $06, nB4, $0C, nA4, $12, nE4, $18
 	dc.b	nRst, $06, nG4, $12, nE4, $0C, nRst, $06, nC5, $0C, nA4, $06
 	dc.b	nRst, $06, nFs4, $06, nRst, $06, nA4, $05, nRst, $01, nA4, $05
@@ -121,7 +121,7 @@ snd_sng_worldmap_FM5:
 	;smpsPan             panLeft, $00
 	dc.b	nRst, $60, nG3, $18, nB3, $18, nC4, $12, nD4, $12, nE4, $0C
 	dc.b	nRst, $60, nE4, $12, nD4, $12, nC4, $0C, nD4, $18, nRst, $0C
-	dc.b	nD4, $0C, nRst, $7F, nRst, $41
+	dc.b	nRst, $0C, nRst, $7F, nRst, $41
 	smpsJump	snd_sng_worldmap_FM5
 
 ; PSG1 Data
