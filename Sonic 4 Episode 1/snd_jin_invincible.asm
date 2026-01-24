@@ -6,10 +6,10 @@ snd_jin_invincible_Header:
 
 	smpsHeaderDAC       snd_jin_invincible_DAC
 	smpsHeaderFM        snd_jin_invincible_FM1,	$00, $0E
-	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $0F
+	smpsHeaderFM        snd_jin_invincible_FM2,	$F4, $13
 	smpsHeaderFM        snd_jin_invincible_FM4,	$F4, $13
-	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $0F
-	smpsHeaderFM        snd_jin_invincible_FM5,	$24, $19
+	smpsHeaderFM        snd_jin_invincible_FM3,	$F4, $1E
+	smpsHeaderFM        snd_jin_invincible_FM5,	$24, $13
 	smpsHeaderPSG       snd_jin_invincible_PSG1,	$0C, $03, $00, sTone_0A
 	smpsHeaderPSG       snd_jin_invincible_PSG2,	$00, $03, $00, sTone_17
 	smpsHeaderPSG       snd_jin_invincible_PSG3,	$23, $00, $00, sTone_0F
@@ -74,14 +74,14 @@ snd_jin_invincible_FM1:
 	dc.b	nRst, $06, nC3, $06, nC4, $06, nG2, $06, nG3, $06, nC3, $06
 	dc.b	nC4, $06, nRst, $60
 	smpsSetvoice        $00
-	smpsPan             panCenter, $00
+	;smpsPan             panCenter, $00
 	smpsStop
 
 ; FM2 Data
 snd_jin_invincible_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 snd_jin_invincible_FM2INIT:
 	dc.b	nC5, $0F, nRst, $03, nB4, $0C, nA4, $06, nG4, $06, nRst, $06
 	dc.b	nD5, $0F, nRst, $03, nCs5, $0C, nB4, $06, nA4, $06, nRst, $06
@@ -109,7 +109,7 @@ snd_jin_invincible_FM2INIT:
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsPan             panRight, $00
+	;smpsPan             panRight, $00
 	dc.b	nRst, $0C
 	smpsJump		snd_jin_invincible_FM2INIT
 
