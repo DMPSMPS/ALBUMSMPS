@@ -8,28 +8,28 @@ snd_sng_worldmap_Header:
 	smpsHeaderFM        snd_sng_worldmap_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_worldmap_FM2,	$0C, $13
 	smpsHeaderFM        snd_sng_worldmap_FM3,	$0C, $1B
-	smpsHeaderFM        snd_sng_worldmap_FM4,	$00, $13
-	smpsHeaderFM        snd_sng_worldmap_FM5,	$00, $16
+	smpsHeaderFM        snd_sng_worldmap_FM4,	$00, $0F
+	smpsHeaderFM        snd_sng_worldmap_FM5,	$00, $12
 	smpsHeaderPSG       snd_sng_worldmap_PSG1,	$18, $01, $00, sTone_06
 	smpsHeaderPSG       snd_sng_worldmap_PSG2,	$18, $04, $00, sTone_04
 	smpsHeaderPSG       snd_sng_worldmap_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
 snd_sng_worldmap_DAC:
-	dc.b	$86, $0C, dSnareS3, $0C, $86, $06, $86, $06, dSnareS3, $0C, $86, $0C
-	dc.b	dSnareS3, $0C, $86, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $86, $06
-	dc.b	$86, $06, dSnareS3, $06, $86, $0C, $86, $06, dSnareS3, $06, $86, $06
-	dc.b	dSnareS3, $06, $86, $06, $86, $06, dSnareS3, $06, $86, $06, dSnareS3, $06
-	dc.b	$90, $06, $93, $06, $86, $0C, dSnareS3, $0C, $86, $06, $86, $06
-	dc.b	dSnareS3, $06, $86, $0C, $86, $06, dSnareS3, $0C, $86, $06, dSnareS3, $06
-	dc.b	dSnareS3, $06, dSnareS3, $06, $86, $06, $86, $06, dSnareS3, $06, $86, $0C
-	dc.b	$86, $06, dSnareS3, $06, $86, $06, dSnareS3, $06, $86, $06, $86, $06
-	dc.b	dSnareS3, $06, $86, $06, dSnareS3, $06, $90, $06, $93, $06, $86, $06
-	dc.b	$86, $06, dSnareS3, $06, $86, $0C, $86, $06, $90, $06, $93, $06
-	dc.b	$86, $06, $86, $06, dSnareS3, $06, $86, $0C, $86, $06, $90, $06
-	dc.b	$93, $06, dSnareS3, $06, $86, $06, $86, $06, dSnareS3, $06, $86, $06
-	dc.b	$86, $06, dSnareS3, $06, $86, $06, dSnareS3, $06, dSnareS3, $06, $86, $06
-	dc.b	dSnareS3, $06, $86, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
+	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C
+	dc.b	dSnareS3, $0C, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $06
+	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $06, dKickS3, $06
+	dc.b	dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06
+	dc.b	dHighTomS3, $06, dFloorTomS3, $06, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dKickS3, $06
+	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C, dKickS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C
+	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06
+	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dHighTomS3, $06, dFloorTomS3, $06, dKickS3, $06
+	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dHighTomS3, $06, dFloorTomS3, $06
+	dc.b	dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dHighTomS3, $06
+	dc.b	dFloorTomS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06
+	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $06
+	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
 	smpsJump	snd_sng_worldmap_DAC
 
 ; FM1 Data
@@ -79,7 +79,7 @@ snd_sng_worldmap_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	smpsAlterNote	    $FD
-	smpsPan             panRight, $00
+	;smpsPan             panRight, $00
 	dc.b	nRst, $06
 	smpsJump	snd_sng_worldmap_FM2INIT
 
@@ -123,7 +123,6 @@ snd_sng_worldmap_FM5:
 	dc.b	nRst, $60, nE4, $12, nD4, $12, nC4, $0C, nD4, $18, nRst, $0C
 	dc.b	nD4, $0C, nRst, $7F, nRst, $41
 	smpsJump	snd_sng_worldmap_FM5
-
 
 ; PSG1 Data
 snd_sng_worldmap_PSG1:
