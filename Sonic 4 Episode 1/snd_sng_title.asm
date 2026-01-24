@@ -8,7 +8,7 @@ snd_sng_title_Header:
 	smpsHeaderFM        snd_sng_title_FM1,	$00, $10
 	smpsHeaderFM        snd_sng_title_FM2,	$F4, $11
 	smpsHeaderFM        snd_sng_title_FM3,	$F4, $15
-	smpsHeaderFM        snd_sng_title_FM4,	$F4, $1A
+	smpsHeaderFM        snd_sng_title_FM4,	$F4, $11
 	smpsHeaderFM        snd_sng_title_FM5,	$24, $16
 	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $05, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_title_PSG2,	$E8, $05, $00, sTone_17
