@@ -121,7 +121,7 @@ snd_sng_z1a1_FM3INIT:
 ; FM4 Data
 snd_sng_z1a1_FM4:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $02
 	smpsAlterNote       $FD
 	;smpsPan             panRight, $00
 	dc.b	nRst, $06
