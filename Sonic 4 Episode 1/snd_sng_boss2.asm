@@ -179,7 +179,6 @@ snd_sng_boss2_FM3Loop:
 	dc.b	smpsNoAttack, $06
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	nEb5, $06
-
 	smpsAlterVol        $F5
 	dc.b	nC4, $0C, nG3, $06, nC4, $06, nRst, $06, nEb4, $06, nRst, $06
 	dc.b	nC4, $06, nEb4, $06, nRst, $06, nEb4, $06, nRst, $06, nD4, $06
