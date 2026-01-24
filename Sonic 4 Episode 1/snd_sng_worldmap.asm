@@ -8,8 +8,8 @@ snd_sng_worldmap_Header:
 	smpsHeaderFM        snd_sng_worldmap_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_worldmap_FM2,	$0C, $13
 	smpsHeaderFM        snd_sng_worldmap_FM3,	$0C, $1B
-	smpsHeaderFM        snd_sng_worldmap_FM4,	$00, $0F
-	smpsHeaderFM        snd_sng_worldmap_FM5,	$00, $12
+	smpsHeaderFM        snd_sng_worldmap_FM4,	$00, $13
+	smpsHeaderFM        snd_sng_worldmap_FM5,	$00, $16
 	smpsHeaderPSG       snd_sng_worldmap_PSG1,	$18, $01, $00, sTone_06
 	smpsHeaderPSG       snd_sng_worldmap_PSG2,	$18, $04, $00, sTone_04
 	smpsHeaderPSG       snd_sng_worldmap_PSG3,	$23, $00, $00, sTone_0F
@@ -88,7 +88,7 @@ snd_sng_worldmap_FM3:
 snd_sng_worldmap_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	smpsChangeTransposition		$F4
 	dc.b	nFs5, $05, nRst, $01, nFs5, $06, nE5, $06, nA4, $06, nRst, $06
 	dc.b	nCs5, $06, nRst, $06, nD5, $06, nRst, $06, nE5, $06, nRst, $06
@@ -118,7 +118,7 @@ snd_sng_worldmap_FM4:
 snd_sng_worldmap_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	dc.b	nRst, $60, nG3, $18, nB3, $18, nC4, $12, nD4, $12, nE4, $0C
 	dc.b	nRst, $60, nE4, $12, nD4, $12, nC4, $0C, nD4, $18, nRst, $0C
 	dc.b	nD4, $0C, nRst, $7F, nRst, $41
