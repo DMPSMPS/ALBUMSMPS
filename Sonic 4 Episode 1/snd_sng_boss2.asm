@@ -7,7 +7,7 @@ snd_sng_boss2_Header:
 	smpsHeaderDAC       snd_sng_boss2_DAC
 	smpsHeaderFM        snd_sng_boss2_FM1,	$F4, $0E
 	smpsHeaderFM        snd_sng_boss2_FM2,	$00, $0F
-	smpsHeaderFM        snd_sng_boss2_FM3,	$00, $1A
+	smpsHeaderFM        snd_sng_boss2_FM3,	$00, $0F
 	smpsHeaderFM        snd_sng_boss2_FM4,	$0C, $0F
 	smpsHeaderFM        snd_sng_boss2_FM5,	$00, $0F
 	smpsHeaderPSG       snd_sng_boss2_PSG1,	$0C, $03, $00, sTone_0A
@@ -154,11 +154,9 @@ snd_sng_boss2_FM3Loop:
 	dc.b	nEb5, $06
 	smpsPan             panCenter, $00
 	smpsAlterVol	    $04
-	smpsAlterVol        $F5
 	dc.b	nC4, $0C, nG3, $06, nC4, $06, nRst, $06, nEb4, $06, nRst, $06
 	dc.b	nC4, $06, nEb4, $06, nRst, $06, nEb4, $06, nRst, $06, nD4, $06
 	dc.b	nRst, $06, nCs4, $06, nRst, $0A, nRst, $02
-	smpsAlterVol        $0B
 	smpsAlterVol	    $FC
 	smpsPan             panRight, $00
 	dc.b	nC5, $06, nC4, $06, nF4, $06, nG4, $06, nEb5, $06, nF4, $06
@@ -183,12 +181,10 @@ snd_sng_boss2_FM3Loop:
 	;smpsModSet          $00, $01, $06, $04
 	dc.b	nEb5, $06
 	smpsPan             panCenter, $00
-	smpsAlterVol        $F5
 	smpsAlterVol	    $04
 	dc.b	nC4, $0C, nG3, $06, nC4, $06, nRst, $06, nEb4, $06, nRst, $06
 	dc.b	nC4, $06, nEb4, $06, nRst, $06, nEb4, $06, nRst, $06, nD4, $06
 	dc.b	nRst, $06, nCs4, $06, nRst, $36, nRst, $06
-	smpsAlterVol        $0B
 	smpsAlterVol	    $FC
 	smpsPan             panRight, $00
 	smpsJump	snd_sng_boss2_FM3Loop
