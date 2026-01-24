@@ -8,8 +8,8 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $0A
 	smpsHeaderFM        Snd_Supersonic_FM2,	$00, $13
 	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $13
-	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $13
-	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $13
+	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $0F
+	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $0F
 	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG2,	$E8, $03, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3,	$23, $00, $00, sTone_0F
