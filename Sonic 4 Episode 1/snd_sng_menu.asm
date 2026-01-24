@@ -128,7 +128,8 @@ snd_sng_menu_FM4:
 	
 ; FM5 Data
 snd_sng_menu_FM5:
-	smpsPan             panRight, $00
+	;smpsPan             panRight, $00
+	smpsAlterNote       $FD
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
 	dc.b	nRst, $0C
