@@ -118,7 +118,7 @@ snd_jin_invincible_FM3:
 snd_jin_invincible_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $03
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	dc.b	nRst, $02, $10, nD1, $1B, nRst, $03, nE1, $0F, nRst, $03, nE1
 	dc.b	$1B, nRst, $03, nF1, $0F, nRst, $03, nF1, $1B, nRst, $03, nG1
 	dc.b	$0F, nRst, $03, nG1, $1B, nRst, $03, nA1, $1E, nRst, $06, nA1
