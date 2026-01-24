@@ -8,8 +8,8 @@ snd_sng_z2a1_Header:
 	smpsHeaderFM        snd_sng_z2a1_FM1,	$00, $10
 	smpsHeaderFM        snd_sng_z2a1_FM2,	$00, $15
 	smpsHeaderFM        snd_sng_z2a1_FM3,	$00, $15
-	smpsHeaderFM        snd_sng_z2a1_FM4,	$00, $17
-	smpsHeaderFM        snd_sng_z2a1_FM5,	$00, $17
+	smpsHeaderFM        snd_sng_z2a1_FM4,	$00, $13
+	smpsHeaderFM        snd_sng_z2a1_FM5,	$00, $13
 	smpsHeaderPSG       snd_sng_z2a1_PSG1,	$F4, $09, $00, sTone_11
 	smpsHeaderPSG       snd_sng_z2a1_PSG2,	$F4, $00, $00, sTone_11
 	smpsHeaderPSG       snd_sng_z2a1_PSG3,	$23, $00, $00, sTone_0F
