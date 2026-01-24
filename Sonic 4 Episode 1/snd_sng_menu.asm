@@ -64,7 +64,7 @@ snd_sng_menu_FM1:
 
 ; FM2 Data
 snd_sng_menu_FM2:
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
 snd_sng_menu_FM2INIT:
