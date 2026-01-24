@@ -16,7 +16,7 @@ snd_jin_clear_final_Header:
 
 ; DAC Data
 snd_jin_clear_final_DAC:
-	smpsPan             panCenter, $00
+	;smpsPan             panCenter, $00
 	dc.b	dSnareS3, $06, dKickS3, $06, dKickS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $03, dSnareS3, $03, dSnareS3, $03, dSnareS3, $03, dKickS3, $0C, dSnareS3, $0C
 	dc.b	dKickS3, $06, dKickS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06
@@ -49,12 +49,12 @@ snd_jin_clear_final_FM1:
 	dc.b	nEb4, $06, nEb3, $06, nEb4, $06, nF3, $06, nRst, $06, nF4, $06
 	dc.b	nG3, $36, nRst, $30
 	smpsSetvoice        $00
-	smpsPan             panCenter, $00
+	;smpsPan             panCenter, $00
 	smpsStop
 
 ; FM2 Data
 snd_jin_clear_final_FM2:
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
 	dc.b	nRst, $30, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
@@ -75,7 +75,7 @@ snd_jin_clear_final_FM2:
 	dc.b	nG4, $0C, nE4, $06, nFs4, $06, nG4, $06, nC5, $0C, nB4, $0C
 	dc.b	nA4, $09, nRst, $03, nA4, $06, nG4, $0C, nBb4, $06, nA4, $06
 	dc.b	nRst, $06, nG4, $36, nRst, $30
-	smpsPan             panCenter, $00
+	;smpsPan             panCenter, $00
 	smpsSetvoice        $00
 	smpsStop
 
@@ -84,7 +84,7 @@ snd_jin_clear_final_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsAlterNote       $FD
-	smpsPan             panRight, $00
+	;smpsPan             panRight, $00
 	dc.b	nRst, $36, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
 	dc.b	nC5, $06, nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06
 	dc.b	nA4, $06, nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03
@@ -104,7 +104,7 @@ snd_jin_clear_final_FM3:
 	dc.b	nA4, $09, nRst, $03, nA4, $06, nG4, $0C, nBb4, $06, nA4, $06
 	dc.b	nRst, $06, nG4, $36, nRst, $2A
 	smpsSetvoice        $00
-	smpsPan             panCenter, $00
+	;smpsPan             panCenter, $00
 	smpsStop
 
 ; FM4 Data
@@ -112,7 +112,7 @@ snd_jin_clear_final_FM4:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsAlterNote       $FA
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	dc.b	nRst, $3C, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
 	dc.b	nC5, $06, nRst, $06, nB4, $06, nRst, $06, nA4, $06, nRst, $06
 	dc.b	nA4, $06, nB4, $06, nG4, $1B, nRst, $03, nG4, $06, nRst, $03
@@ -153,7 +153,7 @@ snd_jin_clear_final_FM5:
 	dc.b	nEb4, $09, nRst, $03, nEb4, $03, nRst, $03, nEb4, $0C, nF4, $03
 	dc.b	nRst, $03, nF4, $06, nRst, $06, nD4, $36, nRst, $30
 	smpsSetvoice        $00
-	smpsPan             panCenter, $00
+	;smpsPan             panCenter, $00
 	smpsStop
 
 ; PSG1 Data
