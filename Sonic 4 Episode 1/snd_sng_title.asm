@@ -86,6 +86,7 @@ snd_sng_title_FM3:
 snd_sng_title_FM4:
 	smpsSetvoice        $01
 	smpsModSet          $07, $01, $03, $05
+	smpsAlterNote       $FD
 	;smpsPan             panRight, $00
 	dc.b	nRst, $0C
 	smpsJump	snd_sng_title_FM2INIT
@@ -94,7 +95,7 @@ snd_sng_title_FM4:
 snd_sng_title_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
-	;smpsPan             panRight, $00
+	smpsPan             panRight, $00
 	dc.b	nRst, $30, nA1, $1E, nRst, $06, nA1, $0C, nRst, $0C, nA1, $0C
 	dc.b	nRst, $0C, nC2, $0C, nRst, $0C, nC2, $0C, nRst, $0C, nC2, $18
 	dc.b	nB1, $0C, nA1, $0C, nG1, $0C, nB1, $1E, nRst, $06, nB1, $0C
