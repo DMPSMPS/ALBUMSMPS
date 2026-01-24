@@ -17,8 +17,8 @@ snd_sng_z2a2_Header:
 ; DAC Data
 snd_sng_z2a2_DAC:
 	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06
-	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dLowTomS3, $06, dLowTomS3, $06, dKickS3, $06
-	dc.b	dSnareS3, $0C, dLowTomS3, $06, dFloorTomS3, $06, dKickS3, $0C, dSnareS3, $0C, dSnareS3, $06
+	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dElectricLowTom, $06, dElectricLowTom, $06, dKickS3, $06
+	dc.b	dSnareS3, $0C, dElectricLowTom, $06, dElectricFloorTom, $06, dKickS3, $0C, dSnareS3, $0C, dSnareS3, $06
 	dc.b	dKickS3, $06, dSnareS3, $06, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
 	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C
 	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dSnareS3, $06
@@ -33,8 +33,8 @@ snd_sng_z2a2_DAC:
 	dc.b	dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $06, dSnareS3, $0C
 	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $0C
 	dc.b	dSnareS3, $0C, dKickS3, $0C, dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $0C
-	dc.b	dKickS3, $0C, dSnareS3, $0C, dLowTomS3, $06, dLowTomS3, $06, dKickS3, $06, dSnareS3, $0C
-	dc.b	dLowTomS3, $06, dFloorTomS3, $06, dKickS3, $0C, dSnareS3, $0C, dSnareS3, $06, dKickS3, $06
+	dc.b	dKickS3, $0C, dSnareS3, $0C, dElectricLowTom, $06, dElectricLowTom, $06, dKickS3, $06, dSnareS3, $0C
+	dc.b	dElectricLowTom, $06, dElectricFloorTom, $06, dKickS3, $0C, dSnareS3, $0C, dSnareS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dSnareS3, $3C
 	smpsStop
 
