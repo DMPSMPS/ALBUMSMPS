@@ -28,7 +28,6 @@ snd_jin_clear_final_DAC:
 	dc.b	dKickS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $06, dSnareS3, $06, dKickS3, $0C, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $06, dSnareS3, $0C, dSnareS3, $06, dKickS3, $66
-	smpsPan             panCenter, $00
 	smpsStop
 
 ; FM1 Data
