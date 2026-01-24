@@ -78,7 +78,7 @@ snd_sng_z1a1_FM1:
 
 ; FM2 Data
 snd_sng_z1a1_FM2:
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 snd_sng_z1a1_FM2INIT:
@@ -102,7 +102,7 @@ snd_sng_z1a1_FM2INIT:
 snd_sng_z1a1_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsPan             panLeft, $00
+	;smpsPan             panLeft, $00
 snd_sng_z1a1_FM3INIT:
 	dc.b	nF4, $06, nC4, $2A, nRst, $06, nC4, $24, nF4, $06, nD4, $2A
 	dc.b	nRst, $06, nC4, $12, nRst, $06, nC4, $18, nF4, $06, nC4, $2A
@@ -121,8 +121,9 @@ snd_sng_z1a1_FM3INIT:
 ; FM4 Data
 snd_sng_z1a1_FM4:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
-	smpsPan             panRight, $00
+	smpsSetvoice        $01
+	smpsAlterNote       $FD
+	;smpsPan             panRight, $00
 	dc.b	nRst, $06
 	smpsJump	snd_sng_z1a1_FM2INIT
 
@@ -130,7 +131,8 @@ snd_sng_z1a1_FM4:
 snd_sng_z1a1_FM5:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsPan             panRight, $00
+	smpsAlterNote       $FD
+	;smpsPan             panRight, $00
 	dc.b	nRst, $06
 	smpsJump	snd_sng_z1a1_FM3INIT
 
