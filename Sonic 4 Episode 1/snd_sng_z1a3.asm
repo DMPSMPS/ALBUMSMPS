@@ -173,6 +173,7 @@ snd_sng_z1a3_FM4:
 	smpsAlterVol        -$0A
 	smpsAlterVol        $06
 	;smpsPan             panLeft, $00
+	smpsAlterNote	     $FD
 	dc.b	nRst, $7F, nRst, $7F, nRst, $7F, nRst, $03, nE5, $0C, nF5, $06, nRst, $06, nG5
 	dc.b	$18, nE5, $0C, nF5, $06, nRst, $06, nG5, $18, nE5, $0C, nF5
 	dc.b	$06, nRst, $06, nG5, $0C, nA5, $0C, nG5, $0C, nE5, $0C, nC5
@@ -204,6 +205,7 @@ snd_sng_z1a3_FM5:
 	smpsSetvoice        $04
 	;smpsPan             panRight, $00
 	smpsAlterVol        $07
+	smpsAlterNote	     $FD
 	dc.b	nRst, $7F, nRst, $7F, nRst, $7F, nRst, $03, nG4, $0C, nB4, $06, nRst, $06, nC5
 	dc.b	$12, nRst, $06, nC5, $0C, nD5, $06, nRst, $06, nE5, $18, nC5
 	dc.b	$0C, nD5, $06, nRst, $06, nE5, $0C, nD5, $0C, nB4, $06
