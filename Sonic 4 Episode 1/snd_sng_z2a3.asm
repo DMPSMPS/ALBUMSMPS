@@ -80,7 +80,7 @@ snd_sng_z2a3_FM1:
 snd_sng_z2a3_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsPan             panRight, $00
+	;smpsPan             panRight, $00
 	dc.b	nC4, $08, nRst, $10, nC5, $10, nBb4, $08, nA4, $10, nBb4, $08
 	dc.b	nA4, $10, nF4, $08, nRst, $18, nG4, $10, nA4, $08, nRst, $10
 	dc.b	nBb4, $08, nA4, $18, nG4, $08, nRst, $10, nA4, $18, nBb4, $08
@@ -107,7 +107,8 @@ snd_sng_z2a3_FM2:
 snd_sng_z2a3_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
-	smpsPan             panLeft, $00
+	smpsAlterNote       $FD
+	;smpsPan             panLeft, $00
 	dc.b	nRst, $0C, nC4, $08, nRst, $10, nC5, $10, nBb4, $08, nA4, $10
 	dc.b	nBb4, $08, nA4, $10, nF4, $08, nRst, $18, nG4, $10, nA4, $08
 	dc.b	nRst, $10, nBb4, $08, nA4, $18, nG4, $08, nRst, $10, nA4, $18
