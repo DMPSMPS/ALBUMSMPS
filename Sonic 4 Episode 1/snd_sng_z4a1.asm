@@ -313,7 +313,6 @@ snd_sng_z4a1_PSG1:
 
 ; PSG2 Data
 snd_sng_z4a1_PSG2:
-	smpsAlterNote		$FF
 	smpsJump	snd_sng_z4a1_PSG1
 
 snd_sng_z4a1_Voices:
