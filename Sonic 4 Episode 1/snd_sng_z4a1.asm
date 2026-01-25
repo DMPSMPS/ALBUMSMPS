@@ -89,7 +89,6 @@ snd_sng_z4a1_FM1:
 
 ; FM2 Data
 snd_sng_z4a1_FM2:
-    smpsStop
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $01
 	smpsFMAlterVol      -$07
