@@ -108,7 +108,7 @@ snd_jin_invincible_FM2INIT:
 ; FM3 Data
 snd_jin_invincible_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
+	smpsSetvoice        $01
 	smpsAlterNote	    $FD
 	;smpsPan             panRight, $00
 	dc.b	nRst, $0C
@@ -205,7 +205,7 @@ snd_jin_invincible_Voices:
 ;	Voice $01
 ;	$3E
 ;	$12, $15, $21, $12, 	$0F, $14, $14, $12, 	$05, $05, $05, $0A
-;	$00, $00, $00, $00, 	$11, $22, $22, $22, 	$05, $05, $F6, $19
+;	$00, $00, $00, $00, 	$11, $22, $22, $22, 	$0A, $0A, $F6, $19
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -218,7 +218,7 @@ snd_jin_invincible_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $01, $02, $02, $02
 	smpsVcReleaseRate   $0B, $0B, $0B, $0B
-	smpsVcTotalLevel    $00, $00, $F6, $19
+	smpsVcTotalLevel    $0A, $0A, $F6, $19
 
 ;	Voice $02
 ;	$15
