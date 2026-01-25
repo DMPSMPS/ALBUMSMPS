@@ -222,7 +222,6 @@ snd_sng_z3a1_FM5:
 	smpsSetvoice        $02
 	smpsAlterVol        $08
 	smpsAlterVol        $08
-	smpsAlterVol        $02
 	smpsAlterVol        $FE
 	dc.b	nA4, $0C, nRst, $0C, nA4, $0C, nRst, $18, nA4, $24, nD4, $0C
 	dc.b	nF4, $0C, nD4, $0C, nC5, $18, nA4, $24, nBb4, $0C, nRst, $0C
