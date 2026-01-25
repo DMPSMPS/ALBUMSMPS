@@ -5,9 +5,9 @@ snd_sng_title_Header:
 	smpsHeaderTempo     $01, $1F
 
 	smpsHeaderDAC       snd_sng_title_DAC
-	smpsHeaderFM        snd_sng_title_FM1,	$00, $10
-	smpsHeaderFM        snd_sng_title_FM2,	$F4, $15
-	smpsHeaderFM        snd_sng_title_FM3,	$F4, $15
+	smpsHeaderFM        snd_sng_title_FM1,	$00, $0E
+	smpsHeaderFM        snd_sng_title_FM2,	$F4, $13
+	smpsHeaderFM        snd_sng_title_FM3,	$F4, $13
 	smpsHeaderFM        snd_sng_title_FM4,	$F4, $1E
 	smpsHeaderFM        snd_sng_title_FM5,	$24, $1A
 	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $05, $00, sTone_0A
@@ -208,7 +208,7 @@ snd_sng_title_Voices:
 ;	Voice $01
 ;	$3E
 ;	$12, $15, $21, $12, 	$0F, $14, $14, $12, 	$05, $05, $05, $0A
-;	$00, $00, $00, $00, 	$11, $22, $22, $22, 	$05, $05, $F6, $19
+;	$00, $00, $00, $00, 	$11, $22, $22, $22, 	$0A, $0A, $F6, $19
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -221,7 +221,7 @@ snd_sng_title_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $01, $02, $02, $02
 	smpsVcReleaseRate   $0B, $0B, $0B, $0B
-	smpsVcTotalLevel    $00, $00, $F6, $19
+	smpsVcTotalLevel    $0A, $0A, $F6, $19
 
 ;	Voice $02
 ;	$3D
