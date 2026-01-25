@@ -220,22 +220,22 @@ snd_jin_clear_final_Voices:
 	smpsVcTotalLevel    $00, $1E, $14, $0E
 
 ;	Voice $01
-;	$3D
-;	$12, $21, $54, $12, 	$12, $14, $14, $0F, 	$0A, $05, $02, $05
-;	$00, $00, $00, $00, 	$2B, $2B, $1F, $1B, 	$19, $00, $00, $00
-	smpsVcAlgorithm     $05
+;	$3E
+;	$12, $15, $21, $12, 	$0F, $14, $14, $12, 	$05, $05, $05, $0A
+;	$00, $00, $00, $00, 	$11, $22, $22, $22, 	$05, $05, $F6, $19
+	smpsVcAlgorithm     $06
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $01, $05, $02, $01
-	smpsVcCoarseFreq    $02, $03, $01, $02
+	smpsVcCoarseFreq    $02, $01, $01, $02
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $0F, $14, $14, $12
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $05, $02, $05, $0A
+	smpsVcDecayRate1    $05, $05, $05, $0A
 	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $01, $01, $02, $02
-	smpsVcReleaseRate   $0B, $0F, $0B, $0B
-	smpsVcTotalLevel    $00, $00, $00, $19
+	smpsVcDecayLevel    $01, $02, $02, $02
+	smpsVcReleaseRate   $0B, $0B, $0B, $0B
+	smpsVcTotalLevel    $00, $00, $F6, $19
 
 ;	Voice $02
 ;	$3D
