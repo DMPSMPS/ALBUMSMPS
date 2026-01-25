@@ -208,7 +208,7 @@ snd_sng_title_Voices:
 ;	Voice $01
 ;	$3E
 ;	$12, $15, $21, $12, 	$0F, $14, $14, $12, 	$05, $05, $05, $0A
-;	$00, $00, $00, $00, 	$11, $22, $22, $22, 	$0A, $0A, $F6, $19
+;	$00, $00, $00, $00, 	$11, $22, $22, $22, 	$07, $07, $F9, $19
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -221,7 +221,7 @@ snd_sng_title_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $01, $02, $02, $02
 	smpsVcReleaseRate   $0B, $0B, $0B, $0B
-	smpsVcTotalLevel    $0A, $0A, $F6, $19
+	smpsVcTotalLevel    $07, $07, $F9, $19
 
 ;	Voice $02
 ;	$3D
