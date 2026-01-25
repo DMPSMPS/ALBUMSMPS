@@ -72,14 +72,12 @@ Snd_Supersonic_FM2:
 	smpsSetvoice        $00
 	dc.b	nE4, $12, $0C, nFs4, $06, nE4, $0C, nFs4, $12, $0C, nAb4, $06
 	dc.b	nFs4, $0C, nA4, $12, $0C, nB4, $06, nA4, $0C
-	smpsAlterVol        $FC
 	smpsPan             panLeft, $00
 	dc.b	nB3, $06, nCs4, nD4, nE4
 	smpsPan             panRight, $00
 	dc.b	nFs4, nAb4, nA4, nB4
 	smpsPan             panCenter, $00
 	smpsAlterVol        $09
-	smpsAlterVol        $04
 
 Snd_Supersonic_Loop03:
 	smpsCall            Snd_Supersonic_Call03
@@ -109,7 +107,6 @@ Snd_Supersonic_Loop0B:
 
 Snd_Supersonic_Call04:
 	smpsAlterVol        $F7
-	smpsAlterVol        $FC
 	smpsPan             panRight, $00
 	dc.b	nE5, $06, nD5, nCs5, nB4
 	smpsPan             panLeft, $00
@@ -120,7 +117,6 @@ Snd_Supersonic_Call04:
 	dc.b	nA4, nAb4, nFs4, nE4
 	smpsPan             panCenter, $00
 	smpsAlterVol        $09
-	smpsAlterVol        $04
 	smpsReturn
 
 ; FM3 Data
