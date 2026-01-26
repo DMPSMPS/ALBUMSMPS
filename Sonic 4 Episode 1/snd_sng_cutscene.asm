@@ -241,9 +241,9 @@ snd_sng_cutscene_Voices:
 	smpsVcTotalLevel    $00, $00, $00, $15
 
 ;	Voice $01
-;	$3D
-;	$01, $01, $01, $02, 	$94, $19, $0F, $14, 	$0F, $0D, $00, $05
-;	$07, $04, $00, $00, 	$25, $1A, $0F, $1F, 	$15, $00, $00, $00
+;	$35
+;	$03, $02, $01, $01, 	$14, $0F, $19, $14, 	$05, $00, $0D, $0F
+;	$00, $00, $04, $07, 	$01, $00, $01, $02, 	$F9, $F9, $07, $15
 	smpsVcAlgorithm     $05
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -256,7 +256,7 @@ snd_sng_cutscene_Voices:
 	smpsVcDecayRate2    $00, $00, $04, $07
 	smpsVcDecayLevel    $01, $00, $01, $02
 	smpsVcReleaseRate   $0F, $0F, $0A, $05
-	smpsVcTotalLevel    $F6, $F6, $0A, $15
+	smpsVcTotalLevel    $F9, $F9, $07, $15
 
 ;	Voice $02
 ;	$28
