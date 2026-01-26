@@ -209,6 +209,7 @@ Snd_Supersonic_Call02:
 
 ; FM4 Data
 Snd_Supersonic_FM4:
+	smpsAlterNote       $03
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panLeft, $00
 	smpsSetvoice        $03
