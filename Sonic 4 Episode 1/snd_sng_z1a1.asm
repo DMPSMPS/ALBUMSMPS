@@ -80,7 +80,7 @@ snd_sng_z1a1_FM1:
 snd_sng_z1a1_FM2:
 	;smpsPan             panLeft, $00
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
+	smpsSetvoice        $01
 snd_sng_z1a1_FM2INIT:
 	dc.b	nF4, $06, nC4, $06, nG4, $06, nF4, $24, nC4, $06, nF4, $06
 	dc.b	nG4, $06, nBb4, $06, nA4, $06, nG4, $06, nF4, $06, nG4, $0C
