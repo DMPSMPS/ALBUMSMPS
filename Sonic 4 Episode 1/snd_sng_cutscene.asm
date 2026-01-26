@@ -65,7 +65,7 @@ snd_sng_cutscene_FM1:
 ; FM2 Data
 snd_sng_cutscene_FM2:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $00
+	smpsSetvoice        $01
 snd_sng_cutscene_FM2INIT:
 	dc.b	nRst, $18, nA3, $03, nRst, $03, nA3, $03, nRst, $03, nC4, $03
 	dc.b	nD4, $09, nE4, $03, nRst, $03, nE4, $03, nRst, $03, nA3, $0C
@@ -94,9 +94,10 @@ snd_sng_cutscene_FM2INIT:
 ; FM3 Data
 snd_sng_cutscene_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $00
 	smpsAlterNote       $FD
 	;smpsPan             panLeft, $00
+	dc.b	nRst, $06
 	smpsJump	snd_sng_cutscene_FM2INIT
 
 ; FM4 Data 
@@ -240,22 +241,22 @@ snd_sng_cutscene_Voices:
 	smpsVcTotalLevel    $00, $00, $00, $15
 
 ;	Voice $01
-;	$15
-;	$71, $72, $01, $31, 	$0F, $14, $14, $14, 	$00, $05, $02, $02
-;	$00, $00, $00, $00, 	$0F, $1F, $1F, $1F, 	$2D, $80, $80, $80
+;	$3D
+;	$01, $01, $01, $02, 	$94, $19, $0F, $14, 	$0F, $0D, $00, $05
+;	$07, $04, $00, $00, 	$25, $1A, $0F, $1F, 	$15, $00, $00, $00
 	smpsVcAlgorithm     $05
-	smpsVcFeedback      $02
+	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $03, $00, $07, $07
-	smpsVcCoarseFreq    $01, $01, $02, $01
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $14, $14, $14, $0F
+	smpsVcDetune        $00, $00, $00, $00
+	smpsVcCoarseFreq    $03, $02, $01, $01
+	smpsVcRateScale     $00, $00, $00, $02
+	smpsVcAttackRate    $14, $0F, $19, $14
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $02, $02, $05, $00
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $01, $01, $01, $00
-	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $00, $00, $2D
+	smpsVcDecayRate1    $05, $00, $0D, $0F
+	smpsVcDecayRate2    $00, $00, $04, $07
+	smpsVcDecayLevel    $01, $00, $01, $02
+	smpsVcReleaseRate   $0F, $0F, $0A, $05
+	smpsVcTotalLevel    $F6, $F6, $0A, $15
 
 ;	Voice $02
 ;	$28
