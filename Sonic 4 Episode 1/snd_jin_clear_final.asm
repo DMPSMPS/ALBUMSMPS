@@ -82,7 +82,7 @@ snd_jin_clear_final_FM2:
 ; FM3 Data
 snd_jin_clear_final_FM3:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $02
 	smpsAlterNote       $FD
 	;smpsPan             panRight, $00
 	dc.b	nRst, $36, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
@@ -110,7 +110,7 @@ snd_jin_clear_final_FM3:
 ; FM4 Data
 snd_jin_clear_final_FM4:
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $01
+	smpsSetvoice        $02
 	smpsAlterNote       $FA
 	;smpsPan             panLeft, $00
 	dc.b	nRst, $3C, nG4, $06, nRst, $03, nG4, $03, nA4, $03, nRst, $03
