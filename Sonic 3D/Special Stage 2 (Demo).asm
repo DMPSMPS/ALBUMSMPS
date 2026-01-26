@@ -922,7 +922,7 @@ Snd_SpecialS2_Voices:
 ;	Voice $03
 ;	$04
 ;	$04, $04, $04, $04, 	$13, $10, $13, $10, 	$06, $0C, $06, $0C
-;	$00, $00, $00, $00, 	$4F, $2F, $4F, $2F, 	$1E, $8C, $1E, $80
+;	$00, $00, $00, $00, 	$4F, $2F, $4F, $2F, 	$1E, $8C, $1E, $8C
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $00
 	smpsVcUnusedBits    $00
@@ -935,7 +935,7 @@ Snd_SpecialS2_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $02, $04, $02, $04
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $1E, $0C, $1E
+	smpsVcTotalLevel    $0C, $1E, $0C, $1E
 
 ;	Voice $04
 ;	$3D
