@@ -334,14 +334,14 @@ snd_sng_z3a2_PSG3Loop:
 
 snd_sng_z3a2_Voices:
 ;	Voice $00
-;	$05
+;	$28
 ;	$36, $35, $30, $01, 	$DF, $DF, $1F, $1F, 	$07, $06, $13, $13
 ;	$07, $06, $03, $03, 	$2F, $1F, $4F, $4F, 	$19, $37, $14, $F2
 	smpsVcAlgorithm     $00
 	smpsVcFeedback      $05
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $00, $03, $03, $03
-	smpsVcCoarseFreq    $01, $00, $02, $03
+	smpsVcCoarseFreq    $01, $00, $05, $06
 	smpsVcRateScale     $00, $00, $03, $03
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
