@@ -10,8 +10,8 @@ snd_sng_title_Header:
 	smpsHeaderFM        snd_sng_title_FM3,	$00, $13
 	smpsHeaderFM        snd_sng_title_FM4,	$F4, $1E
 	smpsHeaderFM        snd_sng_title_FM5,	$24, $18
-	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $03, $00, sTone_0A
-	smpsHeaderPSG       snd_sng_title_PSG2,	$E8, $03, $00, sTone_17
+	smpsHeaderPSG       snd_sng_title_PSG1,	$E8, $05, $00, sTone_0A
+	smpsHeaderPSG       snd_sng_title_PSG2,	$E8, $05, $00, sTone_17
 	smpsHeaderPSG       snd_sng_title_PSG3,	$23, $00, $00, sTone_0F
 
 ; DAC Data
@@ -193,25 +193,25 @@ snd_sng_title_PSG2:
 	dc.b	nRst, $01
 	dc.b	nRst, $02, nRst, $2D, nD5, $18, nG5, $18, nD5, $0C, nA5, $18, nD5, $15
 	dc.b	nRst, $03, nD5, $0C, nC6, $15, nRst, $03
-	;smpsAlterVol        $FC
+	smpsAlterVol        $FC
 	dc.b	nC6, $03, nRst, $09, nB5, $03, nRst, $09, nA5, $03, nRst, $09
 	dc.b	nG5, $03, nRst, $09
-	;smpsAlterVol        $04
+	smpsAlterVol        $04
 	dc.b	nD5, $18, nG5, $18, nA5, $18
-	;smpsAlterVol        $FC
+	smpsAlterVol        $FC
 	dc.b	nD6, $06, nRst, $06, nE5, $06, nRst, $06, nA3, $06, nRst, $06
 	dc.b	nA4, $06, nRst, $06, nCs4, $06, nRst, $06, nCs5, $06, nRst, $06
 	dc.b	nE4, $06, nRst, $06, nE5, $06, nRst, $06, nFs5, $06, nG5, $06
 	dc.b	nAb5, $06, nA5, $06
-	;smpsAlterVol        $04
+	smpsAlterVol        $04
 	dc.b	nD5, $18, nG5, $18, nD5, $0C, nA5, $18, nD5, $15, nRst, $03
 	dc.b	nD5, $0C, nC6, $15, nRst, $03
-	;smpsAlterVol        $FC
+	smpsAlterVol        $FC
 	dc.b	nC6, $03, nRst, $09, nB5, $03, nRst, $09, nA5, $03, nRst, $09
 	dc.b	nG5, $03, nRst, $09
-	;smpsAlterVol        $04
+	smpsAlterVol        $04
 	dc.b	nD5, $18, nG5, $18, nA5, $18
-	;smpsAlterVol        $FC
+	smpsAlterVol        $FC
 	dc.b	nD6, $06, nRst, $06, nE5, $06, nRst, $06, nA3, $06, nRst, $06
 	dc.b	nA4, $06, nRst, $06, nCs4, $06, nRst, $06, nA5, $06, nRst, $06
 	dc.b	nE5, $06, nA5, $06, nFs5, $06, nG5, $06, nAb5, $06, nA5, $06
