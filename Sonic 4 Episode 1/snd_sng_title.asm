@@ -77,8 +77,8 @@ snd_sng_title_FM2INIT:
 snd_sng_title_FM3:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $04
-	dc.b	nRst, $30, nD5, $18, nG5, $18, nD5, $0C, nA5, $18, nD5, $15
-	dc.b	nRst, $03, nD5, $0C, nC6, $15, nRst, $03
+	dc.b	nRst, $30, nRst, $18, nRst, $18, nRst, $0C, nRst, $18, nRst, $15
+	dc.b	nRst, $03, nRst, $0C, nRst, $15, nRst, $03
 	smpsPan             panLeft, $00
 	smpsAlterVol        $F6
 	dc.b	nC6, $03, nRst, $03
@@ -98,15 +98,15 @@ snd_sng_title_FM3:
 	dc.b	nG5, $03, nRst, $03
 	smpsPan             panCenter, $00
 	smpsAlterVol        $0A
-	dc.b	nD5, $18, nG5, $0C
+	dc.b	nRst, $18, nRst, $0C
 	smpsSetvoice        $01
 	smpsChangeTransposition		$F4	
 	dc.b	nD5, $0C, nRst, $0C
 	dc.b	nD5, $0C, nRst, $0C, nCs5, $54, nRst, $18
 	smpsSetvoice        $04
 	smpsChangeTransposition		$0C
-	dc.b	nD5, $18, nG5, $18, nD5, $0C, nA5, $18, nD5, $15, nRst, $03
-	dc.b	nD5, $0C, nC6, $15, nRst, $03
+	dc.b	nRst, $18, nRst, $18, nRst, $0C, nRst, $18, nRst, $15, nRst, $03
+	dc.b	nRst, $0C, nRst, $15, nRst, $03
 	smpsPan             panLeft, $00
 	smpsAlterVol        $F6
 	dc.b	nC6, $03, nRst, $03
@@ -126,7 +126,7 @@ snd_sng_title_FM3:
 	dc.b	nG5, $03, nRst, $03
 	smpsPan             panCenter, $00
 	smpsAlterVol        $0A
-	dc.b	nD5, $18, nG5, $0C
+	dc.b	nRst, $18, nRst, $0C
 	smpsSetvoice        $01
 	smpsChangeTransposition		$F4	
 	dc.b	nD5, $0C, nRst, $0C
@@ -313,18 +313,18 @@ snd_sng_title_Voices:
 
 ;	Voice $04
 ;	$3A
-;	$01, $07, $01, $01, 	$8E, $8E, $8D, $53, 	$0E, $0E, $0E, $03
-;	$00, $00, $00, $01, 	$1F, $FF, $1F, $0F, 	$17, $28, $27, $80
+;	$11, $11, $11, $11, 	$8E, $8E, $8D, $53, 	$0E, $0E, $0E, $03
+;	$00, $00, $00, $11, 	$1F, $FF, $1F, $0F, 	$17, $28, $27, $80
 	smpsVcAlgorithm     $02
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $01, $01, $07, $01
+	smpsVcDetune        $01, $01, $01, $01
+	smpsVcCoarseFreq    $01, $01, $01, $01
 	smpsVcRateScale     $01, $02, $02, $02
 	smpsVcAttackRate    $13, $0D, $0E, $0E
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $03, $0E, $0E, $0E
-	smpsVcDecayRate2    $01, $00, $00, $00
+	smpsVcDecayRate2    $11, $00, $00, $00
 	smpsVcDecayLevel    $00, $01, $0F, $01
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $00, $27, $28, $17
