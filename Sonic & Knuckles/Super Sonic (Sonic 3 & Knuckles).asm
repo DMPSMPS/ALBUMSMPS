@@ -326,7 +326,7 @@ Snd_Supersonic_Voices:
 	smpsVcAttackRate    $1F, $1F, $15, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $00, $0E, $0F, $0E
-	smpsVcDecayRate2    $04, $00, $00, $00
+	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $02, $04, $04, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $04, $1A, $1A, $29
