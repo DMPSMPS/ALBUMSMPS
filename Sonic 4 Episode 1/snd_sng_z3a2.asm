@@ -5,7 +5,7 @@ snd_sng_z3a2_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       snd_sng_z3a2_DAC
-	smpsHeaderFM        snd_sng_z3a2_FM1,	$00, $09
+	smpsHeaderFM        snd_sng_z3a2_FM1,	$00, $0E
 	smpsHeaderFM        snd_sng_z3a2_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_z3a2_FM3,	$00, $13
 	smpsHeaderFM        snd_sng_z3a2_FM4,	$00, $0C
@@ -349,7 +349,7 @@ snd_sng_z3a2_Voices:
 	smpsVcDecayRate2    $03, $03, $06, $07
 	smpsVcDecayLevel    $04, $04, $01, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $F7, $0E, $37, $19
+	smpsVcTotalLevel    $F2, $0E, $37, $19
 
 ;	Voice $01
 ;	$3D
