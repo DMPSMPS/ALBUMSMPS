@@ -5,11 +5,11 @@ snd_sng_z3a2_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       snd_sng_z3a2_DAC
-	smpsHeaderFM        snd_sng_z3a2_FM1,	$00, $0E
+	smpsHeaderFM        snd_sng_z3a2_FM1,	$00, $09
 	smpsHeaderFM        snd_sng_z3a2_FM2,	$00, $13
 	smpsHeaderFM        snd_sng_z3a2_FM3,	$00, $13
-	smpsHeaderFM        snd_sng_z3a2_FM4,	$F4, $0C
-	smpsHeaderFM        snd_sng_z3a2_FM5,	$F4, $0C
+	smpsHeaderFM        snd_sng_z3a2_FM4,	$00, $0C
+	smpsHeaderFM        snd_sng_z3a2_FM5,	$00, $0C
 	smpsHeaderPSG       snd_sng_z3a2_PSG1,	$0C, $00, $00, sTone_0A
 	smpsHeaderPSG       snd_sng_z3a2_PSG2,	$E8, $05, $00, sTone_11
 	smpsHeaderPSG       snd_sng_z3a2_PSG3,	$23, $00, $00, sTone_0F
@@ -335,12 +335,12 @@ snd_sng_z3a2_PSG3Loop:
 snd_sng_z3a2_Voices:
 ;	Voice $00
 ;	$28
-;	$36, $35, $30, $01, 	$DF, $DF, $1F, $1F, 	$07, $06, $13, $13
-;	$07, $06, $03, $03, 	$2F, $1F, $4F, $4F, 	$19, $37, $14, $F2
+;	$36, $35, $30, $31, 	$DF, $DF, $1F, $1F, 	$07, $06, $13, $13
+;	$07, $06, $03, $03, 	$2F, $1F, $4F, $4F, 	$19, $37, $00, $00
 	smpsVcAlgorithm     $00
 	smpsVcFeedback      $05
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $03, $03, $03
+	smpsVcDetune        $03, $03, $03, $03
 	smpsVcCoarseFreq    $01, $00, $05, $06
 	smpsVcRateScale     $00, $00, $03, $03
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
@@ -349,7 +349,7 @@ snd_sng_z3a2_Voices:
 	smpsVcDecayRate2    $03, $03, $06, $07
 	smpsVcDecayLevel    $04, $04, $01, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $F2, $14, $37, $19
+	smpsVcTotalLevel    $F7, $0E, $37, $19
 
 ;	Voice $01
 ;	$3D
@@ -377,12 +377,12 @@ snd_sng_z3a2_Voices:
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $03, $03, $07, $07
-	smpsVcCoarseFreq    $04, $0F, $02, $01
+	smpsVcCoarseFreq    $04, $0F, $01, $00
 	smpsVcRateScale     $00, $02, $01, $02
 	smpsVcAttackRate    $1F, $1F, $12, $0D
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $0D, $00, $00, $09
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $0F, $00, $00, $02
-	smpsVcReleaseRate   $0F, $0F, $08, $03
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $07, $1D, $00, $15
