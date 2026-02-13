@@ -241,7 +241,7 @@ Snd_Title_Loop01:
 Snd_Title_FM4:
 	smpsAlterNote       $FD
 	smpsPan             panCenter, $00
-	dc.b	nRst, $7F, $48
+	dc.b	nRst, $7F, nRst, $48
 	smpsSetvoice        $06
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b	nRst, $18, nC5
