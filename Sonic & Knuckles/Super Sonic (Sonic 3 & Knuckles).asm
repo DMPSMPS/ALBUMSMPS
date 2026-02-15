@@ -329,7 +329,7 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $02, $04, $04, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $04, $1A, $1A, $20
+	smpsVcTotalLevel    $04, $1A, $1A, $29
 
 ;	Voice $01
 ;	$3D
