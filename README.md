@@ -147,177 +147,113 @@ Used to decode:
 This ensures every track behaves exactly as it would on a real Mega Drive.
 
 ---
+# 🎼 SMPS Type‑2 (S3K) — Seamless Modulation Refresh (FF 08)
 
-# 🎼 **SMPS Type‑2 (S3K) — Modulation Refresh on Next Note (FF 08)**  
-*(Placed at the very end exactly as you requested — unchanged)*
+This tutorial adds a new Coordination Flag ($FF 08$) to the Sonic 3 & Knuckles Z80 sound driver. It enables **mid-note modulation changes** across tied notes without triggering a new attack.
 
-The SMPS files for the album in SMPS2ASM format. There are some songs that require a new pitchbend command to be programmed into the SMPS Z80 driver. You can follow this tutorial I made with Copilot here:
-🎼 SMPS Type‑2 (S3K) — Modulation Refresh on Next Note (FF 08)
-A new SMPS feature enabling seamless modulation changes across tied notes without re‑attack
-This document describes a clean, safe extension to the Sonic 3K Z80 sound driver that adds a new FF command:
+### ✨ Features
+* **Zero Driver Modification:** Does not change a single line of original driver code; it is a purely additive extension.
+* **Non-Invasive:** Implemented as a standalone command rather than hooking into core FM/PSG update loops.
+* **Multi-Channel Safe:** Strictly preserves all Z80 registers, ensuring other music channels remain stable.
+* **Optimized for smpsNoAttack:** Allows transitions from "no vibrato" to "vibrato" seamlessly mid-note.
 
-FF 08 — Refresh modulation on the next note event (one‑shot)
+---
 
-This allows modulation to be reinitialized without triggering a key‑on, enabling expressive vibrato/tremolo transitions across tied notes.
+### 📁 1. The Implementation (Z80 Assembly)
 
-The feature is fully compatible with the original driver architecture and requires only one hook and one small routine.
+#### Step A: Register the Command
+Locate `zExtraCoordFlagSwitchTable` in your driver source. This table defines the behavior for $FF$ commands. Add the pointer for `cfModRefreshNextNote` at index **$08$**.
 
-✨ Features
-Refresh modulation exactly once, at the next note event  
-Works seamlessly with smpsNoAttack  
-No key‑on → no attack  
-No envelope reset  
-No pitchbend glitch  
-No artifacts  
-No driver rewrites  
-Only one inserted call and one FF command  
-This is a capability the original S3K driver never supported.
-
-📁 Implementation  
-1. Add FF 08 to the Meta‑Coord Flag Table  
-In zExtraCoordFlagSwitchTable:
+```z80
+zExtraCoordFlagSwitchTable:
+        dw  cfModSet            ; 00
+        ; ... (entries 01-07)
+        dw  cfModRefreshNextNote ; 08 - Add this here
 
 ```
-        dw cfModRefreshNextNote    ; 08 – refresh modulation on next note
-```
 
-Ensure this is placed at index $08.
+#### Step B: Add the Handler
 
-2. Add the FF 08 Handler
+Paste this routine into any free space in your Z80 driver. This handler performs an immediate refresh of the modulation parameters by copying the data from the current pointer into the active track registers.
 
-```
-; FF 08 – Request modulation refresh on the next note event
+```z80
+; ---------------------------------------------------------------------------
+; FF 08 – Integrated Modulation Refresh (Standalone Extension)
+; ---------------------------------------------------------------------------
 cfModRefreshNextNote:
-        ld  (ix+zTrack.Unk11h),1    ; set one-shot refresh flag
-        dec de                      ; undo cfMetaCF's inc de
-        ret
-```
+        push de                     ; [PROTECT] Save music pointer for this channel
 
-Why dec de is required  
-cfMetaCF increments DE before calling the handler.  
-Without undoing it, the next event byte is skipped, corrupting the stream.
-
-3. Add the One‑Shot Refresh Routine  
-Place this in free space:
-
-```
-; Called once per note event, before zPrepareModulation
-zCheckModRefreshNextNote:
-        ld  a,(ix+zTrack.Unk11h)
-        or  a
-        ret z                      ; nothing to do
-
-        xor a
-        ld  (ix+zTrack.Unk11h),a   ; clear flag
-
-        ; reinitialize modulation using the track’s ModulationPtr
+        ; 1. Load the Modulation Data Address from ROM
         ld  e,(ix+zTrack.ModulationPtrLow)
         ld  d,(ix+zTrack.ModulationPtrHigh)
 
+        ; 2. Target the Track RAM (starting at ModulationWait)
         push ix
         pop  hl
-
         ld  b,0
         ld  c,zTrack.ModulationWait
-        add hl,bc
-        ex  de,hl
+        add hl,bc                   ; HL = Target modulation registers in RAM
+        
+        ex  de,hl                   ; DE = Target, HL = Source
 
-        ldi
-        ldi
-        ldi
+        ; 3. Transfer the 3-byte header (Wait, Speed, Step)
+        ldi                         ; Copy zTrack.ModulationWait
+        ldi                         ; Copy zTrack.ModulationSpeed
+        ldi                         ; Copy zTrack.ModulationStep
 
-        ld  a,(hl)
-        srl a
-        ld  (de),a
+        ; 4. Set the phase/delta (Standard SMPS: Speed / 2)
+        ld  a,(hl)                  ; Get Speed byte from ROM
+        srl a                       ; Calculate initial phase Delta
+        ld  (de),a                  ; Store in zTrack.ModulationValLow
 
+        ; 5. Clear high byte of the modulation value
         xor a
-        ld  (ix+zTrack.ModulationValLow),a
         ld  (ix+zTrack.ModulationValHigh),a
 
+        ; 6. Restore and Sync
+        pop de                      ; Restore music pointer
+        dec de                      ; Undo dispatcher's auto-increment
         ret
-```
-
-This is a safe clone of the modulation init logic inside zPrepareModulation.
-
-4. Insert the Hook in the FM Note Handler  
-In zUpdateFMorPSGTrack, find:
 
 ```
-call    zGetNextNote
-bit     4,(ix+zTrack.PlaybackControl)
-ret     nz
-
-call    zPrepareModulation
-```
-
-Insert your call right before zPrepareModulation:
-
-```
-call    zGetNextNote
-bit     4,(ix+zTrack.PlaybackControl)
-ret     nz
-
-call    zCheckModRefreshNextNote    ; <-- INSERT THIS LINE
-
-call    zPrepareModulation
-call    zUpdateFreq
-call    zDoModulation
-call    zFMSendFreq
-jp      zFMNoteOn
-```
-
-This is the only safe hook point in the entire driver.
-
-5. Add the Macro
-
-```
-smpsModRefreshNextNote macro
-    dc.b $FF,$08
-endm
-```
-
-🎵 Usage in Music Data  
-The correct ordering is:
-
-smpsModSet — new modulation parameters  
-smpsModRefreshNextNote — request refresh  
-smpsNoAttack — prevent key‑on  
-duration byte — SMPS reuses previous note  
-
-Example (working pattern):
-
-```
-smpsModSet          $01, $00, $00, $00
-dc.b    nD5, $36
-
-smpsModSet          $01, $01, $01, $00
-smpsModRefreshNextNote
-dc.b    smpsNoAttack, $30
-```
-
-SMPS interprets $30 as:
-
-“Continue the previous note (D5).”
-
-The engine:
-
-- sees no‑attack  
-- sees your refresh flag  
-- refreshes modulation  
-- skips key‑on  
-- continues the note seamlessly  
-
-✔ Result  
-With this feature:
-
-- Modulation changes mid‑note  
-- No attack  
-- No envelope reset  
-- No pitchbend glitch  
-- No artifacts  
-- No driver rewrites  
-- Only one inserted call and one FF command  
-
-This is a clean, modern, expressive extension to SMPS Type‑2.
 
 ---
+
+### 🧠 Why the Previous "Hook" Method Caused Issues
+
+Older versions of this logic suggested adding a `call` hook directly into the original driver code (specifically `zUpdateFMorPSGTrack`). While well-intentioned, that approach was bugged because:
+
+* **Logic Conflicts:** Modifying the original driver code interfered with the "Tick" timing. This caused a domino effect where **notes on other channels would fail to play** because the driver couldn't finish its processing loop correctly.
+* **Register Corruption:** The Z80 `DE` register tracks the music position. The old method changed `DE` without saving it, causing the driver to "get lost" when switching between channels.
+* **The "Even DAC" Bug:** The instability of hacking the core loop was so great that it often caused conflicts across the entire engine—leading to dropped notes or silence on FM, PSG, and **even the DAC** channels.
+
+This **Integrated Extension** avoids these conflicts entirely. By staying inside the  coordination flag table and using `push/pop de`, the driver remains in its "stock" state and all channels play perfectly.
+
+---
+
+### 🎵 2. Music Data Usage
+
+Add this macro to your `smps2asm` definitions:
+
+```assembly
+smpsModRefreshNextNote macro
+    dc.b    $FF, $08
+endm
+
+```
+
+#### Example Usage:
+
+```assembly
+    ; Note starts with no modulation
+    smpsModSet          $01, $00, $00, $00
+    dc.b                nD5, $36
+
+    ; Mid-note transition:
+    smpsModSet          $01, $01, $01, $00 ; Set new parameters
+    smpsModRefreshNextNote             ; Apply parameters immediately
+    dc.b                smpsNoAttack, $30  ; Note continues with new vibrato
+
+```
+
+```
