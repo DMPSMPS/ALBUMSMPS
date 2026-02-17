@@ -255,5 +255,3 @@ endm
     dc.b                smpsNoAttack, $30  ; Note continues with new vibrato
 
 ```
-
-```
