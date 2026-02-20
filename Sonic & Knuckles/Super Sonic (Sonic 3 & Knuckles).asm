@@ -37,6 +37,7 @@ Snd_Supersonic_Call06:
 
 ; FM1 Data
 Snd_Supersonic_FM1:
+	smpsAlterNote       $FC
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	dc.b	nE2, $0F, nRst, $03, nE2, $0C, nB1, $06, nE2, $0C, nD2, $0F
@@ -68,20 +69,21 @@ Snd_Supersonic_FM2:
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panCenter, $00
 	smpsSetvoice        $01
-	dc.b	nE4, $12, $0C, nFs4, $06, nE4, $0C, nFs4, $12, $0C, nAb4, $06
-	dc.b	nFs4, $0C, nA4, $12, $0C, nB4, $06, nA4, $0C
+	dc.b	nE4, $12, nE4, $0C, nFs4, $06, nE4, $0C, nFs4, $12
+	dc.b	nFs4, $0C, nAb4, $06, nFs4, $0C, nA4, $12
+	dc.b	nA4, $0C, nB4, $06, nA4, $0C
 	smpsPan             panLeft, $00
 	dc.b	nB3, $06, nCs4, nD4, nE4
 	smpsPan             panRight, $00
 	dc.b	nFs4, nAb4, nA4, nB4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $07
+	smpsAlterVol        $0A
 
 Snd_Supersonic_Loop03:
 	smpsCall            Snd_Supersonic_Call03
 	smpsCall            Snd_Supersonic_Call04
 	smpsLoop            $00, $02, Snd_Supersonic_Loop03
-	smpsAlterVol        $F9
+	smpsAlterVol        $F6
 	smpsJump            Snd_Supersonic_FM2
 
 Snd_Supersonic_Call03:
@@ -103,7 +105,7 @@ Snd_Supersonic_Loop0B:
 	smpsReturn
 
 Snd_Supersonic_Call04:
-	smpsAlterVol        $F9
+	smpsAlterVol        $F6
 	smpsPan             panRight, $00
 	dc.b	nE5, $06, nD5, nCs5, nB4
 	smpsPan             panLeft, $00
@@ -113,25 +115,30 @@ Snd_Supersonic_Call04:
 	smpsPan             panLeft, $00
 	dc.b	nA4, nAb4, nFs4, nE4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $07
+	smpsAlterVol        $0A
 	smpsReturn
 
 ; FM3 Data
 Snd_Supersonic_FM3:
+	smpsAlterNote       $04
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, $60, nRst, $60, nRst, $60, nRst, $60, nRst, $60
 	smpsCall            Snd_Supersonic_Call02
 	smpsSetvoice        $00
 	smpsModSet          $01, $01, $06, $00
 	smpsPan             panCenter, $00
+	smpsAlterVol	    $04
 	dc.b	nG1, $60, smpsNoAttack, nG1
 	smpsModSet          $07, $01, $03, $05
+	smpsAlterVol	    $FC
 	dc.b	nRst, $7C, nRst, $41, nRst, $41, nRst, $41, nRst, $41
 	smpsCall            Snd_Supersonic_Call02
+	smpsAlterVol	    $04
 	smpsSetvoice        $00
 	smpsModSet          $01, $01, $06, $00
 	smpsPan             panCenter, $00
 	dc.b	nG1, $60, smpsNoAttack, nG1
+	smpsAlterVol	    $FC
 	smpsJump	    Snd_Supersonic_FM3
 	
 Snd_Supersonic_Call02:
@@ -232,73 +239,21 @@ Snd_Supersonic_PSG1:
 	smpsJump            Snd_Supersonic_PSG1
 
 Snd_Supersonic_Call07:
-	smpsPSGvoice         sTone_06
-	smpsPSGAlterVol        $29
-	dc.b	nA3, $03
+	smpsPSGvoice         sTone_0A
+	smpsPSGAlterVol        $04
+	dc.b	nA3, $03, nB3, nCs4, nE4
+	dc.b	nB3, nCs4, nD4, nFs4
 	smpsPSGAlterVol        $FF
-	dc.b	nB3
+	dc.b	nCs4, nD4, nE4, nAb4
+	dc.b	nD4, nE4, nFs4, nA4
 	smpsPSGAlterVol        $FF
-	dc.b	nCs4
+	dc.b	nE4, nFs4, nAb4, nB4
+	dc.b	nFs4, nAb4, nA4, nCs5
 	smpsPSGAlterVol        $FF
-	dc.b	nE4
+	dc.b	nAb4, nA4, nB4, nD5
+	dc.b	nA4, nB4, nCs5, nE5
+	smpsPSGvoice         sTone_11
 	smpsPSGAlterVol        $FF
-	dc.b	nB3
-	smpsPSGAlterVol        $FF
-	dc.b	nCs4
-	smpsPSGAlterVol        $FF
-	dc.b	nD4
-	smpsPSGAlterVol        $FF
-	dc.b	nFs4
-	smpsPSGAlterVol        $FF
-	dc.b	nCs4
-	smpsPSGAlterVol        $FF
-	dc.b	nD4
-	smpsPSGAlterVol        $FF
-	dc.b	nE4
-	smpsPSGAlterVol        $FF
-	dc.b	nAb4
-	smpsPSGAlterVol        $FF
-	dc.b	nD4
-	smpsPSGAlterVol        $FF
-	dc.b	nE4
-	smpsPSGAlterVol        $FF
-	dc.b	nFs4
-	smpsPSGAlterVol        $FF
-	dc.b	nA4
-	smpsPSGAlterVol        $FF
-	dc.b	nE4
-	smpsPSGAlterVol        $FF
-	dc.b	nFs4
-	smpsPSGAlterVol        $FF
-	dc.b	nAb4
-	smpsPSGAlterVol        $FF
-	dc.b	nB4
-	smpsPSGAlterVol        $FF
-	dc.b	nFs4
-	smpsPSGAlterVol        $FF
-	dc.b	nAb4
-	smpsPSGAlterVol        $FF
-	dc.b	nA4
-	smpsPSGAlterVol        $FF
-	dc.b	nCs5
-	smpsPSGAlterVol        $FF
-	dc.b	nAb4
-	smpsPSGAlterVol        $FF
-	dc.b	nA4
-	smpsPSGAlterVol        $FF
-	dc.b	nB4
-	smpsPSGAlterVol        $FF
-	dc.b	nD5
-	smpsPSGAlterVol        $FF
-	dc.b	nA4
-	smpsPSGAlterVol        $FF
-	dc.b	nB4
-	smpsPSGAlterVol        $FF
-	dc.b	nCs5
-	smpsPSGAlterVol        $FF
-	dc.b	nE5
-	smpsPSGAlterVol        $EE
-	smpsPSGvoice        sTone_11
 	smpsReturn
 
 ; PSG2 Data
