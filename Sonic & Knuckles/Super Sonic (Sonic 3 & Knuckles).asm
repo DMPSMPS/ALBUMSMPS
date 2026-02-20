@@ -90,15 +90,15 @@ Snd_Supersonic_Loop0C:
 	dc.b	nD5, $15
 
 Snd_Supersonic_Loop0B:
-	dc.b	nRst, $03, nD5, $09, nRst, $03, nD5, $06, nRst, $06, nD5, $09
+	dc.b	nRst, $03, nD5, $09, nRst, $03, nD5, $08, nRst, $04, nD5, $09
 	dc.b	nRst, $03, nCs5, $18, nA4, $0C, nE4, nFs4, nA4, $18, nB4, $60
 	dc.b	nRst, $0C
 	smpsLoop            $02, $02, Snd_Supersonic_Loop0C
-	dc.b    nA4, $09, nRst, $03, nA4, $09, nRst, $03, nA4, $06, nB4, $06, nCs5
-        dc.b    $0C, nB4, $09, nRst, $03, nB4, $09, nRst, $03, nB4, $06, nCs5
-        dc.b    $06, nD5, $0C, nCs5, $09, nRst, $03, nCs5, $09, nRst, $03, nCs5
-   	dc.b    $06, nD5, $06, nE5, $0C, nD5, $09, nRst, $03, nD5, $09, nRst
-        dc.b    $03, nD5, $06, nE5, $06, nFs5, $0C, nE4, $48, nFs4, $06, nAb4
+	dc.b    nA4, $08, nRst, $04, nA4, $08, nRst, $04, nA4, $06, nB4, $06, nCs5
+        dc.b    $0C, nB4, $08, nRst, $04, nB4, $08, nRst, $04, nB4, $06, nCs5
+        dc.b    $06, nD5, $0C, nCs5, $08, nRst, $04, nCs5, $08, nRst, $04, nCs5
+   	dc.b    $06, nD5, $06, nE5, $0C, nD5, $08, nRst, $04, nD5, $08, nRst
+        dc.b    $04, nD5, $06, nE5, $06, nFs5, $0C, nE4, $48, nFs4, $06, nAb4
         dc.b    $06, nA4, $06, nCs5, $06
 	smpsReturn
 
@@ -131,12 +131,12 @@ Snd_Supersonic_Call02:
 	smpsAlterVol        $F6
 	dc.b	nCs5, $18, nB4, $0C, nA4, $0C, nCs5, $0C, nB4, $0C, nA4, $0C
 	dc.b	nAb4, $2D, nRst, $03, nFs5, $15, nRst, $03, nFs5, $09, nRst, $03
-	dc.b	nFs5, $06, nRst, $06, nFs5, $09, nRst, $03, nE5, $18, nCs5, $0C
-	dc.b	nA4, $0C, nA4, $0C, nCs5, $18, nD5, $60, nRst, $0C, nFs4, $09
-	dc.b	nRst, $03, nFs4, $09, nRst, $03, nFs4, $06, nAb4, $06, nA4, $0C
-	dc.b	nAb4, $09, nRst, $03, nAb4, $09, nRst, $03, nAb4, $06, nBb4, $06
-	dc.b	nB4, $0C, nA4, $09, nRst, $03, nA4, $09, nRst, $03, nA4, $06
-	dc.b	nB4, $06, nCs5, $0C, nB4, $09, nRst, $03, nB4, $09, nRst, $03
+	dc.b	nFs5, $08, nRst, $04, nFs5, $09, nRst, $03, nE5, $18, nCs5, $0C
+	dc.b	nA4, $0C, nA4, $0C, nCs5, $18, nD5, $60, nRst, $0C, nFs4, $08
+	dc.b	nRst, $04, nFs4, $08, nRst, $04, nFs4, $06, nAb4, $06, nA4, $0C
+	dc.b	nAb4, $08, nRst, $04, nAb4, $08, nRst, $04, nAb4, $06, nBb4, $06
+	dc.b	nB4, $0C, nA4, $08, nRst, $04, nA4, $08, nRst, $04, nA4, $06
+	dc.b	nB4, $06, nCs5, $0C, nB4, $08, nRst, $04, nB4, $08, nRst, $04
 	dc.b	nB4, $06, nCs5, $06, nD5, $0C, nRst, $60
 	smpsSetvoice        $04
 	smpsPan             panCenter, $00
