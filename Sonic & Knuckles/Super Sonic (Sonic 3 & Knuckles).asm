@@ -240,7 +240,7 @@ Snd_Supersonic_PSG1:
 
 Snd_Supersonic_Call07:
 	smpsPSGvoice         sTone_0A
-	smpsPSGAlterVol        $03
+	smpsPSGAlterVol        $04
 	dc.b	nA3, $03, nB3, nCs4, nE4
 	dc.b	nB3, nCs4, nD4, nFs4
 	smpsPSGAlterVol        $FF
@@ -253,6 +253,7 @@ Snd_Supersonic_Call07:
 	dc.b	nAb4, nA4, nB4, nD5
 	dc.b	nA4, nB4, nCs5, nE5
 	smpsPSGvoice         sTone_11
+	smpsPSGAlterVol        $FF
 	smpsReturn
 
 ; PSG2 Data
