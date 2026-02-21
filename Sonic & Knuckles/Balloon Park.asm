@@ -362,36 +362,36 @@ Snd_BPZ_Loop09:
 
 ; PSG3 Data
 Snd_BPZ_PSG3:
-    smpsPSGform         $E7
+	smpsPSGform         $E7
 	dc.b	nRst, $30
 
 Snd_BPZ_Jump05:
 	smpsPSGvoice        sTone_01
-	dc.b	nRst, $30, nRst, nRst, nRst, nRst, nRst, nRst, nRst, nMaxPSG2, $05, smpsNoAttack
-	dc.b	$13, nMaxPSG2, $04, smpsNoAttack, $02, nMaxPSG2, $04, smpsNoAttack, $0E, nMaxPSG2, $05, smpsNoAttack
-	dc.b	$13, nMaxPSG2, $06, $01, smpsNoAttack, $11, nMaxPSG2, $07, smpsNoAttack, $11, nMaxPSG2, $04
-	dc.b	smpsNoAttack, $02, nMaxPSG2, $04, smpsNoAttack, $0E, nMaxPSG2, $07, smpsNoAttack, $11, nMaxPSG2, $06
-	dc.b	$01, smpsNoAttack, $11, nRst, $30, nRst, nRst, nRst, nRst, nRst, nRst, nRst
+	dc.b	nRst, $30, nRst, nRst, nRst, nRst, nRst, nRst, nRst, nMaxPSG2, $05, nRst
+	dc.b	$13, nMaxPSG2, $04, nRst, $02, nMaxPSG2, $04, nRst, $0E, nMaxPSG2, $05, nRst
+	dc.b	$13, nMaxPSG2, $06, $01, nRst, $11, nMaxPSG2, $07, nRst, $11, nMaxPSG2, $04
+	dc.b	nRst, $02, nMaxPSG2, $04, nRst, $0E, nMaxPSG2, $07, nRst, $11, nMaxPSG2, $06
+	dc.b	$01, nRst, $11, nRst, $30, nRst, nRst, nRst, nRst, nRst, nRst, nRst
 	smpsPSGvoice        sTone_04
-	dc.b	nRst, nRst, nRst, nRst, nMaxPSG2, $05, smpsNoAttack, $13, nMaxPSG2, $04, smpsNoAttack, $02
-	dc.b	nMaxPSG2, $04, smpsNoAttack, $0E, nMaxPSG2, $05, smpsNoAttack, $13, nMaxPSG2, $06, $01, smpsNoAttack
-	dc.b	$11, nMaxPSG2, $07, smpsNoAttack, $11, nMaxPSG2, $04, smpsNoAttack, $02, nMaxPSG2, $04, smpsNoAttack
-	dc.b	$0E, nMaxPSG2, $07, smpsNoAttack, $11, nMaxPSG2, $06, $01, smpsNoAttack, $11, nRst, $30
+	dc.b	nRst, nRst, nRst, nRst, nMaxPSG2, $05, nRst, $13, nMaxPSG2, $04, nRst, $02
+	dc.b	nMaxPSG2, $04, nRst, $0E, nMaxPSG2, $05, nRst, $13, nMaxPSG2, $06, $01, nRst
+	dc.b	$11, nMaxPSG2, $07, nRst, $11, nMaxPSG2, $04, nRst, $02, nMaxPSG2, $04, nRst
+	dc.b	$0E, nMaxPSG2, $07, nRst, $11, nMaxPSG2, $06, $01, nRst, $11, nRst, $30
 	dc.b	nRst, nRst, nRst, nRst, nRst, nRst, nRst, nRst, nRst, nRst, nRst, nRst
 	dc.b	nRst, nRst, nRst, nRst, nRst, nRst, nRst, nRst, $0C, nMaxPSG2, $06, nMaxPSG2
-	dc.b	smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C
-	dc.b	nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06
-	dc.b	nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack
-	dc.b	$0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2
-	dc.b	$06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2
-	dc.b	smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C
-	dc.b	nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06
-	dc.b	nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack
-	dc.b	$0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2
-	dc.b	$06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2
-	dc.b	smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C
-	dc.b	nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06
-	dc.b	nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2, smpsNoAttack, $0C, nMaxPSG2, $06, nMaxPSG2
+	dc.b	nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C
+	dc.b	nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06
+	dc.b	nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst
+	dc.b	$0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2
+	dc.b	$06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2
+	dc.b	nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C
+	dc.b	nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06
+	dc.b	nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst
+	dc.b	$0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2
+	dc.b	$06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2
+	dc.b	nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C
+	dc.b	nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06
+	dc.b	nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2, nRst, $0C, nMaxPSG2, $06, nMaxPSG2
 	smpsJump            Snd_BPZ_Jump05
 
 ; DAC Data
