@@ -233,11 +233,10 @@ Snd_Supersonic_Loop09:
 ; PSG1 Data
 Snd_Supersonic_PSG1:
 	dc.b	nRst, $7F, nRst, $41
+Snd_Supersonic_Loop0D:
 	smpsCall            Snd_Supersonic_Call03
 	smpsCall            Snd_Supersonic_Call0A
-	smpsCall            Snd_Supersonic_Call03
-	smpsCall            Snd_Supersonic_Call0A
-	smpsJump            Snd_Supersonic_PSG1
+	smpsLoop            $00, $01, Snd_Supersonic_Loop0D
 
 Snd_Supersonic_Call0A:
 	smpsPSGvoice        sTone_0A
