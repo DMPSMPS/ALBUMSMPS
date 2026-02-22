@@ -5,7 +5,7 @@ Snd_Supersonic_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       Snd_Supersonic_DAC
-	smpsHeaderFM        Snd_Supersonic_FM1, $00, $0B
+	smpsHeaderFM        Snd_Supersonic_FM1, $00, $0A
 	smpsHeaderFM        Snd_Supersonic_FM2, $00, $17
 	smpsHeaderFM        Snd_Supersonic_FM3, $00, $14
 	smpsHeaderFM        Snd_Supersonic_FM4, $00, $17
