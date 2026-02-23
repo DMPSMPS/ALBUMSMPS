@@ -155,9 +155,9 @@ Snd_Supersonic_Call06:
 	smpsReturn
 
 Snd_Supersonic_Call07:
+	smpsAlterVol        $1A
 	smpsSetvoice        $05
 	smpsPan             panCenter, $00
-	smpsAlterVol        $1F
 	dc.b	nRst, $60, nA3, $03
 	smpsAlterVol        $FF
 	dc.b	nB3
@@ -221,6 +221,7 @@ Snd_Supersonic_Call07:
 	dc.b	nCs5
 	smpsAlterVol        $FF
 	dc.b	nE5
+	smpsAlterVol        $05
 	smpsReturn
 
 ; FM4 Data
