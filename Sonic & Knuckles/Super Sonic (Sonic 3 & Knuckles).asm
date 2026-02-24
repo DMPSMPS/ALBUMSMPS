@@ -295,7 +295,9 @@ Snd_Supersonic_Loop0B:
 Snd_Supersonic_Loop0C:
 	dc.b	$0C
 	smpsPSGvoice        sTone_12
+	smpsPSGAlterVol		$02
 	dc.b	$0C
+	smpsPSGAlterVol		$FE
 	smpsPSGvoice        sTone_0F
 	smpsLoop            $00, $28, Snd_Supersonic_Loop0C
 	dc.b	$12, $12, $18, $24, $12, $12, $18, $24
