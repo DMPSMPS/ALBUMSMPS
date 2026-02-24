@@ -134,7 +134,7 @@ Snd_Supersonic_Call06:
 	smpsReturn
 
 Snd_Supersonic_Call07:
-	smpsAlterVol        $1C
+	smpsAlterVol        $1D
 	smpsSetvoice        $05
 	smpsPan             panCenter, $00
 	dc.b	nRst, $60, nA3, $03
