@@ -218,9 +218,9 @@ Snd_Title_Loop01:
 	smpsModSet          $0C, $01, $05, $05
 	dc.b    nG4, $24
 	smpsModSet          $0C, $01, $F0, $FD
-	dc.b    smpsNoAttack, $18
+	dc.b    smpsNoAttack, $18, nRst, $18
 	smpsModSet          $0C, $01, $F8, $FD
-	dc.b    nRst, $18, nG4, $18
+	dc.b    nG4, $18
 	smpsModSet          $07, $01, $03, $05
 	dc.b    nD4, $0C, nD5, $0C, nD5, $0C, nC5, $18, nD5, $0C, nC5, $0C
 	smpsModSet          $07, $01, $09, $05
