@@ -155,7 +155,7 @@ Snd_Title_FM4:
 	smpsModSet          $07, $01, $09, $05
 	dc.b    nD5, $0C
 	smpsModSet          $0C, $01, $F0, $FF
-	dc.b    smpsNoAttack, nD5, $09
+	dc.b    smpsNoAttack, nD5, $08
 	smpsSetvoice        $03
 	smpsPan             panRight, $00
 	smpsModSet          $24, $01, $04, $07
