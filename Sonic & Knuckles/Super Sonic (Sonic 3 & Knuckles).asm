@@ -12,7 +12,7 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM5, $00, $13
 	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $03, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG3, $23, $00, $00, sTone_0F
+	smpsHeaderPSG       Snd_Supersonic_PSG3, $47, $00, $00, sTone_01
 
 ; FM1 Data
 Snd_Supersonic_FM1:
@@ -289,15 +289,13 @@ Snd_Supersonic_PSG2:
 Snd_Supersonic_PSG3:
 	smpsPSGform         $E7
 Snd_Supersonic_Loop0B:
-	dc.b	(nMaxPSG2-$23)&$FF, $12, $1E
+	dc.b	(nMaxPSG2-$47)&$FF, $12, $1E
 	smpsLoop            $00, $04, Snd_Supersonic_Loop0B
 Snd_Supersonic_Loop0C:
 	dc.b	$0C
-	smpsPSGvoice        sTone_12
-	smpsPSGAlterVol     $02
+	smpsPSGvoice        sTone_27
 	dc.b	$0C
-	smpsPSGAlterVol     $FE
-	smpsPSGvoice        sTone_0F
+	smpsPSGvoice        sTone_01
 	smpsLoop            $00, $28, Snd_Supersonic_Loop0C
 	dc.b	$12, $12, $18, $24, $12, $12, $18, $24
 	smpsLoop            $01, $02, Snd_Supersonic_Loop0C
