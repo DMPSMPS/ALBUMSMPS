@@ -12,7 +12,7 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM5, $00, $13
 	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $03, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG3, $23, $00, $00, sTone_0F
+	smpsHeaderPSG       Snd_Supersonic_PSG3, $23, $01, $00, sTone_0F
 
 ; FM1 Data
 Snd_Supersonic_FM1:
