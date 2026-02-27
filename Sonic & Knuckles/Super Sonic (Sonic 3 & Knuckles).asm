@@ -12,16 +12,16 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM5, $00, $13
 	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $03, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG3, $47, $00, $00, sTone_01
+	smpsHeaderPSG       Snd_Supersonic_PSG3, $23, $00, $00, sTone_0F
 
 ; FM1 Data
 Snd_Supersonic_FM1:
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	dc.b	nE2, $0F, nRst, $03, nE2, $0C, nB1, $06, nE2, $0C, nD2, $0F
-	dc.b	nRst, $03, nFs2, $0C, nA2, $06, nB2, $0C, nCs3, $0F, nRst, $03
-	dc.b	nCs3, $0C, nA2, $06, nCs3, $0C, nB2, $06, nRst, nB2, nRst, nB2
-	dc.b	nCs3, nB2, $0C
+	dc.b	nRst, $03, nFs2, $0C, nA2, $06, nB2, $0C, nC, $0F, nRst, $03
+	dc.b	nC, $0C, nA2, $06, nC, $0C, nB2, $06, nRst, nB2, nRst, nB2
+	dc.b	nC, nB2, $0C
 	smpsCall            Snd_Supersonic_Call01
 	smpsCall            Snd_Supersonic_Call01
 	smpsJump            Snd_Supersonic_FM1
@@ -29,10 +29,10 @@ Snd_Supersonic_FM1:
 Snd_Supersonic_Call01:
 	dc.b	nA2, $06, nRst
 	smpsCall            Snd_Supersonic_Call02
-	dc.b	nE2, $06, nFs2, nAb2, nA2, nFs2, nAb2, nA2, nB2, nAb2, nA2, nB2, nCs3, nBb2, nC3, nCs3, nEb3, nA2
+	dc.b	nE2, $06, nFs2, nAb2, nA2, nFs2, nAb2, nA2, nB2, nAb2, nA2, nB2, nC, nBb2, nC3, nC, nEb3, nA2
 	dc.b	nRst
 	smpsCall            Snd_Supersonic_Call02
-	dc.b	nB2, $06, nA2, nAb2, nFs2, nCs3, nB2, nA2, nAb2, nE2, nFs2, nAb2, nFs2, nAb2, nA2, nBb2, nB2
+	dc.b	nB2, $06, nA2, nAb2, nFs2, nC, nB2, nA2, nAb2, nE2, nFs2, nAb2, nFs2, nAb2, nA2, nBb2, nB2
 	smpsLoop            $00, $02, Snd_Supersonic_Call01
 	dc.b	nD2, nRst, nD2, nD2, nRst, nA2, nD2, $0C, nE2, $06, nRst, nE2
 	dc.b	nE2, nRst, nB2, nE2, $0C, nFs2, $06, nRst, nFs2, nFs2, nRst, nA2
@@ -282,20 +282,20 @@ Snd_Supersonic_PSG1:
 ; PSG2 Data
 Snd_Supersonic_PSG2:
 	smpsAlterNote       $FF
-	dc.b	nRst, $04
+	dc.b	nRst, $05
 	smpsJump            Snd_Supersonic_PSG1
 
 ; PSG3 Data
 Snd_Supersonic_PSG3:
 	smpsPSGform         $E7
 Snd_Supersonic_Loop0B:
-	dc.b	(nMaxPSG2-$47)&$FF, $12, $1E
+	dc.b	(nMaxPSG2-$23)&$FF, $12, $1E
 	smpsLoop            $00, $04, Snd_Supersonic_Loop0B
 Snd_Supersonic_Loop0C:
 	dc.b	$0C
-	smpsPSGvoice        sTone_27
+	smpsPSGvoice        sTone_12
 	dc.b	$0C
-	smpsPSGvoice        sTone_01
+	smpsPSGvoice        sTone_0F
 	smpsLoop            $00, $28, Snd_Supersonic_Loop0C
 	dc.b	$12, $12, $18, $24, $12, $12, $18, $24
 	smpsLoop            $01, $02, Snd_Supersonic_Loop0C
@@ -303,23 +303,23 @@ Snd_Supersonic_Loop0C:
 
 ; DAC Data
 Snd_Supersonic_DAC:
-	dc.b	dKickS3, $0C, dSnareS3, dKickS3, $06, $06, dSnareS3, $0C, dKickS3, dSnareS3, dKickS3, $06
-	dc.b	$06, dSnareS3, dSnareS3, dKickS3, $0C, dSnareS3, dKickS3, $06, $06, dSnareS3, $0C, dKickS3
-	dc.b	dSnareS3, $06, dKickS3, $0C, dSnareS3, $06, $06, $06
+	dc.b	dKick, $0C, dSnare, dKick, $06, $06, dSnare, $0C, dKick, dSnare, dKick, $06
+	dc.b	$06, dSnare, dSnare, dKick, $0C, dSnare, dKick, $06, $06, dSnare, $0C, dKick
+	dc.b	dSnare, $06, dKick, $0C, dSnare, $06, $06, $06
 	smpsCall            Snd_Supersonic_Call00
 	smpsCall            Snd_Supersonic_Call00
 	smpsJump            Snd_Supersonic_DAC
 
 Snd_Supersonic_Call00:
-	dc.b	dKickS3, $0C, dSnareS3
+	dc.b	dKick, $0C, dSnare
 	smpsLoop            $00, $07, Snd_Supersonic_Call00
-	dc.b	dKickS3, dSnareS3, $06, $06
+	dc.b	dKick, dSnare, $06, $06
 	smpsLoop            $01, $04, Snd_Supersonic_Call00
-	dc.b	dKickS3, $0C, dSnareS3, dKickS3, dSnareS3, $06, $06, dKickS3, $0C, dSnareS3, dKickS3, $06
-	dc.b	dSnareS3, dSnareS3, dSnareS3, dKickS3, $0C, dSnareS3, dKickS3, dSnareS3, $06, $06, dKickS3, dSnareS3
-	dc.b	dSnareS3, $0C, dKickS3, $06, dSnareS3, dSnareS3, dSnareS3, dKickS3, dKickS3, $0C, $0C, $06
-	dc.b	$18, $0C, dSnareS3, $06, $06, $0C, dKickS3, $06, $0C, $0C, dSnareS3, $06
-	dc.b	$18, dKickS3, $0C, dSnareS3, $06, $06, $06, $06
+	dc.b	dKick, $0C, dSnare, dKick, dSnare, $06, $06, dKick, $0C, dSnare, dKick, $06
+	dc.b	dSnare, dSnare, dSnare, dKick, $0C, dSnare, dKick, dSnare, $06, $06, dKick, dSnare
+	dc.b	dSnare, $0C, dKick, $06, dSnare, dSnare, dSnare, dKick, dKick, $0C, $0C, $06
+	dc.b	$18, $0C, dSnare, $06, $06, $0C, dKick, $06, $0C, $0C, dSnare, $06
+	dc.b	$18, dKick, $0C, dSnare, $06, $06, $06, $06
 	smpsReturn
 
 Snd_Supersonic_Voices:
