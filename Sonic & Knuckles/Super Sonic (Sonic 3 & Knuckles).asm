@@ -5,11 +5,11 @@ Snd_Supersonic_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       Snd_Supersonic_DAC
-	smpsHeaderFM        Snd_Supersonic_FM1, $00, $09
-	smpsHeaderFM        Snd_Supersonic_FM2, $00, $17
-	smpsHeaderFM        Snd_Supersonic_FM3, $00, $17
-	smpsHeaderFM        Snd_Supersonic_FM4, $00, $17
-	smpsHeaderFM        Snd_Supersonic_FM5, $00, $17
+	smpsHeaderFM        Snd_Supersonic_FM1, $00, $0A
+	smpsHeaderFM        Snd_Supersonic_FM2, $00, $13
+	smpsHeaderFM        Snd_Supersonic_FM3, $00, $13
+	smpsHeaderFM        Snd_Supersonic_FM4, $00, $13
+	smpsHeaderFM        Snd_Supersonic_FM5, $00, $13
 	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $03, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3, $23, $00, $00, sTone_0F
@@ -39,9 +39,11 @@ Snd_Supersonic_Call01:
 	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $06, $00
+	smpsAlterVol	    $FB
 	dc.b	nG3, $60, smpsNoAttack, nG3
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
+	smpsAlterVol	    $05
 	smpsReturn
 
 Snd_Supersonic_Call02:
@@ -119,7 +121,7 @@ Snd_Supersonic_Loop03:
 Snd_Supersonic_Call06:
 	smpsSetvoice        $02
 	smpsPan             panRight, $00
-	smpsAlterVol        $F3
+	smpsAlterVol        $F6
 	dc.b	nCs5, $18, nB4, $0C, nA4, nCs5, nB4, nA4
 	dc.b	nAb4, $2D, nRst, $03, nFs5, $15, nRst, $03, nFs5, $08, nRst, $04
 	dc.b	nFs5, $08, nRst, $04, nFs5, $08, nRst, $04, nE5, $18, nCs5, $0C
@@ -128,11 +130,11 @@ Snd_Supersonic_Call06:
 	dc.b	nAb4, $08, nRst, $04, nAb4, $08, nRst, $04, nAb4, $06, nBb4 
 	dc.b	nB4, $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsAlterVol        $0D
+	smpsAlterVol        $0A
 	smpsReturn
 
 Snd_Supersonic_Call07:
-	smpsAlterVol        $1B
+	smpsAlterVol        $1F
 	smpsSetvoice        $05
 	smpsPan             panCenter, $00
 	dc.b	nRst, $60, nA3, $03
@@ -198,7 +200,6 @@ Snd_Supersonic_Call07:
 	dc.b	nCs5
 	smpsAlterVol        $FF
 	dc.b	nE5
-	smpsAlterVol        $04
 	smpsReturn
 
 ; FM4 Data
