@@ -10,8 +10,8 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM3, $00, $13
 	smpsHeaderFM        Snd_Supersonic_FM4, $00, $13
 	smpsHeaderFM        Snd_Supersonic_FM5, $00, $13
-	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $01, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $03, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $00, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $02, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3, $23, $00, $00, sTone_0F
 
 ; FM1 Data
@@ -64,12 +64,12 @@ Snd_Supersonic_FM2:
 	smpsPan             panRight, $00
 	dc.b	nFs4, nAb4, nA4, nB4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $0E
+	smpsAlterVol        $09
 Snd_Supersonic_Loop00:
 	smpsCall            Snd_Supersonic_Call03
 	smpsCall            Snd_Supersonic_Call04
 	smpsLoop            $00, $02, Snd_Supersonic_Loop00
-	smpsAlterVol        $F6
+	smpsAlterVol        $FB
 	smpsJump            Snd_Supersonic_FM2
 
 Snd_Supersonic_Call03:
@@ -88,7 +88,7 @@ Snd_Supersonic_Loop02:
 	smpsReturn
 
 Snd_Supersonic_Call04:
-	smpsAlterVol        $F2
+	smpsAlterVol        $F7
 	smpsPan             panRight, $00
 	dc.b	nE5, $06, nD5, nCs5, nB4
 	smpsPan             panLeft, $00
@@ -98,7 +98,7 @@ Snd_Supersonic_Call04:
 	smpsPan             panLeft, $00
 	dc.b	nA4, nAb4, nFs4, nE4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $0E
+	smpsAlterVol        $09
 	smpsReturn
 
 Snd_Supersonic_Call05:
@@ -326,7 +326,7 @@ Snd_Supersonic_Voices:
 ;	Voice $00
 ;	$32
 ;	$70, $76, $31, $72, 	$1F, $95, $1F, $1F, 	$0E, $0F, $0E, $00
-;	$00, $00, $00, $00, 	$2F, $4F, $4F, $2F, 	$29, $1A, $1A, $04
+;	$00, $00, $00, $00, 	$2F, $4F, $4F, $2F, 	$2B, $1C, $1A, $04
 	smpsVcAlgorithm     $02
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
@@ -339,7 +339,7 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $02, $04, $04, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $04, $1A, $1A, $29
+	smpsVcTotalLevel    $04, $1A, $1C, $2B
 
 ;	Voice $01
 ;	$3D
