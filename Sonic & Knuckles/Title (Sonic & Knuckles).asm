@@ -895,10 +895,15 @@ Snd_Title_Loop04:
 	dc.b	nRst, $18, nA3, $0C, nRst, $18, nFs3, $09, nRst, $0F, nE3, $24, nRst
 	dc.b	$60, nA3, $0C, nRst, $18, nA3, $09, nRst, $1B, nB3, $06, nRst
 	dc.b	$06, nB3, $18, nB3, $30, nRst, $0C
-	smpsLoop            $00, $03, Snd_Title_Loop04
+	dc.b	nRst, $18, nA3, $0C, nRst, $18, nFs3, $09, nRst, $0F, nE3, $24, nRst
+	dc.b	$60, nA3, $0C, nRst, $18, nA3, $09, nRst, $1B, nA3, $06, nRst
+	dc.b	$06, nA3, $18, nA3, $30, nRst, $0C
+	dc.b	nRst, $18, nA3, $0C, nRst, $18, nFs3, $09, nRst, $0F, nE3, $24, nRst
+	dc.b	$60, nA3, $0C, nRst, $18, nA3, $09, nRst, $1B, nB3, $06, nRst
+	dc.b	$06, nB3, $18, nB3, $30, nRst, $0C
 	dc.b	nRst, $18, nA3, $0C, nRst, $18, nFs3, $09, nRst, $0F, nE3, $24
-	dc.b	nRst, $60, nA3, $0C, nRst, $18, nA3, $09, nRst, $1B, nB3, $06
-	dc.b	nRst, $06, nB3, $18, nB3, $30
+	dc.b	nRst, $60, nA3, $0C, nRst, $18, nA3, $09, nRst, $1B, nA3, $06
+	dc.b	nRst, $06, nA3, $18, nA3, $30
 
 Snd_Title_Loop05:
 	dc.b	nRst, $79
