@@ -1,8 +1,8 @@
 Snd_SpecialS_Header:
-	smpsHeaderStartSong 1
+	smpsHeaderStartSong 3
 	smpsHeaderVoice     Snd_SpecialS_Voices
 	smpsHeaderChan      $06, $03
-	smpsHeaderTempo     $01, $06
+	smpsHeaderTempo     $01, $2B
 
 	smpsHeaderDAC       Snd_SpecialS_DAC
 	smpsHeaderFM        Snd_SpecialS_FM1,	$00, $17
@@ -10,9 +10,9 @@ Snd_SpecialS_Header:
 	smpsHeaderFM        Snd_SpecialS_FM3,	$00, $17
 	smpsHeaderFM        Snd_SpecialS_FM4,	$00, $17
 	smpsHeaderFM        Snd_SpecialS_FM5,	$00, $1F
-	smpsHeaderPSG       Snd_SpecialS_PSG1,	$00, $05, $00, sTone_0C
-	smpsHeaderPSG       Snd_SpecialS_PSG2,	$00, $05, $00, sTone_0C
-	smpsHeaderPSG       Snd_SpecialS_PSG3,	$00, $04, $00, fTone_02
+	smpsHeaderPSG       Snd_SpecialS_PSG1,	$0C, $05, $00, sTone_0C
+	smpsHeaderPSG       Snd_SpecialS_PSG2,	$0C, $05, $00, sTone_0C
+	smpsHeaderPSG       Snd_SpecialS_PSG3,	$0C, $04, $00, fTone_02
 
 ; FM1 Data
 Snd_SpecialS_FM1:
@@ -23,7 +23,7 @@ Snd_SpecialS_FM1:
 
 Snd_SpecialS_Jump03:
 	smpsSetvoice        $03
-	smpsModSet          $01, $01, $01, $04
+	smpsModSet          $14, $01, $06, $06
 	smpsCall            Snd_SpecialS_Call00
 	smpsCall            Snd_SpecialS_Call01
 	smpsCall            Snd_SpecialS_Call02
@@ -34,7 +34,6 @@ Snd_SpecialS_Jump03:
 	smpsCall            Snd_SpecialS_Call03
 	dc.b	nEb4
 	smpsFMAlterVol      $FA
-	smpsModSet          $00, $00, $00, $00
 	smpsJump            Snd_SpecialS_Jump03
 
 ; Unreachable
@@ -249,7 +248,7 @@ Snd_SpecialS_FM5:
 
 Snd_SpecialS_Jump00:
 	smpsSetvoice        $03
-	smpsModSet          $01, $01, $01, $04
+	smpsModSet          $14, $01, $06, $06
 	dc.b	nRst, $12
 	smpsCall            Snd_SpecialS_Call00
 	smpsCall            Snd_SpecialS_Call01
@@ -262,7 +261,6 @@ Snd_SpecialS_Jump00:
 	dc.b	nRst, $03
 	smpsCall            Snd_SpecialS_Call03
 	smpsFMAlterVol      $FB
-	smpsModSet          $00, $00, $00, $00
 	smpsJump            Snd_SpecialS_Jump00
 
 ; Unreachable
