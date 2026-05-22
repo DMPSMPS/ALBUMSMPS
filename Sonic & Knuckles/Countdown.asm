@@ -1,8 +1,8 @@
 Snd_Drown_Header:
-	smpsHeaderStartSong 3
+	smpsHeaderStartSong 1
 	smpsHeaderVoice     Snd_Drown_Voices
-	smpsHeaderChan      $06, $03
-	smpsHeaderTempo     $01, $7F
+	smpsHeaderChan      $06, $00
+	smpsHeaderTempo     $01, $02
 
 	smpsHeaderDAC       Snd_Drown_DAC
 	smpsHeaderFM        Snd_Drown_FM1,	$0C, $08
@@ -10,25 +10,22 @@ Snd_Drown_Header:
 	smpsHeaderFM        Snd_Drown_FM3,	$F4, $40
 	smpsHeaderFM        Snd_Drown_FM4,	$06, $11
 	smpsHeaderFM        Snd_Drown_FM5,	$0C, $19
-	smpsHeaderPSG       Snd_Drown_PSG1,	$0C, $19, $00, $00
-	smpsHeaderPSG       Snd_Drown_PSG2,	$0C, $19, $00, $00
-	smpsHeaderPSG       Snd_Drown_PSG3,	$0C, $19, $00, $00
 
 ; FM1 Data
 Snd_Drown_FM1:
 	smpsSetvoice        $00
 	smpsNop             $01
-	smpsNoteFill        $03
+	smpsNoteFill        $05
 	smpsCall            Snd_Drown_Call01
-	smpsSetTempoMod     $40
+	smpsSetTempoMod     $03
 	smpsCall            Snd_Drown_Call01
-	smpsSetTempoMod     $20
+	smpsSetTempoMod     $04
 	smpsCall            Snd_Drown_Call01
-	smpsSetTempoMod     $10
+	smpsSetTempoMod     $06
 	smpsCall            Snd_Drown_Call01
-	smpsSetTempoMod     $08
+	smpsSetTempoMod     $0A
 	smpsCall            Snd_Drown_Call01
-	dc.b	nC5, $0C
+	dc.b	nC5, $06
 	smpsNop             $01
 	smpsStop
 
@@ -53,7 +50,7 @@ Snd_Drown_Loop02:
 	smpsFMAlterVol      $FE
 	smpsCall            Snd_Drown_Call03
 	smpsLoop            $00, $1D, Snd_Drown_Loop02
-	dc.b	nC6, $0C
+	dc.b	nC6, $06
 	smpsStop
 
 Snd_Drown_Call03:
@@ -105,13 +102,6 @@ Snd_Drown_DAC:
 	dc.b	dSnareS3, $0C, dSnareS3, dSnareS3, dSnareS3
 	smpsLoop            $00, $0A, Snd_Drown_DAC
 	dc.b	dSnareS3, $06
-
-; PSG1 Data
-Snd_Drown_PSG1:
-; PSG2 Data
-Snd_Drown_PSG2:
-; PSG3 Data
-Snd_Drown_PSG3:
 	smpsStop
 
 Snd_Drown_Call01:
