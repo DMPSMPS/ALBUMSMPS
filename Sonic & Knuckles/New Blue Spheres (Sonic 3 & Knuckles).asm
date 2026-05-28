@@ -689,7 +689,7 @@ Snd_NewSpecialS_Voices:
 	smpsVcDecayRate2    $08, $06, $06, $07
 	smpsVcDecayLevel    $00, $01, $01, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $F6, $18, $37, $19
+	smpsVcTotalLevel    $00, $18, $37, $19
 
 ;	Voice $01
 ;	$3A
