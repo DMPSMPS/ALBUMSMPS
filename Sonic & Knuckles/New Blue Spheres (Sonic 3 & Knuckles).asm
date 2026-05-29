@@ -7,9 +7,9 @@ Snd_NewSpecialS_Header:
 	smpsHeaderDAC       Snd_NewSpecialS_DAC
 	smpsHeaderFM        Snd_NewSpecialS_FM1,	$00, $10
 	smpsHeaderFM        Snd_NewSpecialS_FM2,	$00, $06
-	smpsHeaderFM        Snd_NewSpecialS_FM3,	$00, $06
+	smpsHeaderFM        Snd_NewSpecialS_FM3,	$00, $03
 	smpsHeaderFM        Snd_NewSpecialS_FM4,	$00, $15
-	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $06
+	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $03
 	smpsHeaderPSG       Snd_NewSpecialS_PSG1,	$F4, $01, $00, sTone_03
 	smpsHeaderPSG       Snd_NewSpecialS_PSG2,	$F4, $01, $00, sTone_03
 	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$E8, $02, $00, sTone_0A
@@ -876,19 +876,19 @@ Snd_NewSpecialS_Voices:
 	smpsVcTotalLevel    $0F, $28, $00, $0E
 
 ;	Voice $0B
-;	$04
+;	$3C
 ;	$11, $02, $0F, $74, 	$5F, $5F, $5F, $5F, 	$00, $08, $00, $00
-;	$00, $00, $00, $0A, 	$0F, $FF, $0F, $0F, 	$1C, $00, $23, $03
+;	$00, $08, $00, $0C, 	$0F, $FF, $0F, $0F, 	$1C, $00, $23, $03
 	smpsVcAlgorithm     $04
-	smpsVcFeedback      $00
+	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $07, $00, $00, $01
-	smpsVcCoarseFreq    $04, $0F, $01, $01
+	smpsVcDetune        $00, $00, $00, $00
+	smpsVcCoarseFreq    $04, $0F, $02, $01
 	smpsVcRateScale     $01, $01, $01, $01
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $00, $00, $08, $00
-	smpsVcDecayRate2    $0A, $00, $00, $00
+	smpsVcDecayRate2    $0C, $00, $08, $00
 	smpsVcDecayLevel    $00, $00, $0F, $00
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $03, $23, $00, $1C
