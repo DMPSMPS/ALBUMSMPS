@@ -5,14 +5,14 @@ Snd_NewSpecialS_Header:
 	smpsHeaderTempo     $01, $33
 
 	smpsHeaderDAC       Snd_NewSpecialS_DAC
-	smpsHeaderFM        Snd_NewSpecialS_FM1,	$00, $10
-	smpsHeaderFM        Snd_NewSpecialS_FM2,	$00, $06
+	smpsHeaderFM        Snd_NewSpecialS_FM1,	$00, $0D
+	smpsHeaderFM        Snd_NewSpecialS_FM2,	$00, $03
 	smpsHeaderFM        Snd_NewSpecialS_FM3,	$00, $03
-	smpsHeaderFM        Snd_NewSpecialS_FM4,	$00, $15
+	smpsHeaderFM        Snd_NewSpecialS_FM4,	$00, $12
 	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $03
-	smpsHeaderPSG       Snd_NewSpecialS_PSG1,	$F4, $01, $00, sTone_03
-	smpsHeaderPSG       Snd_NewSpecialS_PSG2,	$F4, $01, $00, sTone_03
-	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$E8, $02, $00, sTone_0A
+	smpsHeaderPSG       Snd_NewSpecialS_PSG1,	$F4, $01, $00, sTone_0A
+	smpsHeaderPSG       Snd_NewSpecialS_PSG2,	$F4, $01, $00, sTone_0A
+	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$E8, $01, $00, sTone_0A
 
 ; FM1 Data
 Snd_NewSpecialS_FM1:
@@ -711,7 +711,7 @@ Snd_NewSpecialS_Voices:
 	smpsVcDecayRate2    $02, $02, $02, $02
 	smpsVcDecayLevel    $06, $01, $01, $01
 	smpsVcReleaseRate   $06, $01, $01, $01
-	smpsVcTotalLevel    $07, $20, $2F, $24
+	smpsVcTotalLevel    $04, $20, $2F, $24
 
 ;	Voice $02
 ;	$3B
