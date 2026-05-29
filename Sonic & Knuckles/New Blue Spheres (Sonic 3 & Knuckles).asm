@@ -67,6 +67,7 @@ Snd_NewSpecialS_Loop06:
 	smpsAlterVol        $03
 
 Mus_88_Jump03:
+	smpsChangeTransposition		$0C		
 	smpsCall            Mus_88_Call03
 	dc.b	$FB
 	dc.b	$02
@@ -91,6 +92,7 @@ Mus_88_Jump03:
 	dc.b	nG5, $04, nG5, $0C, nG5, nA5, nB5, nG5, $5C, nRst, $04
 	smpsAlterVol        $03
 	smpsSetvoice        $05
+	smpsChangeTransposition		$F4
 	smpsJump            Snd_NewSpecialS_Loop06
 
 Mus_88_Call03:
@@ -602,6 +604,7 @@ Snd_NewSpecialS_Loop06PSG:
 	dc.b	nG7, $04, nG7, $0C, nFs7, nE7, nD7, nG7, $5C, nRst, $04
 
 Mus_88_Jump03PSG:
+	smpsChangeTransposition		$0C		
 	smpsCall            Mus_88_Call03PSG
 	dc.b	$FB
 	dc.b	$02
@@ -622,6 +625,7 @@ Mus_88_Jump03PSG:
 	dc.b	nD6, $04, nRst, nRst, nA5, nD6, $0C, nA5, nFs5, $08, nRst, $04
 	dc.b	nG5, $08, nA5, $04, nB5, $08, nG5, $04, nRst, nRst, nD5, $0C
 	dc.b	nG5, $04, nG5, $0C, nG5, nA5, nB5, nG5, $5C, nRst, $04
+	smpsChangeTransposition		$F4
 	smpsJump	Snd_NewSpecialS_Loop06PSG
 
 Mus_88_Call03PSG:
@@ -879,7 +883,7 @@ Snd_NewSpecialS_Voices:
 	smpsVcFeedback      $00
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $07, $00, $00, $01
-	smpsVcCoarseFreq    $04, $0F, $02, $02
+	smpsVcCoarseFreq    $04, $0F, $01, $01
 	smpsVcRateScale     $01, $01, $01, $01
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
