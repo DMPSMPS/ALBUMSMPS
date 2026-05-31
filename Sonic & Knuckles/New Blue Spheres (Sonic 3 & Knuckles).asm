@@ -5,14 +5,14 @@ Snd_NewSpecialS_Header:
 	smpsHeaderTempo     $01, $33
 
 	smpsHeaderDAC       Snd_NewSpecialS_DAC
-	smpsHeaderFM        Snd_NewSpecialS_FM1,	$00, $10
+	smpsHeaderFM        Snd_NewSpecialS_FM1,	$00, $0C
 	smpsHeaderFM        Snd_NewSpecialS_FM2,	$00, $06
 	smpsHeaderFM        Snd_NewSpecialS_FM3,	$00, $06
-	smpsHeaderFM        Snd_NewSpecialS_FM4,	$00, $17
+	smpsHeaderFM        Snd_NewSpecialS_FM4,	$00, $13
 	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $06
 	smpsHeaderPSG       Snd_NewSpecialS_PSG1,	$F4, $01, $00, sTone_0A
 	smpsHeaderPSG       Snd_NewSpecialS_PSG2,	$F4, $01, $00, sTone_0A
-	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$E8, $02, $00, sTone_0A
+	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$E8, $01, $00, sTone_0A
 
 ; FM1 Data
 Snd_NewSpecialS_FM1:
