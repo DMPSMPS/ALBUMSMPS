@@ -1,7 +1,7 @@
 Snd_NewSpecialS_Header:
 	smpsHeaderStartSong 3
 	smpsHeaderVoice     Snd_NewSpecialS_Voices
-	smpsHeaderChan      $06, $02
+	smpsHeaderChan      $06, $03
 	smpsHeaderTempo     $01, $33
 
 	smpsHeaderDAC       Snd_NewSpecialS_DAC
