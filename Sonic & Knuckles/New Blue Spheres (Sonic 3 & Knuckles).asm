@@ -20,12 +20,12 @@ Snd_NewSpecialS_FM1:
 	smpsAlterNote       $FE
 Snd_NewSpecialS_FM1INIT:
 	smpsSetvoice        $04	
-	smpsAlterVol        $04
+	smpsAlterVol        $07
 	dc.b	nRst, $08, nRst, $04, nRst, nRst, nRst, $0C, nRst, $04, nRst, $08
 	dc.b	nRst, $04, nG4, $08, nE4, $04, nG5, $08, nFs4, $1C
 	smpsChangeTransposition		$F4
 	smpsSetvoice        $05
-	smpsAlterVol        $FC
+	smpsAlterVol        $F9
 
 Snd_NewSpecialS_Loop06:
 	dc.b	nG5, $08, nRst, $04, nA5, $08, nRst, $04, nB5, $08, nRst, $04
@@ -211,7 +211,6 @@ Mus_88_Call02:
 	dc.b	smpsNoAttack, nA2, $08, nG2, $04, nB2, $08, nD3, $0C, nE3, nRst, $04
 	smpsReturn
 
-
 ; FM3 Data
 Snd_NewSpecialS_FM3:
 	smpsPan             panRight, $00
@@ -257,10 +256,13 @@ Snd_NewSpecialS_Loop04:
 
 Snd_NewSpecialS_Loop03:
 	dc.b	nB4, $0C
+	smpsAlterVol        $FE
 	smpsLoop            $01, $04, Snd_NewSpecialS_Loop03
+	smpsAlterVol        $08
 	dc.b	$FB 
 	dc.b	$02
 	smpsLoop            $00, $02, Snd_NewSpecialS_Loop04
+	smpsAlterVol        $FB
 	dc.b	$FB 
 	dc.b	$FC 
 	dc.b	nB4, $08, nB4, $04, nRst, nRst, nB4, $18, nRst, $04, nB4, $0C
@@ -301,7 +303,9 @@ Snd_NewSpecialS_Loop03:
 	dc.b	nB4, $08, nB4, $04, nRst, nRst, nB4, $0C, nB4, $04, nB4, $08
 	dc.b	nRst, $04
 	smpsSetvoice        $02
+	smpsAlterVol        $03
 	dc.b	nRst, $0C, nB4, $08, nRst, nRst, $04, nB4, $08, nRst
+	smpsAlterVol        $02
 
 Mus_88_Jump01:
 	smpsAlterVol        $04
@@ -411,10 +415,13 @@ Snd_NewSpecialS_Loop02:
 
 Snd_NewSpecialS_Loop01:
 	dc.b	nAb4, $0C
+	smpsAlterVol        $FE
 	smpsLoop            $01, $04, Snd_NewSpecialS_Loop01
+	smpsAlterVol        $08
 	dc.b	$FB 
 	dc.b	$02
 	smpsLoop            $00, $02, Snd_NewSpecialS_Loop02
+	smpsAlterVol        $FB
 	dc.b	$FB 
 	dc.b	$FC 
 	dc.b	nFs4, $08, nFs4, $04, nRst, nRst, nFs4, $18, nRst, $04, nFs4, $0C
@@ -455,7 +462,9 @@ Snd_NewSpecialS_Loop01:
 	dc.b	nG4, $08, nG4, $04, nRst, nRst, nG4, $0C, nG4, $04, nG4, $08
 	dc.b	nRst, $04
 	smpsSetvoice        $02
+	smpsAlterVol        $03
 	dc.b	nRst, $0C, nG4, $08, nRst, nRst, $04, nG4, $08, nRst
+	smpsAlterVol        $02
 
 Mus_88_Jump00:
 	smpsAlterVol        $04
