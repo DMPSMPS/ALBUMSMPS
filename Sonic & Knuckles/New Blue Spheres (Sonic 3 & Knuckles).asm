@@ -12,7 +12,7 @@ Snd_NewSpecialS_Header:
 	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $04
 	smpsHeaderPSG       Snd_NewSpecialS_PSG1,	$F4, $01, $00, sTone_0A
 	smpsHeaderPSG       Snd_NewSpecialS_PSG2,	$F4, $01, $00, sTone_0A
-	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$00, $00, $00, $00
+	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$00, $00, $00, sTone_01
 
 ; FM1 Data
 Snd_NewSpecialS_FM1:
@@ -538,6 +538,7 @@ Snd_NewSpecialS_FM4:
 
 ; PSG1 Data
 Snd_NewSpecialS_PSG1:
+	smpsPSGvoice        sTone_0A
 	dc.b	nB3, $30, nC4, $14, nD4, $1C
 
 Snd_NewSpecialS_Jump01:
@@ -551,6 +552,7 @@ Snd_NewSpecialS_Jump01:
 
 ; PSG2 Data
 Snd_NewSpecialS_PSG2:
+	smpsPSGvoice        sTone_0A
 	dc.b	nG3, $30, nG3, $14, nA3, $1C
 
 Snd_NewSpecialS_Jump00:
@@ -578,6 +580,7 @@ Mus_10_Loop07:
 	smpsLoop            $00, $03, Mus_10_Loop07
 	smpsJump            Mus_10_Loop07
 
+; DAC Data
 Snd_NewSpecialS_DAC:
     dc.b    dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14
     dc.b    dQuickLooseSnare, $0C, dQuickLooseSnare, $0C, dKickS3, $04, dQuickLooseSnare, $08, dQuickLooseSnare, $04, dKickS3, $08, dQuickLooseSnare, $04
@@ -588,7 +591,6 @@ Snd_NewSpecialS_Loop00:
     dc.b    dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14, dKickS3, $0C, dKickS3, $0C, dKickS3, $04, dQuickLooseSnare, $0C, dQuickLooseSnare, $08, dQuickLooseSnare, $04
     smpsLoop            $00, $03, Snd_NewSpecialS_Loop00
     smpsJump            Snd_NewSpecialS_Loop00
-
 
 Snd_NewSpecialS_Voices:
 ;	Voice $00
