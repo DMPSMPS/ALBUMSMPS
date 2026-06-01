@@ -304,7 +304,7 @@ Snd_NewSpecialS_Loop03:
 	dc.b	nRst, $0C, nB4, $08, nRst, nRst, $04, nB4, $08, nRst
 
 Mus_88_Jump01:
-	smpsAlterVol        $05
+	smpsAlterVol        $04
 	smpsPan             panCenter, $00
 	smpsCall            Mus_88_Call01
 	dc.b	$FB 
@@ -326,7 +326,7 @@ Mus_88_Jump01:
 	dc.b	nB4, $18, nRst, $04, nB4, $0C, nB4, nB4, nB4, nB4, $08, nB4
 	dc.b	$04, nRst, nRst, nB4, $0C, nB4, $04, nB4, $08, nRst, $04, nRst
 	dc.b	$0C, nB4, $08, nRst, nRst, $04, nB4, $08, nRst
-	smpsAlterVol        $FB
+	smpsAlterVol        $FC
 	smpsJump            Snd_NewSpecialS_Loop04
 
 Mus_88_Call01:
@@ -458,7 +458,7 @@ Snd_NewSpecialS_Loop01:
 	dc.b	nRst, $0C, nG4, $08, nRst, nRst, $04, nG4, $08, nRst
 
 Mus_88_Jump00:
-	smpsAlterVol        $05
+	smpsAlterVol        $04
 	smpsPan             panCenter, $00
 	smpsCall            Mus_88_Call00
 	dc.b	$FB 
@@ -480,7 +480,7 @@ Mus_88_Jump00:
 	dc.b	nG4, $18, nRst, $04, nG4, $0C, nFs4, nE4, nFs4, nG4, $08, nG4
 	dc.b	$04, nRst, nRst, nG4, $0C, nG4, $04, nG4, $08, nRst, $04, nRst
 	dc.b	$0C, nG4, $08, nRst, nRst, $04, nG4, $08, nRst
-	smpsAlterVol        $FB
+	smpsAlterVol        $FC
 	smpsJump            Snd_NewSpecialS_Loop02
 
 Mus_88_Call00:
