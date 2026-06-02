@@ -305,8 +305,31 @@ Snd_Supersonic_Loop06:
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $10
 	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $E9
+	dc.b	smpsNoAttack, nE5, $01
+	smpsAlterNote       $EC
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $F0
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F1
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $F4
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F6
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $F7
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $FA
+	dc.b	smpsNoAttack, $03
+	smpsAlterNote       $FB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FD
+	dc.b	smpsNoAttack, $05
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $0A
 	smpsAlterNote       $03
-	dc.b	smpsNoAttack, nE5, $1E, nRst, $01
 	smpsReturn
 
 ; FM5 Data
@@ -413,8 +436,31 @@ Snd_Supersonic_Loop09:
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $10
 	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $E9
+	dc.b	smpsNoAttack, nE6, $01
+	smpsAlterNote       $EC
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $F0
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F1
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $F4
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F6
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $F7
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $02
+	smpsAlterNote       $FA
+	dc.b	smpsNoAttack, $03
+	smpsAlterNote       $FB
+	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $FD
-	dc.b	smpsNoAttack, nE6, $1E, nRst, $01
+	dc.b	smpsNoAttack, $05
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $0A
+	smpsAlterNote       $FD
 	smpsReturn
 
 ; PSG1 Data
