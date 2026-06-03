@@ -328,7 +328,7 @@ Snd_Supersonic_Loop06:
 	smpsAlterNote       $FD
 	dc.b	smpsNoAttack, $05
 	smpsAlterNote       $FE
-	dc.b	smpsNoAttack, $0A
+	dc.b	smpsNoAttack, $09, nRst, $01
 	smpsAlterNote       $03
 	smpsReturn
 
@@ -459,7 +459,7 @@ Snd_Supersonic_Loop09:
 	smpsAlterNote       $FD
 	dc.b	smpsNoAttack, $05
 	smpsAlterNote       $FE
-	dc.b	smpsNoAttack, $0A
+	dc.b	smpsNoAttack, $09, nRst, $01
 	smpsAlterNote       $FD
 	smpsReturn
 
