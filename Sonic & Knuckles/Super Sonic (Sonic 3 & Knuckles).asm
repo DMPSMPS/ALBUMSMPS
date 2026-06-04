@@ -16,6 +16,7 @@ Snd_Supersonic_Header:
 
 ; FM1 Data
 Snd_Supersonic_FM1:
+	smpsAlterNote       $FC
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	dc.b	nE2, $0F, nRst, $03, nE2, $0C, nB1, $06, nE2, $0C, nD2, $0F
