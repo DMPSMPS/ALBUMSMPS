@@ -5,13 +5,13 @@ Snd_Supersonic_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       Snd_Supersonic_DAC
-	smpsHeaderFM        Snd_Supersonic_FM1, $00, $0A
-	smpsHeaderFM        Snd_Supersonic_FM2, $00, $13
-	smpsHeaderFM        Snd_Supersonic_FM3, $00, $13
-	smpsHeaderFM        Snd_Supersonic_FM4, $00, $13
-	smpsHeaderFM        Snd_Supersonic_FM5, $00, $13
-	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $01, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $02, $00, sTone_11
+	smpsHeaderFM        Snd_Supersonic_FM1, $00, $0D
+	smpsHeaderFM        Snd_Supersonic_FM2, $00, $16
+	smpsHeaderFM        Snd_Supersonic_FM3, $00, $16
+	smpsHeaderFM        Snd_Supersonic_FM4, $00, $16
+	smpsHeaderFM        Snd_Supersonic_FM5, $00, $16
+	smpsHeaderPSG       Snd_Supersonic_PSG1, $E8, $02, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG2, $E8, $03, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3, $23, $00, $00, sTone_0F
 
 ; FM1 Data
@@ -39,11 +39,11 @@ Snd_Supersonic_Call01:
 	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $05, $00
-	smpsAlterVol	    $FB
+	smpsAlterVol	    $FC
 	dc.b	nG3, $60, smpsNoAttack, nG3
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
-	smpsAlterVol	    $05
+	smpsAlterVol	    $04
 	smpsReturn
 
 Snd_Supersonic_Call02:
@@ -229,6 +229,7 @@ Snd_Supersonic_Loop06:
 	smpsLoop            $01, $02, Snd_Supersonic_Loop05
 	dc.b	nD4, nRst, nD4, nRst, nE4, nRst, nE4, nRst, nFs4, nRst, nFs4, nRst
 	dc.b	nAb4, nRst, nAb4, nRst, $60
+	smpsModOff
 	smpsAlterNote       $02
 	dc.b	nE4, $14
 	smpsAlterNote       $03
@@ -330,6 +331,7 @@ Snd_Supersonic_Loop06:
 	smpsAlterNote       $FE
 	dc.b	smpsNoAttack, $09, nRst, $01
 	smpsAlterNote       $03
+	smpsModSet          $07, $01, $03, $05
 	smpsReturn
 
 ; FM5 Data
@@ -360,6 +362,7 @@ Snd_Supersonic_Loop09:
 	smpsLoop            $01, $02, Snd_Supersonic_Loop07
 	dc.b	nFs4, nRst, nFs4, nRst, nAb4, nRst, nAb4, nRst, nA4, nRst, nA4, nRst
 	dc.b	nB4, nRst, nB4, nRst, $60
+	smpsModOff
 	smpsAlterNote       $02
 	dc.b	nE5, $14
 	smpsAlterNote       $03
@@ -461,6 +464,7 @@ Snd_Supersonic_Loop09:
 	smpsAlterNote       $FE
 	dc.b	smpsNoAttack, $09, nRst, $01
 	smpsAlterNote       $FD
+	smpsModSet          $07, $01, $03, $05
 	smpsReturn
 
 ; PSG1 Data
