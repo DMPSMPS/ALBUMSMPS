@@ -20,12 +20,12 @@ Snd_NewSpecialS_FM1:
 	smpsAlterNote       $FE
 Snd_NewSpecialS_FM1INIT:
 	smpsSetvoice        $04	
-	smpsAlterVol        $04
+	smpsAlterVol        $07
 	dc.b	nRst, $08, nRst, $04, nRst, nRst, nRst, $0C, nRst, $04, nRst, $08
 	dc.b	nRst, $04, nG4, $08, nE4, $04, nG5, $08, nFs4, $1C
 	smpsChangeTransposition		$F4
 	smpsSetvoice        $05
-	smpsAlterVol        $FC
+	smpsAlterVol        $F9
 
 Snd_NewSpecialS_Loop06:
 	dc.b	nG5, $08, nRst, $04, nA5, $08, nRst, $04, nB5, $08, nRst, $04
