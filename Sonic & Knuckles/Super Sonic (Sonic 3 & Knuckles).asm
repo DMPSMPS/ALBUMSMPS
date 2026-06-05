@@ -113,10 +113,14 @@ Snd_Supersonic_Loop03:
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst 
 	smpsCall            Snd_Supersonic_Call06
+	smpsAlterVol        $0A
 	smpsCall            Snd_Supersonic_Call07
+	smpsAlterVol        $F6
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call06
+	smpsAlterVol        $0A
 	smpsCall            Snd_Supersonic_Call07
+	smpsAlterVol        $F6
 	smpsJump            Snd_Supersonic_Loop03
 
 Snd_Supersonic_Call06:
