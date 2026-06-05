@@ -794,7 +794,7 @@ Snd_NewSpecialS_Voices:
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $00, $00, $08, $00
-	smpsVcDecayRate2    $0C, $00, $08, $00
+	smpsVcDecayRate2    $0A, $00, $00, $00
 	smpsVcDecayLevel    $00, $00, $0F, $00
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $02, $23, $00, $1C
@@ -811,7 +811,7 @@ Snd_NewSpecialS_Voices:
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $08, $06, $0E, $10
+	smpsVcDecayRate1    $06, $06, $06, $10
 	smpsVcDecayRate2    $06, $06, $06, $01
 	smpsVcDecayLevel    $01, $01, $01, $03
 	smpsVcReleaseRate   $0A, $05, $0A, $05
