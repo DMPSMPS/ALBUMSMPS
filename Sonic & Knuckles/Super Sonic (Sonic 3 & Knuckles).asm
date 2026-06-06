@@ -456,9 +456,9 @@ Snd_Supersonic_Loop02:
 
 Snd_Supersonic_Loop03:
 	dc.b	$0C
-	smpsPSGvoice        fTone_02
+	smpsPSGvoice        sTone_12
 	dc.b	$0C
-	smpsPSGvoice        fTone_01
+	smpsPSGvoice        sTone_0F
 	smpsLoop            $00, $28, Snd_Supersonic_Loop03
 	dc.b	$12, $12, $18, $24, $12, $12, $18, $24
 	smpsLoop            $01, $02, Snd_Supersonic_Loop03
