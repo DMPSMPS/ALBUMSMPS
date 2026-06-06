@@ -78,17 +78,13 @@ Snd_Supersonic_Loop01:
 
 Snd_Supersonic_Call05:
 	dc.b	nA4, $18, nFs4, $0C, nE4, nA4, nFs4, nD4, nE4, $2D, nRst, $03
-	dc.b	nD5, $15, nRst, $03
-
-Snd_Supersonic_Loop08:
-	dc.b	nD5, $07, nRst, $05
-	smpsLoop            $01, $03, Snd_Supersonic_Loop08
-	dc.b	nCs5, $18, nA4, $0C, nE4, nFs4, nA4, $18, nB4, $60, nRst, $0C
+	dc.b	nD5, $15, nRst, $03, nD5, $06, nRst, nD5, nRst, nD5, nRst, nCs5
+	dc.b	$18, nA4, $0C, nE4, nFs4, nA4, $18, nB4, $60, nRst, $0C
 	smpsLoop            $02, $02, Snd_Supersonic_Call05
 	smpsCall            Snd_Supersonic_Call08
-	dc.b	nCs5, $07, nRst, $05, nCs5, $07, nRst, $05, nCs5, $06, nD5, nE5
-	dc.b	$0C, nD5, $07, nRst, $05, nD5, $07, nRst, $05, nD5, $06, nE5
-	dc.b	nFs5, $0C, nE4, $48, nFs4, $06, nAb4, nA4, nCs5
+	dc.b	nCs5, $06, nRst, nCs5, nRst, nCs5, nD5, nE5, $0C, nD5, $06, nRst
+	dc.b	nD5, nRst, nD5, nE5, nFs5, $0C, nE4, $48, nFs4, $06, nAb4, nA4
+	dc.b	nCs5
 	smpsReturn
 
 Snd_Supersonic_Call06:
@@ -106,9 +102,8 @@ Snd_Supersonic_Call06:
 	smpsReturn
 
 Snd_Supersonic_Call08:
-	dc.b	nA4, $07, nRst, $05, nA4, $07, nRst, $05, nA4, $06, nB4, nCs5
-	dc.b	$0C, nB4, $07, nRst, $05, nB4, $07, nRst, $05, nB4, $06, nCs5
-	dc.b	nD5, $0C
+	dc.b	nA4, $06, nRst, nA4, nRst, nA4, nB4, nCs5, $0C, nB4, $06, nRst
+	dc.b	nB4, nRst, nB4, nCs5, nD5, $0C
 	smpsReturn
 
 ; FM3 Data
@@ -130,15 +125,10 @@ Snd_Supersonic_Call03:
 	smpsSetvoice        $02
 	smpsPan             panRight, $00
 	dc.b	nCs5, $18, nB4, $0C, nA4, nCs5, nB4, nA4, nAb4, $2D, nRst, $03
-	dc.b	nFs5, $15, nRst, $03
-
-Snd_Supersonic_Loop07:
-	dc.b	nFs5, $07, nRst, $05
-	smpsLoop            $00, $03, Snd_Supersonic_Loop07
-	dc.b	nE5, $18, nCs5, $0C, nA4, nA4, nCs5, $18, nD5, $60, nRst, $0C
-	dc.b	nFs4, $07, nRst, $05, nFs4, $07, nRst, $05, nFs4, $06, nAb4, nA4
-	dc.b	$0C, nAb4, $07, nRst, $05, nAb4, $07, nRst, $05, nAb4, $06, nBb4
-	dc.b	nB4, $0C
+	dc.b	nFs5, $15, nRst, $03, nFs5, $06, nRst, nFs5, nRst, nFs5, nRst, nE5
+	dc.b	$18, nCs5, $0C, nA4, nA4, nCs5, $18, nD5, $60, nRst, $0C, nFs4
+	dc.b	$06, nRst, nFs4, nRst, nFs4, nAb4, nA4, $0C, nAb4, $06, nRst, nAb4
+	dc.b	nRst, nAb4, nBb4, nB4, $0C
 	smpsCall            Snd_Supersonic_Call08
 	smpsReturn
 
@@ -579,7 +569,7 @@ Snd_Supersonic_Voices:
 ;	Voice $05
 ;	$36
 ;	$0F, $01, $01, $01, 	$94, $9F, $96, $9F, 	$12, $00, $14, $0F
-;	$04, $0A, $04, $0D, 	$2F, $0F, $4F, $2F, 	$1C, $8A, $90, $8A
+;	$04, $0A, $04, $0D, 	$2F, $0F, $4F, $2F, 	$1C, $8E, $90, $8E
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
