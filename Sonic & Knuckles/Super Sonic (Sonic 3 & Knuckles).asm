@@ -106,8 +106,8 @@ Snd_Supersonic_Call06:
 	smpsReturn
 
 Snd_Supersonic_Call08:
-	dc.b	nA4, $07, nRst, $05, nA4, $07, nRst, $05, nA4, $07, nB4, nCs5
-	dc.b	$0C, nB4, $07, nRst, $05, nB4, $07, nRst, $05, nB4, $07, nCs5
+	dc.b	nA4, $07, nRst, $05, nA4, $07, nRst, $05, nA4, $06, nB4, nCs5
+	dc.b	$0C, nB4, $07, nRst, $05, nB4, $07, nRst, $05, nB4, $06, nCs5
 	dc.b	nD5, $0C
 	smpsReturn
 
