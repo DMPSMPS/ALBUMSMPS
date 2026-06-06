@@ -41,11 +41,11 @@ Snd_Supersonic_Call07:
 	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $05, $00
-	smpsAlterVol        $FB
+	smpsAlterVol        $F8
 	dc.b	nG3, $60, smpsNoAttack, nG3
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
-	smpsAlterVol        $05
+	smpsAlterVol        $08
 	smpsReturn
 
 Snd_Supersonic_Call09:
