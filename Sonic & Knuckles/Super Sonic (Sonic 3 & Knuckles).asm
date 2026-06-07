@@ -130,24 +130,72 @@ Snd_Supersonic_Call03:
 
 Snd_Supersonic_Call04:
 	dc.b	nRst, $60
+	smpsAlterVol        $1F
 	smpsSetvoice        $05
 	smpsPan             panCenter, $00
-	smpsAlterVol        $07
-	dc.b	nA3, $03, nB3, nCs4, nE4
+	dc.b	nRst, $60, nA3, $03
 	smpsAlterVol        $FF
-	dc.b	nB3, nCs4, nD4, nFs4
+	dc.b	nB3
 	smpsAlterVol        $FF
-	dc.b	nCs4, nD4, nE4, nAb4
+	dc.b	nCs4
 	smpsAlterVol        $FF
-	dc.b	nD4, nE4, nFs4, nA4
+	dc.b	nE4
 	smpsAlterVol        $FF
-	dc.b	nE4, nFs4, nAb4, nB4
+	dc.b	nB3
 	smpsAlterVol        $FF
-	dc.b	nFs4, nAb4, nA4, nCs5
+	dc.b	nCs4
 	smpsAlterVol        $FF
-	dc.b	nAb4, nA4, nB4, nD5
+	dc.b	nD4
 	smpsAlterVol        $FF
-	dc.b	nA4, nB4, nCs5, nE5
+	dc.b	nFs4
+	smpsAlterVol        $FF
+	dc.b	nCs4
+	smpsAlterVol        $FF
+	dc.b	nD4
+	smpsAlterVol        $FF
+	dc.b	nE4
+	smpsAlterVol        $FF
+	dc.b	nAb4
+	smpsAlterVol        $FF
+	dc.b	nD4
+	smpsAlterVol        $FF
+	dc.b	nE4
+	smpsAlterVol        $FF
+	dc.b	nFs4
+	smpsAlterVol        $FF
+	dc.b	nA4
+	smpsAlterVol        $FF
+	dc.b	nE4
+	smpsAlterVol        $FF
+	dc.b	nFs4
+	smpsAlterVol        $FF
+	dc.b	nAb4
+	smpsAlterVol        $FF
+	dc.b	nB4
+	smpsAlterVol        $FF
+	dc.b	nFs4
+	smpsAlterVol        $FF
+	dc.b	nAb4
+	smpsAlterVol        $FF
+	dc.b	nA4
+	smpsAlterVol        $FF
+	dc.b	nCs5
+	smpsAlterVol        $FF
+	dc.b	nAb4
+	smpsAlterVol        $FF
+	dc.b	nA4
+	smpsAlterVol        $FF
+	dc.b	nB4
+	smpsAlterVol        $FF
+	dc.b	nD5
+	smpsAlterVol        $FF
+	dc.b	nA4
+	smpsAlterVol        $FF
+	dc.b	nB4
+	smpsAlterVol        $FF
+	dc.b	nCs5
+	smpsAlterVol        $FF
+	dc.b	nE5
 	smpsReturn
 
 ; FM4 Data
@@ -564,18 +612,18 @@ Snd_Supersonic_Voices:
 
 ;	Voice $05
 ;	$36
-;	$0F, $01, $01, $01, 	$94, $9F, $96, $9F, 	$12, $00, $14, $0F
-;	$04, $0A, $04, $0D, 	$2F, $0F, $4F, $2F, 	$1C, $90, $90, $90
+;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
+;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $85, $85, $85
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $00, $00, $00, $00
 	smpsVcCoarseFreq    $01, $01, $01, $0F
-	smpsVcRateScale     $02, $02, $02, $02
-	smpsVcAttackRate    $1F, $16, $1F, $14
+	smpsVcRateScale     $00, $00, $00, $00
+	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $0F, $14, $00, $12
-	smpsVcDecayRate2    $0D, $04, $0A, $04
-	smpsVcDecayLevel    $02, $04, $00, $02
+	smpsVcDecayRate1    $00, $0E, $11, $12
+	smpsVcDecayRate2    $09, $07, $0A, $00
+	smpsVcDecayLevel    $00, $01, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $10, $10, $10, $1C
+	smpsVcTotalLevel    $05, $05, $05, $18
