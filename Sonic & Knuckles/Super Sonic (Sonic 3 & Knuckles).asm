@@ -133,7 +133,7 @@ Snd_Supersonic_Call04:
 	smpsAlterVol        $1F
 	smpsSetvoice        $05
 	smpsPan             panCenter, $00
-	dc.b	nRst, $60, nA3, $03
+	dc.b	nA3, $03
 	smpsAlterVol        $FF
 	dc.b	nB3
 	smpsAlterVol        $FF
