@@ -8,21 +8,29 @@ Snd_NewSpecialS_Header:
 	smpsHeaderFM        Snd_NewSpecialS_FM1,	$00, $0C
 	smpsHeaderFM        Snd_NewSpecialS_FM2,	$00, $06
 	smpsHeaderFM        Snd_NewSpecialS_FM3,	$00, $04
-	smpsHeaderFM        Snd_NewSpecialS_FM4,	$00, $13
-	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $04
+	smpsHeaderFM        Snd_NewSpecialS_FM4,	$00, $04
+	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $13
 	smpsHeaderPSG       Snd_NewSpecialS_PSG1,	$F4, $01, $00, sTone_0A
 	smpsHeaderPSG       Snd_NewSpecialS_PSG2,	$F4, $01, $00, sTone_0A
 	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$00, $00, $00, sTone_01
+
+; FM5 Data
+Snd_NewSpecialS_FM5:
+	smpsAlterNote       $02
+	smpsModSet          $15, $01, $06, $06
+	dc.b	nRst, $07
+	smpsJump	    Snd_NewSpecialS_FM1INIT
 
 ; FM1 Data
 Snd_NewSpecialS_FM1:
 	smpsModSet          $14, $01, $06, $06
 	smpsAlterNote       $FE
 Snd_NewSpecialS_FM1INIT:
-	smpsSetvoice        $04	
 	smpsAlterVol        $04
+	smpsSetvoice        $04	
 	dc.b	nRst, $08, nRst, $04, nRst, nRst, nRst, $0C, nRst, $04, nRst, $08
-	dc.b	nRst, $04, nG4, $08, nE4, $04, nG5, $08, nFs4, $1C
+	dc.b	nRst, $04, nG4, $08, nE4, $04, nG5, $08
+	dc.b	nFs4, $16, smpsNoAttack, nE4, $06
 	smpsChangeTransposition		$F4
 	smpsSetvoice        $05
 	smpsAlterVol        $FC
@@ -365,8 +373,8 @@ Mus_88_Call01:
 	dc.b	nB4, $30
 	smpsReturn
 
-; FM5 Data
-Snd_NewSpecialS_FM5:
+; FM4 Data
+Snd_NewSpecialS_FM4:
 	smpsPan             panLeft, $00
 	smpsSetvoice        $01
 	dc.b	nG4, $08, nG4, $04, nRst, nRst, nG4, $0C, nG4, $04, nD4, $08
@@ -517,14 +525,7 @@ Mus_88_Call00:
 	smpsSetvoice        $01
 	dc.b	nFs4, $0C, nFs4, nFs4, $08, nFs4, $04, nFs4, $08, nAb4, $04, smpsNoAttack
 	dc.b	nAb4, $0C, nAb4, nAb4, nAb4
-	smpsReturn
-
-; FM4 Data
-Snd_NewSpecialS_FM4:
-	smpsModSet          $15, $01, $06, $06
-	smpsAlterNote       $02
-	dc.b	nRst, $07
-	smpsJump            Snd_NewSpecialS_FM1INIT
+	smpsReturn   
 
 ; PSG1 Data
 Snd_NewSpecialS_PSG1:
