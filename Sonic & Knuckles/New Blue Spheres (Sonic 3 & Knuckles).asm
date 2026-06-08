@@ -12,7 +12,7 @@ Snd_NewSpecialS_Header:
 	smpsHeaderFM        Snd_NewSpecialS_FM5,	$00, $13
 	smpsHeaderPSG       Snd_NewSpecialS_PSG1,	$F4, $01, $00, sTone_0A
 	smpsHeaderPSG       Snd_NewSpecialS_PSG2,	$F4, $01, $00, sTone_0A
-	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$00, $00, $00, sTone_01
+	smpsHeaderPSG       Snd_NewSpecialS_PSG3,	$0C, $FF, $00, sTone_0A
 
 ; FM5 Data
 Snd_NewSpecialS_FM5:
