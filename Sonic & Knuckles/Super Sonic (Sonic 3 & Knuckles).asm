@@ -42,7 +42,7 @@ Snd_Supersonic_Call07:
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $05, $00
 	smpsAlterVol        $F8
-	dc.b	nG3, $60, smpsNoAttack, nG3
+	dc.b	nG2, $60, smpsNoAttack, nG2
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	smpsAlterVol        $08
@@ -67,13 +67,13 @@ Snd_Supersonic_FM2:
 	smpsPan             panRight, $00
 	dc.b	nFs4, nAb4, nA4, nB4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $0E
+	smpsAlterVol        $09
 
 Snd_Supersonic_Loop01:
 	smpsCall            Snd_Supersonic_Call05
 	smpsCall            Snd_Supersonic_Call06
 	smpsLoop            $00, $02, Snd_Supersonic_Loop01
-	smpsAlterVol        $F6
+	smpsAlterVol        $FB
 	smpsJump            Snd_Supersonic_FM2
 
 Snd_Supersonic_Call05:
@@ -88,7 +88,7 @@ Snd_Supersonic_Call05:
 	smpsReturn
 
 Snd_Supersonic_Call06:
-	smpsAlterVol        $F2
+	smpsAlterVol        $F7
 	smpsPan             panRight, $00
 	dc.b	nE5, $06, nD5, nCs5, nB4
 	smpsPan             panLeft, $00
@@ -98,7 +98,7 @@ Snd_Supersonic_Call06:
 	smpsPan             panLeft, $00
 	dc.b	nA4, nAb4, nFs4, nE4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $0E
+	smpsAlterVol        $09
 	smpsReturn
 
 Snd_Supersonic_Call08:
