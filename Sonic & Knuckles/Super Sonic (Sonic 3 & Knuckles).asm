@@ -129,7 +129,6 @@ Snd_Supersonic_Call03:
 	smpsReturn
 
 Snd_Supersonic_Call04:
-	dc.b	nRst, $60
 	smpsSetvoice        $05
 	smpsPan             panCenter, $00
 	dc.b	nRst, $60, nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4, nCs4
