@@ -421,13 +421,13 @@ Snd_Supersonic_Loop04:
 Snd_Supersonic_Call07:
 	smpsAlterNote       $02
 	smpsPSGvoice        sTone_0A
-	smpsPSGAlterVol     $04
+	smpsPSGAlterVol     $02
 	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4, nCs4, nD4, nE4
 	dc.b	nAb4, nD4, nE4, nFs4, nA4, nE4, nFs4, nAb4, nB4, nFs4, nAb4, nA4
 	dc.b	nCs5, nAb4, nA4, nB4, nD5, nA4, nB4, nCs5, nE5
 	smpsAlterNote       $00
 	smpsPSGvoice        sTone_11
-	smpsPSGAlterVol     $FC
+	smpsPSGAlterVol     $FE
 	smpsReturn
 
 ; PSG2 Data
