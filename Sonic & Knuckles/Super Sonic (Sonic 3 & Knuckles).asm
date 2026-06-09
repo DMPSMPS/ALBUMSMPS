@@ -67,13 +67,13 @@ Snd_Supersonic_FM2:
 	smpsPan             panRight, $00
 	dc.b	nFs4, nAb4, nA4, nB4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $09
+	smpsAlterVol        $0C
 
 Snd_Supersonic_Loop01:
 	smpsCall            Snd_Supersonic_Call05
 	smpsCall            Snd_Supersonic_Call06
 	smpsLoop            $00, $02, Snd_Supersonic_Loop01
-	smpsAlterVol        $FB
+	smpsAlterVol        $F8
 	smpsJump            Snd_Supersonic_FM2
 
 Snd_Supersonic_Call05:
@@ -88,7 +88,7 @@ Snd_Supersonic_Call05:
 	smpsReturn
 
 Snd_Supersonic_Call06:
-	smpsAlterVol        $F7
+	smpsAlterVol        $F4
 	smpsPan             panRight, $00
 	dc.b	nE5, $06, nD5, nCs5, nB4
 	smpsPan             panLeft, $00
@@ -130,72 +130,11 @@ Snd_Supersonic_Call03:
 
 Snd_Supersonic_Call04:
 	dc.b	nRst, $60
-	smpsAlterVol        $1F
 	smpsSetvoice        $05
 	smpsPan             panCenter, $00
-	dc.b	nA3, $03
-	smpsAlterVol        $FF
-	dc.b	nB3
-	smpsAlterVol        $FF
-	dc.b	nCs4
-	smpsAlterVol        $FF
-	dc.b	nE4
-	smpsAlterVol        $FF
-	dc.b	nB3
-	smpsAlterVol        $FF
-	dc.b	nCs4
-	smpsAlterVol        $FF
-	dc.b	nD4
-	smpsAlterVol        $FF
-	dc.b	nFs4
-	smpsAlterVol        $FF
-	dc.b	nCs4
-	smpsAlterVol        $FF
-	dc.b	nD4
-	smpsAlterVol        $FF
-	dc.b	nE4
-	smpsAlterVol        $FF
-	dc.b	nAb4
-	smpsAlterVol        $FF
-	dc.b	nD4
-	smpsAlterVol        $FF
-	dc.b	nE4
-	smpsAlterVol        $FF
-	dc.b	nFs4
-	smpsAlterVol        $FF
-	dc.b	nA4
-	smpsAlterVol        $FF
-	dc.b	nE4
-	smpsAlterVol        $FF
-	dc.b	nFs4
-	smpsAlterVol        $FF
-	dc.b	nAb4
-	smpsAlterVol        $FF
-	dc.b	nB4
-	smpsAlterVol        $FF
-	dc.b	nFs4
-	smpsAlterVol        $FF
-	dc.b	nAb4
-	smpsAlterVol        $FF
-	dc.b	nA4
-	smpsAlterVol        $FF
-	dc.b	nCs5
-	smpsAlterVol        $FF
-	dc.b	nAb4
-	smpsAlterVol        $FF
-	dc.b	nA4
-	smpsAlterVol        $FF
-	dc.b	nB4
-	smpsAlterVol        $FF
-	dc.b	nD5
-	smpsAlterVol        $FF
-	dc.b	nA4
-	smpsAlterVol        $FF
-	dc.b	nB4
-	smpsAlterVol        $FF
-	dc.b	nCs5
-	smpsAlterVol        $FF
-	dc.b	nE5
+	dc.b	nRst, $60, nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4, nCs4
+	dc.b	nD4, nE4, nAb4, nD4, nE4, nFs4, nA4, nE4, nFs4, nAb4, nB4, nFs4
+	dc.b	nAb4, nA4, nCs5, nAb4, nA4, nB4, nD5, nA4, nB4, nCs5, nE5
 	smpsReturn
 
 ; FM4 Data
