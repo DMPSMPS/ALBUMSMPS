@@ -98,7 +98,7 @@ Snd_Supersonic_Call06:
 	smpsPan             panLeft, $00
 	dc.b	nA4, nAb4, nFs4, nE4
 	smpsPan             panCenter, $00
-	smpsAlterVol        $09
+	smpsAlterVol        $0C
 	smpsReturn
 
 Snd_Supersonic_Call08:
