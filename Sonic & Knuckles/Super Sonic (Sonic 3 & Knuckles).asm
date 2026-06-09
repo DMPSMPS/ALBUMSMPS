@@ -42,7 +42,7 @@ Snd_Supersonic_Call07:
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $06, $00
 	smpsAlterVol        $F8
-	dc.b	nG2, $60, smpsNoAttack, nG2
+	dc.b	nG3, $60, smpsNoAttack, nG3
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	smpsAlterVol        $08
@@ -108,13 +108,26 @@ Snd_Supersonic_Call08:
 
 ; FM3 Data
 Snd_Supersonic_FM3:
+	smpsAlterNote       $04
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call03
-	smpsCall            Snd_Supersonic_Call04
+	smpsSetvoice        $04
+	smpsModSet          $01, $01, $06, $00
+	smpsAlterVol        $FC
+	dc.b	nG1, $60, smpsNoAttack, nG1
+	smpsModSet          $07, $01, $03, $05
+	smpsSetvoice        $02
+	smpsAlterVol        $04
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call03
-	smpsCall            Snd_Supersonic_Call04
+	smpsSetvoice        $04
+	smpsModSet          $01, $01, $06, $00
+	smpsAlterVol        $FC
+	dc.b	nG2, $60, smpsNoAttack, nG2
+	smpsModSet          $07, $01, $03, $05
+	smpsSetvoice        $02
+	smpsAlterVol        $04
 	smpsJump            Snd_Supersonic_FM3
 
 Snd_Supersonic_Call03:
@@ -126,14 +139,6 @@ Snd_Supersonic_Call03:
 	dc.b	$06, nRst, nFs4, nRst, nFs4, nAb4, nA4, $0C, nAb4, $06, nRst, nAb4
 	dc.b	nRst, nAb4, nBb4, nB4, $0C
 	smpsCall            Snd_Supersonic_Call08
-	smpsReturn
-
-Snd_Supersonic_Call04:
-	smpsSetvoice        $05
-	smpsPan             panCenter, $00
-	dc.b	nRst, $60, nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4, nCs4
-	dc.b	nD4, nE4, nAb4, nD4, nE4, nFs4, nA4, nE4, nFs4, nAb4, nB4, nFs4
-	dc.b	nAb4, nA4, nCs5, nAb4, nA4, nB4, nD5, nA4, nB4, nCs5, nE5
 	smpsReturn
 
 ; FM4 Data
@@ -407,16 +412,32 @@ Snd_Supersonic_Loop05:
 Snd_Supersonic_PSG1:
 	dc.b	nRst, $7F, nRst, $41
 	smpsCall            Snd_Supersonic_Call05
-	dc.b	nRst, $60
+	smpsCall            Snd_Supersonic_Call04
 	smpsCall            Snd_Supersonic_Call05
-	dc.b	nRst, $60
+	smpsCall            Snd_Supersonic_Call04
 	smpsJump            Snd_Supersonic_PSG1
+
+Snd_Supersonic_Call04:
+	smpsPSGvoice        sTone_0A
+	smpsPSGAlterVol     $04
+	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4, nCs4, nD4 
+	dc.b	nE4, nAb4, nD4, nE4, nFs4, nA4, nE4, nFs4, nAb4, nB4, nFs4
+	dc.b	nAb4, nA4, nCs5, nAb4, nA4, nB4, nD5, nA4, nB4, nCs5, nE5
+	smpsPSGvoice        sTone_11
+	smpsPSGAlterVol     $FC
+	smpsReturn
 
 ; PSG2 Data
 Snd_Supersonic_PSG2:
 	smpsAlterNote       $FF
-	dc.b	nRst, $05
-	smpsJump            Snd_Supersonic_PSG1
+	dc.b	nRst, $7F, nRst, $46
+
+Snd_Supersonic_Loop07:
+	smpsCall            Snd_Supersonic_Call05
+	dc.b	nRst, $60
+	smpsCall            Snd_Supersonic_Call05
+	dc.b	nRst, $5B
+	smpsJump            Snd_Supersonic_PSG2
 
 ; PSG3 Data
 Snd_Supersonic_PSG3:
@@ -547,21 +568,3 @@ Snd_Supersonic_Voices:
 	smpsVcDecayLevel    $04, $04, $04, $01
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $0E, $0E, $0E, $10
-
-;	Voice $05
-;	$36
-;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
-;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $9E, $9E, $9E
-	smpsVcAlgorithm     $06
-	smpsVcFeedback      $06
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $01, $01, $01, $0F
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $0E, $11, $12
-	smpsVcDecayRate2    $09, $07, $0A, $00
-	smpsVcDecayLevel    $00, $01, $00, $0F
-	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $1E, $1E, $1E, $18
