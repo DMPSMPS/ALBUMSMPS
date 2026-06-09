@@ -19,20 +19,21 @@ Snd_NewSpecialS_FM5:
 	smpsAlterNote       $02
 	smpsModSet          $15, $01, $06, $06
 	dc.b	nRst, $07
-	smpsJump	    Snd_NewSpecialS_FM1INIT
+	smpsJump            Snd_NewSpecialS_Jump00
 
 ; FM1 Data
 Snd_NewSpecialS_FM1:
 	smpsModSet          $14, $01, $06, $06
 	smpsAlterNote       $FE
-Snd_NewSpecialS_FM1INIT:
+
+Snd_NewSpecialS_Jump00:
 	smpsAlterVol        $04
-	smpsSetvoice        $04	
+	smpsSetvoice        $03
 	dc.b	nRst, $08, nRst, $04, nRst, nRst, nRst, $0C, nRst, $04, nRst, $08
-	dc.b	nRst, $04, nG4, $08, nE4, $04, nG5, $08
-	dc.b	nFs4, $16, smpsNoAttack, nE4, $06
-	smpsChangeTransposition		$F4
-	smpsSetvoice        $05
+	dc.b	nRst, $04, nG4, $08, nE4, $04, nG5, $08, nFs4, $16, smpsNoAttack, nE4
+	dc.b	$06
+	smpsAlterPitch      $F4
+	smpsSetvoice        $04
 	smpsAlterVol        $FC
 
 Snd_NewSpecialS_Loop06:
@@ -55,13 +56,13 @@ Snd_NewSpecialS_Loop06:
 	dc.b	nB5, $08, nRst, $04, nA5, $08, nRst, $04, nG5, $08, nRst, $04
 	dc.b	nFs5, $08, nRst, $04, nD5, $08, nRst, $04, nFs5, $08, nAb5, $0C
 	dc.b	nA5, $04, nRst, nRst, nB5, $08, nRst
-	dc.b	$FB 
+	dc.b	$FB
 	dc.b	$02
 	smpsLoop            $01, $02, Snd_NewSpecialS_Loop06
 	smpsAlterVol        $FD
-	dc.b	$FB 
-	dc.b	$FC 
-	smpsSetvoice        $06
+	dc.b	$FB
+	dc.b	$FC
+	smpsSetvoice        $05
 	dc.b	nEb6, $08, nE6, $04, nFs6, $08, nFs6, $04, nRst, nRst, nAb6, $0C
 	dc.b	nEb6, $04, nRst, nRst, nEb6, nFs6, $0C, nB5, nCs6, $08, nRst, $04
 	dc.b	nE6, $08, nFs6, $04, nAb6, $08, nB6, $04, nRst, nRst, nCs7, $0C
@@ -77,16 +78,14 @@ Snd_NewSpecialS_Loop06:
 	dc.b	nG6, $08, nA6, $04, nB6, $08, nD7, $04, nRst, nRst, nE7, $0C
 	dc.b	nG7, $04, nG7, $0C, nFs7, nE7, nD7, nG7, $5C, nRst, $04
 	smpsAlterVol        $03
-
-Mus_88_Jump03:
-	smpsChangeTransposition		$0C		
-	smpsCall            Mus_88_Call03
+	smpsAlterPitch      $0C
+	smpsCall            Snd_NewSpecialS_Call03
 	dc.b	$FB
 	dc.b	$02
-	smpsCall            Mus_88_Call03
-	dc.b	$FB 
+	smpsCall            Snd_NewSpecialS_Call03
+	dc.b	$FB
 	dc.b	$FE
-	smpsSetvoice        $0C
+	smpsSetvoice        $07
 	smpsAlterVol        $FD
 	dc.b	nEb6, $08, nE6, $04, nFs6, $08, nFs6, $04, nRst, nRst, nAb6, $0C
 	dc.b	nEb6, $04, nRst, nRst, nEb6, nFs6, $0C, nB5, nCs6, $08, nRst, $04
@@ -103,12 +102,12 @@ Mus_88_Jump03:
 	dc.b	nG5, $08, nA5, $04, nB5, $08, nG5, $04, nRst, nRst, nD5, $0C
 	dc.b	nG5, $04, nG5, $0C, nG5, nA5, nB5, nG5, $5C, nRst, $04
 	smpsAlterVol        $03
-	smpsSetvoice        $05
-	smpsChangeTransposition		$F4
+	smpsSetvoice        $04
+	smpsAlterPitch      $F4
 	smpsJump            Snd_NewSpecialS_Loop06
 
-Mus_88_Call03:
-	smpsSetvoice        $0B
+Snd_NewSpecialS_Call03:
+	smpsSetvoice        $06
 	dc.b	nG5, $08, nRst, $04, nA5, $08, nRst, $04, nB5, $08, nRst, $04
 	dc.b	nA5, $08, nG5, $04, nG5, $08, nA5, $04, nG5, $08, nFs5, $14
 	dc.b	nRst, $08, nFs5, $08, nRst, $04, nA5, $08, nRst, $04, nB5, $08
@@ -153,7 +152,7 @@ Snd_NewSpecialS_Loop05:
 	dc.b	smpsNoAttack, nA2, $08, nB2, $04, nA2, $08, nG2, $0C, nFs2, nRst, $04
 	dc.b	nA2, $0C, nFs2, $08, nA2, $0C, nD2, $04, nFs2, $08, nB2, $04
 	dc.b	smpsNoAttack, nA2, $08, nG2, $04, nB2, $08, nD3, $0C, nE3, nRst, $04
-	dc.b	$FB 
+	dc.b	$FB
 	dc.b	$02
 	smpsLoop            $00, $02, Snd_NewSpecialS_Loop05
 	dc.b	$FB 
@@ -174,14 +173,12 @@ Snd_NewSpecialS_Loop05:
 	dc.b	smpsNoAttack, nD3, $08, nE3, $04, nD3, $08, nC3, $0C, nB2, nRst, $04
 	dc.b	nG3, $0C, nB2, $08, nD3, $0C, nG2, $04, nB2, $08, nD3, $04
 	dc.b	smpsNoAttack, nD3, $08, nCs3, $04, nD3, $08, nG3, $0C, nD3, nRst, $04
-
-Mus_88_Jump02:
-	smpsCall            Mus_88_Call02
-	dc.b	$FB
+	smpsCall            Snd_NewSpecialS_Call02
+	dc.b	$FB 
 	dc.b	$02
-	smpsCall            Mus_88_Call02
-	dc.b	$FB
-	dc.b	$FE
+	smpsCall            Snd_NewSpecialS_Call02
+	dc.b	$FB 
+	dc.b	$FE 
 	dc.b	nB3, $0C, nEb3, $08, nFs3, $0C, nB2, $04, nEb3, $08, nFs3, $04
 	dc.b	smpsNoAttack, nFs3, $08, nAb3, $04, nFs3, $08, nE3, $0C, nEb2, nRst, $04
 	dc.b	nB3, $0C, nE3, $08, nAb3, $0C, nB2, $04, nE3, $08, nAb3, $04
@@ -200,7 +197,7 @@ Mus_88_Jump02:
 	dc.b	smpsNoAttack, nD3, $08, nCs3, $04, nD3, $08, nG3, $0C, nD3, nRst, $04
 	smpsJump            Snd_NewSpecialS_Loop05
 
-Mus_88_Call02:
+Snd_NewSpecialS_Call02:
 	dc.b	nG3, $0C, nB2, $08, nD3, $0C, nG2, $04, nB2, $08, nD3, $04
 	dc.b	smpsNoAttack, nD3, $08, nE3, $04, nD3, $08, nC3, $0C, nB2, nRst, $04
 	dc.b	nFs3, $0C, nB2, $08, nD3, $0C, nG2, $04, nB2, $08, nD3, $04
@@ -265,10 +262,10 @@ Snd_NewSpecialS_Loop04:
 Snd_NewSpecialS_Loop03:
 	dc.b	nB4, $0C
 	smpsLoop            $01, $04, Snd_NewSpecialS_Loop03
-	dc.b	$FB 
+	dc.b	$FB
 	dc.b	$02
 	smpsLoop            $00, $02, Snd_NewSpecialS_Loop04
-	dc.b	$FB 
+	dc.b	$FB
 	dc.b	$FC 
 	dc.b	nB4, $08, nB4, $04, nRst, nRst, nB4, $18, nRst, $04, nB4, $0C
 	dc.b	nBb4, nAb4, $08, nBb4, $04
@@ -309,16 +306,14 @@ Snd_NewSpecialS_Loop03:
 	dc.b	nRst, $04
 	smpsSetvoice        $02
 	dc.b	nRst, $0C, nB4, $08, nRst, nRst, $04, nB4, $08, nRst
-
-Mus_88_Jump01:
 	smpsAlterVol        $04
 	smpsPan             panCenter, $00
-	smpsCall            Mus_88_Call01
-	dc.b	$FB 
+	smpsCall            Snd_NewSpecialS_Call01
+	dc.b	$FB
 	dc.b	$02
-	smpsCall            Mus_88_Call01
-	dc.b	$FB 
-	dc.b	$FE 
+	smpsCall            Snd_NewSpecialS_Call01
+	dc.b	$FB
+	dc.b	$FE
 	dc.b	nB4, $08, nB4, $04, nRst, nRst, nB4, $18, nRst, $04, nB4, $0C
 	dc.b	nBb4, nAb4, $08, nBb4, $04, nAb4, $08, nBb4, $04, nB4, $08, nB4
 	dc.b	$04, nRst, nRst, nB4, $18, nRst, $04, nB4, $0C, nBb4, nB4, $08
@@ -336,7 +331,7 @@ Mus_88_Jump01:
 	smpsAlterVol        $FC
 	smpsJump            Snd_NewSpecialS_Loop04
 
-Mus_88_Call01:
+Snd_NewSpecialS_Call01:
 	smpsSetvoice        $01
 	dc.b	nG4, $08, nG4, $04, nRst, nRst, nG4, $18, nRst, $04, nG4, $0C
 	dc.b	nFs4, nE4
@@ -419,11 +414,11 @@ Snd_NewSpecialS_Loop02:
 Snd_NewSpecialS_Loop01:
 	dc.b	nAb4, $0C
 	smpsLoop            $01, $04, Snd_NewSpecialS_Loop01
-	dc.b	$FB 
+	dc.b	$FB
 	dc.b	$02
 	smpsLoop            $00, $02, Snd_NewSpecialS_Loop02
-	dc.b	$FB 
-	dc.b	$FC 
+	dc.b	$FB
+	dc.b	$FC
 	dc.b	nFs4, $08, nFs4, $04, nRst, nRst, nFs4, $18, nRst, $04, nFs4, $0C
 	dc.b	nFs4, nFs4, $08, nFs4, $04
 	smpsSetvoice        $02
@@ -463,16 +458,14 @@ Snd_NewSpecialS_Loop01:
 	dc.b	nRst, $04
 	smpsSetvoice        $02
 	dc.b	nRst, $0C, nG4, $08, nRst, nRst, $04, nG4, $08, nRst
-
-Mus_88_Jump00:
 	smpsAlterVol        $04
 	smpsPan             panCenter, $00
-	smpsCall            Mus_88_Call00
-	dc.b	$FB 
+	smpsCall            Snd_NewSpecialS_Call00
+	dc.b	$FB
 	dc.b	$02
-	smpsCall            Mus_88_Call00
-	dc.b	$FB 
-	dc.b	$FE 
+	smpsCall            Snd_NewSpecialS_Call00
+	dc.b	$FB
+	dc.b	$FE
 	dc.b	nFs4, $08, nFs4, $04, nRst, nRst, nFs4, $18, nRst, $04, nFs4, $0C
 	dc.b	nFs4, nFs4, $08, nFs4, $04, nFs4, $08, nFs4, $04, nAb4, $08, nAb4
 	dc.b	$04, nRst, nRst, nAb4, $18, nRst, $04, nAb4, $0C, nAb4, nAb4, $08
@@ -490,7 +483,7 @@ Mus_88_Jump00:
 	smpsAlterVol        $FC
 	smpsJump            Snd_NewSpecialS_Loop02
 
-Mus_88_Call00:
+Snd_NewSpecialS_Call00:
 	smpsSetvoice        $01
 	dc.b	nB4, $08, nB4, $04, nRst, nRst, nB4, $18, nRst, $04, nB4, $0C
 	dc.b	nB4, nB4
@@ -525,35 +518,35 @@ Mus_88_Call00:
 	smpsSetvoice        $01
 	dc.b	nFs4, $0C, nFs4, nFs4, $08, nFs4, $04, nFs4, $08, nAb4, $04, smpsNoAttack
 	dc.b	nAb4, $0C, nAb4, nAb4, nAb4
-	smpsReturn   
+	smpsReturn
 
 ; PSG1 Data
 Snd_NewSpecialS_PSG1:
 	smpsPSGvoice        sTone_0A
 	dc.b	nB3, $30, nC4, $14, nD4, $1C
 
-Snd_NewSpecialS_Jump01:
+Snd_NewSpecialS_Jump02:
 	dc.b	nB3, $60, nB3, nB3, $60, nB3, nA3, nA3, nA3, nA3, $30, nAb3
-	dc.b	$FB 
+	dc.b	$FB
 	dc.b	$02, nB3, $60, nB3, nB3, nB3, nA3, nA3, nA3, nA3, $30, nAb3
 	dc.b	$FB 
-	dc.b	$FE 
+	dc.b	$FE
 	dc.b	nB3, $60, nB3, nB3, nBb3, nB3, nA3, nB3, nB3
-	smpsJump            Snd_NewSpecialS_Jump01
+	smpsJump            Snd_NewSpecialS_Jump02
 
 ; PSG2 Data
 Snd_NewSpecialS_PSG2:
 	smpsPSGvoice        sTone_0A
 	dc.b	nG3, $30, nG3, $14, nA3, $1C
 
-Snd_NewSpecialS_Jump00:
+Snd_NewSpecialS_Jump01:
 	dc.b	nG3, $60, nFs3, nF3, $60, nE3, nD3, nC3, nB2, nA2, $30, nB2
-	dc.b	$FB 
+	dc.b	$FB
 	dc.b	$02, nG3, $60, nFs3, nF3, nE3, nD4, nC4, nB3, nA3, $30, nB3
 	dc.b	$FB 
 	dc.b	$FE 
 	dc.b	nFs3, $60, nAb3, nFs3, nFs3, nFs3, nFs3, nG3, nG3
-	smpsJump            Snd_NewSpecialS_Jump00
+	smpsJump            Snd_NewSpecialS_Jump01
 
 ; PSG3 Data
 Snd_NewSpecialS_PSG3:
@@ -562,32 +555,34 @@ Snd_NewSpecialS_PSG3:
 	smpsPSGvoice        sTone_01
 	dc.b	nRst, $0C, nRst, nG6, nRst, nRst, nRst, nG6, nRst
 
-Mus_10_Loop07:
+Snd_NewSpecialS_Loop07:
 	dc.b	nG6, $0C, nRst, nG6, nRst, $04, nRst, nG6, nRst, nRst, nG6, $0C
 	dc.b	nRst, $04, nG6, $0C, nRst, $04, nRst, nG6
-	smpsLoop            $01, $07, Mus_10_Loop07
+	smpsLoop            $01, $07, Snd_NewSpecialS_Loop07
 	dc.b	nG6, $0C, nRst, nG6, nRst, $04, nRst, nG6, nRst, nRst, nG6, $0C
 	dc.b	nG6, nRst, $04, nG6, $0C
-	smpsLoop            $00, $03, Mus_10_Loop07
-	smpsJump            Mus_10_Loop07
+	smpsLoop            $00, $03, Snd_NewSpecialS_Loop07
+	smpsJump            Snd_NewSpecialS_Loop07
 
 ; DAC Data
 Snd_NewSpecialS_DAC:
-    dc.b    dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14
-    dc.b    dQuickLooseSnare, $0C, dQuickLooseSnare, $0C, dKickS3, $04, dQuickLooseSnare, $08, dQuickLooseSnare, $04, dKickS3, $08, dQuickLooseSnare, $04
+	dc.b	dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14, dQuickLooseSnare, $0C, dQuickLooseSnare, $0C
+	dc.b	dKickS3, $04, dQuickLooseSnare, $08, dQuickLooseSnare, $04, dKickS3, $08, dQuickLooseSnare, $04
 
 Snd_NewSpecialS_Loop00:
-    dc.b    dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14, dKickS3, $0C, dKickS3, $0C, dKickS3, $04, dQuickLooseSnare, $14, dQuickLooseSnare, $04
-    smpsLoop            $01, $07, Snd_NewSpecialS_Loop00
-    dc.b    dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14, dKickS3, $0C, dKickS3, $0C, dKickS3, $04, dQuickLooseSnare, $0C, dQuickLooseSnare, $08, dQuickLooseSnare, $04
-    smpsLoop            $00, $03, Snd_NewSpecialS_Loop00
-    smpsJump            Snd_NewSpecialS_Loop00
+	dc.b	dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14, dKickS3, $0C, dKickS3, $0C
+	dc.b	dKickS3, $04, dQuickLooseSnare, $14, dQuickLooseSnare, $04
+	smpsLoop            $01, $07, Snd_NewSpecialS_Loop00
+	dc.b	dKickS3, $0C, dKickS3, $08, dKickS3, $04, dQuickLooseSnare, $14, dKickS3, $0C, dKickS3, $0C
+	dc.b	dKickS3, $04, dQuickLooseSnare, $0C, dQuickLooseSnare, $08, dQuickLooseSnare, $04
+	smpsLoop            $00, $03, Snd_NewSpecialS_Loop00
+	smpsJump            Snd_NewSpecialS_Loop00
 
 Snd_NewSpecialS_Voices:
 ;	Voice $00
 ;	$00
-;	$27, $37, $30, $20, 	$1F, $1F, $1F, $1F, 	$07, $06, $09, $06
-;	$07, $06, $06, $08, 	$20, $10, $10, $0F, 	$19, $37, $18, $F6
+;	$23, $33, $30, $20, 	$1F, $1F, $1F, $1F, 	$07, $06, $09, $06
+;	$07, $06, $06, $08, 	$2F, $1F, $1F, $0F, 	$19, $37, $18, $80
 	smpsVcAlgorithm     $00
 	smpsVcFeedback      $00
 	smpsVcUnusedBits    $00
@@ -604,8 +599,8 @@ Snd_NewSpecialS_Voices:
 
 ;	Voice $01
 ;	$3A
-;	$71, $0C, $32, $01, 	$9C, $96, $5D, $92, 	$04, $09, $04, $07
-;	$00, $01, $03, $08, 	$1F, $1F, $1F, $0F, 	$24, $2F, $20, $05
+;	$71, $0C, $32, $01, 	$5F, $99, $5F, $1F, 	$05, $05, $05, $0C
+;	$02, $02, $02, $02, 	$11, $11, $11, $66, 	$24, $2F, $20, $85
 	smpsVcAlgorithm     $02
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -623,7 +618,7 @@ Snd_NewSpecialS_Voices:
 ;	Voice $02
 ;	$3B
 ;	$03, $01, $01, $02, 	$14, $14, $12, $1F, 	$00, $03, $03, $0C
-;	$02, $00, $08, $0E, 	$0F, $0F, $3F, $1F, 	$1A, $13, $1E, $00
+;	$02, $00, $08, $0E, 	$0F, $0F, $3F, $1F, 	$1A, $13, $1E, $80
 	smpsVcAlgorithm     $03
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -639,27 +634,9 @@ Snd_NewSpecialS_Voices:
 	smpsVcTotalLevel    $00, $1E, $13, $1A
 
 ;	Voice $03
-;	$3C
-;	$61, $71, $3F, $32, 	$9F, $5F, $9F, $1F, 	$09, $00, $00, $0D
-;	$00, $00, $00, $00, 	$23, $08, $02, $F7, 	$15, $00, $1D, $07
-	smpsVcAlgorithm     $04
-	smpsVcFeedback      $07
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $03, $03, $07, $06
-	smpsVcCoarseFreq    $02, $0F, $01, $01
-	smpsVcRateScale     $00, $02, $01, $02
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $0D, $00, $00, $09
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $0F, $00, $00, $02
-	smpsVcReleaseRate   $07, $02, $08, $03
-	smpsVcTotalLevel    $07, $1D, $00, $15
-
-;	Voice $04
 ;	$24
 ;	$70, $74, $30, $38, 	$12, $1F, $1F, $1F, 	$05, $03, $05, $03
-;	$05, $03, $05, $03, 	$36, $2C, $26, $2C, 	$0A, $00, $06, $24
+;	$05, $03, $05, $03, 	$36, $2C, $26, $2C, 	$0A, $80, $06, $A4
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $04
 	smpsVcUnusedBits    $00
@@ -674,10 +651,10 @@ Snd_NewSpecialS_Voices:
 	smpsVcReleaseRate   $0C, $06, $0C, $06
 	smpsVcTotalLevel    $24, $06, $00, $0A
 
-;	Voice $05
+;	Voice $04
 ;	$04
 ;	$11, $02, $0F, $74, 	$5F, $5F, $5F, $5F, 	$00, $08, $00, $00
-;	$00, $00, $00, $0A, 	$0F, $FF, $0F, $0F, 	$1C, $00, $23, $03
+;	$00, $00, $00, $0A, 	$0F, $FF, $0F, $0F, 	$1C, $80, $23, $83
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $00
 	smpsVcUnusedBits    $00
@@ -692,10 +669,10 @@ Snd_NewSpecialS_Voices:
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $03, $23, $00, $1C
 
-;	Voice $06
+;	Voice $05
 ;	$34
 ;	$71, $72, $30, $30, 	$1F, $1F, $1F, $1F, 	$10, $06, $06, $06
-;	$01, $06, $06, $06, 	$35, $1A, $15, $1A, 	$10, $0C, $18, $0F
+;	$01, $06, $06, $06, 	$35, $1A, $15, $1A, 	$10, $80, $18, $8F
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
@@ -710,82 +687,10 @@ Snd_NewSpecialS_Voices:
 	smpsVcReleaseRate   $0A, $05, $0A, $05
 	smpsVcTotalLevel    $0F, $18, $00, $10
 
-;	Voice $07
-;	$00
-;	$27, $37, $30, $20, 	$1F, $1F, $1F, $1F, 	$07, $06, $09, $06
-;	$07, $06, $06, $08, 	$20, $10, $10, $0F, 	$19, $37, $18, $80
-	smpsVcAlgorithm     $00
-	smpsVcFeedback      $00
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $02, $03, $03, $02
-	smpsVcCoarseFreq    $00, $00, $07, $07
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $06, $09, $06, $07
-	smpsVcDecayRate2    $08, $06, $06, $07
-	smpsVcDecayLevel    $00, $01, $01, $02
-	smpsVcReleaseRate   $0F, $00, $00, $00
-	smpsVcTotalLevel    $00, $18, $37, $19
-
-;	Voice $08
-;	$34
-;	$00, $02, $0F, $04, 	$1F, $1F, $1F, $1F, 	$10, $06, $06, $06
-;	$01, $06, $06, $06, 	$35, $1A, $15, $1A, 	$10, $00, $18, $05
-	smpsVcAlgorithm     $04
-	smpsVcFeedback      $06
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $04, $0F, $02, $01
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $06, $06, $06, $10
-	smpsVcDecayRate2    $06, $06, $06, $01
-	smpsVcDecayLevel    $01, $01, $01, $03
-	smpsVcReleaseRate   $0A, $05, $0A, $05
-	smpsVcTotalLevel    $05, $18, $00, $10
-
-;	Voice $09
-;	$34
-;	$00, $02, $0F, $04, 	$1F, $1F, $1F, $1F, 	$10, $06, $06, $06
-;	$01, $06, $06, $06, 	$35, $1A, $15, $1A, 	$10, $00, $18, $11
-	smpsVcAlgorithm     $04
-	smpsVcFeedback      $06
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $04, $00, $02, $00
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $06, $06, $06, $10
-	smpsVcDecayRate2    $06, $06, $06, $01
-	smpsVcDecayLevel    $01, $01, $01, $03
-	smpsVcReleaseRate   $0A, $05, $0A, $05
-	smpsVcTotalLevel    $11, $18, $00, $10
-
-;	Voice $0A
-;	$34
-;	$00, $02, $11, $11, 	$1F, $1F, $1F, $1F, 	$10, $06, $06, $06
-;	$01, $06, $06, $00, 	$35, $1A, $1A, $1A, 	$0E, $00, $28, $14
-	smpsVcAlgorithm     $04
-	smpsVcFeedback      $06
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $01, $01, $00, $00
-	smpsVcCoarseFreq    $01, $01, $02, $00
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $06, $06, $06, $10
-	smpsVcDecayRate2    $06, $06, $06, $01
-	smpsVcDecayLevel    $01, $01, $01, $03
-	smpsVcReleaseRate   $0A, $05, $0A, $05
-	smpsVcTotalLevel    $0F, $28, $00, $0E
-
-;	Voice $0B
+;	Voice $06
 ;	$3C
-;	$11, $02, $0F, $74, 	$5F, $5F, $5F, $5F, 	$00, $08, $00, $00
-;	$00, $08, $00, $0C, 	$0F, $FF, $0F, $0F, 	$1C, $00, $23, $02
+;	$01, $02, $0F, $04, 	$5F, $5F, $5F, $5F, 	$00, $08, $00, $00
+;	$00, $08, $00, $0C, 	$0F, $FF, $0F, $0F, 	$1C, $80, $23, $82
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -800,10 +705,10 @@ Snd_NewSpecialS_Voices:
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $02, $23, $00, $1C
 
-;	Voice $0C
+;	Voice $07
 ;	$3C
-;	$72, $72, $30, $30, 	$1F, $1F, $1F, $1F, 	$10, $0E, $06, $08
-;	$01, $06, $06, $06, 	$35, $1A, $15, $1A, 	$10, $00, $18, $0F
+;	$01, $02, $00, $01, 	$1F, $1F, $1F, $1F, 	$10, $0E, $06, $08
+;	$01, $06, $06, $06, 	$35, $1A, $15, $1A, 	$10, $80, $18, $8F
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
