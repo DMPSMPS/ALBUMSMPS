@@ -115,7 +115,7 @@ Snd_Supersonic_FM3:
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $06, $00
 	smpsFMAlterVol      $FC
-	dc.b	nA3, $60, smpsNoAttack, nA3
+	dc.b	nC2, $60, smpsNoAttack, nC2
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsFMAlterVol      $04
