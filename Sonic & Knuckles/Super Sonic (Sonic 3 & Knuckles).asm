@@ -38,9 +38,13 @@ Snd_Supersonic_Call06:
 	smpsLoop            $00, $02, Snd_Supersonic_Call06
 	dc.b	nD2, nRst, nD2, nD2, nRst, nA2, nD2, $0C, nE2, $06, nRst, nE2
 	dc.b	nE2, nRst, nB2, nE2, $0C, nFs2, $06, nRst, nFs2, nFs2, nRst, nA2
-	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C, nB2
-	dc.b	$10, smpsNoAttack, nC3, smpsNoAttack, nCs3, smpsNoAttack, nD3, smpsNoAttack, nEb3, smpsNoAttack, nE3, smpsNoAttack
-	dc.b	nF3, smpsNoAttack, nFs3, smpsNoAttack, nG3, smpsNoAttack, nAb3, smpsNoAttack, nA3, smpsNoAttack, nBb3
+	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C
+	smpsModSet          $01, $01, $06, $00
+	dc.b	nB2, $60
+	smpsModSet          $01, $01, $04, $00
+	smpsModRefreshNextNote          
+	dc.b	smpsNoAttack, nF3
+	smpsModSet          $07, $01, $03, $05
 	smpsReturn
 
 Snd_Supersonic_Call09:
@@ -127,8 +131,12 @@ Snd_Supersonic_Call03:
 Snd_Supersonic_Call0A:
 	smpsSetvoice        $00
 	smpsFMAlterVol      $04
-	dc.b	nB1, $10, smpsNoAttack, nC2, smpsNoAttack, nCs2, smpsNoAttack, nD2, smpsNoAttack, nEb2, smpsNoAttack, nE2
-	dc.b	smpsNoAttack, nF2, smpsNoAttack, nFs2, smpsNoAttack, nG2, smpsNoAttack, nAb2, smpsNoAttack, nA2, smpsNoAttack, nBb2
+	smpsModSet          $01, $01, $06, $00
+	dc.b	nB1, $60
+	smpsModSet          $01, $01, $04, $00
+	smpsModRefreshNextNote          
+	dc.b	smpsNoAttack, nF2
+	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsFMAlterVol      $FC
 	smpsReturn
@@ -263,6 +271,7 @@ Snd_Supersonic_Loop07:
 	smpsAlterNote       $FE
 	dc.b	smpsNoAttack, $09, nRst, $01
 	smpsAlterNote       $03
+    	smpsModOn
 	smpsModSet          $07, $01, $03, $05
 	smpsReturn
 
@@ -397,6 +406,7 @@ Snd_Supersonic_Loop06:
 	smpsAlterNote       $FE
 	dc.b	smpsNoAttack, $09, nRst, $01
 	smpsAlterNote       $FD
+    	smpsModOn
 	smpsModSet          $07, $01, $03, $05
 	smpsReturn
 
