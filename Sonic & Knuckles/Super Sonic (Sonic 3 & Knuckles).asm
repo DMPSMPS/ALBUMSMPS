@@ -38,10 +38,9 @@ Snd_Supersonic_Call06:
 	smpsLoop            $00, $02, Snd_Supersonic_Call06
 	dc.b	nD2, nRst, nD2, nD2, nRst, nA2, nD2, $0C, nE2, $06, nRst, nE2
 	dc.b	nE2, nRst, nB2, nE2, $0C, nFs2, $06, nRst, nFs2, nFs2, nRst, nA2
-	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C
-	smpsModSet          $01, $01, $06, $00
-	dc.b	nC2, $60, smpsNoAttack, nC2
-	smpsModSet          $07, $01, $03, $05
+	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C, nB2
+	dc.b	$10, smpsNoAttack, nC3, smpsNoAttack, nCs3, smpsNoAttack, nD3, smpsNoAttack, nEb3, smpsNoAttack, nE3, smpsNoAttack
+	dc.b	nF3, smpsNoAttack, nFs3, smpsNoAttack, nG3, smpsNoAttack, nAb3, smpsNoAttack, nA3, smpsNoAttack, nBb3
 	smpsReturn
 
 Snd_Supersonic_Call09:
@@ -108,22 +107,10 @@ Snd_Supersonic_FM3:
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call03
-	smpsSetvoice        $00
-	smpsModSet          $01, $01, $06, $00
-	smpsFMAlterVol      $04
-	dc.b	nC1, $60, smpsNoAttack, nC1
-	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
-	smpsFMAlterVol      $FC
+	smpsCall            Snd_Supersonic_Call0A
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call03
-	smpsSetvoice        $00
-	smpsModSet          $01, $01, $06, $00
-	smpsFMAlterVol      $04
-	dc.b	nC1, $60, smpsNoAttack, nC1
-	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
-	smpsFMAlterVol      $FC
+	smpsCall            Snd_Supersonic_Call0A
 	smpsJump            Snd_Supersonic_FM3
 
 Snd_Supersonic_Call03:
@@ -135,6 +122,15 @@ Snd_Supersonic_Call03:
 	dc.b	nRst, nFs4, nRst, nFs4, nAb4, nA4, $0C, nAb4, $06, nRst, nAb4, nRst
 	dc.b	nAb4, nBb4, nB4, $0C
 	smpsCall            Snd_Supersonic_Call08
+	smpsReturn
+
+Snd_Supersonic_Call0A:
+	smpsSetvoice        $00
+	smpsFMAlterVol      $04
+	dc.b	nB1, $10, smpsNoAttack, nC2, smpsNoAttack, nCs2, smpsNoAttack, nD2, smpsNoAttack, nEb2, smpsNoAttack, nE2
+	dc.b	smpsNoAttack, nF2, smpsNoAttack, nFs2, smpsNoAttack, nG2, smpsNoAttack, nAb2, smpsNoAttack, nA2, smpsNoAttack, nBb2
+	smpsSetvoice        $02
+	smpsFMAlterVol      $FC
 	smpsReturn
 
 ; FM4 Data
