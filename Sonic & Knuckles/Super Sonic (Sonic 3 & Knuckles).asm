@@ -42,7 +42,7 @@ Snd_Supersonic_Call06:
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $06, $00
 	smpsFMAlterVol      $F8
-	dc.b	nG3, $60, smpsNoAttack, nG3
+	dc.b	nC3, $60, smpsNoAttack, nC3
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	smpsFMAlterVol      $08
@@ -115,7 +115,7 @@ Snd_Supersonic_FM3:
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $06, $00
 	smpsFMAlterVol      $FC
-	dc.b	nG1, $60, smpsNoAttack, nG1
+	dc.b	nA3, $60, smpsNoAttack, nA3
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsFMAlterVol      $04
@@ -124,7 +124,7 @@ Snd_Supersonic_FM3:
 	smpsSetvoice        $04
 	smpsModSet          $01, $01, $06, $00
 	smpsFMAlterVol      $FC
-	dc.b	nG2, $60, smpsNoAttack, nG2
+	dc.b	nC2, $60, smpsNoAttack, nC2
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
 	smpsFMAlterVol      $04
