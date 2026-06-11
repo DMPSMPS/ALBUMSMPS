@@ -16,15 +16,17 @@ Snd_Supersonic_Header:
 
 ; FM1 Data
 Snd_Supersonic_FM1:
-	smpsAlterNote       $FC
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $00
 	dc.b	nE2, $0F, nRst, $03, $0C, nB1, $06, nE2, $0C, nD2, $0F, nRst
 	dc.b	$03, nFs2, $0C, nA2, $06, nB2, $0C, nCs3, $0F, nRst, $03, $0C
 	dc.b	nA2, $06, nCs3, $0C, nB2, $06, nRst, nB2, nRst, nB2, nCs3, nB2
 	dc.b	$0C
+
+Snd_Supersonic_Loop02:
 	smpsCall            Snd_Supersonic_Call07
-	smpsCall            Snd_Supersonic_Call07
+	smpsCall            Snd_Supersonic_Call04
+	smpsLoop            $00, $02, Snd_Supersonic_Loop02
 	smpsJump            Snd_Supersonic_FM1
 
 Snd_Supersonic_Call07:
@@ -35,19 +37,399 @@ Snd_Supersonic_Call07:
 	smpsCall            Snd_Supersonic_Call0A
 	dc.b	nB2, $06, nA2, nAb2, nFs2, nCs3, nB2, nA2, nAb2, nE2, nFs2, nAb2
 	dc.b	nFs2, nAb2, nA2, nBb2, nB2
-	smpsLoop            $00, $02, Snd_Supersonic_Call07
+	smpsLoop            $01, $02, Snd_Supersonic_Call07
 	dc.b	nD2, nRst, nD2, nD2, nRst, nA2, nD2, $0C, nE2, $06, nRst, nE2
 	dc.b	nE2, nRst, nB2, nE2, $0C, nFs2, $06, nRst, nFs2, nFs2, nRst, nA2
 	dc.b	nFs2, $0C, nAb2, $06, nRst, nAb2, nAb2, nRst, nA2, nAb2, $0C
-	smpsModSet          $01, $01, $01, $00
-	dc.b	nB2, $10
+	smpsReturn
 
-Snd_Supersonic_Loop09:
-	smpsAlterPitch      $01
-	smpsModRefreshNextNote          
-	dc.b	smpsNoAttack, nB2
-	smpsLoop            $00, $0B, Snd_Supersonic_Loop09
-	smpsAlterPitch      $F5
+Snd_Supersonic_Call04:
+	smpsModSet          $00, $00, $00, $00
+	smpsAlterNote       $01
+	dc.b	nB2, $01
+	smpsAlterNote       $02
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $05
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $07
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $09
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0C
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0E
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $10
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EF
+	dc.b	smpsNoAttack, nC3
+	smpsAlterNote       $F1
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F3
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F5
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F8
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FC
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FF
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $01
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $03
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $06
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $07
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0A
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0C
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0E
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $11
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EE
+	dc.b	smpsNoAttack, nCs3
+	smpsAlterNote       $F0
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F3
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F5
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F7
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FA
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FC
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $01
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $03
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $06
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $09
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0B
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0D
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $10
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $13
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EC
+	dc.b	smpsNoAttack, nD3
+	smpsAlterNote       $EF
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F1
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F3
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F7
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $01
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $03
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $06
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $09
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0A
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0E
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $11
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $13
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EB
+	dc.b	smpsNoAttack, nEb3
+	smpsAlterNote       $ED
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F0
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F3
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F6
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F8
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $00
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $04
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $06
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $09
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0C
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0F
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $11
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $15
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EA
+	dc.b	smpsNoAttack, nE3
+	smpsAlterNote       $ED
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F0
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F3
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F5
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $02
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $04
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $07
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0A
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0D
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $10
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $13
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $16
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E8
+	dc.b	smpsNoAttack, nF3
+	smpsAlterNote       $EC
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EF
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F2
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F6
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F8
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FF
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $02
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $04
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $08
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0B
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0D
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $12
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $14
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $17
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E8
+	dc.b	smpsNoAttack, nFs3
+	smpsAlterNote       $EB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F2
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F5
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F7
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FF
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $01
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $05
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $08
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0B
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0F
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $12
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $15
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $19
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E6
+	dc.b	smpsNoAttack, nG3
+	smpsAlterNote       $E8
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EC
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F0
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F2
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F7
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FA
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FD
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $01
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $04
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $07
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0C
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0F
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $12
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $16
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $1A
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E3
+	dc.b	smpsNoAttack, nAb3
+	smpsAlterNote       $E8
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EB
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EF
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F3
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F6
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $02
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $04
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $09
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0D
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0F
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $14
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $18
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $1B
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E3
+	dc.b	smpsNoAttack, nA3
+	smpsAlterNote       $E6
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F2
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F5
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FD
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $00
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $06
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $09
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0C
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $11
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $15
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $18
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $1D
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E1
+	dc.b	smpsNoAttack, nBb3
+	smpsAlterNote       $E4
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $E9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $ED
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F0
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F6
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F9
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FD
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $02
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $06
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $09
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $0E
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $13
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $15
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $1B
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $1F
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $EF
+	dc.b	smpsNoAttack, nB3
+	smpsAlterNote       $F2
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F3
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F5
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $F8
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FA
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FC
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $FE
+	dc.b	smpsNoAttack, $01
+	smpsAlterNote       $00
 	smpsModSet          $07, $01, $03, $05
 	smpsReturn
 
@@ -111,13 +493,14 @@ Snd_Supersonic_Call09:
 
 ; FM3 Data
 Snd_Supersonic_FM3:
-	smpsAlterNote       $04
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call03
+	smpsSetvoice        $03
 	smpsCall            Snd_Supersonic_Call04
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call03
+	smpsSetvoice        $03
 	smpsCall            Snd_Supersonic_Call04
 	smpsJump            Snd_Supersonic_FM3
 
@@ -132,29 +515,12 @@ Snd_Supersonic_Call03:
 	smpsCall            Snd_Supersonic_Call09
 	smpsReturn
 
-Snd_Supersonic_Call04:
-	smpsSetvoice        $00
-	smpsFMAlterVol      $04
-	smpsModSet          $01, $01, $01, $00
-	dc.b	nB1, $10
-
-Snd_Supersonic_Loop08:
-	smpsAlterPitch      $01
-	smpsModRefreshNextNote          
-	dc.b	smpsNoAttack, nB1
-	smpsLoop            $00, $0B, Snd_Supersonic_Loop08
-	smpsAlterPitch      $F5
-	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $02
-	smpsFMAlterVol      $FC
-	smpsReturn
-
 ; FM4 Data
 Snd_Supersonic_FM4:
 	smpsAlterNote       $03
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panLeft, $00
-	smpsSetvoice        $03
+	smpsSetvoice        $04
 
 Snd_Supersonic_Loop00:
 	dc.b	nE4, $0C, nRst, $06, $18, nRst, $06
@@ -169,9 +535,9 @@ Snd_Supersonic_Loop00:
 Snd_Supersonic_Call02:
 	dc.b	nE4, $0C, nRst, nE4, nRst, nD4, nRst, nD4
 
-Snd_Supersonic_Loop07:
+Snd_Supersonic_Loop08:
 	dc.b	nRst, nE4
-	smpsLoop            $00, $06, Snd_Supersonic_Loop07
+	smpsLoop            $00, $06, Snd_Supersonic_Loop08
 	dc.b	nRst, nD4, nRst, nD4, nRst, nAb4, nRst, nAb4, nRst, nFs4, nRst, nE4
 	dc.b	nRst
 	smpsLoop            $01, $02, Snd_Supersonic_Call02
@@ -287,7 +653,7 @@ Snd_Supersonic_FM5:
 	smpsAlterNote       $FD
 	smpsModSet          $07, $01, $03, $05
 	smpsPan             panRight, $00
-	smpsSetvoice        $03
+	smpsSetvoice        $04
 	dc.b	nB4, $0C, nRst, $06, nAb4, $18, nRst, $06, nA4, $0C, nRst, $06
 	dc.b	nB4, $18, nRst, $06, nCs5, $0C, nRst, $06, nA4, $18, nRst, $06
 	dc.b	nB4, $0C, nRst, nAb4, $18, nRst, $0C
@@ -300,13 +666,13 @@ Snd_Supersonic_Call01:
 	dc.b	nA4, $0C, nRst, nA4, nRst, nFs4, nRst, nFs4, nRst, nAb4, nRst, nAb4
 	dc.b	nRst, nB4, nRst, nB4
 
-Snd_Supersonic_Loop05:
-	dc.b	nRst, nA4
-	smpsLoop            $00, $04, Snd_Supersonic_Loop05
-
 Snd_Supersonic_Loop06:
-	dc.b	nRst, nB4
+	dc.b	nRst, nA4
 	smpsLoop            $00, $04, Snd_Supersonic_Loop06
+
+Snd_Supersonic_Loop07:
+	dc.b	nRst, nB4
+	smpsLoop            $00, $04, Snd_Supersonic_Loop07
 	dc.b	nRst
 	smpsLoop            $01, $02, Snd_Supersonic_Call01
 	dc.b	nFs4, nRst, nFs4, nRst, nAb4, nRst, nAb4, nRst, nA4, nRst, nA4, nRst
@@ -420,10 +786,10 @@ Snd_Supersonic_Loop06:
 Snd_Supersonic_PSG1:
 	dc.b	nRst, $7F, nRst, $41
 
-Snd_Supersonic_Loop04:
+Snd_Supersonic_Loop05:
 	smpsCall            Snd_Supersonic_Call05
 	smpsCall            Snd_Supersonic_Call08
-	smpsLoop            $00, $02, Snd_Supersonic_Loop04
+	smpsLoop            $00, $02, Snd_Supersonic_Loop05
 	smpsJump            Snd_Supersonic_PSG1
 
 Snd_Supersonic_Call08:
@@ -452,19 +818,19 @@ Snd_Supersonic_PSG2:
 Snd_Supersonic_PSG3:
 	smpsPSGform         $E7
 
-Snd_Supersonic_Loop02:
-	dc.b	(nMaxPSG2-$23)&$FF, $12, $1E
-	smpsLoop            $00, $04, Snd_Supersonic_Loop02
-
 Snd_Supersonic_Loop03:
+	dc.b	nB6, $12, $1E
+	smpsLoop            $00, $04, Snd_Supersonic_Loop03
+
+Snd_Supersonic_Loop04:
 	dc.b	$0C
 	smpsPSGvoice        sTone_12
 	dc.b	$0C
 	smpsPSGvoice        sTone_0F
-	smpsLoop            $00, $28, Snd_Supersonic_Loop03
+	smpsLoop            $00, $28, Snd_Supersonic_Loop04
 	dc.b	$12, $12, $18, $24, $12, $12, $18, $24
-	smpsLoop            $01, $02, Snd_Supersonic_Loop03
-	smpsJump            Snd_Supersonic_Loop02
+	smpsLoop            $01, $02, Snd_Supersonic_Loop04
+	smpsJump            Snd_Supersonic_Loop03
 
 ; DAC Data
 Snd_Supersonic_DAC:
@@ -543,6 +909,24 @@ Snd_Supersonic_Voices:
 	smpsVcTotalLevel    $00, $27, $28, $17
 
 ;	Voice $03
+;	$3D
+;	$51, $21, $30, $10, 	$1F, $1F, $1F, $1F, 	$0F, $00, $00, $00
+;	$00, $00, $00, $00, 	$1F, $4F, $4F, $4F, 	$10, $8E, $8E, $8E
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $07
+	smpsVcUnusedBits    $00
+	smpsVcDetune        $01, $03, $02, $05
+	smpsVcCoarseFreq    $00, $00, $01, $01
+	smpsVcRateScale     $00, $00, $00, $00
+	smpsVcAttackRate    $1F, $1F, $1F, $1F
+	smpsVcAmpMod        $00, $00, $00, $00
+	smpsVcDecayRate1    $00, $00, $00, $0F
+	smpsVcDecayRate2    $00, $00, $00, $00
+	smpsVcDecayLevel    $04, $04, $04, $01
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcTotalLevel    $0E, $0E, $0E, $10
+
+;	Voice $04
 ;	$2F
 ;	$04, $03, $02, $01, 	$1F, $1F, $1F, $1F, 	$0A, $0A, $05, $03
 ;	$00, $00, $00, $00, 	$3F, $3F, $2F, $2F, 	$80, $80, $80, $80
