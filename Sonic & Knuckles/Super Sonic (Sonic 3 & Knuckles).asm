@@ -44,6 +44,7 @@ Snd_Supersonic_Call07:
 	smpsReturn
 
 Snd_Supersonic_Call04:
+	smpsPan             panCenter, $00
 	smpsModSet          $00, $00, $00, $00
 	smpsAlterNote       $01
 	dc.b	nB2, $01
