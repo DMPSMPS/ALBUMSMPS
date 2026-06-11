@@ -5,7 +5,7 @@ Snd_Supersonic_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       Snd_Supersonic_DAC
-	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $12
+	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $0D
 	smpsHeaderFM        Snd_Supersonic_FM2,	$00, $13
 	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $09
 	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $15
@@ -44,6 +44,7 @@ Snd_Supersonic_Call07:
 
 Snd_Supersonic_Loop09:
 	smpsAlterPitch      $01
+	smpsModRefreshNextNote          
 	dc.b	smpsNoAttack, nB2
 	smpsLoop            $00, $0B, Snd_Supersonic_Loop09
 	smpsAlterPitch      $F5
@@ -132,19 +133,20 @@ Snd_Supersonic_Call03:
 	smpsReturn
 
 Snd_Supersonic_Call04:
-	smpsSetvoice        $04
-	smpsFMAlterVol      $FC
+	smpsSetvoice        $00
+	smpsFMAlterVol      $04
 	smpsModSet          $01, $01, $01, $00
-	dc.b	nB3, $10
+	dc.b	nB1, $10
 
 Snd_Supersonic_Loop08:
 	smpsAlterPitch      $01
-	dc.b	smpsNoAttack, nB3
+	smpsModRefreshNextNote          
+	dc.b	smpsNoAttack, nB1
 	smpsLoop            $00, $0B, Snd_Supersonic_Loop08
 	smpsAlterPitch      $F5
 	smpsModSet          $07, $01, $03, $05
 	smpsSetvoice        $02
-	smpsFMAlterVol      $04
+	smpsFMAlterVol      $FC
 	smpsReturn
 
 ; FM4 Data
@@ -557,21 +559,3 @@ Snd_Supersonic_Voices:
 	smpsVcDecayLevel    $02, $02, $03, $03
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $00, $00, $00, $00
-
-;	Voice $04
-;	$3D
-;	$51, $21, $30, $10, 	$1F, $1F, $1F, $1F, 	$0F, $00, $00, $00
-;	$00, $00, $00, $00, 	$1F, $4F, $4F, $4F, 	$10, $8E, $8E, $8E
-	smpsVcAlgorithm     $05
-	smpsVcFeedback      $07
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $01, $03, $02, $05
-	smpsVcCoarseFreq    $00, $00, $01, $01
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $00, $00, $0F
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $04, $04, $04, $01
-	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $0E, $0E, $0E, $10
