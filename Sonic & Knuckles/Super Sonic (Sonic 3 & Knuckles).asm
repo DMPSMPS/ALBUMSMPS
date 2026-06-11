@@ -819,7 +819,7 @@ Snd_Supersonic_PSG3:
 	smpsPSGform         $E7
 
 Snd_Supersonic_Loop03:
-	dc.b	nB6, $12, $1E
+	dc.b	(nMaxPSG2-$23)&$FF, $12, $1E
 	smpsLoop            $00, $04, Snd_Supersonic_Loop03
 
 Snd_Supersonic_Loop04:
