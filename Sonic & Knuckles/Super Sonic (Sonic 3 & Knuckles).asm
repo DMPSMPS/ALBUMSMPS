@@ -26,10 +26,10 @@ Snd_Supersonic_FM1:
 Snd_Supersonic_Loop04:
 	smpsSetvoice        $00
 	smpsCall            Snd_Supersonic_Call08
-	smpsFMAlterVol      $FF
+	smpsFMAlterVol      $FC
 	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $01
+	smpsFMAlterVol      $04
 	smpsAlterPitch      $F4
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	smpsJump            Snd_Supersonic_FM1
