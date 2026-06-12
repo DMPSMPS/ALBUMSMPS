@@ -5,11 +5,11 @@ Snd_Supersonic_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       Snd_Supersonic_DAC
-	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $0D
+	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $0A
 	smpsHeaderFM        Snd_Supersonic_FM2,	$00, $0E
 	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $05
-	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $17
-	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $17
+	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $0F
+	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $0F
 	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG2,	$E8, $02, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3,	$23, $00, $00, sTone_0F
@@ -26,10 +26,10 @@ Snd_Supersonic_FM1:
 Snd_Supersonic_Loop04:
 	smpsSetvoice        $00
 	smpsCall            Snd_Supersonic_Call08
-	smpsFMAlterVol      $FC
+	smpsFMAlterVol      $FF
 	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $04
+	smpsFMAlterVol      $01
 	smpsAlterPitch      $F4
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	smpsJump            Snd_Supersonic_FM1
@@ -849,18 +849,18 @@ Snd_Supersonic_Voices:
 
 ;	Voice $04
 ;	$2F
-;	$04, $03, $02, $01, 	$1F, $1F, $1F, $1F, 	$00, $00, $00, $00
-;	$00, $00, $00, $00, 	$0F, $0F, $0F, $0F, 	$80, $80, $80, $80
+;	$34, $73, $32, $71, 	$1F, $1F, $1F, $1F, 	$0A, $0A, $05, $03
+;	$00, $00, $00, $00, 	$3F, $3F, $2F, $2F, 	$00, $00, $00, $00
 	smpsVcAlgorithm     $07
 	smpsVcFeedback      $05
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $01, $02, $03, $04
+	smpsVcDetune        $07, $03, $07, $03
+	smpsVcCoarseFreq    $01, $02, $03, $03
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $00, $00, $00
+	smpsVcDecayRate1    $03, $05, $0A, $0A
 	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $00, $00, $00, $00
+	smpsVcDecayLevel    $02, $02, $03, $03
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $00, $00, $00, $00
