@@ -854,8 +854,8 @@ Snd_Supersonic_Voices:
 	smpsVcAlgorithm     $07
 	smpsVcFeedback      $05
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $07, $07, $03, $03
-	smpsVcCoarseFreq    $01, $02, $03, $03
+	smpsVcDetune        $00, $00, $00, $00
+	smpsVcCoarseFreq    $01, $02, $03, $04
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
