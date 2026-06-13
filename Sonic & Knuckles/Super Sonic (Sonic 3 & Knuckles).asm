@@ -5,11 +5,11 @@ Snd_Supersonic_Header:
 	smpsHeaderTempo     $01, $00
 
 	smpsHeaderDAC       Snd_Supersonic_DAC
-	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $0D
+	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $0A
 	smpsHeaderFM        Snd_Supersonic_FM2,	$00, $13
-	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $07
-	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $17
-	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $17
+	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $09
+	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $13
+	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $13
 	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG2,	$E8, $02, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3,	$23, $00, $00, sTone_0F
@@ -26,10 +26,10 @@ Snd_Supersonic_FM1:
 Snd_Supersonic_Loop04:
 	smpsSetvoice        $00
 	smpsCall            Snd_Supersonic_Call08
-	smpsFMAlterVol      $FC
+	smpsFMAlterVol      $FF
 	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $04
+	smpsFMAlterVol      $01
 	smpsAlterPitch      $F4
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	smpsJump            Snd_Supersonic_FM1
@@ -503,14 +503,14 @@ Snd_Supersonic_FM3:
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
-	smpsFMAlterVol      $02
+	smpsFMAlterVol      $04
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $FE
+	smpsFMAlterVol      $FC
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
-	smpsFMAlterVol      $02
+	smpsFMAlterVol      $04
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $FE
+	smpsFMAlterVol      $FC
 	smpsJump            Snd_Supersonic_FM3
 
 Snd_Supersonic_Call04:
