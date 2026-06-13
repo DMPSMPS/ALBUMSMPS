@@ -27,10 +27,8 @@ Snd_Supersonic_Loop04:
 	smpsSetvoice        $00
 	smpsCall            Snd_Supersonic_Call08
 	smpsFMAlterVol      $FF
-	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
 	smpsFMAlterVol      $01
-	smpsAlterPitch      $F4
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	smpsJump            Snd_Supersonic_FM1
 
@@ -504,13 +502,17 @@ Snd_Supersonic_FM3:
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
 	smpsFMAlterVol      $04
+	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
 	smpsFMAlterVol      $FC
+	smpsAlterPitch      $F4
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
 	smpsFMAlterVol      $04
+	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
 	smpsFMAlterVol      $FC
+	smpsAlterPitch      $F4
 	smpsJump            Snd_Supersonic_FM3
 
 Snd_Supersonic_Call04:
