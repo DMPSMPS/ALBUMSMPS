@@ -10,8 +10,8 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $09
 	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $13
 	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $13
-	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $01, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG2,	$E8, $02, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $00, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG2,	$E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3,	$23, $00, $00, sTone_0F
 
 ; FM1 Data
@@ -26,9 +26,9 @@ Snd_Supersonic_FM1:
 Snd_Supersonic_Loop04:
 	smpsSetvoice        $00
 	smpsCall            Snd_Supersonic_Call08
-	smpsFMAlterVol      $FB
+	smpsFMAlterVol      $FF
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $05
+	smpsFMAlterVol      $01
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	smpsJump            Snd_Supersonic_FM1
 
@@ -501,17 +501,13 @@ Snd_Supersonic_FM3:
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
-	smpsFMAlterVol      $FC
 	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $04
 	smpsAlterPitch      $F4
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
-	smpsFMAlterVol      $FC
 	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $04
 	smpsAlterPitch      $F4
 	smpsJump            Snd_Supersonic_FM3
 
@@ -715,7 +711,7 @@ Snd_Supersonic_Loop07:
 
 Snd_Supersonic_Call09:
 	smpsPSGvoice        sTone_0A
-	smpsPSGAlterVol     $04
+	smpsPSGAlterVol     $05
 	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4
 	smpsPSGAlterVol     $FF
 	dc.b	nCs4, nD4, nE4, nAb4, nD4, nE4, nFs4, nA4
@@ -723,7 +719,7 @@ Snd_Supersonic_Call09:
 	dc.b	nE4, nFs4, nAb4, nB4, nFs4, nAb4, nA4, nCs5
 	smpsPSGAlterVol     $FF
 	dc.b	nAb4, nA4, nB4, nD5, nA4, nB4, nCs5, nE5
-	smpsPSGAlterVol     $FF
+	smpsPSGAlterVol     $FE
 	smpsPSGvoice        sTone_11
 	smpsReturn
 
