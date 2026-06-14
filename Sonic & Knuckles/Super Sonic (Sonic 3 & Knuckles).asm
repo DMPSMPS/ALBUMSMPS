@@ -501,17 +501,17 @@ Snd_Supersonic_FM3:
 	smpsModSet          $07, $01, $03, $05
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
-	smpsFMAlterVol      $F8
+	smpsFMAlterVol      $FC
 	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $08
+	smpsFMAlterVol      $04
 	smpsAlterPitch      $F4
 	dc.b	nRst, $7C, nRst, $41, nRst, nRst, nRst
 	smpsCall            Snd_Supersonic_Call04
-	smpsFMAlterVol      $F8
+	smpsFMAlterVol      $FC
 	smpsAlterPitch      $0C
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $08
+	smpsFMAlterVol      $04
 	smpsAlterPitch      $F4
 	smpsJump            Snd_Supersonic_FM3
 
