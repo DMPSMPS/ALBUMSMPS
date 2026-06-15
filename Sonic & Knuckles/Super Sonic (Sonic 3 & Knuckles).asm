@@ -479,11 +479,6 @@ Snd_Supersonic_Call06:
 	smpsReturn
 
 Snd_Supersonic_Call07:
-	dc.b	nE5, $06, nD5, nCs5, nB4, nD5, nCs5, nB4, nA4
-	dc.b    nCs5, nB4, nA4, nAb4, nA4, nAb4, nFs4, nE4
-	smpsReturn
-
-Snd_Supersonic_Call0A:
 	smpsFMAlterVol      $FC
 	smpsPan             panRight, $00
 	dc.b	nE5, $06, nD5, nCs5, nB4
@@ -495,6 +490,11 @@ Snd_Supersonic_Call0A:
 	dc.b	nA4, nAb4, nFs4, nE4
 	smpsPan             panCenter, $00
 	smpsFMAlterVol      $04
+	smpsReturn
+
+Snd_Supersonic_Call0A:
+	dc.b	nA4, $06, nRst, nA4, nRst, nA4, nB4, nCs5, $0C, nB4, $06, nRst
+	dc.b	nB4, nRst, nB4, nCs5, nD5, $0C
 	smpsReturn
 
 ; FM3 Data
