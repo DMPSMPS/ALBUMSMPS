@@ -24,11 +24,8 @@ Snd_Supersonic_FM1:
 	dc.b	$0C
 
 Snd_Supersonic_Loop04:
-	smpsSetvoice        $00
 	smpsCall            Snd_Supersonic_Call08
-	smpsFMAlterVol      $FC
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $04
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	smpsJump            Snd_Supersonic_FM1
 
