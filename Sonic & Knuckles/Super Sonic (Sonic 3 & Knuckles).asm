@@ -7,7 +7,7 @@ Snd_Supersonic_Header:
 	smpsHeaderDAC       Snd_Supersonic_DAC
 	smpsHeaderFM        Snd_Supersonic_FM1,	$00, $0A
 	smpsHeaderFM        Snd_Supersonic_FM2,	$00, $13
-	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $09
+	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $05
 	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $13
 	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $13
 	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $00, $00, sTone_11
@@ -26,9 +26,9 @@ Snd_Supersonic_FM1:
 Snd_Supersonic_Loop04:
 	smpsSetvoice        $00
 	smpsCall            Snd_Supersonic_Call08
-	smpsFMAlterVol      $FF
+	smpsFMAlterVol      $FB
 	smpsCall            Snd_Supersonic_Call05
-	smpsFMAlterVol      $01
+	smpsFMAlterVol      $05
 	smpsLoop            $00, $02, Snd_Supersonic_Loop04
 	smpsJump            Snd_Supersonic_FM1
 
@@ -457,13 +457,14 @@ Snd_Supersonic_FM2:
 	smpsPan             panRight, $00
 	dc.b	nFs4, nAb4, nA4, nB4
 	smpsPan             panCenter, $00
-	smpsFMAlterVol      $09
+	smpsFMAlterVol      $04
 
 Snd_Supersonic_Loop03:
+	smpsFMAlterVol      $03
 	smpsCall            Snd_Supersonic_Call06
+	smpsFMAlterVol      $FD
 	smpsCall            Snd_Supersonic_Call07
 	smpsLoop            $00, $02, Snd_Supersonic_Loop03
-	smpsFMAlterVol      $FB
 	smpsJump            Snd_Supersonic_FM2
 
 Snd_Supersonic_Call06:
@@ -478,17 +479,8 @@ Snd_Supersonic_Call06:
 	smpsReturn
 
 Snd_Supersonic_Call07:
-	smpsFMAlterVol      $F7
-	smpsPan             panRight, $00
-	dc.b	nE5, $06, nD5, nCs5, nB4
-	smpsPan             panLeft, $00
-	dc.b	nD5, nCs5, nB4, nA4
-	smpsPan             panRight, $00
-	dc.b	nCs5, nB4, nA4, nAb4
-	smpsPan             panLeft, $00
-	dc.b	nA4, nAb4, nFs4, nE4
-	smpsPan             panCenter, $00
-	smpsFMAlterVol      $09
+	dc.b	nE5, $06, nD5, nCs5, nB4, nD5, nCs5, nB4, nA4
+	dc.b    nCs5, nB4, nA4, nAb4, nA4, nAb4, nFs4, nE4
 	smpsReturn
 
 Snd_Supersonic_Call0A:
@@ -852,8 +844,8 @@ Snd_Supersonic_Voices:
 	smpsVcAlgorithm     $07
 	smpsVcFeedback      $05
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $01, $02, $03, $04
+	smpsVcDetune        $07, $07, $03, $03
+	smpsVcCoarseFreq    $01, $02, $03, $03
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
