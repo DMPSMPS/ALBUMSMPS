@@ -709,9 +709,9 @@ Snd_Supersonic_Loop09:
 ; PSG1 Data
 Snd_Supersonic_PSG1:
 	dc.b	nRst, $7F, nRst, $41
-	smpsCall            Snd_Supersonic_Call03
+	smpsCall            Snd_Supersonic_Call06
 	dc.b	nRst, $60
-	smpsCall            Snd_Supersonic_Call03
+	smpsCall            Snd_Supersonic_Call06
 	dc.b	nRst, $60
 	smpsJump            Snd_Supersonic_PSG1
 
