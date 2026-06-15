@@ -822,7 +822,7 @@ Snd_Supersonic_Voices:
 ;	Voice $03
 ;	$36
 ;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
-;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $98, $98, $98
+;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $18, $18, $18
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
