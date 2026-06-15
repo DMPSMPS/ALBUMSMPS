@@ -518,7 +518,7 @@ Snd_Supersonic_Call04:
 Snd_Supersonic_Call09:
 	dc.b	nRst, $60
 	smpsSetvoice        $03
-	smpsFMAlterVol     $10
+	smpsFMAlterVol     $0C
 	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4
 	smpsFMAlterVol     $FD
 	dc.b	nCs4, nD4, nE4, nAb4, nD4, nE4, nFs4, nA4
