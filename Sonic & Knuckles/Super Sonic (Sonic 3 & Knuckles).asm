@@ -431,9 +431,9 @@ Snd_Supersonic_Call09:
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $FE
 	dc.b	smpsNoAttack, $01
+	smpsFMAlterVol      $08
 	smpsAlterNote       $00
 	smpsModSet          $07, $01, $03, $05
-	smpsFMAlterVol      $08
 	smpsSetvoice        $00
 	smpsReturn
 
@@ -858,7 +858,7 @@ Snd_Supersonic_Voices:
 ;	Voice $05
 ;	$3D
 ;	$51, $21, $30, $10, 	$1F, $1F, $1F, $1F, 	$0F, $00, $00, $00
-;	$00, $00, $00, $00, 	$1F, $4F, $4F, $4F, 	$10, $8A, $8A, $8A
+;	$00, $00, $00, $00, 	$1F, $4F, $4F, $4F, 	$8E, $8E, $8E, $8E
 	smpsVcAlgorithm     $04
 	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
@@ -871,4 +871,4 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $04, $04, $04, $01
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $0E, $0E, $0E, $10
+	smpsVcTotalLevel    $0E, $0E, $0E, $0E
