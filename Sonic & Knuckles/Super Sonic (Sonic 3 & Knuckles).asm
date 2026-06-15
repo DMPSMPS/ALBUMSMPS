@@ -44,7 +44,6 @@ Snd_Supersonic_Call08:
 	smpsReturn
 
 Snd_Supersonic_Call09:
-	smpsFMAlterVol      $F8
 	smpsSetvoice        $05
 	smpsModSet          $00, $00, $00, $00
 	smpsAlterNote       $01
@@ -433,8 +432,6 @@ Snd_Supersonic_Call09:
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $00
 	smpsModSet          $07, $01, $03, $05
-	smpsFMAlterVol      $08
-	smpsSetvoice        $00
 	smpsReturn
 
 Snd_Supersonic_Call0B:
@@ -822,7 +819,7 @@ Snd_Supersonic_Voices:
 ;	Voice $03
 ;	$36
 ;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
-;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $90, $90, $90
+;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $95, $95, $95
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
@@ -835,7 +832,7 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $09, $07, $0A, $00
 	smpsVcDecayLevel    $00, $01, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $10, $10, $10, $18
+	smpsVcTotalLevel    $15, $15, $15, $18
 
 ;	Voice $04
 ;	$2F
@@ -856,19 +853,19 @@ Snd_Supersonic_Voices:
 	smpsVcTotalLevel    $00, $00, $00, $00
 
 ;	Voice $05
-;	$05
-;	$01, $01, $00, $00, 	$1F, $1F, $1F, $1F, 	$00, $00, $00, $00
-;	$00, $00, $00, $00, 	$4F, $4F, $4F, $4F, 	$13, $93, $93, $93
-	smpsVcAlgorithm     $05
-	smpsVcFeedback      $00
+;	$3D
+;	$51, $21, $30, $10, 	$1F, $1F, $1F, $1F, 	$0F, $00, $00, $00
+;	$00, $00, $00, $00, 	$1F, $4F, $4F, $4F, 	$10, $8A, $8A, $8A
+	smpsVcAlgorithm     $04
+	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
+	smpsVcDetune        $01, $03, $02, $05
 	smpsVcCoarseFreq    $00, $00, $01, $01
 	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $00, $00, $00
+	smpsVcDecayRate1    $00, $00, $00, $0F
 	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $04, $04, $04, $04
+	smpsVcDecayLevel    $04, $04, $04, $01
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $13, $13, $13, $13
+	smpsVcTotalLevel    $0A, $0A, $0A, $10
