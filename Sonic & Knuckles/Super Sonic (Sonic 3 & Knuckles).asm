@@ -516,6 +516,7 @@ Snd_Supersonic_Call04:
 	smpsReturn
 
 Snd_Supersonic_Call09:
+	dc.b	nRst, $60
 	smpsSetvoice        $03
 	smpsFMAlterVol     $10
 	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4
@@ -708,11 +709,10 @@ Snd_Supersonic_Loop09:
 ; PSG1 Data
 Snd_Supersonic_PSG1:
 	dc.b	nRst, $7F, nRst, $41
-
-Snd_Supersonic_Loop07:
-	smpsCall            Snd_Supersonic_Call06
-	smpsCall            Snd_Supersonic_Call09
-	smpsLoop            $00, $02, Snd_Supersonic_Loop07
+	smpsCall            Snd_Supersonic_Call03
+	dc.b	nRst, $60
+	smpsCall            Snd_Supersonic_Call03
+	dc.b	nRst, $60
 	smpsJump            Snd_Supersonic_PSG1
 
 ; PSG2 Data
