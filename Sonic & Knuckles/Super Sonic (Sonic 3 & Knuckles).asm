@@ -44,10 +44,9 @@ Snd_Supersonic_Call08:
 	smpsReturn
 
 Snd_Supersonic_Call09:
-	smpsSetvoice        $05
 	smpsModSet          $00, $00, $00, $00
 	smpsAlterNote       $01
-	dc.b	nB1, $01
+	dc.b	nB2, $01
 	smpsAlterNote       $02
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $05
@@ -63,7 +62,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $10
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EF
-	dc.b	smpsNoAttack, nC2
+	dc.b	smpsNoAttack, nC3
 	smpsAlterNote       $F1
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F3
@@ -95,7 +94,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $11
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EE
-	dc.b	smpsNoAttack, nCs2
+	dc.b	smpsNoAttack, nCs3
 	smpsAlterNote       $F0
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F3
@@ -127,7 +126,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $13
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EC
-	dc.b	smpsNoAttack, nD2
+	dc.b	smpsNoAttack, nD3
 	smpsAlterNote       $EF
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F1
@@ -159,7 +158,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $13
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EB
-	dc.b	smpsNoAttack, nEb2
+	dc.b	smpsNoAttack, nEb3
 	smpsAlterNote       $ED
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F0
@@ -191,7 +190,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $15
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EA
-	dc.b	smpsNoAttack, nE2
+	dc.b	smpsNoAttack, nE3
 	smpsAlterNote       $ED
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F0
@@ -223,7 +222,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $16
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E8
-	dc.b	smpsNoAttack, nF2
+	dc.b	smpsNoAttack, nF3
 	smpsAlterNote       $EC
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EF
@@ -255,7 +254,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $17
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E8
-	dc.b	smpsNoAttack, nFs2
+	dc.b	smpsNoAttack, nFs3
 	smpsAlterNote       $EB
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EE
@@ -287,7 +286,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $19
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E6
-	dc.b	smpsNoAttack, nG2
+	dc.b	smpsNoAttack, nG3
 	smpsAlterNote       $E8
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EC
@@ -319,7 +318,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1A
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E3
-	dc.b	smpsNoAttack, nAb2
+	dc.b	smpsNoAttack, nAb3
 	smpsAlterNote       $E8
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EB
@@ -351,7 +350,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1B
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E3
-	dc.b	smpsNoAttack, nA2
+	dc.b	smpsNoAttack, nA3
 	smpsAlterNote       $E6
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E9
@@ -383,7 +382,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1D
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E1
-	dc.b	smpsNoAttack, nBb2
+	dc.b	smpsNoAttack, nBb3
 	smpsAlterNote       $E4
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E9
@@ -415,7 +414,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1F
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EF
-	dc.b	smpsNoAttack, nB2
+	dc.b	smpsNoAttack, nB3
 	smpsAlterNote       $F2
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F3
@@ -432,7 +431,6 @@ Snd_Supersonic_Call09:
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $00
 	smpsModSet          $07, $01, $03, $05
-	smpsSetvoice        $00
 	smpsReturn
 
 Snd_Supersonic_Call0B:
@@ -520,7 +518,7 @@ Snd_Supersonic_Call05:
 	smpsPan             panCenter, $00
 	dc.b	nRst, $60
 	smpsSetvoice        $03
-	smpsFMAlterVol      $22
+	smpsFMAlterVol      $0C
 	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4
 	smpsFMAlterVol      $FD
 	dc.b	nCs4, nD4, nE4, nAb4, nD4, nE4, nFs4, nA4
@@ -528,7 +526,7 @@ Snd_Supersonic_Call05:
 	dc.b	nE4, nFs4, nAb4, nB4, nFs4, nAb4, nA4, nCs5
 	smpsFMAlterVol      $FD
 	dc.b	nAb4, nA4, nB4, nD5, nA4, nB4, nCs5, nE5
-	smpsFMAlterVol      $E7
+	smpsFMAlterVol      $FD
 	smpsReturn
 
 ; FM4 Data
@@ -765,7 +763,7 @@ Snd_Supersonic_Call00:
 Snd_Supersonic_Voices:
 ;	Voice $00
 ;	$32
-;	$00, $06, $01, $02, 	$1F, $95, $1F, $1F, 	$0E, $0F, $0E, $00
+;	$00, $06, $01, $02, 	$1F, $9F, $1F, $1F, 	$0E, $0E, $0E, $00
 ;	$00, $00, $00, $00, 	$2F, $4F, $4F, $2F, 	$29, $1A, $1A, $80
 	smpsVcAlgorithm     $02
 	smpsVcFeedback      $06
@@ -773,9 +771,9 @@ Snd_Supersonic_Voices:
 	smpsVcDetune        $00, $00, $00, $00
 	smpsVcCoarseFreq    $02, $01, $06, $00
 	smpsVcRateScale     $00, $00, $02, $00
-	smpsVcAttackRate    $1F, $1F, $15, $1F
+	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $0E, $0F, $0E
+	smpsVcDecayRate1    $00, $0E, $0E, $0E
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $02, $04, $04, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
@@ -820,7 +818,7 @@ Snd_Supersonic_Voices:
 ;	Voice $03
 ;	$36
 ;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
-;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $16, $16, $16
+;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $8E, $8E, $8E
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
@@ -833,7 +831,7 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $09, $07, $0A, $00
 	smpsVcDecayLevel    $00, $01, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $00, $00, $18
+	smpsVcTotalLevel    $0E, $0E, $0E, $18
 
 ;	Voice $04
 ;	$2F
@@ -852,21 +850,3 @@ Snd_Supersonic_Voices:
 	smpsVcDecayLevel    $02, $02, $03, $03
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $00, $00, $00, $00
-
-;	Voice $05
-;	$38
-;	$04, $02, $01, $00, 	$1F, $1F, $1F, $1F, 	$00, $00, $00, $00
-;	$00, $00, $00, $00, 	$0F, $0F, $0F, $0F, 	$9F, $9F, $9F, $03
-	smpsVcAlgorithm     $00
-	smpsVcFeedback      $00
-	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $04, $02, $01, $00
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $1F, $1F
-	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $00, $00, $00
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $01, $01, $01, $01
-	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $03, $1F, $1F, $1F
