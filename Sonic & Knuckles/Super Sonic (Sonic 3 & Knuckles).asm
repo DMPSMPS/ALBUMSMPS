@@ -44,6 +44,8 @@ Snd_Supersonic_Call08:
 	smpsReturn
 
 Snd_Supersonic_Call09:
+	smpsFMAlterVol      $F7
+	smpsSetvoice        $05
 	smpsModSet          $00, $00, $00, $00
 	smpsAlterNote       $01
 	dc.b	nB2, $01
@@ -429,6 +431,8 @@ Snd_Supersonic_Call09:
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $FE
 	dc.b	smpsNoAttack, $01
+	smpsFMAlterVol      $09
+	smpsSetvoice        $00
 	smpsAlterNote       $00
 	smpsModSet          $07, $01, $03, $05
 	smpsReturn
@@ -850,3 +854,21 @@ Snd_Supersonic_Voices:
 	smpsVcDecayLevel    $02, $02, $03, $03
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $00, $00, $00, $00
+
+;	Voice $05
+;	$3D
+;	$51, $21, $30, $10, 	$1F, $1F, $1F, $1F, 	$0F, $00, $00, $00
+;	$00, $00, $00, $00, 	$1F, $4F, $4F, $4F, 	$10, $8E, $8E, $8E
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $07
+	smpsVcUnusedBits    $00
+	smpsVcDetune        $01, $03, $02, $05
+	smpsVcCoarseFreq    $00, $00, $01, $01
+	smpsVcRateScale     $00, $00, $00, $00
+	smpsVcAttackRate    $1F, $1F, $1F, $1F
+	smpsVcAmpMod        $00, $00, $00, $00
+	smpsVcDecayRate1    $00, $00, $00, $0F
+	smpsVcDecayRate2    $00, $00, $00, $00
+	smpsVcDecayLevel    $04, $04, $04, $01
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcTotalLevel    $0E, $0E, $0E, $10
