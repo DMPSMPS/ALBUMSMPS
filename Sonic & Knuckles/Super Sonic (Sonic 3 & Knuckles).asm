@@ -48,7 +48,7 @@ Snd_Supersonic_Call09:
 	smpsSetvoice        $05
 	smpsModSet          $00, $00, $00, $00
 	smpsAlterNote       $01
-	dc.b	nB3, $01
+	dc.b	nB2, $01
 	smpsAlterNote       $02
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $05
@@ -64,7 +64,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $10
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EF
-	dc.b	smpsNoAttack, nC4
+	dc.b	smpsNoAttack, nC3
 	smpsAlterNote       $F1
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F3
@@ -96,7 +96,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $11
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EE
-	dc.b	smpsNoAttack, nCs4
+	dc.b	smpsNoAttack, nCs3
 	smpsAlterNote       $F0
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F3
@@ -128,7 +128,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $13
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EC
-	dc.b	smpsNoAttack, nD4
+	dc.b	smpsNoAttack, nD3
 	smpsAlterNote       $EF
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F1
@@ -160,7 +160,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $13
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EB
-	dc.b	smpsNoAttack, nEb4
+	dc.b	smpsNoAttack, nEb3
 	smpsAlterNote       $ED
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F0
@@ -192,7 +192,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $15
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EA
-	dc.b	smpsNoAttack, nE4
+	dc.b	smpsNoAttack, nE3
 	smpsAlterNote       $ED
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F0
@@ -224,7 +224,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $16
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E8
-	dc.b	smpsNoAttack, nF4
+	dc.b	smpsNoAttack, nF3
 	smpsAlterNote       $EC
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EF
@@ -256,7 +256,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $17
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E8
-	dc.b	smpsNoAttack, nFs4
+	dc.b	smpsNoAttack, nFs3
 	smpsAlterNote       $EB
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EE
@@ -288,7 +288,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $19
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E6
-	dc.b	smpsNoAttack, nG4
+	dc.b	smpsNoAttack, nG3
 	smpsAlterNote       $E8
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EC
@@ -320,7 +320,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1A
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E3
-	dc.b	smpsNoAttack, nAb4
+	dc.b	smpsNoAttack, nAb3
 	smpsAlterNote       $E8
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EB
@@ -352,7 +352,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1B
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E3
-	dc.b	smpsNoAttack, nA4
+	dc.b	smpsNoAttack, nA3
 	smpsAlterNote       $E6
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E9
@@ -384,7 +384,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1D
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E1
-	dc.b	smpsNoAttack, nBb4
+	dc.b	smpsNoAttack, nBb3
 	smpsAlterNote       $E4
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $E9
@@ -416,7 +416,7 @@ Snd_Supersonic_Call09:
 	smpsAlterNote       $1F
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $EF
-	dc.b	smpsNoAttack, nB4
+	dc.b	smpsNoAttack, nB3
 	smpsAlterNote       $F2
 	dc.b	smpsNoAttack, $01
 	smpsAlterNote       $F3
@@ -822,7 +822,7 @@ Snd_Supersonic_Voices:
 ;	Voice $03
 ;	$36
 ;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
-;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $91, $91, $91
+;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $92, $92, $92
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
@@ -835,7 +835,7 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $09, $07, $0A, $00
 	smpsVcDecayLevel    $00, $01, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $11, $11, $11, $18
+	smpsVcTotalLevel    $12, $12, $12, $18
 
 ;	Voice $04
 ;	$2F
