@@ -459,9 +459,9 @@ Snd_Supersonic_FM2:
 	smpsFMAlterVol      $04
 
 Snd_Supersonic_Loop03:
-	smpsFMAlterVol      $06
+	smpsFMAlterVol      $07
 	smpsCall            Snd_Supersonic_Call06
-	smpsFMAlterVol      $FA
+	smpsFMAlterVol      $F9
 	smpsCall            Snd_Supersonic_Call07
 	smpsLoop            $00, $02, Snd_Supersonic_Loop03
 	smpsJump            Snd_Supersonic_FM2
