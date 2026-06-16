@@ -522,7 +522,7 @@ Snd_Supersonic_Call05:
 	smpsPan             panCenter, $00
 	dc.b	nRst, $60
 	smpsSetvoice        $03
-	smpsFMAlterVol      $22
+	smpsFMAlterVol      $21
 	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4
 	smpsFMAlterVol      $FB
 	dc.b	nCs4, nD4, nE4, nAb4, nD4, nE4, nFs4, nA4
