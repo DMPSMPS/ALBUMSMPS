@@ -522,15 +522,15 @@ Snd_Supersonic_Call05:
 	smpsPan             panCenter, $00
 	dc.b	nRst, $60
 	smpsSetvoice        $03
-	smpsFMAlterVol      $0C
+	smpsFMAlterVol      $26
 	dc.b	nA3, $03, nB3, nCs4, nE4, nB3, nCs4, nD4, nFs4
-	smpsFMAlterVol      $FD
+	smpsFMAlterVol      $F6
 	dc.b	nCs4, nD4, nE4, nAb4, nD4, nE4, nFs4, nA4
-	smpsFMAlterVol      $FD
+	smpsFMAlterVol      $F6
 	dc.b	nE4, nFs4, nAb4, nB4, nFs4, nAb4, nA4, nCs5
-	smpsFMAlterVol      $FD
+	smpsFMAlterVol      $F6
 	dc.b	nAb4, nA4, nB4, nD5, nA4, nB4, nCs5, nE5
-	smpsFMAlterVol      $FD
+	smpsFMAlterVol      $F6
 	smpsReturn
 
 ; FM4 Data
@@ -822,7 +822,7 @@ Snd_Supersonic_Voices:
 ;	Voice $03
 ;	$36
 ;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
-;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $92, $92, $92
+;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $0C, $0C, $0C
 	smpsVcAlgorithm     $06
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
@@ -835,7 +835,7 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $09, $07, $0A, $00
 	smpsVcDecayLevel    $00, $01, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $12, $12, $12, $18
+	smpsVcTotalLevel    $0C, $0C, $0C, $18
 
 ;	Voice $04
 ;	$2F
