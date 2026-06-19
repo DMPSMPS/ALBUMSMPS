@@ -5,57 +5,57 @@ snd_sng_final_Header:
 	smpsHeaderTempo     $01, $46
 
 	smpsHeaderDAC       snd_sng_final_DAC
-	smpsHeaderFM        snd_sng_final_FM1,	$00, $0E
-	smpsHeaderFM        snd_sng_final_FM2,	$00, $13
-	smpsHeaderFM        snd_sng_final_FM3,	$18, $13
-	smpsHeaderFM        snd_sng_final_FM4,	$00, $08
-	smpsHeaderFM        snd_sng_final_FM5,	$00, $08
+	smpsHeaderFM        snd_sng_final_FM1,	$00, $12
+	smpsHeaderFM        snd_sng_final_FM2,	$00, $17
+	smpsHeaderFM        snd_sng_final_FM3,	$18, $17
+	smpsHeaderFM        snd_sng_final_FM4,	$00, $12
+	smpsHeaderFM        snd_sng_final_FM5,	$00, $12
 	smpsHeaderPSG       snd_sng_final_PSG1,	$0C, $03, $00, sTone_0A
-	smpsHeaderPSG       snd_sng_final_PSG2,	$E8, $05, $00, sTone_11
+	smpsHeaderPSG       snd_sng_final_PSG2,	$E8, $07, $00, sTone_11
 
 ; DAC Data
 snd_sng_final_DAC:
-	dc.b	dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dSnareS3, $04
-	dc.b	dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04
-	dc.b	dMuffledSnare, $0C, dMuffledSnare, $0C, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06
-	dc.b	dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24, dMuffledSnare, $0C, dMuffledSnare, $0C
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $18
-	dc.b	dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06
-	dc.b	dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24, dMuffledSnare, $0C, dMuffledSnare, $0C
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $18
-	dc.b	dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04
-	dc.b	dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dSnareS3, $04
-	dc.b	dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dMuffledSnare, $0C, dMuffledSnare, $0C, dMuffledSnare, $0C
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24
-	dc.b	dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
-	dc.b	dMuffledSnare, $0C, dMuffledSnare, $18, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $0C
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24
-	dc.b	dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
-	dc.b	dMuffledSnare, $0C, dMuffledSnare, $18, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dSnareS3, $04
-	dc.b	dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04
-	dc.b	dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dMuffledSnare, $0C
-	dc.b	dSnareS3, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
-	dc.b	dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
-	dc.b	dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $18, dSnareS3, $06
-	dc.b	dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
-	dc.b	dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $18, dSnareS3, $06
-	dc.b	dSnareS3, $06, dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C
-	dc.b	dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04
-	dc.b	dSnareS3, $04, dMuffledSnare, $0C, dMuffledSnare, $0C, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24, dMuffledSnare, $0C
-	dc.b	dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C
-	dc.b	dMuffledSnare, $18, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06
-	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $24, dMuffledSnare, $0C
-	dc.b	dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C
-	dc.b	dMuffledSnare, $18, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04
-	dc.b	dSnareS3, $04, dMuffledSnare, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C
-	dc.b	dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06
-	dc.b	dSnareS3, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $0C, dMuffledSnare, $0C
-	dc.b	dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dMuffledSnare, $0C
-	dc.b	dMuffledSnare, $24, dMuffledSnare, $0C, dMuffledSnare, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
-	dc.b	dSnareS3, $06, dMuffledSnare, $0C, dMuffledSnare, $18, dSnareS3, $06, dSnareS3, $66
+	dc.b	$87, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, $87, $0C, dSnareS3, $04
+	dc.b	dSnareS3, $04, dSnareS3, $04, $87, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04
+	dc.b	$87, $0C, $87, $0C, $87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $0C, $98, $0C, $99, $0C
+	dc.b	$87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
+	dc.b	$87, $0C, $87, $18, dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $0C
+	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $0C
+	dc.b	$98, $0C, $99, $0C, $87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $18, dSnareS3, $06, dSnareS3, $06
+	dc.b	$98, $0C, $99, $0C, $98, $0C, $99, $0C, $98, $0C, $99, $0C
+	dc.b	$98, $0C, $99, $0C, $87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $0C, $98, $0C, $99, $0C
+	dc.b	$87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
+	dc.b	$87, $0C, $87, $18, dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $0C
+	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $0C
+	dc.b	$98, $0C, $99, $0C, $87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $18, dSnareS3, $06, dSnareS3, $06
+	dc.b	$87, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, $87, $0C, dSnareS3, $04
+	dc.b	dSnareS3, $04, dSnareS3, $04, $87, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04
+	dc.b	$87, $0C, $87, $0C, $98, $0C, $99, $0C, $98, $18, $87, $0C
+	dc.b	$87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C
+	dc.b	$87, $0C, $98, $0C, $99, $0C, $87, $0C, $87, $0C, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $18, dSnareS3, $06
+	dc.b	dSnareS3, $06, $87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, $87, $0C, $87, $0C, $98, $0C, $99, $0C, $87, $0C
+	dc.b	$87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C
+	dc.b	$87, $18, dSnareS3, $06, dSnareS3, $06, $98, $0C, $99, $0C, $98, $0C
+	dc.b	$99, $0C, $98, $0C, $99, $0C, $98, $0C, $99, $0C, $87, $0C
+	dc.b	$87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C
+	dc.b	$87, $0C, $98, $0C, $99, $0C, $87, $0C, $87, $0C, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $18, dSnareS3, $06
+	dc.b	dSnareS3, $06, $87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, $87, $0C, $87, $0C, $98, $0C, $99, $0C, $87, $0C
+	dc.b	$87, $0C, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C
+	dc.b	$87, $18, dSnareS3, $06, dSnareS3, $06, $87, $0C, dSnareS3, $04, dSnareS3, $04
+	dc.b	dSnareS3, $04, $87, $0C, dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, $87, $0C
+	dc.b	dSnareS3, $04, dSnareS3, $04, dSnareS3, $04, $87, $0C, $87, $0C, $98, $0C
+	dc.b	$99, $0C, $98, $18, $87, $0C, $87, $0C, dSnareS3, $06, dSnareS3, $06
+	dc.b	dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $24, $87, $0C, $87, $0C
+	dc.b	dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, dSnareS3, $06, $87, $0C, $87, $18
+	dc.b	dSnareS3, $06, dSnareS3, $06
 	smpsStop
 
 ; FM1 Data
