@@ -10,8 +10,8 @@ Snd_Supersonic_Header:
 	smpsHeaderFM        Snd_Supersonic_FM3,	$00, $07
 	smpsHeaderFM        Snd_Supersonic_FM4,	$00, $16
 	smpsHeaderFM        Snd_Supersonic_FM5,	$00, $16
-	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $01, $00, sTone_11
-	smpsHeaderPSG       Snd_Supersonic_PSG2,	$E8, $02, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG1,	$E8, $00, $00, sTone_11
+	smpsHeaderPSG       Snd_Supersonic_PSG2,	$E8, $01, $00, sTone_11
 	smpsHeaderPSG       Snd_Supersonic_PSG3,	$23, $00, $00, sTone_0F
 
 ; FM1 Data
@@ -459,9 +459,9 @@ Snd_Supersonic_FM2:
 	smpsFMAlterVol      $04
 
 Snd_Supersonic_Loop03:
-	smpsFMAlterVol      $09
+	smpsFMAlterVol      $06
 	smpsCall            Snd_Supersonic_Call06
-	smpsFMAlterVol      $F7
+	smpsFMAlterVol      $FA
 	smpsCall            Snd_Supersonic_Call07
 	smpsLoop            $00, $02, Snd_Supersonic_Loop03
 	smpsJump            Snd_Supersonic_FM2
@@ -819,10 +819,10 @@ Snd_Supersonic_Voices:
 	smpsVcTotalLevel    $00, $27, $28, $17
 
 ;	Voice $03
-;	$36
+;	$34
 ;	$0F, $01, $01, $01, 	$1F, $1F, $1F, $1F, 	$12, $11, $0E, $00
-;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$18, $1B, $1B, $1B
-	smpsVcAlgorithm     $06
+;	$00, $0A, $07, $09, 	$FF, $0F, $1F, $0F, 	$16, $1B, $17, $1B
+	smpsVcAlgorithm     $04
 	smpsVcFeedback      $06
 	smpsVcUnusedBits    $00
 	smpsVcDetune        $00, $00, $00, $00
@@ -834,7 +834,7 @@ Snd_Supersonic_Voices:
 	smpsVcDecayRate2    $09, $07, $0A, $00
 	smpsVcDecayLevel    $00, $01, $00, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $1B, $1B, $1B, $18
+	smpsVcTotalLevel    $1B, $17, $1B, $16
 
 ;	Voice $04
 ;	$2F
