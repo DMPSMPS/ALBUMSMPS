@@ -29,7 +29,6 @@ Snd_Ending_FM1:
 	dc.b	nG0, nG1, nG0, nG1, nG0, smpsNoAttack, nG0, nG1, smpsNoAttack, nG1, nG0, nG1
 	dc.b	nG0, nRst, nG0, nRst, nG1, smpsNoAttack, nG1, nG0, nG1, nG0, nG1, nG0
 	dc.b	smpsNoAttack, nG0, nG0, nG0, nA0, nB0
-; --- middle: from the long version ---
 	dc.b	nAb0, nRst, nAb0, nRst, nAb1, $0C, nAb0, $06, nAb1, nAb0, nAb1, nAb0
 	dc.b	$0C, nAb1, nAb0, $06, nAb1, nAb0, nRst, nAb0, nRst, nAb1, $0C, nAb0
 	dc.b	$06, nAb1, nAb0, nAb1, nAb0, $0C, nAb1, nAb0, $06, nAb1, nG0, nRst
@@ -42,7 +41,6 @@ Snd_Ending_FM1:
 	dc.b	$06, nB1, nB0, nB1, nB0, $0C, nB1, nB0, $06, nB1, nB0, nRst
 	dc.b	nB1, nB1, nC1, nRst, nC2, nC2, nD1, nE1, nD1, nC1, nB0, nA0
 	dc.b	nG0, $0C
-; --- outro ---
 	dc.b	nAb0, $06, nRst, nAb0, nRst, nAb1, smpsNoAttack, nAb1, nAb0, nAb1, nAb0, nAb1
 	dc.b	nAb0, smpsNoAttack, nAb0, nAb1, smpsNoAttack, nAb1, nAb0, nAb1, nG0, nRst, nG0, nRst
 	dc.b	nG1, smpsNoAttack, nG1, nG0, nG1, nG0, nG1, nG0, smpsNoAttack, nG0, nG1, smpsNoAttack
@@ -84,7 +82,6 @@ Snd_Ending_Jump00:
 	dc.b	nD5, $18
 	smpsModSet          $0C, $01, $F0, $FF
 	dc.b	smpsNoAttack, nD5
-; --- middle: from the long version ---
 	smpsFMAlterVol      $FE
 	dc.b	nRst
 	smpsModSet          $0C, $01, $F8, $FF
@@ -118,7 +115,6 @@ Snd_Ending_Jump00:
 	dc.b	nC5, $24
 	smpsModSet          $0C, $01, $F0, $FF
 	dc.b	smpsNoAttack, nC5, $18
-; --- outro ---
 	smpsFMAlterVol      $FE
 	smpsModSet          $0C, $01, $03, $07
 	dc.b	nC5, $24, nF5, $3C, nE5, $24, nD5, nC5, $0C, nB4, nC5, $60
@@ -158,7 +154,6 @@ Snd_Ending_Loop00:
 	dc.b	nA4, $18
 	smpsModSet          $0C, $01, $F0, $FF
 	dc.b	smpsNoAttack, nA4
-; --- middle: from the long version ---
 	smpsModSet          $0C, $01, $F8, $FF
 	dc.b	nRst, nAb4
 	smpsModSet          $07, $01, $03, $05
@@ -187,7 +182,6 @@ Snd_Ending_Loop00:
 	dc.b	nG4, $24
 	smpsModSet          $0C, $01, $F0, $FF
 	dc.b	smpsNoAttack, nG4, $18
-; --- outro ---
 	smpsModSet          $0C, $01, $03, $06
 	dc.b	nAb4, $24, nAb4, $3C, nG4, $24, nG4, nG4, $0C, nF4, nE4, $60
 	dc.b	smpsNoAttack, nE4
@@ -210,10 +204,8 @@ Snd_Ending_FM5:
 	smpsAlterNote       $02
 	smpsSetvoice        $03
 	dc.b	nRst, $60, nRst, nRst, nRst, nRst
-; --- middle: from the long version ---
 	smpsPan             panLeft, $00
 	dc.b	nRst, nRst, nRst, nRst, nRst, nRst, nRst, nRst
-; --- outro ---
 	smpsPan             panLeft, $00
 	dc.b	nAb2, nG2
 	smpsModSet          $07, $01, $09, $07
@@ -232,7 +224,6 @@ Snd_Ending_PSG1:
 	dc.b	nG2, $0C, nE3, nG2, nE3, nG2, nE3, nG2, nE3, nG2, nE3, nG2
 	dc.b	nE3, nG2, nE3, nG2, nE3, nB2, nF3, nB2, nF3, nB2, nF3, nB2
 	dc.b	nF3, nB2, nF3, nB2, nF3, nB2, nF3, nB2, nF3
-; --- middle: from the long version ---
 	dc.b	nEb2, nC3, nEb2, nC3, nEb2, nC3, nEb2, nC3, nEb2, nC3, nEb2, nC3
 	dc.b	nEb2, nC3, nEb2, nC3, nG1, $06, nB1, nD2, nF2, nG2, nF2, nD2
 	dc.b	nB1, nG1, nB1, nD2, nF2, nG2, nF2, nD2, nB1, nG1, nB1, nD2
@@ -240,7 +231,6 @@ Snd_Ending_PSG1:
 	dc.b	nG3, nG2, $0C, nE3, nG2, nE3, nG2, nE3, nG2, nE3, nG2, nE3
 	dc.b	nG2, nE3, nG2, nE3, nG2, nE3, nB2, nF3, nB2, nF3, nB2, nF3
 	dc.b	nB2, nF3, nB2, nF3, nB2, nF3, nB2, nF3, nB2, nF3
-; --- outro ---
 	dc.b	nAb2, $60, nG2, nG2, $0C, nE3, nG2, nE3, nG2, nE3, nG2, nE3
 	dc.b	nG2, nE3, nG2, nE3, nG2, nE3, nG2, nE3
 	smpsStop
@@ -260,7 +250,6 @@ Snd_Ending_Loop03:
 	dc.b	nG3, $0C, nC3, nG3, nC3, nG3, nC3, nG3, nC3, nG3, nC3, nG3
 	dc.b	nC3, nG3, nC3, nG3, nC3, nG3, nD3, nG3, nD3, nG3, nD3, nG3
 	dc.b	nD3, nG3, nD3, nG3, nD3, nG3, nD3, nG3, nD3, $06
-; --- middle: from the long version ---
 	dc.b	nRst, nEb3, $0C, nAb2, nEb3, nAb2, nEb3, nAb2, nEb3, nAb2, nEb3, nAb2
 	dc.b	nEb3, nAb2, nEb3, nAb2, nEb3, nAb2, nG1, $06, nB1, nD2, nF2, nG2
 	dc.b	nF2, nD2, nB1, nG1, nB1, nD2, nF2, nG2, nF2, nD2, nB1, nG1
@@ -269,7 +258,6 @@ Snd_Ending_Loop03:
 	dc.b	nG3, nC3, nG3, nC3, nG3, nC3, nG3, nC3, nG3, nD3, nG3, nD3
 	dc.b	nG3, nD3, nG3, nD3, nG3, nD3, nG3, nD3, nG3, nD3, nG3, nD3
 	dc.b	$06
-; --- outro ---
 	dc.b	nEb2, $60, nD2, nRst, $06, nG3, $0C, nC3, nG3, nC3, nG3, nC3
 	dc.b	nG3, nC3, nG3, nC3, nG3, nC3, nG3, nC3, nG3, nC3
 	smpsStop
@@ -318,7 +306,6 @@ Snd_Ending_Call01:
 ; DAC Data
 Snd_Ending_DAC:
 	smpsPan             panCenter, $00
-; from ENDINGDACFORCLAUDE.mid (kick+snare and snare alone -> dMuffledSnare)
 	dc.b	dCrashCymbal, $06, nRst, nRst, nRst, nRst, nRst, nRst, dElectricMidTom, nRst, dElectricMidTom, dElectricMidTom, nRst
 	dc.b	dElectricLowTom, dElectricLowTom, dElectricFloorTom, nRst, dCrashCymbal, nRst, nRst, nRst, dMuffledSnare, nRst, nRst, dMuffledSnare
 	dc.b	nRst, nRst, dKickS3, nRst, dMuffledSnare, dKickS3, dKickS3, nRst, dKickS3, nRst, nRst, nRst
