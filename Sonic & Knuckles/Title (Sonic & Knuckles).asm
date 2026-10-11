@@ -37,7 +37,7 @@ Snd_Title_Loop01:
 	dc.b	dKickS3, $0C, dKickS3, $0C, dSnareS3, $0C, dKickS3, $0C, dKickS3, $06, dKickS3, $0C
 	dc.b	dKickS3, $06, dSnareS3, $06, dKickS3, $06, dKickS3, $12, dKickS3, $0C, dKickS3, $06
 	dc.b	dSnareS3, $06, dKickS3, $06, dKickS3, $06, dKickS3, $06, dKickS3, $18, dSnareS3, $12
-	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $0C, dSnareS3, $0C, dCrashCymbal, $12
+	dc.b	dSnareS3, $06, dKickS3, $0C, dKickS3, $0C, dSnareS3, $0C, dCrashCymbal, $0C
 	smpsStop
 
 ; FM1 Data
@@ -100,6 +100,7 @@ Snd_Title_Loop58:
 	dc.b	nB5, $3C, nRst, $30, nA5, $18, nFs5, $0C, nE5, $0C, nA5, $0C
 	dc.b	nFs5, $0C, nD5, $0C, nE5, $30, nD6, $18, nCs6, $0C, nB5, $0C
 	dc.b	nA5, $0C
+	smpsNoteFill        $17
 	smpsAlterVol        $FE
 	dc.b	nCs6, $18
 	smpsNoteFill        $06
@@ -157,11 +158,7 @@ Snd_Title_Loop55:
 	dc.b	nD2, $06, nD2, $06, nRst, $06, nD2, $06, nRst, $06, nD2, $06
 	dc.b	nD2, $0C, nD2, $0C, nD2, $18, nD2, $06, nE2, $06, nA2, $06
 	dc.b	nA2, $06, nRst, $06, nA2, $06, nRst, $06, nA2, $06, nA2, $0C
-	dc.b	nE2, $06, nRst, $06, nE3, $0C, nE2
-
-Snd_Title_Loop54:
-	dc.b	$06
-	smpsLoop            $00, $04, Snd_Title_Loop54
+	dc.b	nE2, $06, nRst, $06, nE3, $0C, nE2, $06, $06, $0C
 	smpsLoop            $01, $02, Snd_Title_Loop55
 
 Snd_Title_Loop56:
@@ -171,11 +168,7 @@ Snd_Title_Loop56:
 	dc.b	nA2, $06, nA2, $06, nRst, $06, nA2, $06, nRst, $06, nA2, $06
 	dc.b	nFs2, $0C, nA2, $06, nRst, $06, nA2, $18, nE2, $06, nFs2, $06
 	dc.b	nA2, $06, nA2, $06, nRst, $06, nA2, $06, nRst, $06, nA2, $06
-	dc.b	nA2, $0C, nE2, $0C, nE3, $0C, nE2
-
-Snd_Title_Loop57:
-	dc.b	$06
-	smpsLoop            $00, $04, Snd_Title_Loop57
+	dc.b	nA2, $0C, nE2, $06, nRst, $06, nE3, $0C, nE2, $06, $06, $0C
 	smpsLoop            $02, $02, Snd_Title_Loop55
 	dc.b	nA2, $06, nA2, $06, nRst, $06, nA2, $06, nRst, $06, nA2, $06
 	dc.b	nA2, $0C, nFs2, $0C, nFs2, $18, nE2, $0C, nE2, $06, nE2, $06
