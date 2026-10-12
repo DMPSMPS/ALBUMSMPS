@@ -360,16 +360,26 @@ Snd_Title_FM4:
 	smpsPan             panRight, $00
 	smpsCall            Snd_Title_Call0A
 	smpsModSet          $14, $01, $04, $06
-
-Snd_Title_Loop10:
 	dc.b	nRst, $18
 	smpsCall            Snd_Title_Call0B
-	dc.b	nA3, $09, nRst, $1B, nB3, $06, nRst, nB3, $18, $30, nRst, $0C
-	smpsLoop            $00, $04, Snd_Title_Loop10
+	dc.b	nE3, $24
+	smpsCall            Snd_Title_Call0C
+	dc.b	nRst, $18
+	smpsCall            Snd_Title_Call0B
+	dc.b	nD3, $24
+	smpsCall            Snd_Title_Call0C
+	dc.b	nRst, $18
+	smpsCall            Snd_Title_Call0B
+	dc.b	nAb3, $24
+	smpsCall            Snd_Title_Call0C
+	dc.b	nRst, $18
+	smpsCall            Snd_Title_Call0B
+	dc.b	nD3, $24
+	smpsCall            Snd_Title_Call0C
 
-Snd_Title_Loop11:
+Snd_Title_Loop10:
 	dc.b	nRst
-	smpsLoop            $00, $78, Snd_Title_Loop11
+	smpsLoop            $00, $78, Snd_Title_Loop10
 	smpsSetvoice        $06
 	smpsAlterNote       $FE
 	smpsModSet          $14, $01, $06, $06
@@ -390,8 +400,9 @@ Snd_Title_Loop11:
 	smpsFMAlterVol      $F3
 	smpsFMAlterVol      $03
 	smpsCall            Snd_Title_Call0B
-	dc.b	nA3, $09, nRst, $1B, nB3, $06, nRst, nB3, $18, $30
+	dc.b	nE3, $24
 	smpsCall            Snd_Title_Call0C
+	smpsCall            Snd_Title_Call0D
 
 Snd_Title_Call0A:
 	smpsModSet          $01, $01, $06, $00
@@ -400,13 +411,16 @@ Snd_Title_Call0A:
 	smpsReturn
 
 Snd_Title_Call0B:
-	dc.b	nA3, $0C, nRst, $18, nFs3, $09, nRst, $0F, nE3, $24, nRst, $60
-	dc.b	nA3, $0C, nRst, nRst
+	dc.b	nA3, $0C, nRst, $18, nFs3, $09, nRst, $0F
 	smpsReturn
 
 Snd_Title_Call0C:
-	dc.b	nRst, $0C, nA3, nRst, $30, nFs3, $09, nRst, $0F, nE3, $3C, nRst
-	dc.b	$30
+	dc.b	nRst, $60, nA3, $0C, nRst, $18, nA3, $09, nRst, $1B, nB3, $06
+	dc.b	nRst, nB3, $18, $30, nRst, $0C
+	smpsReturn
+
+Snd_Title_Call0D:
+	dc.b	nA3, $0C, nRst, $30, nFs3, $09, nRst, $0F, nE3, $3C, nRst, $30
 	smpsNoteFill        $17
 	dc.b	nCs4, $18
 	smpsNoteFill        $06
@@ -425,21 +439,29 @@ Snd_Title_FM5:
 	smpsModSet          $14, $01, $04, $06
 	dc.b	nRst, $18
 	smpsCall            Snd_Title_Call0B
-	smpsCall            Snd_Title_Call0D
+	dc.b	nE3, $24, nRst, $60
+	smpsCall            Snd_Title_Call0B
+	smpsCall            Snd_Title_Call0E
 	dc.b	nE3, $30, nRst, $24
 	smpsCall            Snd_Title_Call0B
-	smpsCall            Snd_Title_Call0D
+	dc.b	nD3, $24, nRst, $60
+	smpsCall            Snd_Title_Call0B
+	smpsCall            Snd_Title_Call0E
 	dc.b	nD3, $30, nRst, $24
 	smpsCall            Snd_Title_Call0B
-	smpsCall            Snd_Title_Call0D
+	dc.b	nAb3, $24, nRst, $60
+	smpsCall            Snd_Title_Call0B
+	smpsCall            Snd_Title_Call0E
 	dc.b	nAb3, $30, nRst, $24
 	smpsCall            Snd_Title_Call0B
-	smpsCall            Snd_Title_Call0D
+	dc.b	nD3, $24, nRst, $60
+	smpsCall            Snd_Title_Call0B
+	smpsCall            Snd_Title_Call0E
 	dc.b	nD3, $30
 
-Snd_Title_Loop12:
+Snd_Title_Loop11:
 	dc.b	nRst, $0C
-	smpsLoop            $00, $79, Snd_Title_Loop12
+	smpsLoop            $00, $79, Snd_Title_Loop11
 	smpsSetvoice        $06
 	smpsAlterNote       $02
 	smpsModSet          $15, $01, $06, $06
@@ -460,12 +482,14 @@ Snd_Title_Loop12:
 	smpsFMAlterVol      $E9
 	smpsFMAlterVol      $03
 	smpsCall            Snd_Title_Call0B
+	dc.b	nE3, $24, nRst, $60
+	smpsCall            Snd_Title_Call0B
+	smpsCall            Snd_Title_Call0E
+	dc.b	nE3, $30, nRst, $0C
 	smpsCall            Snd_Title_Call0D
-	dc.b	nE3, $30
-	smpsCall            Snd_Title_Call0C
 
-Snd_Title_Call0D:
-	dc.b	nFs3, $09, nRst, $1B, nG3, $06, nRst, nG3, $18
+Snd_Title_Call0E:
+	dc.b	nRst, $0C, nG3, $06, nRst, nG3, $18
 	smpsReturn
 
 ; PSG1 Data
@@ -481,64 +505,64 @@ Snd_Title_PSG1:
 	smpsAlterPitch      $0C
 	smpsModSet          $00, $00, $00, $00
 
+Snd_Title_Loop12:
+	smpsCall            Snd_Title_Call0F
+	smpsLoop            $00, $04, Snd_Title_Loop12
+
 Snd_Title_Loop13:
-	smpsCall            Snd_Title_Call0E
-	smpsLoop            $00, $04, Snd_Title_Loop13
+	smpsCall            Snd_Title_Call10
+	smpsCall            Snd_Title_Call10
 
 Snd_Title_Loop14:
-	smpsCall            Snd_Title_Call0F
-	smpsCall            Snd_Title_Call0F
+	dc.b	nD4, nB3
+	smpsLoop            $01, $04, Snd_Title_Loop14
+	smpsCall            Snd_Title_Call10
 
 Snd_Title_Loop15:
-	dc.b	nD4, nB3
+	dc.b	nE4, nB3
 	smpsLoop            $01, $04, Snd_Title_Loop15
+	smpsLoop            $00, $02, Snd_Title_Loop13
 	smpsCall            Snd_Title_Call0F
 
 Snd_Title_Loop16:
 	dc.b	nE4, nB3
-	smpsLoop            $01, $04, Snd_Title_Loop16
-	smpsLoop            $00, $02, Snd_Title_Loop14
-	smpsCall            Snd_Title_Call0E
-
-Snd_Title_Loop17:
-	dc.b	nE4, nB3
-	smpsLoop            $00, $04, Snd_Title_Loop17
+	smpsLoop            $00, $04, Snd_Title_Loop16
 	dc.b	nD4, nB3, nE4, nB3, nE4, nB3, nE4, nB3, nRst, $60
 
-Snd_Title_Loop18:
+Snd_Title_Loop17:
 	dc.b	nG3, $0C, nA3, $18, nCs4, $24, nE3, $18
-	smpsLoop            $00, $02, Snd_Title_Loop18
-	smpsCall            Snd_Title_Call10
+	smpsLoop            $00, $02, Snd_Title_Loop17
+	smpsCall            Snd_Title_Call11
 	smpsPSGAlterVol     $01
-	smpsCall            Snd_Title_Call10
+	smpsCall            Snd_Title_Call11
 	dc.b	smpsNoAttack, $48
 	smpsStop
 
-Snd_Title_Call0E:
+Snd_Title_Call0F:
 
-Snd_Title_Loop19:
+Snd_Title_Loop18:
 	dc.b	nE4, $0C, nB3
-	smpsLoop            $01, $04, Snd_Title_Loop19
+	smpsLoop            $01, $04, Snd_Title_Loop18
 	dc.b	nD4
 
-Snd_Title_Loop1A:
+Snd_Title_Loop19:
 	dc.b	nB3, nE4
-	smpsLoop            $01, $07, Snd_Title_Loop1A
+	smpsLoop            $01, $07, Snd_Title_Loop19
 	dc.b	nB3, nD4, nB3, nD4, nB3, nD5, nB4, nD5, nB4
 	smpsReturn
 
-Snd_Title_Call0F:
+Snd_Title_Call10:
+
+Snd_Title_Loop1A:
+	dc.b	nD4, $0C, nB3
+	smpsLoop            $01, $04, Snd_Title_Loop1A
 
 Snd_Title_Loop1B:
-	dc.b	nD4, $0C, nB3
-	smpsLoop            $01, $04, Snd_Title_Loop1B
-
-Snd_Title_Loop1C:
 	dc.b	nE4, nB3
-	smpsLoop            $01, $04, Snd_Title_Loop1C
+	smpsLoop            $01, $04, Snd_Title_Loop1B
 	smpsReturn
 
-Snd_Title_Call10:
+Snd_Title_Call11:
 	dc.b	nG3, $0C
 	smpsPSGAlterVol     $01
 	dc.b	nA3, $18
@@ -557,36 +581,36 @@ Snd_Title_PSG2:
 	smpsPSGAlterVol     $03
 	smpsAlterNote       $00
 
-Snd_Title_Loop1D:
-	smpsCall            Snd_Title_Call11
-	smpsCall            Snd_Title_Call11
+Snd_Title_Loop1C:
+	smpsCall            Snd_Title_Call12
+	smpsCall            Snd_Title_Call12
 	dc.b	nCs5, nA4, nCs5, nA4
-	smpsLoop            $00, $04, Snd_Title_Loop1D
+	smpsLoop            $00, $04, Snd_Title_Loop1C
 
-Snd_Title_Loop1E:
-	smpsCall            Snd_Title_Call11
-	smpsLoop            $00, $0B, Snd_Title_Loop1E
+Snd_Title_Loop1D:
+	smpsCall            Snd_Title_Call12
+	smpsLoop            $00, $0B, Snd_Title_Loop1D
 	dc.b	nCs4, nA3, nCs5, nA4, nCs5, nA4
-	smpsCall            Snd_Title_Call11
+	smpsCall            Snd_Title_Call12
 	dc.b	nCs4, nA3, nRst, $5A
 
-Snd_Title_Loop1F:
+Snd_Title_Loop1E:
 	dc.b	nA2, $18, nE3, $24, nA3, $18, nD4, $0C
-	smpsLoop            $00, $02, Snd_Title_Loop1F
-	smpsCall            Snd_Title_Call12
+	smpsLoop            $00, $02, Snd_Title_Loop1E
+	smpsCall            Snd_Title_Call13
 	smpsPSGAlterVol     $01
-	smpsCall            Snd_Title_Call12
+	smpsCall            Snd_Title_Call13
 	dc.b	smpsNoAttack, $54
 	smpsStop
 
-Snd_Title_Call11:
+Snd_Title_Call12:
 
-Snd_Title_Loop20:
+Snd_Title_Loop1F:
 	dc.b	nCs4, $0C, nA3
-	smpsLoop            $01, $07, Snd_Title_Loop20
+	smpsLoop            $01, $07, Snd_Title_Loop1F
 	smpsReturn
 
-Snd_Title_Call12:
+Snd_Title_Call13:
 	dc.b	nA2, $18
 	smpsPSGAlterVol     $01
 	dc.b	nE3, $24
@@ -615,13 +639,13 @@ Snd_Title_DAC:
 	dc.b	dKickS3, $06, $0C, $12, $18, $0C, dSnareS3, $06, $12, dKickS3, $06, $0C
 	dc.b	$12, dSnareS3, $18, dKickS3, $0C, dSnareS3, $06, dSnareS3, dSnareS3, dSnareS3
 
-Snd_Title_Loop21:
+Snd_Title_Loop20:
 	dc.b	dCrashCymbal, $12, dKickS3, $06, dSnareS3, dKickS3, dKickS3, $0C, dKickS3, dKickS3, dSnareS3, dKickS3
 	dc.b	dKickS3, $06, $0C, $06, dSnareS3, dKickS3, dKickS3, $12, $0C, $06, dSnareS3, dKickS3
 	dc.b	dKickS3, $0C, $06, $0C, $06, dSnareS3, dKickS3, dKickS3, $0C, dKickS3, dKickS3, dSnareS3
 	dc.b	dKickS3, dKickS3, $06, $0C, $06, dSnareS3, dKickS3, dKickS3, $12, $0C, $06, dSnareS3
 	dc.b	dKickS3, dKickS3, $0C
-	smpsLoop            $00, $09, Snd_Title_Loop21
+	smpsLoop            $00, $09, Snd_Title_Loop20
 	dc.b	$06, $0C, $06, dSnareS3, dKickS3, dKickS3, $0C, dKickS3, dKickS3, dSnareS3, dKickS3, dKickS3
 	dc.b	$06, $0C, $06, dSnareS3, dKickS3, dKickS3, $12, $0C, $06, dSnareS3, dKickS3, dKickS3
 	dc.b	dKickS3, dKickS3, $18, dSnareS3, $12, $06, dKickS3, $0C, dKickS3, dSnareS3, dCrashCymbal
