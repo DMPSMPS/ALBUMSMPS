@@ -76,8 +76,7 @@ Snd_Title_Call01:
 	smpsReturn
 
 Snd_Title_Call02:
-	dc.b	nFs5, $0C, $18, $0C, nE5, $18, nD5, $0C, nE5, $60, nRst, $0C
-	dc.b	nFs5
+	dc.b	nFs5, $0C, $18, $0C, nE5, $18, nD5, $0C, nE5, $6C, nFs5, $0C
 	smpsReturn
 
 Snd_Title_Call03:
