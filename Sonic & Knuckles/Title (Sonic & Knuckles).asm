@@ -41,8 +41,7 @@ Snd_Title_Jump00:
 	smpsCall            Snd_Title_Call02
 	dc.b	nA5, nRst, nFs5, $18, nE5, $0C
 	smpsCall            Snd_Title_Call03
-	dc.b	nA4, $3C, nRst, $24, nA4, $06, nB4, nCs5, nE5, nB4, nCs5, nE5
-	dc.b	nFs5
+	dc.b	nA4, $60, $06, nB4, nCs5, nE5, nB4, nCs5, nE5, nFs5
 	smpsCall            Snd_Title_Call04
 	smpsNoteFill        $06
 	dc.b	$0C, nD6, nD6
@@ -77,14 +76,14 @@ Snd_Title_Call01:
 	smpsReturn
 
 Snd_Title_Call02:
-	dc.b	nFs5, $0C, $18, $0C, nE5, $18, nD5, $0C, nE5, $3C, nRst, $30
-	dc.b	nFs5, $0C
+	dc.b	nFs5, $0C, $18, $0C, nE5, $18, nD5, $0C, nE5, $60, nRst, $0C
+	dc.b	nFs5
 	smpsReturn
 
 Snd_Title_Call03:
-	dc.b	nD5, $0C, nE5, $3C, nRst, $18, nB4, $0C, nCs5, nD5, $18, nCs5
-	dc.b	$0C, nD5, nRst, nA5, nRst, nFs5, $3C, nRst, $18, nD5, $0C, nFs5
-	dc.b	nE5, $10, nCs5, nB4
+	dc.b	nD5, $0C, nE5, $48, nRst, $0C, nB4, nCs5, nD5, $18, nCs5, $0C
+	dc.b	nD5, nRst, nA5, nRst, nFs5, $48, nRst, $0C, nD5, nFs5, nE5, $10
+	dc.b	nCs5, nB4
 	smpsReturn
 
 Snd_Title_Call04:
