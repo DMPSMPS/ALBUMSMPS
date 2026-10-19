@@ -53,7 +53,7 @@ Snd_Title_Call03:
 Snd_Title_FM2:
 	smpsPan             panLeft, $00
 	smpsSetvoice        $04
-	smpsFMAlterVol      $28
+	smpsFMAlterVol      $2A
 	dc.b    nRst, $30, nFs6, $01
 
 Snd_Title_Loop02:
@@ -96,7 +96,7 @@ Snd_Title_FM3:
 	smpsSetvoice        $04
 	dc.b    nRst, $30
 	smpsAlterNote       $01
-	smpsFMAlterVol      $28
+	smpsFMAlterVol      $2A
 	dc.b    nFs6, $01
   
 Snd_Title_Loop01:
