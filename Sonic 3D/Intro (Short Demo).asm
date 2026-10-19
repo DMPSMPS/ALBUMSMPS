@@ -6,8 +6,8 @@ Snd_Title_Header:
 
 	smpsHeaderDAC       Snd_Title_DAC
 	smpsHeaderFM        Snd_Title_FM1,	$D8, $0B
-	smpsHeaderFM        Snd_Title_FM2,	$00, $05
-	smpsHeaderFM        Snd_Title_FM3,	$00, $05
+	smpsHeaderFM        Snd_Title_FM2,	$00, $07
+	smpsHeaderFM        Snd_Title_FM3,	$00, $07
 	smpsHeaderFM        Snd_Title_FM4,	$00, $18
 	smpsHeaderFM        Snd_Title_FM5,	$00, $09
 	smpsHeaderPSG       Snd_Title_PSG1,	$00, $02, $00, $00
@@ -53,7 +53,7 @@ Snd_Title_Call03:
 Snd_Title_FM2:
 	smpsPan             panLeft, $00
 	smpsSetvoice        $04
-	smpsFMAlterVol      $2A
+	smpsFMAlterVol      $28
 	dc.b    nRst, $30, nFs6, $01
 
 Snd_Title_Loop02:
@@ -96,7 +96,7 @@ Snd_Title_FM3:
 	smpsSetvoice        $04
 	dc.b    nRst, $30
 	smpsAlterNote       $01
-	smpsFMAlterVol      $2A
+	smpsFMAlterVol      $28
 	dc.b    nFs6, $01
   
 Snd_Title_Loop01:
